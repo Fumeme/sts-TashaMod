@@ -1,0 +1,14 @@
+{
+"theDefault: CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied ", " keyword.", " keywords."]
+},
+"theDefault: RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn TOUCH ", " enemy." , " enemies."]
+},
+"theDefault: Mana": {
+        "NAME": "Mana",
+        "DESCRIPTIONS": ["At the start of your turn TOUCH "]
+}
+}
