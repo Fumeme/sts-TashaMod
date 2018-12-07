@@ -26,7 +26,7 @@ public class Channel extends CustomCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = defaultmod.DefaultMod.makeID("DefaultCommonPower");
+    public static final String ID = defaultmod.DefaultMod.makeID("Channel");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = DefaultMod.makePath(DefaultMod.DEFAULT_UNCOMMON_POWER);
 
