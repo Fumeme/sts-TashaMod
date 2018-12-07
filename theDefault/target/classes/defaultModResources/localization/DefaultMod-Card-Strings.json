@@ -1,4 +1,20 @@
 {
+
+
+	"theDefault: Shot": {
+		"NAME": "Shot",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"theDefault: HairyTrigger": {
+		"NAME": "Hairy Trigger",
+		"DESCRIPTION": "Deal !D! damage !M! times."
+	},
+	"theDefault: Channel": {
+		"NAME": "Channel",
+		"DESCRIPTION": "Gain !M! Mana."
+	},
+
+
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! damage."
