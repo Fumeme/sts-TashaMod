@@ -261,6 +261,9 @@ public class DefaultMod
         BaseMod.addCard(new DefaultRareAttack());
         BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
+        
+        BaseMod.addCard(new Shot());
+        BaseMod.addCard(new HairyTrigger());
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
