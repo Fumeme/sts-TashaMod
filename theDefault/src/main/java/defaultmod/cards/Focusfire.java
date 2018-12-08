@@ -74,9 +74,18 @@ public class Focusfire extends CustomCard {
 
     }
     
+    boolean magic (short min) {
+    	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
+
+    		 return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
+    		
+    	}
+    	return false;
+    }
+    
     public void applyPowers(){
 
-        if(AbstractDungeon.player.getPower(Mana.POWER_ID).amount > 2)
+        if(magic((short) 3))
  
         	this.isDamageModified = true;
 
@@ -86,7 +95,7 @@ public class Focusfire extends CustomCard {
     }
 
     public void calculateCardDamage() {
-        if(AbstractDungeon.player.getPower(Mana.POWER_ID).amount > 2)
+        if(magic((short) 3))
         	this.isDamageModified = true;
 
         this.damage += bonus;
@@ -104,10 +113,10 @@ public class Focusfire extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
+        	bonus += 2;
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.initializeDescription();
-            bonus += 2;
         }
     }
 }
