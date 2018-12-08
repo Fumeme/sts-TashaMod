@@ -321,7 +321,8 @@ public class DefaultMod
         final String[] placeholder = { "keyword", "keywords" };
         BaseMod.addKeyword(placeholder, "Whenever you play a card, gain 1 dexterity this turn only.");
 
-        
+        final String[] magic = {"magic", "Magic"};
+        BaseMod.addKeyword(magic, "Requires atleast Y stacks to activate the cards effect");
         
     }
 
