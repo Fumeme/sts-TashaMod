@@ -84,23 +84,24 @@ public class Focusfire extends CustomCard {
     }
     
     public void applyPowers(){
-
-        if(magic((short) 3))
- 
-        	this.isDamageModified = true;
-
-        this.damage += bonus;
-
-        super.applyPowers();
+    	
+    	int tmp = this.baseDamage;
+    	if (magic((short) 3)){
+    	    this.baseDamage += bonus;
+    	}
+    	super.applyPowers();
+    	this.baseDamage = tmp;
+    	this.isDamageModified = this.baseDamage != this.damage;
     }
 
     public void calculateCardDamage() {
-        if(magic((short) 3))
-        	this.isDamageModified = true;
-
-        this.damage += bonus;
-
-        super.applyPowers();
+    	int tmp = this.baseDamage;
+    	if (magic((short) 3)){
+    	    this.baseDamage += bonus;
+    	}
+    	super.applyPowers();
+    	this.baseDamage = tmp;
+    	this.isDamageModified = this.baseDamage != this.damage;
     }
     
     // Which card to return when making a copy of this card.
