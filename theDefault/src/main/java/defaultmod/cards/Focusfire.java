@@ -75,25 +75,21 @@ public class Focusfire extends CustomCard {
     }
     
     public void applyPowers(){
-        int modifier = 0;
 
-        if(AbstractDungeon.player.hasPower("Mana"))
+        if(AbstractDungeon.player.getPower(Mana.POWER_ID).amount > 2)
  
         	this.isDamageModified = true;
 
-        this.damage += modifier;
+        this.damage += bonus;
 
         super.applyPowers();
     }
 
     public void calculateCardDamage() {
-    	
-        int modifier = 0;
-
-        if(AbstractDungeon.player.hasPower("Mana"))
+        if(AbstractDungeon.player.getPower(Mana.POWER_ID).amount > 2)
         	this.isDamageModified = true;
 
-        this.damage += modifier;
+        this.damage += bonus;
 
         super.applyPowers();
     }
