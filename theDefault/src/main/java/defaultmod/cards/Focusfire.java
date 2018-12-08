@@ -59,8 +59,8 @@ public class Focusfire extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     	this.isMultiDamage = true;
-    	if (p.getPower("Mana").amount > this.thres){
-    		upgradeDamage(1);
+    	if (p.getPower(Mana.POWER_ID).amount > this.thres){
+    		this.baseDamage +=1;
     		
    		 AbstractDungeon.actionManager
          .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
@@ -71,18 +71,8 @@ public class Focusfire extends CustomCard {
              .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
                      new DamageInfo(p, this.damage, this.damageTypeForTurn),
                      AbstractGameAction.AttackEffect.FIRE));
-    		 upgradeDamage(-1);
+    		 
     		
-    	}else {
-        AbstractDungeon.actionManager
-                .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.FIRE));
-        
-        AbstractDungeon.actionManager
-        .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.FIRE));
     	}
 
     }

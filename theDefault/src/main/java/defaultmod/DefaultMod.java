@@ -265,6 +265,7 @@ public class DefaultMod
         BaseMod.addCard(new Shot());
         BaseMod.addCard(new HairyTrigger());
         BaseMod.addCard(new Channel());
+        BaseMod.addCard(new Focusfire());
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
