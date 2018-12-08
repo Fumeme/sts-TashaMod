@@ -46,7 +46,6 @@ public class Focusfire extends CustomCard {
     private static final int COST = 0;
     private static int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
-    private final int thres = 3;
     private static int bonus = 1;
 
     // /STAT DECLARATION/
@@ -82,7 +81,7 @@ public class Focusfire extends CustomCard {
     	}
     	return false;
     }
-    
+    @Override
     public void applyPowers(){
     	
     	int tmp = this.baseDamage;
@@ -93,16 +92,16 @@ public class Focusfire extends CustomCard {
     	this.baseDamage = tmp;
     	this.isDamageModified = this.baseDamage != this.damage;
     }
-
-    public void calculateCardDamage() {
-    	int tmp = this.baseDamage;
-    	if (magic((short) 3)){
-    	    this.baseDamage += bonus;
-    	}
-    	super.applyPowers();
-    	this.baseDamage = tmp;
-    	this.isDamageModified = this.baseDamage != this.damage;
-    }
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int tmp = this.baseDamage;
+        if (magic((short) 3)){
+            this.baseDamage += bonus;
+        }
+        super.calculateCardDamage(mo);
+        this.baseDamage = tmp;
+        this.isDamageModified = this.baseDamage != this.damage;
+}
     
     // Which card to return when making a copy of this card.
     @Override

@@ -322,7 +322,7 @@ public class DefaultMod
         BaseMod.addKeyword(placeholder, "Whenever you play a card, gain 1 dexterity this turn only.");
 
         final String[] magic = {"magic", "Magic"};
-        BaseMod.addKeyword(magic, "Requires atleast Y stacks to activate the cards effect");
+        BaseMod.addKeyword(magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
         
     }
 

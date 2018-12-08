@@ -44,7 +44,7 @@ public class HairyTrigger extends CustomCard {
     private static final int COST = 0;
     private static final int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
-    private static int Times = 2;
+    private int Times = 2;
     private  static int UpCount = 0;
 
     // /STAT DECLARATION/
@@ -76,11 +76,13 @@ public class HairyTrigger extends CustomCard {
     // Upgraded stats.
     @Override
     public void upgrade() {
-    	if (UpCount <4) {
-    	Times += 1;
-    	UpCount += 1;
-            this.upgradeName();
+    	if (this.timesUpgraded <4) {
+    		this.Times += 1;
+            this.timesUpgraded += 1;
+    	    this.upgraded = true;
+        	this.name = (NAME + "+" + this.timesUpgraded);
             this.upgradeDamage(UPGRADE_PLUS_DMG);
+            this.initializeTitle();
             this.initializeDescription();
     	}
         
