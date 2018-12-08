@@ -44,9 +44,10 @@ public class Focusfire extends CustomCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 2;
+    private static int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
     private final int thres = 3;
+    private static int bonus = 1;
 
     // /STAT DECLARATION/
 
@@ -59,10 +60,8 @@ public class Focusfire extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     	this.isMultiDamage = true;
-    	if (p.getPower(Mana.POWER_ID).amount > this.thres){
-    		this.baseDamage +=1;
-    		
-   		 AbstractDungeon.actionManager
+
+  		 AbstractDungeon.actionManager
          .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
                  new DamageInfo(p, this.damage, this.damageTypeForTurn),
                  AbstractGameAction.AttackEffect.FIRE));
@@ -72,11 +71,33 @@ public class Focusfire extends CustomCard {
                      new DamageInfo(p, this.damage, this.damageTypeForTurn),
                      AbstractGameAction.AttackEffect.FIRE));
     		 
-    		
-    	}
 
     }
+    
+    public void applyPowers(){
+        int modifier = 0;
 
+        if(AbstractDungeon.player.hasPower("Mana"))
+ 
+        	this.isDamageModified = true;
+
+        this.damage += modifier;
+
+        super.applyPowers();
+    }
+
+    public void calculateCardDamage() {
+    	
+        int modifier = 0;
+
+        if(AbstractDungeon.player.hasPower("Mana"))
+        	this.isDamageModified = true;
+
+        this.damage += modifier;
+
+        super.applyPowers();
+    }
+    
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
@@ -90,6 +111,7 @@ public class Focusfire extends CustomCard {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.initializeDescription();
+            bonus += 2;
         }
     }
 }

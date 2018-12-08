@@ -15,7 +15,7 @@
 	},
 	"theDefault: Focusfire": {
 		"NAME": "Focus fire",
-		"DESCRIPTION": "Deal !D! damage twice. does bonus damage if you have atleast 3 Mana."
+		"DESCRIPTION": "Deal !D! damage twice. does !M! bonus damage if you have atleast 3 Mana."
 	},
 
 
