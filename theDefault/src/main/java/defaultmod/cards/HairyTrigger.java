@@ -43,9 +43,7 @@ public class HairyTrigger extends CustomCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 2;
-    private static final int UPGRADE_PLUS_DMG = 1;
-    private int Times = 2;
-    private  static int UpCount = 0;
+
 
     // /STAT DECLARATION/
 
@@ -57,7 +55,7 @@ public class HairyTrigger extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	for(short i = 0; i >= Times; i++) {
+    	for(short i = 0; i >= this.timesUpgraded+1; i++) {
     	
         AbstractDungeon.actionManager
                 .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
@@ -77,11 +75,9 @@ public class HairyTrigger extends CustomCard {
     @Override
     public void upgrade() {
     	if (this.timesUpgraded <4) {
-    		this.Times += 1;
             this.timesUpgraded += 1;
     	    this.upgraded = true;
         	this.name = (NAME + "+" + this.timesUpgraded);
-            this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.initializeTitle();
             this.initializeDescription();
     	}
