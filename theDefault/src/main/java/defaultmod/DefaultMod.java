@@ -266,7 +266,10 @@ public class DefaultMod
         BaseMod.addCard(new HairyTrigger());
         BaseMod.addCard(new Channel());
         BaseMod.addCard(new Focusfire());
-
+        BaseMod.addCard(new BattleSense());
+        BaseMod.addCard(new Flare());
+        BaseMod.addCard(new ShortTerm());
+        
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);

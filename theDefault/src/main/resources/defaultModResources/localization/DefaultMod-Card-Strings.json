@@ -17,8 +17,18 @@
 		"NAME": "Focus fire",
 		"DESCRIPTION": "Deal !D! damage twice. NL Magic 3 does !M! bonus damage."
 	},
-
-
+	"theDefault: BattleSense": {
+		"NAME": "Battle Sense",
+		"DESCRIPTION": "Gain 1 Strength and 1 Dexterity. NL Gain an aditional dex when upgraded"
+	},
+	"theDefault: ShortTerm": {
+		"NAME": "Short Term Investmenet",
+		"DESCRIPTION": "Gain !M! Mana. NL At the end of your turn, lose 1 more than the mana you have gained."
+	},
+	"theDefault: Flare": {
+		"NAME": "Flare",
+		"DESCRIPTION": "apply 2 Vulnerable and remove 1 Strength on all enemies, NL When upgraded, apply an aditional Vulnerable"
+	},
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",

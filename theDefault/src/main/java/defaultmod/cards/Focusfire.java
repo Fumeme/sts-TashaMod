@@ -53,6 +53,7 @@ public class Focusfire extends CustomCard {
     public Focusfire() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+        this.magicNumber = this.baseMagicNumber = bonus;
     }
 
     // Actions the card should do.

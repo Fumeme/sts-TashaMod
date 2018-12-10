@@ -1,5 +1,6 @@
 package defaultmod.powers;
 
+import defaultmod.cards.ShortTerm;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

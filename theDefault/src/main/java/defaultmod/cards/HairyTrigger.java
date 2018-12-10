@@ -50,12 +50,13 @@ public class HairyTrigger extends CustomCard {
     public HairyTrigger() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+        this.magicNumber = this.baseMagicNumber = this.timesUpgraded+1;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	for(short i = 0; i >= this.timesUpgraded+1; i++) {
+    	for(short i = 0; i <= this.timesUpgraded+1; i++) {
     	
         AbstractDungeon.actionManager
                 .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,

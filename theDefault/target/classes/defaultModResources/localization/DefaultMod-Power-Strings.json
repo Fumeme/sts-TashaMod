@@ -11,5 +11,9 @@
 "theDefault: Mana": {
         "NAME": "Mana",
         "DESCRIPTIONS": ["Used for Powering your cards."]
+},
+"theDefault: ShortTermPower": {
+        "NAME": "Short Term Backfire",
+        "DESCRIPTIONS": ["at the end of your turn, lose Mana equal to "]
 }
 }
