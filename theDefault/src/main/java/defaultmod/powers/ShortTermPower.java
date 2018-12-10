@@ -30,7 +30,7 @@ public class ShortTermPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.updateDescription();
-        this.type = PowerType.BUFF;
+        this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
         this.loadRegion("flex");
         this.source = source;
