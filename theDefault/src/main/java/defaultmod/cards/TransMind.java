@@ -41,12 +41,12 @@ public class TransMind extends CustomCard {
 
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int MAGIC = 1;
 
     // /STAT DECLARATION/
@@ -68,7 +68,7 @@ public class TransMind extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
         
         
-        AbstractDungeon.actionManager.addToBottom(new defaultmod.actions.ModifyMagicAction(this.uuid, -1));
+        AbstractDungeon.actionManager.addToBottom(new defaultmod.actions.ModifyMagicAction(this.uuid, 1));
         
     
     }
@@ -85,7 +85,7 @@ public class TransMind extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.updateCost(1);
+            this.updateCost(-1);
             this.initializeDescription();
         }
     }
