@@ -65,7 +65,7 @@ public class ShortTerm extends CustomCard {
                 new Mana(p, p, this.magicNumber), this.magicNumber));
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ShortTermPower(p, p, (1+this.magicNumber)), (1+this.magicNumber)));
+                new ShortTermPower(p, p, (this.magicNumber)+1), (this.magicNumber)+1));
     }
 
 

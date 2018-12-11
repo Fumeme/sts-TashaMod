@@ -114,7 +114,7 @@ public class Focusfire extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-        	bonus += 2;
+        	this.upgradeMagicNumber(2);
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.initializeDescription();
