@@ -39,13 +39,14 @@ public class ShortTermPower extends AbstractPower {
 
 
     // At the start of the turn, Remove this debuff.
-    public void atStartOfTurn(final boolean isPlayer) {
+    @Override
+    public void atStartOfTurn() {
 
     	flash();
     	AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
   
     }
-    
+    @Override
     public void atEndOfTurn(boolean isPlayer)
      {
     	flash();

@@ -62,18 +62,11 @@ public class Overhead extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager
-                .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (m.isDying || m.currentHealth <= 0) {
-        	
-        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new VulnerablePower(AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber, false), this.magicNumber));
 
-        	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(m, p,
-                    new StrengthPower(AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber), this.magicNumber));
-        }
+        
+        AbstractDungeon.actionManager
+        .addToBottom(new defaultmod.actions.OverheadAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        
         
 
     }
