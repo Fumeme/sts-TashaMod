@@ -38,10 +38,10 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 /* 36 */       this.target.damage(this.info);
 /*    */       
 /* 38 */      if ((((AbstractMonster)this.target).isDying) || (this.target.currentHealth <= 0)) {
-/* 40 */         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, source,
+/* 40 */         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
         new VulnerablePower(AbstractDungeon.getMonsters().getRandomMonster(true), 1, false), 1));
 
-AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(target, source,
+AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(target, AbstractDungeon.player,
         new StrengthPower(AbstractDungeon.getMonsters().getRandomMonster(true), 1), 1));
 /*    */         
 /*    */ 
