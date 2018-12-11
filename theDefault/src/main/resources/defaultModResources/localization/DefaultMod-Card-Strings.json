@@ -19,16 +19,22 @@
 	},
 	"theDefault: BattleSense": {
 		"NAME": "Battle Sense",
-		"DESCRIPTION": "Gain 1 Strength and 1 Dexterity. NL Gain an aditional dex when upgraded"
+		"DESCRIPTION": "Gain 1 Strength and 1 Dexterity. NL Gain an aditional Dexterity when upgraded"
 	},
 	"theDefault: ShortTerm": {
 		"NAME": "Short Term Investmenet",
-		"DESCRIPTION": "Gain !M! Mana. NL At the end of your turn, lose 1 more than the mana you have gained."
+		"DESCRIPTION": "Gain !M! Mana. NL At the end of your turn, lose 1 more than the Mana you have gained."
 	},
 	"theDefault: Flare": {
 		"NAME": "Flare",
 		"DESCRIPTION": "apply 2 Vulnerable and remove 1 Strength on all enemies, NL When upgraded, apply an aditional Vulnerable"
 	},
+	"theDefault: Overhead": {
+		"NAME": "Overhead Swing",
+		"DESCRIPTION": "Deal !D! damage, if it kills, NL apply 1 Vulnerable and reduce the Strength of a random enemy by 1."
+	},
+
+
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",

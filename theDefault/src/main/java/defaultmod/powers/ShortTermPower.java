@@ -19,7 +19,7 @@ import defaultmod.cards.ShortTerm;
 public class ShortTermPower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = defaultmod.DefaultMod.makeID("ShortTerm");
+    public static final String POWER_ID = defaultmod.DefaultMod.makeID("ShortTermPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

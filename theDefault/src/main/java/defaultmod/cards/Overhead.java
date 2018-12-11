@@ -2,6 +2,7 @@ package defaultmod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import basemod.abstracts.CustomCard;
@@ -67,9 +69,10 @@ public class Overhead extends CustomCard {
         if((m.isDying) && (m.currentHealth <= 0)) {
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+                    new VulnerablePower(AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber, false), this.magicNumber));
 
-        	
+        	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(m, p,
+                    new StrengthPower(AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber), this.magicNumber));
         }
         
 

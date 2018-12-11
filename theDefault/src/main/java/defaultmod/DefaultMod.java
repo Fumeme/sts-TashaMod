@@ -269,6 +269,7 @@ public class DefaultMod
         BaseMod.addCard(new BattleSense());
         BaseMod.addCard(new Flare());
         BaseMod.addCard(new ShortTerm());
+        BaseMod.addCard(new Overhead());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
