@@ -64,7 +64,7 @@ public class TransMind extends CustomCard {
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
      
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
         
         
         AbstractDungeon.actionManager.addToBottom(new defaultmod.actions.ModifyMagicAction(this.uuid, -1));
