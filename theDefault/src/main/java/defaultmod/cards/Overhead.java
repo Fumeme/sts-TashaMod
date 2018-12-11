@@ -66,7 +66,7 @@ public class Overhead extends CustomCard {
                 .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if((m.isDying) && (m.currentHealth <= 0)) {
+        if (m.isDying || m.currentHealth <= 0) {
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new VulnerablePower(AbstractDungeon.getMonsters().getRandomMonster(true), this.magicNumber, false), this.magicNumber));

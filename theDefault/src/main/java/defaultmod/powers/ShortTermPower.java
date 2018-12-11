@@ -38,28 +38,26 @@ public class ShortTermPower extends AbstractPower {
     }
 
 
-    // At the end of the turn, Remove gained dexterity.
+    // At the start of the turn, Remove this debuff.
     public void atStartOfTurn(final boolean isPlayer) {
 
-
-    	
-    	AbstractDungeon.actionManager
-    	.addToBottom(new com.megacrit.cardcrawl.actions.common
-    	.RemoveSpecificPowerAction(this.owner, this.owner, "ShortTermPower"));
+    	flash();
+    	AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+  
     }
     
-    public void atEndOfTurn(final boolean isPlayer) {
-    
-    	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner,
-                new Mana(this.owner, this.owner, (this.amount)), (this.amount)));
-    	
-    }
+    public void atEndOfTurn(boolean isPlayer)
+     {
+    	flash();
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new Mana(this.owner, this.owner, -this.amount), -this.amount));
+ 
+  }
     
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0];
+    	this.description = DESCRIPTIONS[0] + this.amount;
     }
 
 }
