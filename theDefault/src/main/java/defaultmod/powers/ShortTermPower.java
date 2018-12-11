@@ -50,8 +50,8 @@ public class ShortTermPower extends AbstractPower {
     
     public void atEndOfTurn(final boolean isPlayer) {
     
-    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-                new Mana(owner, owner, -(this.amount)), -(this.amount)));
+    	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner,
+                new Mana(this.owner, this.owner, (this.amount)), (this.amount)));
     	
     }
     

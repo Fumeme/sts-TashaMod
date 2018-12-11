@@ -46,7 +46,7 @@ public class Flare extends CustomCard {
 
 
     private int AMOUNT = 2;
-    private short strReduce = 1;
+    private short strReduce = -1;
 
     // /STAT DECLARATION/
 
@@ -69,7 +69,7 @@ public class Flare extends CustomCard {
                 
                 if(this.upgraded) {
                	 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                            new VulnerablePower(mo, this.magicNumber, false), this.magicNumber));
+                            new VulnerablePower(mo, 1, false), 1));
                	
                }
         
