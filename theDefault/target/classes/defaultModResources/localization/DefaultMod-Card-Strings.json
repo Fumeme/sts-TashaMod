@@ -33,7 +33,10 @@
 		"NAME": "Overhead Swing",
 		"DESCRIPTION": "Deal !D! damage, if it kills, NL apply 1 Vulnerable and reduce the Strength of a random enemy by 1."
 	},
-
+	"theDefault: TransMind": {
+		"NAME": "Transencent Mindset",
+		"DESCRIPTION": "Gain 1 Intangable, gain !M! Vulnerable. NL using this card increaces the Vulnerable you get for the rest of combat."
+	},
 
 
 	"theDefault: DefaultCommonAttack": {

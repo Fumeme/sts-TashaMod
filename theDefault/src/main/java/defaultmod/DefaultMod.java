@@ -270,6 +270,7 @@ public class DefaultMod
         BaseMod.addCard(new Flare());
         BaseMod.addCard(new ShortTerm());
         BaseMod.addCard(new Overhead());
+        BaseMod.addCard(new TransMind());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

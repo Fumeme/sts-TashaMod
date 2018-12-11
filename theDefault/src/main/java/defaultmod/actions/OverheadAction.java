@@ -43,8 +43,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 /* 40 */         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.getMonsters().getRandomMonster(true), AbstractDungeon.player,
         new VulnerablePower(AbstractDungeon.getMonsters().getRandomMonster(true), 1, false), 1));
 
-AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.getMonsters().getRandomMonster(true), AbstractDungeon.player,
-        new StrengthPower(AbstractDungeon.getMonsters().getRandomMonster(true), 1), 1));
+AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.getMonsters().getRandomMonster(true), AbstractDungeon.player,
+        new StrengthPower(AbstractDungeon.getMonsters().getRandomMonster(true), -1), -1));
 /*    */         
 /*    */ 
 /*    */       }
