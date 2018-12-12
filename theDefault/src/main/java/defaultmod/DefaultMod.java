@@ -271,6 +271,7 @@ public class DefaultMod
         BaseMod.addCard(new ShortTerm());
         BaseMod.addCard(new Overhead());
         BaseMod.addCard(new TransMind());
+        BaseMod.addCard(new ReinArmor());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -328,7 +329,9 @@ public class DefaultMod
 
         final String[] magic = {"magic", "Magic"};
         BaseMod.addKeyword(magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
-        
+
+        final String[] mana = {"Mana", "mana"};
+        BaseMod.addKeyword(magic, "Used for Powering your cards.");
     }
 
     // ================ /LOAD THE KEYWORDS/ ===================    

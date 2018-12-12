@@ -15,7 +15,7 @@
 	},
 	"theDefault: Focusfire": {
 		"NAME": "Focus fire",
-		"DESCRIPTION": "Deal !D! damage twice. NL Magic 3 does !M! bonus damage."
+		"DESCRIPTION": "Deal !D! damage twice. NL Magic 3: does !M! bonus damage."
 	},
 	"theDefault: BattleSense": {
 		"NAME": "Battle Sense",
@@ -37,7 +37,10 @@
 		"NAME": "Transencent Mindset",
 		"DESCRIPTION": "Gain 1 intangable, gain !M! Vulnerable. NL using this card increases the Vulnerable you get for the rest of combat."
 	},
-
+	"theDefault: ReinArmor": {
+		"NAME": "Reinforce Armor",
+		"DESCRIPTION": "Gain !B! block and gain !M! Plated Armor. NL Magic 3: consume 1 Mana to increase the plated armor you get by 1."
+	},
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",
