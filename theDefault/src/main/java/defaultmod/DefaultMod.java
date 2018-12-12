@@ -330,8 +330,8 @@ public class DefaultMod
         final String[] magic = {"magic", "Magic"};
         BaseMod.addKeyword(magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
 
-        final String[] mana = {"Mana", "mana"};
-        BaseMod.addKeyword(magic, "Used for Powering your cards.");
+        final String[] Mana = {"Mana", "mana"};
+        BaseMod.addKeyword(Mana, "Used for Powering your cards.");
     }
 
     // ================ /LOAD THE KEYWORDS/ ===================    
