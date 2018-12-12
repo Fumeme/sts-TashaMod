@@ -65,6 +65,7 @@ public class ReinArmor extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        
         if(magic((short) 3)) {
         	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p,p,new Mana(p,p, 1),1));
         	
