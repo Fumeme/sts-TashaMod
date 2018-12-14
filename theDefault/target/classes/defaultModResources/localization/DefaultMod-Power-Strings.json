@@ -12,6 +12,15 @@
         "NAME": "Mana",
         "DESCRIPTIONS": ["Used for Powering your cards."]
 },
+"theDefault: DecayPower": {
+        "NAME": "Decay",
+        "DESCRIPTIONS": [
+          "At the end of your turn, lose #b",
+          " HP, then reduce #yPoison by #b1.",
+          "At the end of its turn, loses #b"
+        ]
+      },
+
 "theDefault: ShortTermPower": {
         "NAME": "Short Term Backfire",
         "DESCRIPTIONS": ["at the end of your turn, lose Mana equal to "]

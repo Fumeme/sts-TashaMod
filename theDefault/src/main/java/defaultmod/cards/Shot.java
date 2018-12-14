@@ -42,7 +42,7 @@ public class Shot extends CustomCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
     private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/

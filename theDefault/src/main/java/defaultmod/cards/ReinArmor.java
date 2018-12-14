@@ -67,13 +67,10 @@ public class ReinArmor extends CustomCard {
                 new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         
         if(magic((short) 3)) {
-        	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p,p,new Mana(p,p, 1),1));
+        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new Mana(p,p, -1),-1));
         	
-        	AbstractDungeon.actionManager.addToBottom(new defaultmod.actions.ModifyMagicAction(this.uuid, 1));
-        	
-        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new PlatedArmorPower(p,this.magicNumber),this.magicNumber));
-        	
-        	AbstractDungeon.actionManager.addToBottom(new defaultmod.actions.ModifyMagicAction(this.uuid, -1));	
+        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new PlatedArmorPower(p,this.magicNumber+1),this.magicNumber+1));
+      
         }else {
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new PlatedArmorPower(p,this.magicNumber),this.magicNumber));
@@ -100,7 +97,6 @@ public class ReinArmor extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(UPGRADE_MAGIC);
             this.upgradeMagicNumber(UPGRADE_MAGIC);
             this.initializeDescription();
         }

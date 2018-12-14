@@ -214,7 +214,7 @@ public class DefaultMod
         logger.info("begin editing potions");
        
         // Class Specific Potion If you want your potion to not be class-specific, just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT")
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_lIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefaultEnum.THE_DEFAULT);
+        BaseMod.addPotion(BrainJuice.class, PLACEHOLDER_POTION_lIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, BrainJuice.POTION_ID, TheDefaultEnum.THE_DEFAULT);
       
         logger.info("end editing potions");
     }
@@ -272,6 +272,10 @@ public class DefaultMod
         BaseMod.addCard(new Overhead());
         BaseMod.addCard(new TransMind());
         BaseMod.addCard(new ReinArmor());
+        BaseMod.addCard(new SpecializedShot());
+        BaseMod.addCard(new PowerNap());
+        BaseMod.addCard(new CursedStrike());
+        BaseMod.addCard(new Corrupt());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -332,6 +336,9 @@ public class DefaultMod
 
         final String[] Mana = {"Mana", "mana"};
         BaseMod.addKeyword(Mana, "Used for Powering your cards.");
+        
+        final String[] Decay = {"Decay", "decay"};
+        BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");
     }
 
     // ================ /LOAD THE KEYWORDS/ ===================    

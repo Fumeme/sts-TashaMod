@@ -1,6 +1,6 @@
 {
-"theDefault: PlaceholderPotion": {
-        "NAME": "Placeholder Potion",
-        "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strenght."]
+"theDefault: BrainJuice": {
+        "NAME": "Brain Juice",
+        "DESCRIPTIONS": ["Gain ", " Focus and gain ", " Mana."]
 }
 }

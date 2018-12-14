@@ -41,6 +41,24 @@
 		"NAME": "Reinforce Armor",
 		"DESCRIPTION": "Gain !B! block and gain !M! Plated Armor. NL Magic 3: consume 1 Mana to increase the plated armor you get by 1."
 	},
+	"theDefault: SpecShot": {
+		"NAME": "Specialized Shot",
+		"DESCRIPTION": "Deal !D! damage. NL Magic 3: Apply !M! Poison. NL Magic 5: Apply !M! Poison again and apply !M!-1 Weak."
+	},
+	"theDefault: PowerNap": {
+		"NAME": "Power Nap",
+		"DESCRIPTION": "Consume 1 Mana to Gain !M! Regen. NL Magic 4: Gain an aditional Regen"
+	},
+	"theDefault: CursedStrike": {
+		"NAME": "Cursed Strike",
+		"DESCRIPTION": "Deal !D! damage and gain 1 Poison and !M! Decay."
+	},
+	"theDefault: Corrupt": {
+		"NAME": "Corrupt",
+		"DESCRIPTION": "Gain 1 Poison, Apply 2* !M! Vulnerable and +1 Strength. NL Apply !M! Poison to all enemies twice. "
+	},
+
+
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",
