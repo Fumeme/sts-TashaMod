@@ -50,11 +50,25 @@ public class ShortTermPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer)
      {
     	flash();
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new Mana(this.owner, this.owner, -this.amount), -this.amount));
+    	
+    	if(magic(this.amount)) {
+    		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new Mana(this.owner, this.owner, -this.amount), -this.amount));
+    	}else {
+    		
+    		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new Mana(this.owner, this.owner, -(AbstractDungeon.player.getPower(Mana.POWER_ID).amount)), -(AbstractDungeon.player.getPower(Mana.POWER_ID).amount)));
+    	}
+        
  
   }
     
+    boolean magic (int min) {
+    	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 
+    		 return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
+    		
+    	}
+    	return false;
+    }
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {

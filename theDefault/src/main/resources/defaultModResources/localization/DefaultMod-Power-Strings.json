@@ -16,7 +16,7 @@
         "NAME": "Decay",
         "DESCRIPTIONS": [
           "At the end of your turn, lose #b",
-          " HP, then reduce #yPoison by #b1.",
+          " HP, then reduce #yDecay by #b1.",
           "At the end of its turn, loses #b"
         ]
       },

@@ -57,9 +57,9 @@ public class DefaultMod
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
 
     //This is for the in-game mod settings pannel.
-    private static final String MODNAME = "Default Mod";
-    private static final String AUTHOR = "Gremious";
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String MODNAME = "Unnamed Mod";
+    private static final String AUTHOR = "SacredDiamond";
+    private static final String DESCRIPTION = "Use mana to boost the effectiveness of your cards or unleash powerful cards with painful side effects.";
 
     // =============== INPUT TEXTURE LOCATION =================
 
@@ -248,6 +248,7 @@ public class DefaultMod
         logger.info("Add Variables");
         // Add the Custom Dynamic Variables
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
+        BaseMod.addDynamicVariable(new Magicx2());
         
         logger.info("Add Cards");
         // Add the cards
@@ -331,13 +332,13 @@ public class DefaultMod
         final String[] placeholder = { "keyword", "keywords" };
         BaseMod.addKeyword(placeholder, "Whenever you play a card, gain 1 dexterity this turn only.");
 
-        final String[] magic = {"magic", "Magic"};
+        final String[] magic = {"magic"};
         BaseMod.addKeyword(magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
 
-        final String[] Mana = {"Mana", "mana"};
+        final String[] Mana = {"mana"};
         BaseMod.addKeyword(Mana, "Used for Powering your cards.");
         
-        final String[] Decay = {"Decay", "decay"};
+        final String[] Decay = {"decay"};
         BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");
     }
 

@@ -55,7 +55,7 @@
 	},
 	"theDefault: Corrupt": {
 		"NAME": "Corrupt",
-		"DESCRIPTION": "Gain 1 Poison, Apply 2* !M! Vulnerable and +1 Strength. NL Apply !M! Poison to all enemies twice. "
+		"DESCRIPTION": "Gain 1 Poison, Apply !Mx2! Vulnerable and +1 Strength. NL Apply !M! Poison to all enemies twice. "
 	},
 
 

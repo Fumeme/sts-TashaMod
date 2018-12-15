@@ -12,7 +12,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 /*    */ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 /*    */ import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 /*    */ import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 /*    */ public class DecayPower extends AbstractPower
 /*    */ {
     public static final String POWER_ID = defaultmod.DefaultMod.makeID("DecayPower");
@@ -35,11 +37,6 @@ this.updateDescription();
 /* 37 */     this.isTurnBased = true;
 /*    */   }
 /*    */   
-/*    */   public void playApplyPowerSfx()
-/*    */   {
-/* 42 */     CardCrawlGame.sound.play("POWER_POISON", 0.05F);
-/*    */   }
-/*    */   
 /*    */   public void updateDescription()
 /*    */   {
 /* 47 */     if ((this.owner == null) || (this.owner.isPlayer)) {
@@ -48,25 +45,30 @@ this.updateDescription();
 /* 50 */       this.description = (DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1]);
 /*    */     }
 /*    */   }
-/*    */   
+/*    */   @Override
 /*    */   public void stackPower(int stackAmount)
 /*    */   {
 /* 56 */     super.stackPower(stackAmount);
 /*    */     
 /* 58 */   
-/* 59 */      
+/* 59 */              if (this.amount <= 0) {
+    AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+}
 /*    */     
 /*    */   }
-/*    */   
-/*    */   public void atEndOfTurn()
+/*    */   @Override
+/*    */   public void atEndOfTurn(boolean isPlayer)
 /*    */   {
 /* 65 */     if (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)
 /*    */     {
 /* 67 */       if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
 /* 68 */         flashWithoutSound();
+
 /* 69 */         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
         new DamageInfo(owner, this.amount),
         AbstractGameAction.AttackEffect.POISON));
+
+AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, -1), -1));
 /*    */       }
 /*    */     }
 /*    */   }
