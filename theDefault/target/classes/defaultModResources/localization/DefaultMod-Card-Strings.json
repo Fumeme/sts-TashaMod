@@ -1,9 +1,9 @@
 {
 
 
-	"theDefault: Shot": {
-		"NAME": "Shot",
-		"DESCRIPTION": "Deal !D! damage."
+	"theDefault: QuickDraw": {
+		"NAME": "Quick Draw",
+		"DESCRIPTION": "Deal !D! damage and draw a card"
 	},
 	"theDefault: HairyTrigger": {
 		"NAME": "Hairy Trigger",
@@ -57,6 +57,20 @@
 		"NAME": "Corrupt",
 		"DESCRIPTION": "Gain 1 Poison, Apply !Mx2! Vulnerable and +1 Strength. NL Apply !M! Poison to all enemies twice. "
 	},
+	"theDefault: EmbraceDarkness": {
+		"NAME": "Embrace Darkness",
+		"DESCRIPTION": "gain !M! mana, gain !D! decay and draw !M! card(s)."
+	},
+	"theDefault: MagicArmor": {
+		"NAME": "Magic Armor",
+		"DESCRIPTION": "Consume all of your mana. NL gain !Mp1! plated armor."
+	},
+	"theDefault: InfernalForm": {
+		"NAME": "Infernal Form",
+		"DESCRIPTION": "You do not take damage from Decay. At the end of your turn, gain Mana equal to your Decay. You take twice as much damage from Poison. NL Ethereal(loses Ethereal)."
+	},
+
+
 
 
 

@@ -63,11 +63,14 @@ this.updateDescription();
 /*    */     {
 /* 67 */       if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
 /* 68 */         flashWithoutSound();
-
+			if (owner.hasPower(InfernalFormPower.POWER_ID)) {
 /* 69 */         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
         new DamageInfo(owner, this.amount),
         AbstractGameAction.AttackEffect.POISON));
-
+			} else {AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
+			        new DamageInfo(owner, 0),
+			        AbstractGameAction.AttackEffect.POISON));
+			}
 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, -1), -1));
 /*    */       }
 /*    */     }

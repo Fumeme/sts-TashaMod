@@ -249,6 +249,7 @@ public class DefaultMod
         // Add the Custom Dynamic Variables
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new Magicx2());
+        BaseMod.addDynamicVariable(new MagicP1());
         
         logger.info("Add Cards");
         // Add the cards
@@ -263,7 +264,7 @@ public class DefaultMod
         BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
         
-        BaseMod.addCard(new Shot());
+        BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
         BaseMod.addCard(new Channel());
         BaseMod.addCard(new Focusfire());
@@ -277,6 +278,10 @@ public class DefaultMod
         BaseMod.addCard(new PowerNap());
         BaseMod.addCard(new CursedStrike());
         BaseMod.addCard(new Corrupt());
+        BaseMod.addCard(new InfernalForm());
+        
+        
+        
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
