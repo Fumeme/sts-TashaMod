@@ -28,5 +28,5 @@
 "theDefault: InfernalFormPower": {
         "NAME": "Infernal Form",
         "DESCRIPTIONS": ["double your poison damage, take no decay damage. NL at the end of your turn, gain Mana equal to your decay."]
-},
+}
 }
