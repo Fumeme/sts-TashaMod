@@ -284,7 +284,7 @@ public class DefaultMod
         BaseMod.addCard(new SpreadCorruption());
         BaseMod.addCard(new LongTerm());
         BaseMod.addCard(new MagicArmor());
-        BaseMod.addCard(new RestoringStrike());
+
         
         
         logger.info("Making sure the cards are unlocked.");
