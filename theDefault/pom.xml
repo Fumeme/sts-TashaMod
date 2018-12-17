@@ -32,8 +32,14 @@
             <scope>system</scope>
             <systemPath>${basedir}/../../lib/BaseMod.jar</systemPath>
         </dependency>
-
-    </dependencies>
+        <dependency>
+	        <groupId>stslib</groupId>
+		      <artifactId>StSLib</artifactId>
+		      <version>1.0.0</version>
+		      <scope>system</scope>
+          <systemPath>${basedir}/../../lib/StSLib.jar</systemPath>
+	      </dependency>
+</dependencies>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

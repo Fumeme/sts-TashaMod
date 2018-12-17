@@ -279,7 +279,11 @@ public class DefaultMod
         BaseMod.addCard(new CursedStrike());
         BaseMod.addCard(new Corrupt());
         BaseMod.addCard(new InfernalForm());
-        
+        BaseMod.addCard(new Embrace());
+        BaseMod.addCard(new SealTheWounds());
+        BaseMod.addCard(new ToxicWall());
+        BaseMod.addCard(new SpreadCorruption());
+        BaseMod.addCard(new LongTerm());
         
         
         

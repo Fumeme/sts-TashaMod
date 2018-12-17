@@ -48,13 +48,16 @@ public class InfernalFormPower extends AbstractPower {
   }
 
     // At the end of the turn, Remove gained dexterity.
-     
-     public void atStartofTurn() {
+     @Override
+     public void atStartOfTurn() {
     	 
     	 if (owner.hasPower(PoisonPower.POWER_ID)) {
     		 
+    		 for (short i = 0; i< this.amount; i++) {
+    		 
     		 AbstractDungeon.actionManager.addToBottom(new PoisonLoseHpAction(this.owner, this.owner, this.owner.getPower(PoisonPower.POWER_ID).amount, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.POISON));
-    	 }
+    		 }
+    		 }
      }
      
      

@@ -69,10 +69,22 @@
 		"NAME": "Infernal Form",
 		"DESCRIPTION": "You do not take damage from Decay. At the end of your turn, gain Mana equal to your Decay. You take twice as much damage from Poison. NL Ethereal(loses Ethereal)."
 	},
-
-
-
-
+	"theDefault: SealTheWounds": {
+		"NAME": "Seal Wounds",
+		"DESCRIPTION": "Convert half(all) of your poison into decay."
+	},
+	"theDefault: ToxicWall": {
+		"NAME": "Toxic Wall",
+		"DESCRIPTION": "Gain !B! block. NL This turn upon being attacked gain 1 Decay and apply !M! Poison to the attacker."
+	},
+	"theDefault: SpreadCorruption": {
+		"NAME": "Spread Corruption",
+		"DESCRIPTION": "At the Start of your turn, consume !M! Mana to apply !M! poison and decay to everyone."
+	},
+	"theDefault: LongTerm": {
+		"NAME": "Long Term Investment",
+		"DESCRIPTION": "At the end of this turn and next turn, lose half(a third) of your Mana. At the start of the following 3 turns, gain half(two thirds) of your current Mana."
+	},
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",

@@ -28,5 +28,22 @@
 "theDefault: InfernalFormPower": {
         "NAME": "Infernal Form",
         "DESCRIPTIONS": ["double your poison damage, take no decay damage. NL at the end of your turn, gain Mana equal to your decay."]
+},
+"theDefault: ToxicWallPower": {
+        "NAME": "Toxic Wall",
+        "DESCRIPTIONS": ["upon being attacked, gain 1 decay and apply poison to the attacker equal to the amount of stacks."]
+},
+"theDefault: LongTermDebuff": {
+        "NAME": "Long Term Debuff",
+        "DESCRIPTIONS": ["at the start of your turn, lose half of your mana."]
+},
+"theDefault: LongTermBuff": {
+        "NAME": "Long Term Buff",
+        "DESCRIPTIONS": ["at the start of your turn, gain mana equal to half of the mana when you played Long Term Investment."]
+},
+"theDefault: SpreadCorruptionPower": {
+        "NAME": "Spreading Corruption",
+        "DESCRIPTIONS": ["At the start of your turn, consume ", "Mana and apply", "Poison and Decay to everyone."]
 }
+
 }
