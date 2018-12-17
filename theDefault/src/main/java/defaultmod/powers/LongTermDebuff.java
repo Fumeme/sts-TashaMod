@@ -42,9 +42,17 @@ int currM;
     @Override
     public void atStartOfTurn() {
     
+    	if(this.amount <1) {
+    		
+    		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
+    	            new LongTermBuff(owner, owner, 3, this.currM ), 3));
+    		
+    		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+    	}else {
+    	
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
                 new Mana(owner, owner, -(this.currM)/2), -(this.currM/2)));
-    
+    	}
     }
     // At the end of the turn, Remove gained dexterity.
     @Override
@@ -52,21 +60,16 @@ int currM;
     	
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction( owner, owner , new LongTermDebuff(owner, owner, -1, currM)));
     	
-if(this.amount <1) {
-	
-	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-            new LongTermBuff(owner, owner, 3, this.currM ), 3));
-	
-	AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-}
+
     }
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-
+        if (this.amount <= 0) {
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
-        
+        }
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
