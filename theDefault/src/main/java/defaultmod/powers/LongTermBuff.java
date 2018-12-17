@@ -44,7 +44,7 @@ this.currM = M;
     public void atStartOfTurn() {
     
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-                new Mana(owner, owner, (owner.getPower(Mana.POWER_ID).amount)/2), (owner.getPower(Mana.POWER_ID).amount)/2));
+                new Mana(owner, owner, (this.currM)/2), (this.currM)/2));
     
     }
 

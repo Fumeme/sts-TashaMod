@@ -43,16 +43,19 @@ int currM;
     public void atStartOfTurn() {
     
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-                new Mana(owner, owner, (owner.getPower(Mana.POWER_ID).amount)/2), (owner.getPower(Mana.POWER_ID).amount)/2));
+                new Mana(owner, owner, -(this.currM)/2), -(this.currM/2)));
     
     }
     // At the end of the turn, Remove gained dexterity.
     @Override
     public void atEndOfTurn(final boolean isPlayer) {
+    	
+    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction( owner, owner , new LongTermDebuff(owner, owner, -1, currM)));
+    	
 if(this.amount <1) {
 	
 	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-            new LongTermBuff(owner, owner, 3, currM ), 3));
+            new LongTermBuff(owner, owner, 3, this.currM ), 3));
 	
 	AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 }
