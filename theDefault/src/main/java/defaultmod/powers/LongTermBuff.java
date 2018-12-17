@@ -19,7 +19,7 @@ import defaultmod.DefaultMod;
 public class LongTermBuff extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = defaultmod.DefaultMod.makeID("Mana");
+    public static final String POWER_ID = defaultmod.DefaultMod.makeID("LongTermBuff");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
