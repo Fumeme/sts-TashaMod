@@ -60,7 +60,7 @@ public class MagicArmor extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     	
-   	AbstractDungeon.player.getPower(Mana.POWER_ID).amount = this.magicNumber;
+ this.magicNumber =  	AbstractDungeon.player.getPower(Mana.POWER_ID).amount;
     			
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new Mana(p, p, -this.magicNumber), -this.magicNumber));

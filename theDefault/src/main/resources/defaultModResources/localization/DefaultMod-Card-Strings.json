@@ -61,10 +61,6 @@
 		"NAME": "Embrace Darkness",
 		"DESCRIPTION": "gain !M! mana, gain !D! decay and draw !M! card(s)."
 	},
-	"theDefault: MagicArmor": {
-		"NAME": "Magic Armor",
-		"DESCRIPTION": "Consume all of your mana. NL gain !Mp1! plated armor."
-	},
 	"theDefault: InfernalForm": {
 		"NAME": "Infernal Form",
 		"DESCRIPTION": "You do not take damage from Decay. At the end of your turn, gain Mana equal to your Decay. You take twice as much damage from Poison. NL Ethereal(loses Ethereal)."
@@ -85,6 +81,15 @@
 		"NAME": "Long Term Investment",
 		"DESCRIPTION": "At the end of this turn and next turn, lose half(a third) of your Mana. At the start of the following 3 turns, gain half(two thirds) of your current Mana."
 	},
+	"theDefault: RestoringStrike": {
+		"NAME": "Restoring Strike",
+		"DESCRIPTION": "Deal !D! damage and apply !M! Artifact. NL Gain !M! Mana and Nullify."
+	},
+	"theDefault: MagicArmor": {
+		"NAME": "Magic Armor",
+		"DESCRIPTION": "convert all of your mana into plated armor."
+	},
+
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",

@@ -56,6 +56,7 @@ public class CursedStrike extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.

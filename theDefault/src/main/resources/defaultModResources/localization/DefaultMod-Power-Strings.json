@@ -41,6 +41,10 @@
         "NAME": "Long Term Buff",
         "DESCRIPTIONS": ["at the start of your turn, gain mana equal to half of the mana when you played Long Term Investment."]
 },
+"theDefault: NullifyPower": {
+        "NAME": "Nullify",
+        "DESCRIPTIONS": ["Negates the next buff."]
+},
 "theDefault: SpreadCorruptionPower": {
         "NAME": "Spreading Corruption",
         "DESCRIPTIONS": ["At the start of your turn, consume ", "Mana and apply", "Poison and Decay to everyone."]

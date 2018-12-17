@@ -54,7 +54,7 @@ public class ToxicWallPower extends AbstractPower {
     /*    */   @Override
     /*    */   public void atStartOfTurn()
     /*    */   {
-    /* 60 */     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this.POWER_ID));
+    /* 60 */     AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ToxicWallPower.POWER_ID));
     /*    */   }
     /*    */   
     /*    */ @Override

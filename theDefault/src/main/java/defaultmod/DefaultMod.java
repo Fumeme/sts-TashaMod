@@ -257,7 +257,6 @@ public class DefaultMod
         BaseMod.addCard(new DefaultAttackWithVariable());
         BaseMod.addCard(new DefaultCommonSkill());
         BaseMod.addCard(new DefaultCommonPower());
-        BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
         BaseMod.addCard(new DefaultRareAttack());
@@ -284,7 +283,8 @@ public class DefaultMod
         BaseMod.addCard(new ToxicWall());
         BaseMod.addCard(new SpreadCorruption());
         BaseMod.addCard(new LongTerm());
-        
+        BaseMod.addCard(new MagicArmor());
+        BaseMod.addCard(new RestoringStrike());
         
         
         logger.info("Making sure the cards are unlocked.");
