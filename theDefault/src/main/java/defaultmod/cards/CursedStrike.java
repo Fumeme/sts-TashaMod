@@ -48,7 +48,7 @@ public class CursedStrike extends CustomCard {
     private static final int COST = 1;
     private static final int DAMAGE = 11;
     private static final int UPGRADE_PLUS_DMG = 5;
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
 
@@ -64,7 +64,6 @@ public class CursedStrike extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
  
         
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonPower(p, p, 1), 1));
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DecayPower(p, p, this.magicNumber), this.magicNumber));
         

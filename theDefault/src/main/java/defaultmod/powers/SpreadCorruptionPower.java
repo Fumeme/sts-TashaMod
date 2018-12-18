@@ -48,7 +48,7 @@ public class SpreadCorruptionPower extends AbstractPower {
 						new ApplyPowerAction(owner, owner, new Mana(owner, owner, -this.amount), -this.amount));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(owner, owner, new PoisonPower(owner, owner, this.amount), this.amount));
+						new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, this.amount), this.amount));
 
 
 				for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
@@ -64,10 +64,6 @@ public class SpreadCorruptionPower extends AbstractPower {
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
 						new Mana(owner, owner, -this.owner.getPower(defaultmod.powers.Mana.POWER_ID).amount),
 						-this.owner.getPower(defaultmod.powers.Mana.POWER_ID).amount));
-
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-						new PoisonPower(owner, owner, this.owner.getPower(defaultmod.powers.Mana.POWER_ID).amount),
-						this.owner.getPower(defaultmod.powers.Mana.POWER_ID).amount));
 
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
 						new DecayPower(owner, owner, this.owner.getPower(defaultmod.powers.Mana.POWER_ID).amount),

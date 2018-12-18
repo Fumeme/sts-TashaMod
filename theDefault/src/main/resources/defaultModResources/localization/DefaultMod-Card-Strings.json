@@ -51,11 +51,11 @@
 	},
 	"theDefault: CursedStrike": {
 		"NAME": "Cursed Strike",
-		"DESCRIPTION": "Deal !D! damage and gain 1 Poison and !M! Decay."
+		"DESCRIPTION": "Deal !D! damage and !M! Decay."
 	},
 	"theDefault: Corrupt": {
 		"NAME": "Corrupt",
-		"DESCRIPTION": "Gain 1 Poison, Apply !Mx2! Vulnerable and +1 Strength. NL Apply !M! Poison to all enemies twice. "
+		"DESCRIPTION": "Gain 1 Poison, Apply !Mx2! Vulnerable and +1 Strength. NL Apply !M! Poison and !M! decay to all enemies. "
 	},
 	"theDefault: EmbraceDarkness": {
 		"NAME": "Embrace Darkness",
@@ -67,7 +67,7 @@
 	},
 	"theDefault: SealTheWounds": {
 		"NAME": "Seal Wounds",
-		"DESCRIPTION": "Convert half(all) of your poison into decay."
+		"DESCRIPTION": "Convert half of your poison into decay."
 	},
 	"theDefault: ToxicWall": {
 		"NAME": "Toxic Wall",
@@ -88,6 +88,10 @@
 	"theDefault: MagicArmor": {
 		"NAME": "Magic Armor",
 		"DESCRIPTION": "convert all of your mana into plated armor."
+	},
+	"theDefault: InnerHeaven": {
+		"NAME": "Inner Heaven",
+		"DESCRIPTION": "Lose !M! Decay. NL Gain 1 Mana per 5(4) Decay lost. NL Gain 1 Energy per 10(9) Decay lost."
 	},
 
 

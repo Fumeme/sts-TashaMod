@@ -45,52 +45,28 @@ public class SealTheWounds extends CustomCard {
 	private static final CardType TYPE = CardType.SKILL;
 	public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-	private static final int COST = 1;
+	private static final int COST = 2;
 	private static final int MAGIC = 1;
 	private static int CurrPoi;
 	// /STAT DECLARATION/
 
 	public SealTheWounds() {
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-		this.magicNumber = this.baseMagicNumber = MAGIC;
+		this.exhaust = true;
 	}
 
 	// Actions the card should do.
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		if (p.hasPower(PoisonPower.POWER_ID)) {
+		if (p.hasPower(DecayPower.POWER_ID)) {
 
-			if (p.getPower(PoisonPower.POWER_ID).amount > 0) {
-
-				if (!this.upgraded) {
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-							new DecayPower(p, p, (p.getPower(PoisonPower.POWER_ID).amount / 2)),
-							p.getPower(PoisonPower.POWER_ID).amount / 2));
-
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-							new PoisonPower(p, p, -(p.getPower(PoisonPower.POWER_ID).amount / 2)),
-							-p.getPower(PoisonPower.POWER_ID).amount / 2));
-
-				} else {
-
-					AbstractDungeon.actionManager.addToBottom(
-							new ApplyPowerAction(p, p, new DecayPower(p, p, (p.getPower(PoisonPower.POWER_ID).amount)),
-									p.getPower(PoisonPower.POWER_ID).amount));
-
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-							new PoisonPower(p, p, -(p.getPower(PoisonPower.POWER_ID).amount)),
-							-p.getPower(PoisonPower.POWER_ID).amount));
-
-				}
-
-				if (p.getPower(PoisonPower.POWER_ID).amount < 1) {
-
-					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Poison"));
-				}
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, DecayPower.POWER_ID));
+			
+			
 			}
 		}
-	}
+	
 
 	// Which card to return when making a copy of this card.
 	@Override
@@ -103,7 +79,7 @@ public class SealTheWounds extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeMagicNumber(1);
+			this.updateCost(-1);
 			this.initializeDescription();
 		}
 	}

@@ -15,6 +15,7 @@ import basemod.abstracts.CustomCard;
 
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
+import defaultmod.powers.DecayPower;
 
 public class Corrupt extends CustomCard {
 
@@ -65,14 +66,14 @@ public class Corrupt extends CustomCard {
                 new VulnerablePower(m, this.magicNumber+this.magicNumber, false), this.magicNumber+this.magicNumber));
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new PoisonPower(p, p, 1), 1));
+                new DecayPower(p, p, 1), 1));
     
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new StrengthPower(m, this.strGain), this.strGain));
         
             for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new PoisonPower(mo, p, this.magicNumber), this.magicNumber));
+                        new DecayPower(mo, p, this.magicNumber), this.magicNumber));
 
             	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
                         new PoisonPower(mo, p, this.magicNumber), this.magicNumber));

@@ -47,8 +47,8 @@ public class InnerHeaven extends CustomCard {
 	private static final int COST = 1;
 	private static final int MAGIC = 10;
 	private static final int UPGRADE_MAGIC = 10;
-private static final int Manathres = 5;
-private static final int Energythres = 10;
+private static int Manathres = 5;
+private static int Energythres = 10;
 	// /STAT DECLARATION/
 
 	public InnerHeaven() {
@@ -67,9 +67,9 @@ private static final int Energythres = 10;
 						new ApplyPowerAction(p, p, new DecayPower(p, p, -this.magicNumber), -this.magicNumber));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new Mana(p, p, this.magicNumber / InnerHeaven.Manathres), -this.magicNumber / InnerHeaven.Manathres));
+						new ApplyPowerAction(p, p, new Mana(p, p, this.magicNumber / this.Manathres), -this.magicNumber / this.Manathres));
 				
-				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.magicNumber/InnerHeaven.Energythres));
+				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.magicNumber/this.Energythres));
 
 			}else {
 				
@@ -77,9 +77,9 @@ private static final int Energythres = 10;
 						new ApplyPowerAction(p, p, new DecayPower(p, p, -p.getPower(DecayPower.POWER_ID).amount), -p.getPower(DecayPower.POWER_ID).amount));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new Mana(p, p, -p.getPower(DecayPower.POWER_ID).amount / InnerHeaven.Manathres), -p.getPower(DecayPower.POWER_ID).amount / InnerHeaven.Manathres));
+						new ApplyPowerAction(p, p, new Mana(p, p, -p.getPower(DecayPower.POWER_ID).amount / this.Manathres), -p.getPower(DecayPower.POWER_ID).amount / this.Manathres));
 				
-				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-p.getPower(DecayPower.POWER_ID).amount/InnerHeaven.Energythres));
+				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-p.getPower(DecayPower.POWER_ID).amount/this.Energythres));
 				
 			}
 		}
@@ -96,6 +96,8 @@ private static final int Energythres = 10;
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
+			--this.Manathres;
+			--this.Energythres;
 			this.upgradeMagicNumber(UPGRADE_MAGIC);
 			this.initializeDescription();
 		}
