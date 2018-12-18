@@ -47,7 +47,7 @@
 },
 "theDefault: SpreadCorruptionPower": {
         "NAME": "Spreading Corruption",
-        "DESCRIPTIONS": ["At the start of your turn, consume ", "Mana and apply", "Poison and Decay to everyone."]
+        "DESCRIPTIONS": ["At the start of your turn, consume ", "Mana and apply", "Decay to everyone and apply", " Poison to all enemies."]
 }
 
 }

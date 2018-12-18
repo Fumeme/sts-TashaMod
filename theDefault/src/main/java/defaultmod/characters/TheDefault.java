@@ -126,18 +126,16 @@ public class TheDefault extends CustomPlayer {
         logger.info("Begind loading started Deck strings");
 
         retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultUncommonAttack.ID);
-        retVal.add(DefaultRareAttack.ID);
-
-        retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultUncommonSkill.ID);
-        retVal.add(DefaultRareSkill.ID);
-
-        retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        retVal.add(DefaultRarePower.ID);
+        retVal.add(DefaultCommonAttack.ID);
+        retVal.add(DefaultCommonAttack.ID);
         
-        retVal.add(DefaultAttackWithVariable.ID);
+        retVal.add(DefaultCommonSkill.ID);
+        retVal.add(DefaultCommonSkill.ID);
+        retVal.add(DefaultCommonSkill.ID);
+        
+        retVal.add(CursedStrike.ID);
+        retVal.add(Focusfire.ID);
+        retVal.add(Channel.ID);
 
         return retVal;
     }

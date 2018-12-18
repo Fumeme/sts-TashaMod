@@ -50,8 +50,6 @@ public class SpreadCorruptionPower extends AbstractPower {
 				AbstractDungeon.actionManager.addToBottom(
 						new ApplyPowerAction(owner, owner, new PoisonPower(owner, owner, this.amount), this.amount));
 
-				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, this.amount), this.amount));
 
 				for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
 					if ((!monster.isDead) && (!monster.isDying)) {
@@ -106,7 +104,7 @@ public class SpreadCorruptionPower extends AbstractPower {
 	// in keyword(s))
 	@Override
 	public void updateDescription() {
-		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
 	}
 
 }
