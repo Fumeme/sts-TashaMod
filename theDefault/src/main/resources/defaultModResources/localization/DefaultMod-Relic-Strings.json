@@ -6,6 +6,14 @@
 			"Gain +1 [R] ."
 		]
 	},
+	"theDefault: ManaReactor": {
+		"NAME": "Mana Reactor",
+		"FLAVOR": "This odd artifact generates mana ehenever the holder takes damage... weird.",
+		"DESCRIPTIONS": [
+			"Gain +1 Mana whenever you get hit."
+		]
+	},
+
 	"theDefault: PlaceholderRelic2": {
 		"NAME": "Placeholder Relic 2",
 		"FLAVOR": "You feel stronger.",

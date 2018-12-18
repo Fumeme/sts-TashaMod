@@ -233,6 +233,8 @@ public class DefaultMod
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+        
+        BaseMod.addRelic(new ManaReactor(), RelicType.SHARED);
 
         logger.info("Done adding relics!");
     }
@@ -285,7 +287,8 @@ public class DefaultMod
         BaseMod.addCard(new LongTerm());
         BaseMod.addCard(new MagicArmor());
         BaseMod.addCard(new InnerHeaven());
-        
+        BaseMod.addCard(new SappingStrike());
+        BaseMod.addCard(new Overload());        
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

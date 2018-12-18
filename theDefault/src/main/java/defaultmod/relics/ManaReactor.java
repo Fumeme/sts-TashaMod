@@ -1,0 +1,60 @@
+package defaultmod.relics;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+
+import basemod.abstracts.CustomRelic;
+import defaultmod.DefaultMod;
+import defaultmod.powers.DecayPower;
+import defaultmod.powers.Mana;
+
+public class ManaReactor extends CustomRelic {
+    
+    /*
+     * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
+     * 
+     * Gain 1 energy.
+     */
+
+    // ID, images, text.
+    public static final String ID = defaultmod.DefaultMod.makeID("ManaReactor");
+    public static final String IMG = DefaultMod.makePath(DefaultMod.PLACEHOLDER_RELIC);
+    public static final String OUTLINE = DefaultMod.makePath(DefaultMod.PLACEHOLDER_RELIC_OUTLINE);
+
+    public ManaReactor() {
+        super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.COMMON, LandingSound.MAGICAL);
+    }
+
+    // Flash at the start of Battle.
+    @Override
+    public void atBattleStartPreDraw() {
+        flash();
+    }
+
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null) {
+            this.flash();
+            
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new Mana(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+        }
+
+        return damageAmount;
+    }
+    // Description
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+    // Which relic to return on making a copy of this relic.
+    @Override
+    public AbstractRelic makeCopy() {
+        return new ManaReactor();
+    }
+}

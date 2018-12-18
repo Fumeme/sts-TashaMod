@@ -47,8 +47,8 @@ public class InnerHeaven extends CustomCard {
 	private static final int COST = 1;
 	private static final int MAGIC = 10;
 	private static final int UPGRADE_MAGIC = 10;
-private static int Manathres = 5;
-private static int Energythres = 10;
+private  int Manathres = 5;
+private  int Energythres = 10;
 	// /STAT DECLARATION/
 
 	public InnerHeaven() {
@@ -67,7 +67,7 @@ private static int Energythres = 10;
 						new ApplyPowerAction(p, p, new DecayPower(p, p, -this.magicNumber), -this.magicNumber));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new Mana(p, p, this.magicNumber / this.Manathres), -this.magicNumber / this.Manathres));
+						new ApplyPowerAction(p, p, new Mana(p, p, this.magicNumber / this.Manathres), this.magicNumber / this.Manathres));
 				
 				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.magicNumber/this.Energythres));
 
@@ -77,9 +77,9 @@ private static int Energythres = 10;
 						new ApplyPowerAction(p, p, new DecayPower(p, p, -p.getPower(DecayPower.POWER_ID).amount), -p.getPower(DecayPower.POWER_ID).amount));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new Mana(p, p, -p.getPower(DecayPower.POWER_ID).amount / this.Manathres), -p.getPower(DecayPower.POWER_ID).amount / this.Manathres));
+						new ApplyPowerAction(p, p, new Mana(p, p, p.getPower(DecayPower.POWER_ID).amount / this.Manathres), p.getPower(DecayPower.POWER_ID).amount / this.Manathres));
 				
-				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-p.getPower(DecayPower.POWER_ID).amount/this.Energythres));
+				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(p.getPower(DecayPower.POWER_ID).amount/this.Energythres));
 				
 			}
 		}

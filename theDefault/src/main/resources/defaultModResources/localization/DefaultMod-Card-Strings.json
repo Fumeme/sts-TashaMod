@@ -67,7 +67,7 @@
 	},
 	"theDefault: SealTheWounds": {
 		"NAME": "Seal Wounds",
-		"DESCRIPTION": "Convert half of your poison into decay."
+		"DESCRIPTION": "Lose all Decay. NL Exaust"
 	},
 	"theDefault: ToxicWall": {
 		"NAME": "Toxic Wall",
@@ -81,10 +81,6 @@
 		"NAME": "Long Term Investment",
 		"DESCRIPTION": "At the end of this turn and next turn, lose half(a third) of your Mana. At the start of the following 3 turns, gain half(two thirds) of your current Mana."
 	},
-	"theDefault: RestoringStrike": {
-		"NAME": "Restoring Strike",
-		"DESCRIPTION": "Deal !D! damage and apply !M! Artifact. NL Gain !M! Mana and Nullify."
-	},
 	"theDefault: MagicArmor": {
 		"NAME": "Magic Armor",
 		"DESCRIPTION": "convert all of your mana into plated armor."
@@ -92,6 +88,14 @@
 	"theDefault: InnerHeaven": {
 		"NAME": "Inner Heaven",
 		"DESCRIPTION": "Lose !M! Decay. NL Gain 1 Mana per 5(4) Decay lost. NL Gain 1 Energy per 10(9) Decay lost."
+	},
+	"theDefault: Overload": {
+		"NAME": "Overload",
+		"DESCRIPTION": "Gain 1 Mana. NL Magic 5(3): gain 2 Mana. NL Magic 15(10): Double your Mana."
+	},
+	"theDefault: SappingStrike": {
+		"NAME": "Sapping Strike",
+		"DESCRIPTION": "Deal !D! damage and gain !M! Mana. NL Magic 3: Gain 1 MAna"
 	},
 
 
