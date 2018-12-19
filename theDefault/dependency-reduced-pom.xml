@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>defaultmod</groupId>
-  <artifactId>DefaultMod</artifactId>
-  <name>DefaultMod</name>
-  <version>1.0.0</version>
-  <description>A base for Slay the Spire to start your own mod from.</description>
+  <groupId>tashamod</groupId>
+  <artifactId>TashaMod</artifactId>
+  <name>The Corrupted</name>
+  <version>0.0.1</version>
+  <description>Channel mana to give your cards maximum value or use strong cards with downsides</description>
   <build>
-    <finalName>DefaultMod</finalName>
+    <finalName>TashaMod</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>2.4.2</version>
         <executions>
           <execution>
-            <id>DefaultMod</id>
+            <id>TashaMod</id>
             <phase>package</phase>
             <goals>
               <goal>shade</goal>
@@ -22,7 +22,7 @@
             <configuration>
               <filters>
                 <filter>
-                  <artifact>defaultmod:DefaultMod</artifact>
+                  <artifact>tashamod:TashaMod</artifact>
                 </filter>
               </filters>
             </configuration>

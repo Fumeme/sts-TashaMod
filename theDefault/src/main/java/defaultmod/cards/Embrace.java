@@ -59,7 +59,7 @@ public class Embrace extends CustomCard {
     public Embrace() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.baseDamage = DecayCnt;
+      
     }
 
 
@@ -70,7 +70,7 @@ public class Embrace extends CustomCard {
                 new Mana(p, p, this.magicNumber), this.magicNumber));
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DecayPower(p, p, this.damage), this.damage));
+                new DecayPower(p, p, this.DecayCnt), this.DecayCnt));
         
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(p, this.magicNumber));
   
@@ -91,7 +91,7 @@ public class Embrace extends CustomCard {
             this.upgradeName();
             this.upgradeMagicNumber(UPGRADE_MAGIC);
             this.initializeDescription();
-            this.upgradeDamage(-1);
+            --this.DecayCnt;
         }
     }
 }
