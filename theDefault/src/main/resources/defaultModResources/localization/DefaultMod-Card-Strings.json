@@ -95,7 +95,15 @@
 	},
 	"theDefault: SappingStrike": {
 		"NAME": "Sapping Strike",
-		"DESCRIPTION": "Deal !D! damage and gain !M! Mana. NL Magic 3: Gain 1 MAna"
+		"DESCRIPTION": "Deal !D! damage and gain !M! Mana. NL Magic 3: Gain 1 Mana"
+	},
+	"theDefault: DarkmagicSlice": {
+		"NAME": "Darkmagic Slice",
+		"DESCRIPTION": "Deal !D! damage. NL Magic 3: Does 5 aditional damage. NL magic 15: double damage."
+	},
+	"theDefault: ManaBurst": {
+		"NAME": "Mana Burst",
+		"DESCRIPTION": "Consume !M! Mana to do !D! Damage 3 times."
 	},
 
 

@@ -46,10 +46,6 @@ public class SealTheWounds extends CustomCard {
 	public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
 	private static final int COST = 2;
-	private static final int MAGIC = 1;
-	private static int CurrPoi;
-	// /STAT DECLARATION/
-
 	public SealTheWounds() {
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		this.exhaust = true;

@@ -289,6 +289,8 @@ public class DefaultMod
         BaseMod.addCard(new InnerHeaven());
         BaseMod.addCard(new SappingStrike());
         BaseMod.addCard(new Overload());        
+        BaseMod.addCard(new DarkmagicSlice()); 
+        BaseMod.addCard(new ManaBurst()); 
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

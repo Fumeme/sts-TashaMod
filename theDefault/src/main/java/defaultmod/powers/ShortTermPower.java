@@ -42,13 +42,15 @@ public class ShortTermPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
 
+    	
     	flash();
     	AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-  
+    	
     }
     @Override
     public void atEndOfTurn(boolean isPlayer)
      {
+    	if(owner.hasPower(Mana.POWER_ID)) {
     	flash();
     	
     	if(magic(this.amount)) {
@@ -57,7 +59,7 @@ public class ShortTermPower extends AbstractPower {
     		
     		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(this.owner, this.owner, new Mana(this.owner, this.owner, -(AbstractDungeon.player.getPower(Mana.POWER_ID).amount)), -(AbstractDungeon.player.getPower(Mana.POWER_ID).amount)));
     	}
-        
+    	}
  
   }
     
