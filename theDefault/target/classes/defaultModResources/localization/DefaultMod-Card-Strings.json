@@ -110,6 +110,14 @@
 		"DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay. NL Exaust",
 		"UPGRADE_DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay."
 	},
+	"theDefault: EndlessTorment": {
+		"NAME": "Endless Torment",
+		"DESCRIPTION": "Deal !D! damage and apply 2 decay to all enemies !M! times NL corruption 6: apply 6 poison and 1 weak to all enemies",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 2 decay to all enemies !M! times NL corruption 6: apply 6 poison and 2 weak to all enemies"
+	},
+
+
+
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",

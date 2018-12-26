@@ -292,7 +292,7 @@ public class DefaultMod
         BaseMod.addCard(new DarkmagicSlice()); 
         BaseMod.addCard(new ManaBurst()); 
         BaseMod.addCard(new BreakTheseCuffs()); 
-        
+        BaseMod.addCard(new EndlessTorment()); 
         
         
         logger.info("Making sure the cards are unlocked.");

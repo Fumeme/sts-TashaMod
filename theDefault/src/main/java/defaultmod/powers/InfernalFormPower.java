@@ -69,7 +69,7 @@ public class InfernalFormPower extends AbstractPower {
     		
     		
     		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-                    new Mana(owner, owner, owner.getPower(defaultmod.powers.DecayPower.POWER_ID).amount), owner.getPower(defaultmod.powers.DecayPower.POWER_ID).amount));
+                    new Mana(owner, owner, owner.getPower(defaultmod.powers.DecayPower.POWER_ID).amount*this.amount), owner.getPower(defaultmod.powers.DecayPower.POWER_ID).amount*this.amount));
     			
     		
     		
