@@ -19,90 +19,99 @@ import basemod.abstracts.CustomCard;
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
 import defaultmod.powers.DecayPower;
+import defaultmod.powers.Mana;
 
 public class EndlessTorment extends CustomCard {
 
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     * 
-     * for each loop x2" "Apply 1 Vulnerable to all enemies, 2(3) times.
-     */
+	/*
+	 * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
+	 * 
+	 * for each loop x2" "Apply 1 Vulnerable to all enemies, 2(3) times.
+	 */
 
-    // TEXT DECLARATION 
+	// TEXT DECLARATION
 
-    public static final String ID = defaultmod.DefaultMod.makeID("EndlessTorment");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = DefaultMod.makePath(DefaultMod.DEFAULT_RARE_SKILL);
+	public static final String ID = defaultmod.DefaultMod.makeID("EndlessTorment");
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+	public static final String IMG = DefaultMod.makePath(DefaultMod.DEFAULT_RARE_SKILL);
 
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String NAME = cardStrings.NAME;
+	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-    // /TEXT DECLARATION/
+	// /TEXT DECLARATION/
 
-    
-    // STAT DECLARATION 	
+	// STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+	private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+	private static final CardType TYPE = CardType.ATTACK;
+	public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-    private static final int COST = 1;
+	private static final int COST = 1;
 
+	private int AMOUNT = 3;
 
-    private int AMOUNT = 3;
+	// /STAT DECLARATION/
 
-    // /STAT DECLARATION/
+	public EndlessTorment() {
+		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		this.baseMagicNumber = this.magicNumber = AMOUNT;
+		this.baseDamage = 2;
+		this.isMultiDamage = true;
+	}
 
-    
-    public EndlessTorment() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = this.magicNumber = AMOUNT;
-        this.damage = 2;
-        this.isMultiDamage = true;
-    }
+	// Actions the card should do.
+	@Override
+	public void use(AbstractPlayer p, AbstractMonster m) {
 
-    // Actions the card should do.
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    	
-    	for(short i = 0; i<this.magicNumber; i++) {
-    	
-    	
-    	AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common
-    			.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new DecayPower(p, m, 2), 2));
-    
-    	}
+		for (short i = 0; i < this.magicNumber; i++) {
 
-    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new PoisonPower(p, m, 6), 6));
-    	
-    	if(this.upgraded) {
-    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new WeakPower(m, 1, false), 1));
-    	}else {
-        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new WeakPower(m, 2, false), 2));
-    		
-    	}
-    }
+			for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+				AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(mo,
+						new DamageInfo(p, this.damage, this.damageTypeForTurn),
+						AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
-    // Which card to return when making a copy of this card.
-    @Override
-    public AbstractCard makeCopy() {
-        return new EndlessTorment();
-    }
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new DecayPower(p, mo, 2), 2));
 
-    //Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeMagicNumber(1);
-            this.initializeDescription();
-        }
-    }
+				if (Corrupt(6)) {
+
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(p, mo, 6), 6));
+
+					if (!this.upgraded) {
+						AbstractDungeon.actionManager
+								.addToBottom(new ApplyPowerAction(m, p, new WeakPower(mo, 1, false), 1));
+					} else {
+						AbstractDungeon.actionManager
+								.addToBottom(new ApplyPowerAction(m, p, new WeakPower(mo, 2, false), 2));
+					}
+				}
+			}
+
+		}
+	}
+
+	boolean Corrupt(int i) {
+		if (AbstractDungeon.player.hasPower(DecayPower.POWER_ID)) {
+
+			return AbstractDungeon.player.getPower(DecayPower.POWER_ID).amount >= i;
+
+		}
+		return false;
+	}
+
+	// Which card to return when making a copy of this card.
+	@Override
+	public AbstractCard makeCopy() {
+		return new EndlessTorment();
+	}
+
+	// Upgraded stats.
+	@Override
+	public void upgrade() {
+		if (!this.upgraded) {
+			this.upgradeName();
+			this.upgradeMagicNumber(1);
+			this.initializeDescription();
+		}
+	}
 }
