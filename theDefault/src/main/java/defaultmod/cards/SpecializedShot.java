@@ -18,6 +18,7 @@ import basemod.abstracts.CustomCard;
 
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
+import defaultmod.powers.DecayPower;
 import defaultmod.powers.Mana;
 
 public class SpecializedShot extends CustomCard {
@@ -72,15 +73,18 @@ public class SpecializedShot extends CustomCard {
         if(magic((short) 3)) {
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new PoisonPower(m, p, this.AMOUNT), this.AMOUNT));
+                    new PoisonPower(m, p, this.magicNumber), this.magicNumber));
+        	
+        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                    new DecayPower(m, p, 1), 1));
         	
         	if(magic((short) 5)) {
         		
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                        new PoisonPower(m, p, this.AMOUNT), this.AMOUNT));
+                        new PoisonPower(m, p, this.magicNumber), this.magicNumber));
 
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                        new WeakPower(m, this.AMOUNT-1, false), this.AMOUNT));
+                        new WeakPower(m, this.magicNumber-1, false), this.magicNumber));
         	}
         }
 

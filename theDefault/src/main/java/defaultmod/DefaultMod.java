@@ -291,19 +291,18 @@ public class DefaultMod
         BaseMod.addCard(new Overload());        
         BaseMod.addCard(new DarkmagicSlice()); 
         BaseMod.addCard(new ManaBurst()); 
+        BaseMod.addCard(new BreakTheseCuffs()); 
+        
+        
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonPower.ID);
         UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
-        UnlockTracker.unlockCard(DefaultRarePower.ID);
 
         logger.info("Cards - added!");
     }

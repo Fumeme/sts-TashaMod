@@ -43,7 +43,7 @@
 	},
 	"theDefault: SpecShot": {
 		"NAME": "Specialized Shot",
-		"DESCRIPTION": "Deal !D! damage. NL Magic 3: Apply !M! Poison. NL Magic 5: Apply !M! Poison again and apply !M!-1 Weak."
+		"DESCRIPTION": "Deal !D! damage. NL Magic 3: Apply !M! Poison and 1 Decay. NL Magic 5: Apply !M! Poison again and apply !M!-1 Weak."
 	},
 	"theDefault: PowerNap": {
 		"NAME": "Power Nap",
@@ -55,7 +55,7 @@
 	},
 	"theDefault: Corrupt": {
 		"NAME": "Corrupt",
-		"DESCRIPTION": "Gain 1 Poison, Apply !Mx2! Vulnerable and +1 Strength. NL Apply !M! Poison and !M! decay to all enemies. "
+		"DESCRIPTION": "Gain 1 Decay, Apply !Mx2! Vulnerable, 1 Weak and 1 Strength. NL Apply !M! Poison and !Mp1! decay to all enemies. "
 	},
 	"theDefault: EmbraceDarkness": {
 		"NAME": "Embrace Darkness",
@@ -105,7 +105,11 @@
 		"NAME": "Mana Burst",
 		"DESCRIPTION": "Consume !M! Mana to do !D! Damage 3 times."
 	},
-
+	"theDefault: BreakTheseCuffs": {
+		"NAME": "Break These Cuffs",
+		"DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay. NL Exaust",
+		"UPGRADE_DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay."
+	},
 
 	"theDefault: DefaultCommonAttack": {
 		"NAME": "Strike",

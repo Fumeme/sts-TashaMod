@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 
@@ -71,9 +72,12 @@ public class Corrupt extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new StrengthPower(m, this.strGain), this.strGain));
         
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                new WeakPower(m, this.strGain, false), this.strGain));
+        
             for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new DecayPower(mo, p, this.magicNumber), this.magicNumber));
+                        new DecayPower(mo, p, this.magicNumber+1), this.magicNumber+1));
 
             	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
                         new PoisonPower(mo, p, this.magicNumber), this.magicNumber));
