@@ -20,7 +20,7 @@ import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
 import defaultmod.powers.DecayPower;
 import defaultmod.powers.Mana;
-
+import com.megacrit.cardcrawl.localization.CardStrings;
 public class EndlessTorment extends CustomCard {
 
 	/*
@@ -111,7 +111,7 @@ public class EndlessTorment extends CustomCard {
 		if (!this.upgraded) {
 			this.upgradeName();
 			this.upgradeMagicNumber(1);
-			this.initializeDescription();
+            this.initializeDescription();
 		}
 	}
 }

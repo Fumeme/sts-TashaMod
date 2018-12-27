@@ -80,10 +80,10 @@ public class BreakTheseCuffs extends CustomCard {
     		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, FrailPower.POWER_ID));
     	}
     	
-    	
+    	if(this.DecayGain>0) {
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new DecayPower(p, p, this.DecayGain), this.DecayGain));
-    	
+    	}
     	
     }
 

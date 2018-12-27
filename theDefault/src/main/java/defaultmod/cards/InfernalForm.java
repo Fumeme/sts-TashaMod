@@ -55,6 +55,7 @@ public class InfernalForm extends CustomCard {
 
     public InfernalForm() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.isEthereal = true;
     }
 
 
@@ -79,7 +80,7 @@ public class InfernalForm extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.initializeDescription();
-            
+            this.isEthereal = false;
         }
     }
 }
