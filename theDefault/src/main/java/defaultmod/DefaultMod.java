@@ -173,7 +173,7 @@ public class DefaultMod
     public void receiveEditCharacters() {
         logger.info("begin editing characters. " + "Add " + TheDefaultEnum.THE_DEFAULT.toString());
 
-        BaseMod.addCharacter(new TheDefault("the Default", TheDefaultEnum.THE_DEFAULT),
+        BaseMod.addCharacter(new TheDefault("The Corrupted", TheDefaultEnum.THE_DEFAULT),
                 makePath(THE_DEFAULT_BUTTON), makePath(THE_DEFAULT_PORTRAIT), TheDefaultEnum.THE_DEFAULT);
         
         receiveEditPotions();
@@ -195,7 +195,7 @@ public class DefaultMod
         
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
-        settingsPanel.addUIElement(new ModLabel("DefaultMod doesn't have any settings!", 400.0f, 700.0f,
+        settingsPanel.addUIElement(new ModLabel("no settings, jk", 400.0f, 700.0f,
                 settingsPanel, (me) -> {
                 }));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
@@ -249,21 +249,13 @@ public class DefaultMod
     public void receiveEditCards() {
         logger.info("Add Variables");
         // Add the Custom Dynamic Variables
-        BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new Magicx2());
         BaseMod.addDynamicVariable(new MagicP1());
         
         logger.info("Add Cards");
         // Add the cards
         BaseMod.addCard(new DefaultCommonAttack());
-        BaseMod.addCard(new DefaultAttackWithVariable());
         BaseMod.addCard(new DefaultCommonSkill());
-        BaseMod.addCard(new DefaultCommonPower());
-        BaseMod.addCard(new DefaultUncommonAttack());
-        BaseMod.addCard(new DefaultUncommonPower());
-        BaseMod.addCard(new DefaultRareAttack());
-        BaseMod.addCard(new DefaultRareSkill());
-        BaseMod.addCard(new DefaultRarePower());
         
         BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
@@ -293,16 +285,12 @@ public class DefaultMod
         BaseMod.addCard(new ManaBurst()); 
         BaseMod.addCard(new BreakTheseCuffs()); 
         BaseMod.addCard(new EndlessTorment()); 
-        
+        BaseMod.addCard(new HybridRounds()); 
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultRareAttack.ID);
-        UnlockTracker.unlockCard(DefaultRareSkill.ID);
 
         logger.info("Cards - added!");
     }
@@ -345,8 +333,8 @@ public class DefaultMod
         final String[] placeholder = { "keyword", "keywords" };
         BaseMod.addKeyword(placeholder, "Whenever you play a card, gain 1 dexterity this turn only.");
 
-        final String[] magic = {"magic"};
-        BaseMod.addKeyword(magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
+        final String[] Magic = {"magic"};
+        BaseMod.addKeyword(Magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
 
         final String[] Mana = {"mana"};
         BaseMod.addKeyword(Mana, "Used for Powering your cards.");
@@ -360,7 +348,7 @@ public class DefaultMod
     // this adds "ModName: " before the ID of any card/relic/power etc.
     // in order to avoid conflics if any other mod uses the same ID.
     public static String makeID(String idText) {
-        return "theDefault: " + idText;
+        return "Corrupted: " + idText;
     }
 
 }

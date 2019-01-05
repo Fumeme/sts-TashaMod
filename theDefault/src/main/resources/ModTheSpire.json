@@ -3,9 +3,9 @@
   "name": "The Corrupted",
   "author_list": ["SacredDiamond"],
   "description": "Channel mana to give your cards maximum value or use strong cards with decaying yourself.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "sts_version": "12-13-2018",
   "mts_version": "3.6.3",
-  "update_json": "https://api.github.com/repos/SacredDiamond/sts-TashaMod/releases",
+  "update_json": "https://api.github.com/repos/SacredDiamond/sts-TashaMod/releases/latest",
   "dependencies": ["basemod"]
 }

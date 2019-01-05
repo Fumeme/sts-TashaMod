@@ -36,16 +36,19 @@ public class ManaReactor extends CustomRelic {
     }
 
     @Override
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null) {
-            this.flash();
-            
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new Mana(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
-        }
+    /*    */   public int onAttacked(DamageInfo info, int damageAmount)
+    /*    */   {
+    /* 24 */     if ((info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.type != DamageInfo.DamageType.THORNS) && (damageAmount > 1))
+    /*    */     {
+    /* 26 */       flash();
+    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+            new Mana(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+    /*    */     }
+    /* 30 */     return damageAmount;
+    /*    */   }
+    
 
-        return damageAmount;
-    }
+    
     // Description
     @Override
     public String getUpdatedDescription() {

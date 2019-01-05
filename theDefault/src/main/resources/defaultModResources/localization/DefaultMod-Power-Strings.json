@@ -1,18 +1,23 @@
 {
         
-"theDefault: CommonPower": {
+"Corrupted: CommonPower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["You applied ", " keyword.", " keywords."]
 },
-"theDefault: RarePower": {
+"Corrupted: RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn TOUCH ", " enemy." , " enemies."]
 },
-"theDefault: Mana": {
+"Corrupted: Mana": {
         "NAME": "Mana",
-        "DESCRIPTIONS": ["Used for Powering your cards."]
+        "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is "]
 },
-"theDefault: DecayPower": {
+"Corrupted: HybridRoundsPower": {
+        "NAME": "Hybrid Rounds",
+        "DESCRIPTIONS": ["Your ammo is now temporarily infused with your mana causing you to do ",
+        "additional damage."]
+},
+"Corrupted: DecayPower": {
         "NAME": "Decay",
         "DESCRIPTIONS": [
           "At the end of your turn, lose #b",
@@ -21,31 +26,31 @@
         ]
       },
 
-"theDefault: ShortTermPower": {
+"Corrupted: ShortTermPower": {
         "NAME": "Short Term Backfire",
         "DESCRIPTIONS": ["at the end of your turn, lose Mana equal to "]
 },
-"theDefault: InfernalFormPower": {
+"Corrupted: InfernalFormPower": {
         "NAME": "Infernal Form",
         "DESCRIPTIONS": ["double your poison damage, take no decay damage. NL at the end of your turn, gain Mana equal to your decay."]
 },
-"theDefault: ToxicWallPower": {
+"Corrupted: ToxicWallPower": {
         "NAME": "Toxic Wall",
         "DESCRIPTIONS": ["upon being attacked, gain 1 decay and apply poison to the attacker equal to the amount of stacks."]
 },
-"theDefault: LongTermDebuff": {
+"Corrupted: LongTermDebuff": {
         "NAME": "Long Term Debuff",
         "DESCRIPTIONS": ["at the start of your turn, lose half of your mana."]
 },
-"theDefault: LongTermBuff": {
+"Corrupted: LongTermBuff": {
         "NAME": "Long Term Buff",
         "DESCRIPTIONS": ["at the start of your turn, gain mana equal to half of the mana when you played Long Term Investment."]
 },
-"theDefault: NullifyPower": {
+"Corrupted: NullifyPower": {
         "NAME": "Nullify",
         "DESCRIPTIONS": ["Negates the next buff."]
 },
-"theDefault: SpreadCorruptionPower": {
+"Corrupted: SpreadCorruptionPower": {
         "NAME": "Spreading Corruption",
         "DESCRIPTIONS": ["At the start of your turn, consume ", "Mana and apply", "Decay to everyone and apply", " Poison to all enemies."]
 }

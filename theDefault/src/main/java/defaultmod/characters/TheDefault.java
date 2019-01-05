@@ -112,8 +112,8 @@ public class TheDefault extends CustomPlayer {
     // Starting description and loadout
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Default",
-                "Placeholder description text. NL " + "Second line of description text. ",
+        return new CharSelectInfo("The Corrupted",
+                "use your mana properly to maximize your card value or NL " + "Second line of description text. ",
                 STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
@@ -123,7 +123,7 @@ public class TheDefault extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        logger.info("Begind loading started Deck strings");
+        logger.info("Begin loading started Deck strings");
 
         retVal.add(DefaultCommonAttack.ID);
         retVal.add(DefaultCommonAttack.ID);
@@ -194,7 +194,7 @@ public class TheDefault extends CustomPlayer {
     // Should return class name as it appears in run history screen.
     @Override
     public String getLocalizedCharacterName() {
-        return "The Default";
+        return "The Corrupted";
     }
 
     //Which starting card should specific events give you?
@@ -206,7 +206,7 @@ public class TheDefault extends CustomPlayer {
     // The class name as it appears next to your player name in game	
     @Override
     public String getTitle(AbstractPlayer.PlayerClass playerClass) {
-        return "the Default";
+        return "the Corrupted";
     }
 
     // Should return a new instance of your character, sending this.name as its name parameter.

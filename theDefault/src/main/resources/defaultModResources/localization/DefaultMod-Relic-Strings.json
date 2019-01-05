@@ -1,20 +1,20 @@
 {
-	"theDefault: PlaceholderRelic": {
+	"Corrupted: PlaceholderRelic": {
 		"NAME": "Placeholder Relic",
 		"FLAVOR": "The snake is a friend.",
 		"DESCRIPTIONS": [
 			"Gain +1 [R] ."
 		]
 	},
-	"theDefault: ManaReactor": {
+	"Corrupted: ManaReactor": {
 		"NAME": "Mana Reactor",
-		"FLAVOR": "This odd artifact generates mana ehenever the holder takes damage... weird.",
+		"FLAVOR": "This odd artifact generates mana whenever the holder takes damage... weird.",
 		"DESCRIPTIONS": [
-			"Gain +1 Mana whenever you get hit."
+			"Gain #b1 #yMana whenever you get hit."
 		]
 	},
 
-	"theDefault: PlaceholderRelic2": {
+	"Corrupted: PlaceholderRelic2": {
 		"NAME": "Placeholder Relic 2",
 		"FLAVOR": "You feel stronger.",
 		"DESCRIPTIONS": [

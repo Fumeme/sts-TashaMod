@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 /*    */ import com.megacrit.cardcrawl.actions.GameActionManager;
 /*    */ import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 /*    */ import com.megacrit.cardcrawl.core.AbstractCreature;
 /*    */ import com.megacrit.cardcrawl.core.CardCrawlGame;
 /*    */ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -88,12 +89,13 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 					
 					/* 69 */ AbstractDungeon.actionManager
 							.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
-									new DamageInfo(owner, this.amount), AbstractGameAction.AttackEffect.POISON));
+									new DamageInfo(owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
 					
 				} else {
 					
-					AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(
-							owner, new DamageInfo(owner, 0), AbstractGameAction.AttackEffect.POISON));
+					AbstractDungeon.actionManager
+					.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
+							new DamageInfo(owner, 0, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
 					
 				}
 				AbstractDungeon.actionManager
