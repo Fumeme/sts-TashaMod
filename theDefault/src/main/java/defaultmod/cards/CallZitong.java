@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
+import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
 import defaultmod.powers.Mana;
@@ -84,6 +85,21 @@ public class CallZitong extends CustomCard {
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
+    	if(abstractPlayer instanceof AbstractPlayerWithMinions) {
+    		
+    		
+            AbstractPlayerWithMinions player = (AbstractPlayerWithMinions) abstractPlayer;
+            
+            if(player.hasMinion(ZitongBase.ID)) {
+            player.addMinion(ZitongBase(-750F, true));
+            }else {
+            	AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "She's already out!", 1.0F, 2.0F));
+            }
+        }
+
+    	/**
+    	
+    	
         if (abstractPlayer instanceof AbstractPlayerWithMinions) {
 
             AbstractPlayerWithMinions player = (AbstractPlayerWithMinions) abstractPlayer;
@@ -165,7 +181,14 @@ public class CallZitong extends CustomCard {
             }
 
         }
-
+**/
     }
+
+
+
+	private AbstractFriendlyMonster ZitongBase(float f, boolean b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
