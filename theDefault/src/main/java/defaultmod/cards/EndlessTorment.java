@@ -10,17 +10,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
-
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
 import defaultmod.powers.DecayPower;
-import defaultmod.powers.Mana;
-import com.megacrit.cardcrawl.localization.CardStrings;
 public class EndlessTorment extends CustomCard {
 
 	/*
@@ -74,21 +69,28 @@ public class EndlessTorment extends CustomCard {
 
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new DecayPower(mo, p, 2), 2));
 
-				if (Corrupt(6)) {
 
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, 6), 6));
+			}
 
-					if (!this.upgraded) {
-						AbstractDungeon.actionManager
-								.addToBottom(new ApplyPowerAction(m, p, new WeakPower(mo, 1, false), 1));
-					} else {
-						AbstractDungeon.actionManager
-								.addToBottom(new ApplyPowerAction(m, p, new WeakPower(mo, 2, false), 2));
-					}
+		}
+		for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+
+			
+			if (Corrupt(6)) {
+
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PoisonPower(mo, p, 6), 6));
+
+				if (!this.upgraded) {
+					AbstractDungeon.actionManager
+							.addToBottom(new ApplyPowerAction(m, p, new WeakPower(mo, 1, false), 1));
+				} else {
+					AbstractDungeon.actionManager
+							.addToBottom(new ApplyPowerAction(m, p, new WeakPower(mo, 2, false), 2));
 				}
 			}
 
 		}
+
 	}
 
 	boolean Corrupt(int i) {

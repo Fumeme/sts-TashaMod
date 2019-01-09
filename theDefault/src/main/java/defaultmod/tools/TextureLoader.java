@@ -23,7 +23,7 @@ public class TextureLoader {
                 loadTexture(textureString);
             } catch (GdxRuntimeException e) {
                 logger.error("Could not find texture: " + textureString);
-                return getTexture("tools/missingTexture.png");
+                return getTexture("images/oops.png");
             }
         }
         return textures.get(textureString);
@@ -37,7 +37,7 @@ public class TextureLoader {
      * @throws GdxRuntimeException
      */
     private static void loadTexture(final String textureString) throws GdxRuntimeException {
-        logger.info("Yohane | Loading Texture: " + textureString);
+        logger.info("Corrupted | Loading Texture: " + textureString);
         Texture texture = new Texture(textureString);
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         textures.put(textureString, texture);

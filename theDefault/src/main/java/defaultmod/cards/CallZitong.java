@@ -1,29 +1,18 @@
 package defaultmod.cards;
 
-import basemod.abstracts.CustomCard;
-import defaultmod.waifus.AbstractCorrMinion;
-
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
 import com.megacrit.cardcrawl.localization.CardStrings;
-
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
-import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
+import basemod.abstracts.CustomCard;
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
-import defaultmod.powers.Mana;
-import defaultmod.waifus.zitong.*;
-
+import defaultmod.waifus.zitong.ZitongBase;
+import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
 
 public class CallZitong extends CustomCard {
 
@@ -87,13 +76,16 @@ public class CallZitong extends CustomCard {
 
     	if(abstractPlayer instanceof AbstractPlayerWithMinions) {
     		
-    		
             AbstractPlayerWithMinions player = (AbstractPlayerWithMinions) abstractPlayer;
+
             
             if(player.hasMinion(ZitongBase.ID)) {
-            player.addMinion(ZitongBase(-750F, true));
+            
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "She's already out!", 1.0F, 2.0F));
+            
             }else {
-            	AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "She's already out!", 1.0F, 2.0F));
+            	
+            	player.addMinion(new ZitongBase(-750F, true));
             }
         }
 
@@ -186,9 +178,6 @@ public class CallZitong extends CustomCard {
 
 
 
-	private AbstractFriendlyMonster ZitongBase(float f, boolean b) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }

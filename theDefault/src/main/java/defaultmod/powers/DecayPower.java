@@ -92,12 +92,6 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 							.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
 									new DamageInfo(owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
 					
-				} else {
-					
-					AbstractDungeon.actionManager
-					.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
-							new DamageInfo(owner, 0, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
-					
 				}
 				AbstractDungeon.actionManager
 						.addToBottom(new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, -1), -1));

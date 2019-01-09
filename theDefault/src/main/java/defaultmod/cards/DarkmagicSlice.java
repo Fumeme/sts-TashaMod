@@ -43,8 +43,8 @@ public class DarkmagicSlice extends CustomCard {
 	private static final CardType TYPE = CardType.ATTACK;
 	public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-	private static final int COST = 2;
-	private static final int DAMAGE = 5;
+	private static final int COST = 1;
+	private static final int DAMAGE = 6;
 
 	// /STAT DECLARATION/
 
@@ -119,7 +119,7 @@ public class DarkmagicSlice extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-			this.upgradeDamage(1);
+			this.upgradeDamage(2);
 			this.initializeDescription();
 		}
 	}

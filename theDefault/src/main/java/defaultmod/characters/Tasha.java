@@ -74,7 +74,9 @@ public class Tasha extends AbstractPlayerWithMinions   {
                 "defaultModResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
                         "defaultModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
-
+        
+    
+//(String name, PlayerClass playerClass, String[] orbTextures, String orbVfxPath, float[] layerSpeeds, AbstractAnimation animation)
         
         // =============== TEXTURES, ENERGY, LOADOUT =================  
 
@@ -113,7 +115,7 @@ public class Tasha extends AbstractPlayerWithMinions   {
     
     // Starting description and loadout
     /**
-    
+    @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo("The Corrupted",
                 "use your mana properly to maximize your card value or NL " + "Second line of description text. ",
@@ -121,7 +123,7 @@ public class Tasha extends AbstractPlayerWithMinions   {
                 getStartingDeck(), false);
     }
 **/
-    @Override
+    
     public CharSelectInfo getLoadout() {
 
         CharSelectInfo info = new CustomCharSelectInfo(
@@ -160,7 +162,8 @@ public class Tasha extends AbstractPlayerWithMinions   {
         retVal.add(CursedStrike.ID);
         retVal.add(Focusfire.ID);
         retVal.add(Channel.ID);
-
+        retVal.add(Channel.ID);
+        
         return retVal;
     }
 
@@ -279,8 +282,8 @@ public class Tasha extends AbstractPlayerWithMinions   {
 
 	@Override
 	public CustomCharSelectInfo getInfo() {
-		// TODO Auto-generated method stub
-		return null;
+		return (CustomCharSelectInfo) getLoadout ();
 	}
+
 
 }
