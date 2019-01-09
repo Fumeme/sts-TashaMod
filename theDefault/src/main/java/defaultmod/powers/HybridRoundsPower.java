@@ -36,7 +36,7 @@ public class HybridRoundsPower extends AbstractPower {
         this.isTurnBased = false;
         this.loadRegion("focus");
         this.source = source;
-         this.cardLim = 2;
+         this.cardLim = 1;
     }
 
 
@@ -53,7 +53,8 @@ public class HybridRoundsPower extends AbstractPower {
         	AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
         }
-public void onUseCard(AbstractCard c) {
+    @Override
+public void onUseCard(AbstractCard c, UseCardAction action) {
 	
 	if(c.type == AbstractCard.CardType.ATTACK) {
 		

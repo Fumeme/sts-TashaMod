@@ -1,22 +1,17 @@
 package defaultmod;
 
-import com.badlogic.gdx.Gdx;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.shop.ShopScreen;
-import com.megacrit.cardcrawl.shop.StorePotion;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
 import basemod.BaseMod;
 import basemod.ModLabel;
@@ -27,18 +22,50 @@ import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.PostCreateShopPotionSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-
-import defaultmod.potions.*;
-import defaultmod.patches.*;
-import defaultmod.relics.*;
-import defaultmod.variables.*;
-import defaultmod.cards.*;
-import defaultmod.characters.*;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import defaultmod.cards.BattleSense;
+import defaultmod.cards.BreakTheseCuffs;
+import defaultmod.cards.CallZitong;
+import defaultmod.cards.Channel;
+import defaultmod.cards.Corrupt;
+import defaultmod.cards.Curse;
+import defaultmod.cards.CursedStrike;
+import defaultmod.cards.DarkmagicSlice;
+import defaultmod.cards.DefaultCommonAttack;
+import defaultmod.cards.DefaultCommonSkill;
+import defaultmod.cards.Embrace;
+import defaultmod.cards.EndlessTorment;
+import defaultmod.cards.Flare;
+import defaultmod.cards.Focusfire;
+import defaultmod.cards.HairyTrigger;
+import defaultmod.cards.HybridRounds;
+import defaultmod.cards.ImmovableObject;
+import defaultmod.cards.InfernalForm;
+import defaultmod.cards.InnerHeaven;
+import defaultmod.cards.LongTerm;
+import defaultmod.cards.MagicArmor;
+import defaultmod.cards.ManaBurst;
+import defaultmod.cards.Overhead;
+import defaultmod.cards.Overload;
+import defaultmod.cards.PowerNap;
+import defaultmod.cards.QuickDraw;
+import defaultmod.cards.ReinArmor;
+import defaultmod.cards.SappingStrike;
+import defaultmod.cards.SealTheWounds;
+import defaultmod.cards.ShortTerm;
+import defaultmod.cards.SpecializedShot;
+import defaultmod.cards.SpreadCorruption;
+import defaultmod.cards.ToxicWall;
+import defaultmod.cards.TransMind;
+import defaultmod.characters.Tasha;
+import defaultmod.patches.AbstractCardEnum;
+import defaultmod.patches.TheDefaultEnum;
+import defaultmod.potions.BrainJuice;
+import defaultmod.relics.ManaReactor;
+import defaultmod.relics.PlaceholderRelic;
+import defaultmod.relics.PlaceholderRelic2;
+import defaultmod.variables.MagicP1;
+import defaultmod.variables.Magicx2;
 
 /* 
  * Welcome to this mildly over-commented Slay the Spire modding base. 
@@ -98,6 +125,14 @@ public class DefaultMod
     public static final String DEFAULT_RARE_SKILL = "cards/Skill.png";
     public static final String DEFAULT_RARE_POWER = "cards/Power.png";
 
+    public static final String SappingStrike = "cards/sapping-strike.png";
+    public static final String Corrupt = "cards/Corrupt.png";
+    public static final String InfernalForm = "cards/Infernal-Form.png";
+    public static final String ReinArmor = "cards/ReinArmor.png";
+    public static final String ToxicWall = "cards/Toxic-Wall.png";
+    public static final String SpreadCorruption = "cards/SpreadCorruption.png";
+    public static final String TransMind = "cards/TransMind.png";
+    
     // Power images
     public static final String COMMON_POWER = "powers/placeholder_power.png";
     public static final String UNCOMMON_POWER = "powers/placeholder_power.png";
@@ -173,7 +208,7 @@ public class DefaultMod
     public void receiveEditCharacters() {
         logger.info("begin editing characters. " + "Add " + TheDefaultEnum.THE_DEFAULT.toString());
 
-        BaseMod.addCharacter(new TheDefault("The Corrupted", TheDefaultEnum.THE_DEFAULT),
+        BaseMod.addCharacter(new Tasha("The Corrupted", TheDefaultEnum.THE_DEFAULT),
                 makePath(THE_DEFAULT_BUTTON), makePath(THE_DEFAULT_PORTRAIT), TheDefaultEnum.THE_DEFAULT);
         
         receiveEditPotions();
@@ -286,12 +321,15 @@ public class DefaultMod
         BaseMod.addCard(new BreakTheseCuffs()); 
         BaseMod.addCard(new EndlessTorment()); 
         BaseMod.addCard(new HybridRounds()); 
-        
+        BaseMod.addCard(new Curse()); 
+        BaseMod.addCard(new ImmovableObject()); 
+        BaseMod.addCard(new CallZitong()); 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-
+        UnlockTracker.unlockCard(Overload.ID);
+        UnlockTracker.unlockCard(CallZitong.ID);
         logger.info("Cards - added!");
     }
 
@@ -337,7 +375,7 @@ public class DefaultMod
         BaseMod.addKeyword(Magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
 
         final String[] Mana = {"mana"};
-        BaseMod.addKeyword(Mana, "Used for Powering your cards.");
+        BaseMod.addKeyword(Mana, "Used for Powering your cards or your Waifus.");
         
         final String[] Decay = {"decay"};
         BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");

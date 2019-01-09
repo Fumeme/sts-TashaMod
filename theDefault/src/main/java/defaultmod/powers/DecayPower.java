@@ -34,6 +34,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 		/* 25 */ this.owner = owner;
 		/* 26 */ this.source = source;
 		/* 27 */ this.amount = DecayAmt;
+		canGoNegative = false;
 		this.ID = POWER_ID;
 		this.updateDescription();
 		/* 34 */ this.loadRegion("poison");

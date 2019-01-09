@@ -34,6 +34,7 @@ public class Mana extends AbstractPower {
         this.isTurnBased = false;
         this.loadRegion("focus");
         this.source = source;
+        canGoNegative = false;
 
     }
 

@@ -91,7 +91,7 @@
 	},
 	"Corrupted: Overload": {
 		"NAME": "Overload",
-		"DESCRIPTION": "Gain 1 Mana. NL Magic 5(3): gain 2 Mana. NL Magic 15(10): Double your Mana."
+		"DESCRIPTION": "Gain 1 Mana. NL Magic 5(3): gain 2 Mana. NL Magic 15(10): Double your Mana. NL Exaust."
 	},
 	"Corrupted: SappingStrike": {
 		"NAME": "Sapping Strike",
@@ -119,7 +119,19 @@
 		"NAME": "Hybrid Rounds",
 		"DESCRIPTION": "Deal !D! damage. The next attack you play this turn does !M! additional damage NL Magic 2,4,6: this card and your next attack this turn does 2 additional damage. "
 	},
-
+	"Corrupted: Curse": {
+		"NAME": "Curse",
+		"DESCRIPTION": "Apply 5 decay. NL Convert all of the targets Decay into poison.",
+		"UPGRADE_DESCRIPTION":"Apply 5 decay. NL Convert all of the targets Decay into !M! times as much poison."
+	},
+	"Corrupted: ImmovableObject": {
+		"NAME": "Immovable Object",
+		"DESCRIPTION": "Prevent the next time you'd take fatal damage."
+	},
+	"Corrupted: CallZitong": {
+		"NAME": "Call Zitong",
+		"DESCRIPTION": "Call in Zitong."
+	},
 
 
 	"Corrupted: DefaultCommonAttack": {

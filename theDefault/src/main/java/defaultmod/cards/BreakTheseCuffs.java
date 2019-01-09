@@ -34,7 +34,7 @@ public class BreakTheseCuffs extends CustomCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     // /TEXT DECLARATION/
 
     
@@ -99,6 +99,7 @@ public class BreakTheseCuffs extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.exhaust = false;
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

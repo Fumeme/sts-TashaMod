@@ -2,12 +2,18 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\ReinArmor.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\relics\PlaceholderRelic2.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultUncommonPower.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SummonMaria.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\CallZitong.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\InfernalForm.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\Mana.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\characters\Tasha.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\waifus\zitong\ZitongBase.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\MagicArmor.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\patches\LibraryTypeEnum.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\BattleSense.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SummonMiku.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\LongTermDebuff.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\waifus\zitong\ZitongStats.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\CursedStrike.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\ManaBarrier.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\NullifyPower.java
@@ -16,10 +22,12 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\EndlessTorment.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\Overhead.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\CommonPower.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\UndyingPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultCommonPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\patches\AbstractCardEnum.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\actions\UncommonPowerAction.java
-C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\characters\TheDefault.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\tools\TextureLoader.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\ImmovableObject.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\DefaultMod.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\variables\MagicP1.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\Channel.java
@@ -34,6 +42,7 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\relics\PlaceholderRelic.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultCommonAttack.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\LongTermBuff.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SummonZitong.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\Embrace.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\ShortTermPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\QuickDraw.java
@@ -48,6 +57,7 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SpreadCorruption.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\ToxicWall.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\ToxicWallPower.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\waifus\AbstractCorrMinion.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\PowerNap.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\RarePower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultUncommonSkill.java
@@ -55,7 +65,11 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\potions\BrainJuice.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\Corrupt.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\HairyTrigger.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\Curse.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SummonXueli.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\InnerHeaven.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\actions\ZitongHeal.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SummonDia.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\actions\OverheadAction.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\ShortTerm.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultCommonSkill.java
@@ -64,4 +78,5 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\ManaBurst.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\SealTheWounds.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultAttackWithVariable.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\actions\ZitongAttack.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\LongTerm.java

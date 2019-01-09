@@ -37,6 +37,7 @@ public class EndlessTorment extends CustomCard {
 
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 	// /TEXT DECLARATION/
 
@@ -111,6 +112,7 @@ public class EndlessTorment extends CustomCard {
 		if (!this.upgraded) {
 			this.upgradeName();
 			this.upgradeMagicNumber(1);
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
 		}
 	}

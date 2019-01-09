@@ -15,7 +15,11 @@
 "Corrupted: HybridRoundsPower": {
         "NAME": "Hybrid Rounds",
         "DESCRIPTIONS": ["Your ammo is now temporarily infused with your mana causing you to do ",
-        "additional damage."]
+        " additional damage."]
+},
+"Corrupted: UndyingPower": {
+        "NAME": "Undying",
+        "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]
 },
 "Corrupted: DecayPower": {
         "NAME": "Decay",

@@ -23,16 +23,15 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import defaultmod.DefaultMod;
-import defaultmod.cards.*;
-import defaultmod.patches.*;
+import defaultmod.cards.Channel;
+import defaultmod.cards.CursedStrike;
+import defaultmod.cards.DefaultCommonAttack;
+import defaultmod.cards.DefaultCommonSkill;
+import defaultmod.cards.Focusfire;
+import defaultmod.patches.AbstractCardEnum;
 import defaultmod.relics.PlaceholderRelic;
 
-import basemod.animations.AbstractAnimation;
-import basemod.animations.SpriterAnimation;
-//Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
-//and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
-
-public class TheDefault extends CustomPlayer {
+public class Tasha extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
 
     // =============== BASE STATS =================
@@ -67,7 +66,7 @@ public class TheDefault extends CustomPlayer {
     
     // =============== CHARACTER CLASS START =================
 
-    public TheDefault(String name, PlayerClass setClass) {
+    public Tasha(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "defaultModResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
@@ -212,7 +211,7 @@ public class TheDefault extends CustomPlayer {
     // Should return a new instance of your character, sending this.name as its name parameter.
     @Override
     public AbstractPlayer newInstance() {
-        return new TheDefault(this.name, this.chosenClass);
+        return new Tasha(this.name, this.chosenClass);
     }
 
     // Should return a Color object to be used to color the miniature card images in run history.

@@ -30,7 +30,7 @@ public class ReinArmor extends CustomCard {
 
     public static final String ID = defaultmod.DefaultMod.makeID("ReinArmor");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = DefaultMod.makePath(DefaultMod.DEFAULT_COMMON_SKILL);
+    public static final String IMG = DefaultMod.makePath(DefaultMod.ReinArmor);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
