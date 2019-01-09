@@ -36,7 +36,7 @@ public class CallZitong extends CustomCard {
 
     public CallZitong() {
 
-        super(ID, "CallZitong", IMG_PATH, COST, "Call in Zitong.",
+        super(ID, "Call Zitong", IMG_PATH, COST, "Call in Zitong.",
 
                 CardType.SKILL, AbstractCardEnum.DEFAULT_GRAY,
 
