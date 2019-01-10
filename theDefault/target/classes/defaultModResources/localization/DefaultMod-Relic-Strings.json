@@ -1,7 +1,7 @@
 {
 	"Corrupted: InfernalCore": {
 		"NAME": "Infernal Core",
-		"FLAVOR": "The Infernal inhabits your body as its new home. NL creepy...",
+		"FLAVOR": "The Infernal inhabits your body as its new home. creepy...",
 		"DESCRIPTIONS": [
 			"Starting your turn with #yDecay gives you #b1 #yMana."
 		]
