@@ -20,6 +20,7 @@ public class ZitongHeal extends AbstractGameAction {
     public ZitongHeal (AbstractFriendlyMonster owner) {
         this.duration = 0.8F;
         this.owner = owner;
+        p = AbstractDungeon.player;
     }
 
     @Override

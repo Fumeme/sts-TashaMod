@@ -2,6 +2,7 @@ package defaultmod.waifus.zitong;
 
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.LoseBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
@@ -34,6 +35,7 @@ public class ZitongBase extends AbstractCorrMinion {
     private static Texture[] intentImgs = {intentOne, intentTwo, intentThree, intentFour, intentFive, intentSix, intentSeven};
     
     private AbstractMonster target;
+    int  basedmg;
 
     public ZitongBase(float offSetX, boolean slotOne) {
         super(NAME, ID, ZitongStats.ZitongHP,
@@ -52,6 +54,55 @@ public class ZitongBase extends AbstractCorrMinion {
         super.applyEndOfTurnTriggers();
     }
 
+    public void takeTurn()
+
+    {
+
+    	 System.out.println("Zitong Taking Turn. nextMove: " + this.nextMove);
+
+        AbstractMonster abstractMonster = AbstractDungeon.getRandomMonster();
+
+        DamageInfo damageInfo = this.damage.get(0);
+
+        damageInfo.applyPowers(this,abstractMonster);
+        if(this.hasPower(Mana.POWER_ID)) {
+        	  this.basedmg =   this.getPower(Mana.POWER_ID).amount + ZitongStats.ZitongAttackDamage;
+        	}else {
+        		  this.basedmg = ZitongStats.ZitongAttackDamage;
+        	}
+        
+        
+        switch (this.nextMove)
+
+        {
+
+            case 1:
+
+                
+                AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
+                
+                setMove((byte)2, Intent.BUFF);
+
+                break;
+
+            case 2:
+
+            	AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
+
+            	if(this.hasPower(Mana.POWER_ID)) {
+            	
+                setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg );
+            	}else {
+            		 setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg);
+            	}
+        }
+
+    }
+    
+    
+    
+    
+    
     public void addMoves() {
 /**
         this.moves.addMove(new MinionMove("Attack", this, new Texture("defaultModResources/images/Waifus/Zitong/Zitong.png"), "Deal 3 plus her mana count damage to all enemies", () -> {
@@ -68,16 +119,21 @@ public class ZitongBase extends AbstractCorrMinion {
 
     //Not needed unless doing some kind of random move like normal Monsters
     @Override
-    protected void getMove(int i) {
-       
-    	if(i>70) {
-    		
-    		AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
-    	}else {
-    		
-    		AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
-    	}
-    	
-    	
+    protected void getMove(int num)
+
+    {
+
+        System.out.println("Zitong Getting Move Turn.");
+
+        if (AbstractDungeon.aiRng.random(0,10)<7) {
+
+            setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg);
+
+        } else {
+
+            setMove((byte)2, Intent.BUFF);
+
+        }
+
     }
 }
