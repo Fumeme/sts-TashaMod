@@ -1,13 +1,16 @@
 package defaultmod.relics;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
 import defaultmod.DefaultMod;
+import defaultmod.powers.DecayPower;
+import defaultmod.powers.Mana;
 
-public class PlaceholderRelic extends CustomRelic {
+public class InfernalCore extends CustomRelic {
     
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
@@ -16,30 +19,22 @@ public class PlaceholderRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = defaultmod.DefaultMod.makeID("PlaceholderRelic");
+    public static final String ID = defaultmod.DefaultMod.makeID("InfernalCore");
     public static final String IMG = DefaultMod.makePath(DefaultMod.PLACEHOLDER_RELIC);
     public static final String OUTLINE = DefaultMod.makePath(DefaultMod.PLACEHOLDER_RELIC_OUTLINE);
 
-    public PlaceholderRelic() {
+    public InfernalCore() {
         super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
-    // Flash at the start of Battle.
     @Override
-    public void atBattleStartPreDraw() {
-        flash();
-    }
-
-    // Gain 1 energy on eqip.
-    @Override
-    public void onEquip() {
-        AbstractDungeon.player.energy.energyMaster += 1;
-    }
-
-    // Lose 1 energy on unequip.
-    @Override
-    public void onUnequip() {
-        AbstractDungeon.player.energy.energyMaster -= 1;
+    public void atTurnStart() {
+    	
+    	if(AbstractDungeon.player.hasPower(DecayPower.POWER_ID) && (AbstractDungeon.player.getPower(DecayPower.POWER_ID).amount >0)) { 
+    		
+    		flash();
+    		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Mana(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+    	}
     }
 
     // Description
@@ -51,6 +46,6 @@ public class PlaceholderRelic extends CustomRelic {
     // Which relic to return on making a copy of this relic.
     @Override
     public AbstractRelic makeCopy() {
-        return new PlaceholderRelic();
+        return new InfernalCore();
     }
 }

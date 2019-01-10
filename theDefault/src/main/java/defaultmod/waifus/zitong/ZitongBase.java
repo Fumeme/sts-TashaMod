@@ -53,21 +53,7 @@ public class ZitongBase extends AbstractCorrMinion {
     }
 
     public void addMoves() {
-
-        
-        int rng = ThreadLocalRandom.current().nextInt(1, 10 + 1);
-        switch(rng) {
-        
-        case 7: 
-        case 8:
-        case 9: AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
-        	break;
-        default: AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
-        break;
-        }
-        
-        
-
+/**
         this.moves.addMove(new MinionMove("Attack", this, new Texture("defaultModResources/images/Waifus/Zitong/Zitong.png"), "Deal 3 plus her mana count damage to all enemies", () -> {
             target = AbstractDungeon.getRandomMonster();
             DamageInfo info = new DamageInfo(this,5,DamageInfo.DamageType.NORMAL);
@@ -77,11 +63,21 @@ public class ZitongBase extends AbstractCorrMinion {
         this.moves.addMove(new MinionMove("Heal", this, new Texture("defaultModResources/images/Waifus/Zitong/Zitong.png"),"Gain heal 1 hp to her and all allies", () -> {
             AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
         }));
-
+**/
     }
 
     //Not needed unless doing some kind of random move like normal Monsters
     @Override
     protected void getMove(int i) {
+       
+    	if(i>70) {
+    		
+    		AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
+    	}else {
+    		
+    		AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
+    	}
+    	
+    	
     }
 }

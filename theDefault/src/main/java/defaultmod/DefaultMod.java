@@ -62,7 +62,7 @@ import defaultmod.patches.AbstractCardEnum;
 import defaultmod.patches.TheDefaultEnum;
 import defaultmod.potions.BrainJuice;
 import defaultmod.relics.ManaReactor;
-import defaultmod.relics.PlaceholderRelic;
+import defaultmod.relics.InfernalCore;
 import defaultmod.relics.PlaceholderRelic2;
 import defaultmod.variables.MagicP1;
 import defaultmod.variables.Magicx2;
@@ -264,7 +264,7 @@ public class DefaultMod
         logger.info("Add relics");
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), AbstractCardEnum.DEFAULT_GRAY);
+        BaseMod.addRelicToCustomPool(new InfernalCore(), AbstractCardEnum.DEFAULT_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -373,9 +373,12 @@ public class DefaultMod
 
         final String[] Magic = {"magic"};
         BaseMod.addKeyword(Magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
+        
+        final String[] Corruption = {"corruption"};
+        BaseMod.addKeyword(Corruption, "(Corruption Y) Requires atleast Y stacks if Decay to activate the cards effect");
 
         final String[] Mana = {"mana"};
-        BaseMod.addKeyword(Mana, "Used for Powering your cards or your Waifus.");
+        BaseMod.addKeyword(Mana, "Used for Powering your cards... NL or your Waifus.");
         
         final String[] Decay = {"decay"};
         BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");

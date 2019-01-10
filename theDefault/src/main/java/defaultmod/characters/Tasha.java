@@ -29,7 +29,7 @@ import defaultmod.cards.DefaultCommonAttack;
 import defaultmod.cards.DefaultCommonSkill;
 import defaultmod.cards.Focusfire;
 import defaultmod.patches.AbstractCardEnum;
-import defaultmod.relics.PlaceholderRelic;
+import defaultmod.relics.InfernalCore;
 import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
 import kobting.friendlyminions.characters.CustomCharSelectInfo;
 
@@ -171,9 +171,9 @@ public class Tasha extends AbstractPlayerWithMinions   {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PlaceholderRelic.ID);
+        retVal.add(InfernalCore.ID);
 
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
+        UnlockTracker.markRelicAsSeen(InfernalCore.ID);
 
         return retVal;
     }

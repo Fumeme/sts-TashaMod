@@ -1,9 +1,9 @@
 {
-	"Corrupted: PlaceholderRelic": {
-		"NAME": "Placeholder Relic",
-		"FLAVOR": "The snake is a friend.",
+	"Corrupted: InfernalCore": {
+		"NAME": "Infernal Core",
+		"FLAVOR": "The Infernal inhabits your body as its new home. NL creepy...",
 		"DESCRIPTIONS": [
-			"Gain +1 [R] ."
+			"Starting your turn with #yDecay gives you #b1 #yMana."
 		]
 	},
 	"Corrupted: ManaReactor": {
