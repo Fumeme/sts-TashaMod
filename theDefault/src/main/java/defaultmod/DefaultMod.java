@@ -23,7 +23,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-import defaultmod.cards.AmmoOfBlocking;
+import defaultmod.cards.AmmoOfCrippling;
 import defaultmod.cards.BattleSense;
 import defaultmod.cards.BreakTheseCuffs;
 import defaultmod.cards.CallZitong;
@@ -324,7 +324,7 @@ public class DefaultMod
         BaseMod.addCard(new HybridRounds()); 
         BaseMod.addCard(new Curse()); 
         BaseMod.addCard(new ImmovableObject()); 
-        BaseMod.addCard(new AmmoOfBlocking()); 
+        BaseMod.addCard(new AmmoOfCrippling()); 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
