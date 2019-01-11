@@ -25,6 +25,7 @@ public class ZitongAttack extends AbstractGameAction {
                 upgradeCount = this.owner.getPower(Mana.POWER_ID).amount;
             }
             int attackDamage = ZitongStats.ZitongAttackDamage + upgradeCount;
+        	System.out.println(this.owner + " is attacking");   
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 DamageInfo info = new DamageInfo(this.owner, attackDamage, DamageInfo.DamageType.NORMAL);
                 info.applyPowers(this.owner, mo);

@@ -20,7 +20,7 @@ import defaultmod.DefaultMod;
 public class UndyingPower extends AbstractPower {
 	public AbstractCreature source;
 
-	public static final String POWER_ID = defaultmod.DefaultMod.makeID("Undying");
+	public static final String POWER_ID = defaultmod.DefaultMod.makeID("UndyingPower");
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -45,11 +45,11 @@ public class UndyingPower extends AbstractPower {
 		/* 30 */ if ((info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner)
 				&& (damageAmount > 0) &&
 				/* 31 */ (!this.owner.hasPower("Buffer"))) {
-			if (this.owner.currentHealth <= damageAmount) {
+			if (this.owner.currentHealth + this.owner.currentBlock <= damageAmount) {
 				/* 32 */ flash();
 				damageAmount = 0;
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 				flashWithoutSound();
+				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 				/*    */ }
 		}
 		/* 37 */ return damageAmount;

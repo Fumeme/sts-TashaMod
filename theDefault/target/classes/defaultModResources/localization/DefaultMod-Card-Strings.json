@@ -119,6 +119,12 @@
 		"NAME": "Hybrid Rounds",
 		"DESCRIPTION": "Deal !D! damage. The next attack you play this turn does !M! additional damage NL Magic 2,4,6: this card and your next attack this turn does 2 additional damage. "
 	},
+	"Corrupted: AmmoOfBlocking": {
+		"NAME": "Ammo Of Blocking",
+		"DESCRIPTION": "Deal !D! damage. Gain !B! Block and your next attack will give you !M! Block. NL Magic 2,4,6: the next attack you play this turn gives you !B! Block. "
+	},
+
+
 	"Corrupted: Curse": {
 		"NAME": "Curse",
 		"DESCRIPTION": "Apply 5 decay. NL Convert all of the targets Decay into poison.",

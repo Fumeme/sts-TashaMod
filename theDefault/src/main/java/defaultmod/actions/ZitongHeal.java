@@ -31,6 +31,8 @@ public class ZitongHeal extends AbstractGameAction {
                 upgradeCount = this.owner.getPower(Mana.POWER_ID).amount;
             }
 
+        	System.out.println(this.owner + " is healing");   
+            
             AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, ZitongStats.ZitongHealAmount + upgradeCount));
             
                 if (p instanceof AbstractPlayerWithMinions) {

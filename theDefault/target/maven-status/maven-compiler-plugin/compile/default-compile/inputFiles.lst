@@ -27,6 +27,7 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\DefaultCommonPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\patches\AbstractCardEnum.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\actions\UncommonPowerAction.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\AmmoOfBlocking.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\tools\TextureLoader.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\ImmovableObject.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\DefaultMod.java
@@ -46,6 +47,7 @@ C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defa
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\Embrace.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\ShortTermPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\cards\QuickDraw.java
+C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\AmmoOfBlockingPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\relics\ManaReactor.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\HybridRoundsPower.java
 C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\theDefault\src\main\java\defaultmod\powers\InfernalFormPower.java

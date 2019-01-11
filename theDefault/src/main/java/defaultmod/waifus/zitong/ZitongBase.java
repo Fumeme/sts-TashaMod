@@ -40,10 +40,6 @@ public class ZitongBase extends AbstractCorrMinion {
         addMoves();
     }
 
-    @Override
-    public void AtStartOFTurn() {
-    	getMove(AbstractDungeon.aiRng.random(0,10));
-    }
 
     
     @Override
@@ -71,6 +67,7 @@ public class ZitongBase extends AbstractCorrMinion {
 
         damageInfo.applyPowers(this,abstractMonster);
         
+    	System.out.println("checking if " + this.name + " has mana");   
         if(this.hasPower(Mana.POWER_ID)) {
         	  this.basedmg =   this.getPower(Mana.POWER_ID).amount + ZitongStats.ZitongAttackDamage;
         	}else {
@@ -84,7 +81,7 @@ public class ZitongBase extends AbstractCorrMinion {
 
             case 1:
 
-                
+            	System.out.println(this.name + " is about to heal");   
                 AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
                 
                 setMove((byte)2, Intent.BUFF);
@@ -93,14 +90,12 @@ public class ZitongBase extends AbstractCorrMinion {
 
             case 2:
 
+            	System.out.println(this.name + " is about to attack");   
             	AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
 
-            	if(this.hasPower(Mana.POWER_ID)) {
-            	
+ 	
                 setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg );
-            	}else {
-            		 setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg);
-            	}
+            	break;
         }
 
     }
@@ -131,16 +126,19 @@ public class ZitongBase extends AbstractCorrMinion {
 
         System.out.println("Zitong Getting Move Turn.");
 
+        
+        
         if (num<7) {
         	
-
-            setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg);
+        	System.out.println(this.name + " is intending to attack");   
+            setMove((byte)2, AbstractMonster.Intent.ATTACK, this.basedmg);
 
         } else {
-
-            setMove((byte)2, Intent.BUFF);
+        	System.out.println(this.name + " is intending to heal");   
+            setMove((byte)1, Intent.BUFF);
 
         }
+        
 
     }
 }
