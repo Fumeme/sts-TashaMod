@@ -2,10 +2,8 @@ package defaultmod.waifus.zitong;
 
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.LoseBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
@@ -16,8 +14,7 @@ import defaultmod.actions.ZitongHeal;
 import defaultmod.powers.Mana;
 import defaultmod.tools.TextureLoader;
 import defaultmod.waifus.AbstractCorrMinion;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.ArrayList;
+
 
 
 public class ZitongBase extends AbstractCorrMinion {
@@ -44,9 +41,17 @@ public class ZitongBase extends AbstractCorrMinion {
     }
 
     @Override
+    public void AtStartOFTurn() {
+    	getMove(AbstractDungeon.aiRng.random(0,10));
+    }
+
+    
+    @Override
     public void applyStartOfTurnPowers() {
+
         AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(this, this, this.currentBlock));
-        System.out.println(this.name + " " + this.currentHealth);
+        System.out.println(this.name + " has " + this.currentHealth + " hp.");
+    	getMove(AbstractDungeon.aiRng.random(0,10));
     }
 
     @Override
@@ -65,6 +70,7 @@ public class ZitongBase extends AbstractCorrMinion {
         DamageInfo damageInfo = this.damage.get(0);
 
         damageInfo.applyPowers(this,abstractMonster);
+        
         if(this.hasPower(Mana.POWER_ID)) {
         	  this.basedmg =   this.getPower(Mana.POWER_ID).amount + ZitongStats.ZitongAttackDamage;
         	}else {
@@ -125,7 +131,8 @@ public class ZitongBase extends AbstractCorrMinion {
 
         System.out.println("Zitong Getting Move Turn.");
 
-        if (AbstractDungeon.aiRng.random(0,10)<7) {
+        if (num<7) {
+        	
 
             setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg);
 

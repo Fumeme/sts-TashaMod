@@ -1,6 +1,8 @@
 package defaultmod.waifus;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
 import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
 
 public class AbstractCorrMinion extends AbstractFriendlyMonster {
@@ -10,4 +12,9 @@ public class AbstractCorrMinion extends AbstractFriendlyMonster {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY, attackIntents);
         this.slotOne = slotOne;
     }
+
+	public void AtStartOFTurn() {
+	getMove(AbstractDungeon.aiRng.random(0,10));
+		
+	}
 }
