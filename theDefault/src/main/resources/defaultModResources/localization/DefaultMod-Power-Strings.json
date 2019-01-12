@@ -17,6 +17,11 @@
         "DESCRIPTIONS": ["Your ammo is now temporarily infused with your mana causing you to do ",
         " additional damage."]
 },
+"Corrupted: CripplingRoundsPower": {
+        "NAME": "Crippling Rounds",
+        "DESCRIPTIONS": ["Your ammo is temporarily Cripples the enemy causing the lose ",
+        " Strength for the rest of the turn."]
+},
 "Corrupted: UndyingPower": {
         "NAME": "Undying",
         "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]

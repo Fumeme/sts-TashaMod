@@ -9,12 +9,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.GenericStrengthUpPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
 import defaultmod.DefaultMod;
 import defaultmod.patches.AbstractCardEnum;
+import defaultmod.powers.CripplingAmmoPower;
 import defaultmod.powers.Mana;
 
 public class AmmoOfCrippling extends CustomCard {
@@ -27,7 +29,7 @@ public class AmmoOfCrippling extends CustomCard {
 
 	// TEXT DECLARATION
 
-	public static final String ID = defaultmod.DefaultMod.makeID("AmmoOfBlocking");
+	public static final String ID = defaultmod.DefaultMod.makeID("CripplingAmmo");
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String IMG = DefaultMod.makePath(DefaultMod.DEFAULT_UNCOMMON_POWER);
 
@@ -45,7 +47,7 @@ public class AmmoOfCrippling extends CustomCard {
 	public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
 	private static final int COST = 0;
-	private static final int DAMAGE = 2;
+	private static final int DAMAGE = 3;
 	private static final int MAGIC = -1;
 
 	// /STAT DECLARATION/
@@ -60,55 +62,68 @@ public class AmmoOfCrippling extends CustomCard {
 	// Actions the card should do.
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		
+		/**
+		 * 
+		 * 
+		 * if (hasPower(mana)) {
+    for (int i = 0; i <= mana.amount; i += 2) {
+        if (i >= 8) {
+            break;
+        }
+    //do thing
+}
+		 * 
+		 * 
+		 * 
+		 */
+		
 
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-		AbstractDungeon.actionManager
-				.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
 
 		AbstractDungeon.actionManager
 				.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-				new GenericStrengthUpPower(m, "Strength Restoration", this.magicNumber), this.magicNumber));
+		
+		AbstractDungeon.actionManager.addToBottom(
+				new ApplyPowerAction(m, p, new GainStrengthPower(m, -this.magicNumber), -this.magicNumber));
+		
 
 		if (magic((short) 2)) {
 
 			AbstractDungeon.actionManager
-					.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-					new GenericStrengthUpPower(m, "Strength Restoration", this.magicNumber), this.magicNumber));
+			.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, this.magicNumber), this.magicNumber));
+
+			AbstractDungeon.actionManager.addToBottom(
+					new ApplyPowerAction(m, p, new GainStrengthPower(m, -this.magicNumber), -this.magicNumber));
 
 			if (magic((short) 4)) {
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-						new GenericStrengthUpPower(m, "Strength Restoration", this.magicNumber), this.magicNumber));
+						new ApplyPowerAction(p, p, new CripplingAmmoPower(p, p, this.magicNumber), this.magicNumber));
 
 				if (magic((short) 6)) {
 
+					AbstractDungeon.actionManager
+					.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, this.magicNumber), this.magicNumber));
+
 					AbstractDungeon.actionManager.addToBottom(
-							new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-							new GenericStrengthUpPower(m, "Strength Restoration", this.magicNumber), this.magicNumber));
+							new ApplyPowerAction(m, p, new GainStrengthPower(m, -this.magicNumber), -this.magicNumber));
 
 					if (this.upgraded) {
 
 						if (magic((short) 8)) {
-							AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-									new StrengthPower(p, this.magicNumber), this.magicNumber));
-							AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-									new GenericStrengthUpPower(m, "Strength Restoration", this.magicNumber),
-									this.magicNumber));
+							AbstractDungeon.actionManager.addToBottom(	
+									new ApplyPowerAction(p, p, new CripplingAmmoPower(p, p, this.magicNumber), this.magicNumber));
 
 							if (magic((short) 10)) {
 
-								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-										new StrengthPower(p, this.magicNumber), this.magicNumber));
-								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-										new GenericStrengthUpPower(m, "Strength Restoration", this.magicNumber),
-										this.magicNumber));
+								AbstractDungeon.actionManager
+								.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, this.magicNumber), this.magicNumber));
+								
+								AbstractDungeon.actionManager.addToBottom(
+										new ApplyPowerAction(m, p, new GainStrengthPower(m, -this.magicNumber), -this.magicNumber));
 
 							}
 
