@@ -62,12 +62,9 @@ public class Curse extends CustomCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m, p, new DecayPower(m, p, 5), 5));
-
-		if (m.hasPower(DecayPower.POWER_ID)) {
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new DecayPower(m, p, 5), 5));
 
 			this.poi = m.getPower(DecayPower.POWER_ID).amount * this.magicNumber;
-		}
 
 		AbstractDungeon.actionManager
 				.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.poi), this.poi));

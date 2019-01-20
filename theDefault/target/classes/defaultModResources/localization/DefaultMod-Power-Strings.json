@@ -8,6 +8,7 @@
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn TOUCH ", " enemy." , " enemies."]
 },
+
 "Corrupted: Mana": {
         "NAME": "Mana",
         "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is "]
@@ -29,9 +30,16 @@
 "Corrupted: DecayPower": {
         "NAME": "Decay",
         "DESCRIPTIONS": [
-          "At the end of your turn, lose #b",
-          " HP, then reduce #yDecay by #b1.",
-          "At the end of its turn, loses #b"
+          "At the end of your turn, take #b",
+          " damage, then reduce #yDecay by #b1.",
+          "At the end of its turn, it takes #b",
+          " damage, then increase #yDecay by #b1."
+        ]
+      },
+ "Corrupted: EvilCloudPower": {
+        "NAME": "Evil Cloud",
+        "DESCRIPTIONS": [
+          "Gain 1 Decay at the end of its turn instead of losing it."
         ]
       },
 

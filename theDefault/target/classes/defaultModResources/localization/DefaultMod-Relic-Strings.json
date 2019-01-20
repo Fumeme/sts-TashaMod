@@ -13,6 +13,13 @@
 			"Gain #b1 #yMana whenever you get hit."
 		]
 	},
+	"Corrupted: OddShapedKey": {
+		"NAME": "Odd Shaped Key",
+		"FLAVOR": "This Key is more of a decorative peace than anthing.",
+		"DESCRIPTIONS": [
+			"Gain [e], Whenever you open a non-Boss chest, add 1 more status to your draw pile."
+		]
+	},
 
 	"Corrupted: PlaceholderRelic2": {
 		"NAME": "Placeholder Relic 2",

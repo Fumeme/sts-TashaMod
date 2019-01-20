@@ -135,6 +135,16 @@
 		"NAME": "Immovable Object",
 		"DESCRIPTION": "Prevent the next time you'd take fatal damage."
 	},
+	"Corrupted: AimForTheHead": {
+		"NAME": "Aim For The Head",
+		"DESCRIPTION": "Does !D! damage NL Does 1.5x more damage if target has no block NL Increase the damage multiplier by 0.06 per mana you have. NL Magic 4: damage multiplier is increased by 0.25",
+		"UPGRADE_DESCRIPTION":"Does !D! damage NL Does 1.6x more damage if target has no block. NL Increase the damage multiplier by 0.07 per mana you have. NL Magic 4: damage multiplier is increased by 0.35"
+	},
+		"Corrupted: EvilCloud": {
+		"NAME": "Evil CLoud",
+		"DESCRIPTION": "apply 5 Decay to all enemies. NL Enemies gain Decay instead of losing it."
+	},
+
 	"Corrupted: CallZitong": {
 		"NAME": "Call Zitong",
 		"DESCRIPTION": "Call in Zitong."

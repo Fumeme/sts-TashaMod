@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.GenericStrengthUpPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 //Gain 1 dex for the turn for each card played.
@@ -73,13 +72,12 @@ public void onUseCard(AbstractCard c, UseCardAction action) {
     /* 44 */     if (type == DamageInfo.DamageType.NORMAL && this.cardLim == 0) {
     	
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyPowerAction(this.source, owner, new StrengthPower(this.source, -this.amount), -this.amount));
+				new ApplyPowerAction(this.owner, this.source, new StrengthPower(this.owner, -this.amount), -this.amount));
 		
 		AbstractDungeon.actionManager.addToBottom(
-				new ApplyPowerAction(this.source, owner, new GainStrengthPower(this.source, this.amount), this.amount));
-		
+				new ApplyPowerAction(this.owner, this.source, new GainStrengthPower(this.owner, this.amount), this.amount));
 
-    	
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 return damage;
     	
     /*    */     }

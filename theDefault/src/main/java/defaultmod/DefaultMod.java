@@ -23,6 +23,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import defaultmod.cards.AimForTheHead;
 import defaultmod.cards.AmmoOfCrippling;
 import defaultmod.cards.BattleSense;
 import defaultmod.cards.BreakTheseCuffs;
@@ -36,6 +37,7 @@ import defaultmod.cards.DefaultCommonAttack;
 import defaultmod.cards.DefaultCommonSkill;
 import defaultmod.cards.Embrace;
 import defaultmod.cards.EndlessTorment;
+import defaultmod.cards.EvilCloud;
 import defaultmod.cards.Flare;
 import defaultmod.cards.Focusfire;
 import defaultmod.cards.HairyTrigger;
@@ -63,6 +65,8 @@ import defaultmod.patches.AbstractCardEnum;
 import defaultmod.patches.TheDefaultEnum;
 import defaultmod.potions.BrainJuice;
 import defaultmod.relics.ManaReactor;
+import defaultmod.relics.OddShapedKey;
+import defaultmod.relics.FadingHope;
 import defaultmod.relics.InfernalCore;
 import defaultmod.relics.PlaceholderRelic2;
 import defaultmod.variables.MagicP1;
@@ -266,11 +270,12 @@ public class DefaultMod
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new InfernalCore(), AbstractCardEnum.DEFAULT_GRAY);
+        BaseMod.addRelicToCustomPool(new ManaReactor(), AbstractCardEnum.DEFAULT_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
-        
-        BaseMod.addRelic(new ManaReactor(), RelicType.SHARED);
+        BaseMod.addRelic(new FadingHope(), RelicType.SHARED);
+        BaseMod.addRelic(new OddShapedKey(), RelicType.SHARED);
 
         logger.info("Done adding relics!");
     }
@@ -325,6 +330,11 @@ public class DefaultMod
         BaseMod.addCard(new Curse()); 
         BaseMod.addCard(new ImmovableObject()); 
         BaseMod.addCard(new AmmoOfCrippling()); 
+        
+        BaseMod.addCard(new AimForTheHead()); 
+        BaseMod.addCard(new EvilCloud()); 
+        
+        
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
@@ -372,10 +382,10 @@ public class DefaultMod
         final String[] placeholder = { "keyword", "keywords" };
         BaseMod.addKeyword(placeholder, "Whenever you play a card, gain 1 dexterity this turn only.");
 
-        final String[] Magic = {"magic"};
+        final String[] Magic = {"magic", "magic x"};
         BaseMod.addKeyword(Magic, "(Magic Y) Requires atleast Y stacks if Mana to activate the cards effect");
         
-        final String[] Corruption = {"corruption"};
+        final String[] Corruption = {"corruption", "corruption x"};
         BaseMod.addKeyword(Corruption, "(Corruption Y) Requires atleast Y stacks if Decay to activate the cards effect");
 
         final String[] Mana = {"mana"};

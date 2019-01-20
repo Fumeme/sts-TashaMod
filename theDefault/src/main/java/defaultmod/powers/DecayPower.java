@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 /*    */ import com.megacrit.cardcrawl.localization.PowerStrings;
 /*    */ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 /*    */ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 /*    */ import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -43,18 +45,30 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 		/* 37 */ this.isTurnBased = true;
 		this.priority = 10;
 		/*    */ }
-    @Override
-    public int getHealthBarAmount() {
-    	int HpLoss;
-    	HpLoss = this.amount - owner.currentBlock;
-    	if (HpLoss <0) { HpLoss=0;}
-        return  HpLoss;
-    }
 
-    @Override
-    public Color getColor() {
-        return Color.PURPLE;
-    }
+	@Override
+	public int getHealthBarAmount() {
+		int HpLoss;
+		HpLoss = this.amount - owner.currentBlock;
+		if (this.owner.hasPower(MetallicizePower.POWER_ID)
+				&& this.owner.getPower(MetallicizePower.POWER_ID).amount > 0) {
+			HpLoss -= this.owner.getPower(MetallicizePower.POWER_ID).amount;
+		}
+		if (this.owner.hasPower(PlatedArmorPower.POWER_ID)
+				&& this.owner.getPower(PlatedArmorPower.POWER_ID).amount > 0) {
+			HpLoss -= this.owner.getPower(PlatedArmorPower.POWER_ID).amount;
+		}
+		if (HpLoss < 0) {
+			HpLoss = 0;
+		}
+		return HpLoss;
+	}
+
+	@Override
+	public Color getColor() {
+		return Color.BLACK;
+	}
+
 	/*    */
 	/*    */ public void updateDescription()
 	/*    */ {
@@ -80,22 +94,29 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPowe
 	/*    */ @Override
 	/*    */ public void atEndOfTurn(boolean isPlayer)
 	/*    */ {
-		/* 65 */ if (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)
+		/* 65 */ if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
 		/*    */ {
-			/* 67 */ if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-				
-				/* 68 */ flashWithoutSound();
-				
-				if (!owner.hasPower(InfernalFormPower.POWER_ID)) {
-					
-					/* 69 */ AbstractDungeon.actionManager
-							.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(owner,
-									new DamageInfo(owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
-					
-				}
-				AbstractDungeon.actionManager
-						.addToBottom(new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, -1), -1));
-				/*    */ }
+			/* 67 */
+
+			/* 68 */ flashWithoutSound();
+
+			if (!this.owner.hasPower(InfernalFormPower.POWER_ID)) {
+
+				System.out.print("Damaging " + this.owner + " for " + this.amount + " damage");
+				/* 69 */ AbstractDungeon.actionManager.addToBottom(
+						new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageType.THORNS),
+								AbstractGameAction.AttackEffect.POISON));
+
+			}
+			if (!this.owner.hasPower(EvilCloudPower.POWER_ID)
+					|| this.owner.getPower(EvilCloudPower.POWER_ID).amount <= 0) {
+				System.out.print("minus one decay on " + this.owner);
+				AbstractDungeon.actionManager.addToBottom(
+						new ApplyPowerAction(this.owner, this.owner, new DecayPower(this.owner, this.owner, -1), -1));
+				/*    */ } else {
+				AbstractDungeon.actionManager.addToBottom(
+						new ApplyPowerAction(this.owner, this.owner, new DecayPower(this.owner, this.owner, 1), 1));
+			}
 			/*    */ }
 		/*    */ }
 	/*    */ }
