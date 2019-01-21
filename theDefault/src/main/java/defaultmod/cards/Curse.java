@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import basemod.abstracts.CustomCard;
 
 import defaultmod.DefaultMod;
+import defaultmod.actions.Decay2PoisonAction;
 import defaultmod.patches.AbstractCardEnum;
 import defaultmod.powers.DecayPower;
 
@@ -64,13 +65,8 @@ public class Curse extends CustomCard {
 
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new DecayPower(m, p, 5), 5));
 
-			this.poi = m.getPower(DecayPower.POWER_ID).amount * this.magicNumber;
-
-		AbstractDungeon.actionManager
-				.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.poi), this.poi));
-		if (m.hasPower(DecayPower.POWER_ID)) {
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, p, DecayPower.POWER_ID));
-		}
+		AbstractDungeon.actionManager.addToBottom(new Decay2PoisonAction(m, p, this.magicNumber));
+		
 
 	}
 

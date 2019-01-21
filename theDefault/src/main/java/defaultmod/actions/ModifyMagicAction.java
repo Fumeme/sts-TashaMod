@@ -1,8 +1,7 @@
 /*    */ package defaultmod.actions;
-/*    */ 
-/*    */ import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-/*    */ import com.megacrit.cardcrawl.cards.AbstractCard;
 /*    */ import java.util.UUID;
+
+/*    */ import com.megacrit.cardcrawl.cards.AbstractCard;
 /*    */ 
 /*    */ public class ModifyMagicAction extends com.megacrit.cardcrawl.actions.AbstractGameAction
 /*    */ {
