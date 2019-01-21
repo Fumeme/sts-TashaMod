@@ -37,5 +37,6 @@ private int multiplier;
 			.addToBottom(new ApplyPowerAction(this.target, this.source, new PoisonPower(this.target, this.source, poi), poi));
 			
 /*    */   }
+			isDone = true;
 /*    */ }
 }
