@@ -1,0 +1,20 @@
+package CorruptedMod.waifus;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
+
+public class AbstractCorrMinion extends AbstractFriendlyMonster {
+    public boolean slotOne;
+
+    public AbstractCorrMinion(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, Texture[] attackIntents, boolean slotOne) {
+        super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY, attackIntents);
+        this.slotOne = slotOne;
+    }
+
+	public void AtStartOFTurn() {
+	getMove(AbstractDungeon.aiRng.random(0,10));
+		
+	}
+}

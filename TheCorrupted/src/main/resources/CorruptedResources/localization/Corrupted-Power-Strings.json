@@ -1,0 +1,91 @@
+{
+        
+"Corrupted: CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied ", " keyword.", " keywords."]
+},
+"Corrupted: RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn TOUCH ", " enemy." , " enemies."]
+},
+
+"Corrupted: Mana": {
+        "NAME": "Mana",
+        "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is #b"]
+},
+"Corrupted: ManaGeneration": {
+        "NAME": "Mana Regen",
+        "DESCRIPTIONS": ["gain #b1 #yMana at the end of your turn, then reduce by #b1."]
+},
+"Corrupted: Inefficiency": {
+        "NAME": "Inefficiency",
+        "DESCRIPTIONS": ["At the end of your turn, lose", "Mana then remove itself if you haveat most 3 Mana"]
+},
+"Corrupted: witheringBarrierPower": {
+        "NAME": "Withering Barrier",
+        "DESCRIPTIONS": [" gain #b2 #yDecay at teh end of your turn. all blocked attack damage you take is reflected to the attacker in #yDecay."]
+},
+"Corrupted: BlackArmorPower": {
+        "NAME": "Black Armor",
+        "DESCRIPTIONS": ["The next ", " times youd take decay damage, gain that much block instead."]
+},
+"Corrupted: HybridRoundsPower": {
+        "NAME": "Hybrid Rounds",
+        "DESCRIPTIONS": ["Your ammo is now temporarily infused with mana causing your next attack to do #b",
+        " additional damage."]
+},
+"Corrupted: CripplingRoundsPower": {
+        "NAME": "Crippling Rounds",
+        "DESCRIPTIONS": ["Your ammo is temporarily Cripples the enemy causing the lose ",
+        " Strength for the rest of the turn."]
+},
+"Corrupted: UndyingPower": {
+        "NAME": "Undying",
+        "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]
+},
+"Corrupted: DecayPower": {
+        "NAME": "Decay",
+        "DESCRIPTIONS": [
+          "At the end of your turn, take #b",
+          " damage, then reduce #yDecay by #b1.",
+          "At the end of its turn, it takes #b",
+          " damage, then increase #yDecay by #b1."
+        ]
+      },
+ "Corrupted: EvilCloudPower": {
+        "NAME": "Evil Cloud",
+        "DESCRIPTIONS": [
+          "Gain #b1 #yDecay at the end of its turn instead of losing it."
+        ]
+      },
+
+"Corrupted: ShortTermPower": {
+        "NAME": "Short Term Backfire",
+        "DESCRIPTIONS": ["at the end of your turn, lose #yMana equal to #b"]
+},
+"Corrupted: InfernalFormPower": {
+        "NAME": "Infernal Form",
+        "DESCRIPTIONS": ["double your #ypoison damage, take no #yDecay damage. NL at the end of your turn, gain #yMana equal to your #yDecay."]
+},
+"Corrupted: ToxicWallPower": {
+        "NAME": "Toxic Wall",
+        "DESCRIPTIONS": ["upon being attacked, gain #b1 #yDecay and apply #ypoison to the attacker equal to the amount of stacks."]
+},
+"Corrupted: LongTermDebuff": {
+        "NAME": "Long Term Debuff",
+        "DESCRIPTIONS": ["at the start of your turn, lose half of your #ymana."]
+},
+"Corrupted: LongTermBuff": {
+        "NAME": "Long Term Buff",
+        "DESCRIPTIONS": ["at the start of your turn, gain #ymana equal to half of the #ymana when you played Long Term Investment."]
+},
+"Corrupted: NullifyPower": {
+        "NAME": "Nullify",
+        "DESCRIPTIONS": ["Negates the next buff."]
+},
+"Corrupted: SpreadCorruptionPower": {
+        "NAME": "Spreading Corruption",
+        "DESCRIPTIONS": ["At the start of your turn, consume #b", "#yMana and apply #b", "#yDecay to everyone and apply #b", "#yPoison to all enemies."]
+}
+
+}
