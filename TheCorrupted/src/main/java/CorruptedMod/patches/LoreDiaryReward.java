@@ -29,9 +29,18 @@ public class LoreDiaryReward extends CustomReward {
     	
         AbstractDungeon.player.getCardPool(LoreList);
         
-        this.cards = LoreList;
-        /*                                     */
 
+        /*                                     */
+        ArrayList<AbstractCard> LoreListSelect = new ArrayList<AbstractCard>();
+      
+   	 
+        
+        for(int i = 0; i < 2; i++) {
+            //add card to list
+        	
+        	 LoreListSelect.add(LoreList.get(AbstractDungeon.cardRng.random(LoreList.size() -1)));	
+        }
+        this.cards = LoreListSelect;
 
     }
 
