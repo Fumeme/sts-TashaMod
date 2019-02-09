@@ -27,7 +27,7 @@ public class LoreDiaryReward extends CustomReward {
     	if(c.hasTag(CorruptedBase.Lore)) LoreList.add(c.makeStatEquivalentCopy());
     	}
     	
-        AbstractDungeon.player.getCardPool(LoreList);
+
         
 
         /*                                     */
@@ -40,6 +40,8 @@ public class LoreDiaryReward extends CustomReward {
         	
         	 LoreListSelect.add(LoreList.get(AbstractDungeon.cardRng.random(LoreList.size() -1)));	
         }
+        
+
         this.cards = LoreListSelect;
 
     }

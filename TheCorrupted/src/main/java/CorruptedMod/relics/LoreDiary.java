@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.TreasureRoom;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.LoreDiaryReward;
@@ -27,7 +29,17 @@ public class LoreDiary extends CustomRelic {
         super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.SPECIAL, LandingSound.FLAT);
     }
 
-
+@Override
+	/*    */ public void justEnteredRoom(AbstractRoom room)
+	/*    */ {
+		/* 30 */ if ((room instanceof TreasureRoom)) {
+			/* 31 */ flash();
+			/* 32 */ this.pulse = true;
+			/*    */ } else {
+			/* 34 */ this.pulse = false;
+			/*    */ }
+		/*    */ }
+    
 @Override
 	/*    */ public void onChestOpen(boolean bossChest)
 	/*    */ {
@@ -35,6 +47,7 @@ public class LoreDiary extends CustomRelic {
 
 			flash();
 			AbstractDungeon.getCurrRoom().rewards.add(new LoreDiaryReward());
+		
 		}
 }
 
