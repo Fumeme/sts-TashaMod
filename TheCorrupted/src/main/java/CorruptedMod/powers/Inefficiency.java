@@ -49,7 +49,7 @@ public class Inefficiency extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        if (this.amount <= 0 || owner.getPower(Mana.POWER_ID).amount <=3) {
+        if (this.amount <= 0 || this.owner.getPower(Mana.POWER_ID).amount <=3 || !this.owner.hasPower(Mana.POWER_ID)) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
         }

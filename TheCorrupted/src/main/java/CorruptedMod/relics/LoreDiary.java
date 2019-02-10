@@ -63,10 +63,10 @@ public void betterOnSmith(AbstractCard c)
 {
   if ((c.hasTag(CorruptedBase.Ammo)))
   {
-	  AbstractCard card = this.p.masterDeck.getUpgradableCards().getRandomCard(true);
+	  AbstractCard card = p.masterDeck.getUpgradableCards().getRandomCard(true);
 	  while(!card.hasTag(CorruptedBase.Ammo)) {
 		  
-		  card = this.p.masterDeck.getRandomCard(true);
+		  card = p.masterDeck.getUpgradableCards().getRandomCard(true);
 	  }
 
     card.upgrade();
