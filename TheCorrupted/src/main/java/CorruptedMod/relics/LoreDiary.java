@@ -1,19 +1,25 @@
 package CorruptedMod.relics;
 
+import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.relics.BetterOnSmithRelic;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.LoreDiaryReward;
 import basemod.abstracts.CustomRelic;
 
-public class LoreDiary extends CustomRelic {
+public class LoreDiary extends CustomRelic implements BetterOnSmithRelic{
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      * 
@@ -25,6 +31,9 @@ public class LoreDiary extends CustomRelic {
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.PLACEHOLDER_RELIC);
     public static final String OUTLINE = CorruptedBase.makePath(CorruptedBase.PLACEHOLDER_RELIC_OUTLINE_2);
 
+    private static ArrayList<AbstractCard> cardsToShow = new ArrayList<AbstractCard>();
+    private AbstractPlayer p = AbstractDungeon.player;
+    
     public LoreDiary() {
         super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.SPECIAL, LandingSound.FLAT);
     }
@@ -49,6 +58,32 @@ public class LoreDiary extends CustomRelic {
 			AbstractDungeon.getCurrRoom().rewards.add(new LoreDiaryReward());
 		
 		}
+}
+public void betterOnSmith(AbstractCard c)
+{
+  if ((c.hasTag(CorruptedBase.Ammo)))
+  {
+	  AbstractCard card = this.p.masterDeck.getUpgradableCards().getRandomCard(true);
+	  while(!card.hasTag(CorruptedBase.Ammo)) {
+		  
+		  card = this.p.masterDeck.getRandomCard(true);
+	  }
+
+    card.upgrade();
+    cardsToShow.add(card);
+  }
+}
+
+public static void cardEffects()
+{
+  for (AbstractCard c : cardsToShow)
+  {
+    float x = MathUtils.random(0.4F, 0.9F) * Settings.WIDTH;
+    float y = MathUtils.random(0.6F, 0.8F) * Settings.HEIGHT;
+    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
+    AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+  }
+  cardsToShow.clear();
 }
 
     // Description

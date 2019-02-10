@@ -208,35 +208,15 @@
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! block."
 	},
-	"Corrupted: DefaultCommonPower": {
-		"NAME": "Hold Place",
-		"DESCRIPTION": "Gain !M! keyword.",
-		"UPGRADE_DESCRIPTION": "Gain !M! keywords."
-	},
-	"Corrupted: DefaultUncommonAttack": {
-		"NAME": "Big slap",
-		"DESCRIPTION": "Deal !D! damage."
-	},
-	"Corrupted: DefaultUncommonSkill": {
-		"NAME": "A better defend",
-		"DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-	},
-	"Corrupted: DefaultUncommonPower": {
-		"NAME": "Weirdness",
-		"DESCRIPTION": "Gain X keywords.",
-		"UPGRADE_DESCRIPTION": "Gain X +1 keywords."
-	},
-	"Corrupted: DefaultRareAttack": {
-		"NAME": "TOUCH",
-		"DESCRIPTION": "Deal !D! damage."
-	},
-	"Corrupted: DefaultRareSkill": {
-		"NAME": "for each loop x2",
-		"DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
-		"UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
-	},
-	"Corrupted: DefaultRarePower": {
-		"NAME": "In-Progress Form",
-		"DESCRIPTION": "At the start of your turn, play a TOUCH."
+
+	"Corrupted: loreSpire": {
+		"NAME": "Lore: Spire",
+		"DESCRIPTION": "Spire NL",
+		"EXTENDED_DESCRIPTION":[
+			"I've lost track of the time. for all I know 2 years could have passed. NL",
+			"What's the nature of [#FF0000]This [][#FF0000]Spire []? What does it want from me? why me? ",
+			"How did I even get here? and why does everything want to kill me?"
+
+		]
 	}
 }
