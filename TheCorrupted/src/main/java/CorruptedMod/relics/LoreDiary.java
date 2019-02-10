@@ -1,6 +1,7 @@
 package CorruptedMod.relics;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
@@ -64,34 +65,30 @@ public class LoreDiary extends CustomRelic implements BetterOnSmithRelic{
 public void betterOnSmith(AbstractCard c)
 {
 	
-	ArrayList<AbstractCard> nonlore = new ArrayList<AbstractCard>();
-	 
-	 // Create an array list called "upgradable nonlore cards"
-    for ( AbstractCard check : AbstractDungeon.player.masterDeck.getUpgradableCards().group){
-        // if c. has tag lore, add it to the array
-    	if (!c.hasTag(CorruptedBase.Lore)){
-    		
-    	nonlore.add(check);
-    	}
-    }
-    // get a random card from the array and upgrade it
-    
-    
-	
-	
-//	System.out.println(p.masterDeck.getUpgradableCards());
-//  if ((c.hasTag(CorruptedBase.Lore)))
-// {
- AbstractCard card = p.masterDeck.getUpgradableCards().getRandomCard(true);
-	/*  while(card.hasTag(CorruptedBase.Lore)) {
-		  
-		  System.out.println("checking for if the card isnt a lore card" );
-		  card = p.masterDeck.getUpgradableCards().getRandomCard(true);
-	  }
-*/ card = nonlore.get(AbstractDungeon.cardRng.random(nonlore.size() -1));
+	final ArrayList<AbstractCard> upgradableCards = new ArrayList<AbstractCard>();
+
+	for (final AbstractCard c1 : AbstractDungeon.player.masterDeck.group) {
+
+		if (c1.canUpgrade() && !c1.hasTag(CorruptedBase.Lore)) {
+
+			upgradableCards.add(c1);
+
+		}
+
+	}
+
+	Collections.shuffle(upgradableCards);
+
+	if (!upgradableCards.isEmpty()) {
+
+		upgradableCards.get(0).upgrade();
+
+		AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
+
+		AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy()));
+
+	}
 	  
-    card.upgrade();
-    cardsToShow.add(card);
   }
 
 

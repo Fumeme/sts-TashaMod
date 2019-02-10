@@ -59,6 +59,7 @@ public class loreSpire extends CustomCard {
 
 	/*    */ public void triggerWhenDrawn()
 	/*    */ {
+		applyPowers();
 		/* 41 */ flash();
 		/*    */ AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.baseBlock));
 
