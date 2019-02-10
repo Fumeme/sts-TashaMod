@@ -6,9 +6,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.BetterOnSmithRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
@@ -61,19 +63,37 @@ public class LoreDiary extends CustomRelic implements BetterOnSmithRelic{
 }
 public void betterOnSmith(AbstractCard c)
 {
-  if ((c.hasTag(CorruptedBase.Lore)))
-  {
-	  AbstractCard card = p.masterDeck.getUpgradableCards().getRandomCard(true);
-	  while(card.hasTag(CorruptedBase.Lore)) {
+	
+	ArrayList<AbstractCard> nonlore = new ArrayList<AbstractCard>();
+	 
+	 // Create an array list called "upgradable nonlore cards"
+    for ( AbstractCard check : AbstractDungeon.player.masterDeck.getUpgradableCards().group){
+        // if c. has tag lore, add it to the array
+    	if (!c.hasTag(CorruptedBase.Lore)){
+    		
+    	nonlore.add(check);
+    	}
+    }
+    // get a random card from the array and upgrade it
+    
+    
+	
+	
+//	System.out.println(p.masterDeck.getUpgradableCards());
+//  if ((c.hasTag(CorruptedBase.Lore)))
+// {
+ AbstractCard card = p.masterDeck.getUpgradableCards().getRandomCard(true);
+	/*  while(card.hasTag(CorruptedBase.Lore)) {
 		  
 		  System.out.println("checking for if the card isnt a lore card" );
 		  card = p.masterDeck.getUpgradableCards().getRandomCard(true);
 	  }
-
+*/ card = nonlore.get(AbstractDungeon.cardRng.random(nonlore.size() -1));
+	  
     card.upgrade();
     cardsToShow.add(card);
   }
-}
+
 
 public static void cardEffects()
 {

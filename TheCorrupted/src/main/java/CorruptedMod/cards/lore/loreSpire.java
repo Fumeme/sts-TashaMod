@@ -50,7 +50,7 @@ public class loreSpire extends CustomCard {
 		this.damage =this.baseDamage =5;
 		this.isMultiDamage = true;
 		
-        this.rawDescription = DESCRIPTION + ReinArmor.EFFECTS[0];
+        this.rawDescription = DESCRIPTION + loreSpire.LORE[0];
         
         this.initializeDescription();
 	}

@@ -25,7 +25,6 @@ public class LoreDiaryReward extends CustomReward {
     	}
     	
 
-        
 
         /*                                     */
         ArrayList<AbstractCard> LoreListSelect = new ArrayList<AbstractCard>();
