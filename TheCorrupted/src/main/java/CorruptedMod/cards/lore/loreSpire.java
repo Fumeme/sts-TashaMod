@@ -38,8 +38,8 @@ public class loreSpire extends CustomCard {
 	// STAT DECLARATION
 
 	private static final CardRarity RARITY = CardRarity.SPECIAL;
-	private static final CardTarget TARGET = CardTarget.NONE;
-	private static final CardType TYPE = CardType.STATUS;
+	private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+	private static final CardType TYPE = CardType.SKILL;
 	public static final CardColor COLOR = AbstractCard.CardColor.COLORLESS;
 
 	// /STAT DECLARATION/
@@ -47,7 +47,9 @@ public class loreSpire extends CustomCard {
 	public loreSpire() {
 		super(ID, NAME, IMG, -2, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		this.damage =this.baseDamage =5;
+        tags.add(CorruptedBase.Lore);
+        
+		this.damage = this.baseDamage = this.baseBlock = this.block = 5;
 		this.isMultiDamage = true;
 		
         this.rawDescription = DESCRIPTION + loreSpire.LORE[0];
@@ -82,10 +84,8 @@ public class loreSpire extends CustomCard {
 		this.upgradeName();
 		this.upgradeDamage(3);
 		this.upgradeBlock(3);
-		this.rawDescription = DESCRIPTION;
-		for (int i = 0; i<this.timesUpgraded; i++) {
-		this.rawDescription += loreSpire.LORE[i];
-		}
+		this.rawDescription += loreSpire.LORE[this.timesUpgraded];
+		
 		this.initializeDescription();
 	}
 
