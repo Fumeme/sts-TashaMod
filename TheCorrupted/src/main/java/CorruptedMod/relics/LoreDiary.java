@@ -61,11 +61,12 @@ public class LoreDiary extends CustomRelic implements BetterOnSmithRelic{
 }
 public void betterOnSmith(AbstractCard c)
 {
-  if ((c.hasTag(CorruptedBase.Ammo)))
+  if ((c.hasTag(CorruptedBase.Lore)))
   {
 	  AbstractCard card = p.masterDeck.getUpgradableCards().getRandomCard(true);
-	  while(!card.hasTag(CorruptedBase.Ammo)) {
+	  while(card.hasTag(CorruptedBase.Lore)) {
 		  
+		  System.out.println("checking for if the card isnt a lore card" );
 		  card = p.masterDeck.getUpgradableCards().getRandomCard(true);
 	  }
 
