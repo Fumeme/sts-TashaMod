@@ -83,10 +83,11 @@ public void betterOnSmith(AbstractCard c)
 
 		cardsToShow.add(upgradableCards.get(0));
 		upgradableCards.get(0).upgrade();
+		
 
 		AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
-
-		AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy()));
+		
+		cardEffects();
 
 	}
 	  
