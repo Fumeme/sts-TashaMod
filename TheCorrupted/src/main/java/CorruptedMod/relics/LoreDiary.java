@@ -92,7 +92,7 @@ public void betterOnSmith(AbstractCard c)
   }
 
 
-public static void cardEffects()
+/*public static void cardEffects()
 {
   for (AbstractCard c : cardsToShow)
   {
@@ -103,7 +103,7 @@ public static void cardEffects()
   }
   cardsToShow.clear();
 }
-
+*/
     // Description
     @Override
     public String getUpdatedDescription() {

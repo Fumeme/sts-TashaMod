@@ -87,6 +87,7 @@ public class loreSpire extends CustomCard {
 		this.upgradeBlock(3);
 		this.rawDescription += loreSpire.LORE[this.timesUpgraded];
 		
+		this.initializeTitle();
 		this.initializeDescription();
 	}
 
