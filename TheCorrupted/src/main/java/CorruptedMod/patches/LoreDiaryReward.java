@@ -34,7 +34,7 @@ public class LoreDiaryReward extends CustomReward {
         for(int i = 0; i < 2; i++) {
             //add card to list
         	
-        	 LoreListSelect.add(LoreList.get(AbstractDungeon.cardRng.random(LoreList.size() -1)));	
+        	 LoreListSelect.add(LoreList.get(AbstractDungeon.cardRng.random(LoreList.size() -1)).makeStatEquivalentCopy());	
         }
         
 
