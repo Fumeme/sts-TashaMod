@@ -100,8 +100,8 @@ public static void cardEffects()
   {
     float x = MathUtils.random(0.4F, 0.9F) * Settings.WIDTH;
     float y = MathUtils.random(0.6F, 0.8F) * Settings.HEIGHT;
-    AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
-    AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+    AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
+    AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect(x, y));
   }
   cardsToShow.clear();
 }
