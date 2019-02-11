@@ -22,26 +22,26 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.LoreDiaryReward;
 import basemod.abstracts.CustomRelic;
 
-public class LoreDiary extends CustomRelic implements BetterOnSmithRelic{
-    /*
-     * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
-     * 
-     * At the start of each combat, gain 1 strenght (i.e. Varja)
-     */
-    
-    // ID, images, text.
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("LoreDiary");
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.PLACEHOLDER_RELIC);
-    public static final String OUTLINE = CorruptedBase.makePath(CorruptedBase.PLACEHOLDER_RELIC_OUTLINE_2);
+public class LoreDiary extends CustomRelic implements BetterOnSmithRelic {
+	/*
+	 * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
+	 * 
+	 * At the start of each combat, gain 1 strenght (i.e. Varja)
+	 */
 
-    private static ArrayList<AbstractCard> cardsToShow = new ArrayList<AbstractCard>();
-    private AbstractPlayer p = AbstractDungeon.player;
-    
-    public LoreDiary() {
-        super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.SPECIAL, LandingSound.FLAT);
-    }
+	// ID, images, text.
+	public static final String ID = CorruptedMod.CorruptedBase.makeID("LoreDiary");
+	public static final String IMG = CorruptedBase.makePath(CorruptedBase.PLACEHOLDER_RELIC);
+	public static final String OUTLINE = CorruptedBase.makePath(CorruptedBase.PLACEHOLDER_RELIC_OUTLINE_2);
 
-@Override
+	private static ArrayList<AbstractCard> cardsToShow = new ArrayList<AbstractCard>();
+	private AbstractPlayer p = AbstractDungeon.player;
+
+	public LoreDiary() {
+		super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.SPECIAL, LandingSound.FLAT);
+	}
+
+	@Override
 	/*    */ public void justEnteredRoom(AbstractRoom room)
 	/*    */ {
 		/* 30 */ if ((room instanceof TreasureRoom)) {
@@ -51,70 +51,66 @@ public class LoreDiary extends CustomRelic implements BetterOnSmithRelic{
 			/* 34 */ this.pulse = false;
 			/*    */ }
 		/*    */ }
-    
-@Override
+
+	@Override
 	/*    */ public void onChestOpen(boolean bossChest)
 	/*    */ {
 		/* 44 */ if (!bossChest) { /*    */
 
 			flash();
 			AbstractDungeon.getCurrRoom().rewards.add(new LoreDiaryReward());
-		
+
 		}
-}
-public void betterOnSmith(AbstractCard c)
-{
-	
-	final ArrayList<AbstractCard> upgradableCards = new ArrayList<AbstractCard>();
+	}
 
-	for (final AbstractCard c1 : AbstractDungeon.player.masterDeck.group) {
+	public void betterOnSmith(AbstractCard c) {
 
-		if (c1.canUpgrade() && !c1.hasTag(CorruptedBase.Lore)) {
+		final ArrayList<AbstractCard> upgradableCards = new ArrayList<AbstractCard>();
 
-			upgradableCards.add(c1);
+		for (final AbstractCard c1 : AbstractDungeon.player.masterDeck.group) {
+
+			if (c1.canUpgrade() && !c1.hasTag(CorruptedBase.Lore)) {
+
+				upgradableCards.add(c1);
+
+			}
+
+		}
+
+		Collections.shuffle(upgradableCards);
+
+		if (!upgradableCards.isEmpty()) {
+
+			cardsToShow.add(upgradableCards.get(0));
+			upgradableCards.get(0).upgrade();
+
+			AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
+
+			cardEffects();
 
 		}
 
 	}
 
-	Collections.shuffle(upgradableCards);
-
-	if (!upgradableCards.isEmpty()) {
-
-		cardsToShow.add(upgradableCards.get(0));
-		upgradableCards.get(0).upgrade();
-		
-
-		AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
-		
-		cardEffects();
-
+	public static void cardEffects() {
+		for (AbstractCard c : cardsToShow) {
+			float x = MathUtils.random(0.4F, 0.9F) * Settings.WIDTH;
+			float y = MathUtils.random(0.6F, 0.8F) * Settings.HEIGHT;
+			AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
+			AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect(x, y));
+		}
+		cardsToShow.clear();
 	}
-	  
-  }
 
+	// Description
+	@Override
+	public String getUpdatedDescription() {
+		return DESCRIPTIONS[0];
+	}
 
-public static void cardEffects()
-{
-  for (AbstractCard c : cardsToShow)
-  {
-    float x = MathUtils.random(0.4F, 0.9F) * Settings.WIDTH;
-    float y = MathUtils.random(0.6F, 0.8F) * Settings.HEIGHT;
-    AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
-    AbstractDungeon.topLevelEffectsQueue.add(new UpgradeShineEffect(x, y));
-  }
-  cardsToShow.clear();
-}
-
-    // Description
-    @Override
-    public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
-    }
-
-    // Which relic to return on making a copy of this relic.
-    @Override
-    public AbstractRelic makeCopy() {
-        return new LoreDiary();
-    }
+	// Which relic to return on making a copy of this relic.
+	@Override
+	public AbstractRelic makeCopy() {
+		return new LoreDiary();
+	}
 }
