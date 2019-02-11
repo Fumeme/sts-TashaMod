@@ -81,6 +81,7 @@ public void betterOnSmith(AbstractCard c)
 
 	if (!upgradableCards.isEmpty()) {
 
+		cardsToShow.add(upgradableCards.get(0));
 		upgradableCards.get(0).upgrade();
 
 		AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
@@ -92,7 +93,7 @@ public void betterOnSmith(AbstractCard c)
   }
 
 
-/*public static void cardEffects()
+public static void cardEffects()
 {
   for (AbstractCard c : cardsToShow)
   {
@@ -103,7 +104,7 @@ public void betterOnSmith(AbstractCard c)
   }
   cardsToShow.clear();
 }
-*/
+
     // Description
     @Override
     public String getUpdatedDescription() {
