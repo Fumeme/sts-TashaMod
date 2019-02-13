@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Mana extends TwoAmountPower {
+public class Mana extends AbstractPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("Mana");
@@ -18,14 +18,12 @@ public class Mana extends TwoAmountPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     
-	private static int magictimesCheck = 0;
 
     public Mana(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.amount2 = Mana.magictimesCheck;
         this.updateDescription();
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
@@ -35,17 +33,6 @@ public class Mana extends TwoAmountPower {
 
     }
 
-    public void update(int slot)
-    {
-      super.update(slot);
-    }
-    // At the end of the turn, Remove gained dexterity.
-    @Override
-    public void atEndOfTurn(final boolean isPlayer) {
-if(this.amount2 !=0) {
-    	this.amount2 = 0;
-}
-    }
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;

@@ -1,27 +1,18 @@
 package CorruptedMod.powers;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import CorruptedMod.powers.Mana;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.MetallicizePower;
-import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
-import com.megacrit.cardcrawl.vfx.combat.DamageHeartEffect;
-import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
-
-import CorruptedMod.CorruptedBase;
 
 //Gain 1 dex for the turn for each card played.
 
@@ -47,9 +38,6 @@ public class ManaBlightPower extends AbstractPower {
         this.source = source;
         canGoNegative = false;
         
-        if (AbstractDungeon.player.getPower(Mana.POWER_ID) instanceof TwoAmountPower) {
-          this.counter =  ((TwoAmountPower)AbstractDungeon.player.getPower(Mana.POWER_ID)).amount2;
-        }
 
     }
 

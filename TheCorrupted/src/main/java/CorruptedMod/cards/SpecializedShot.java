@@ -36,7 +36,7 @@ public class SpecializedShot extends CustomCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private int magictimes = 0;
+    public int magictimes = 0;
 
     // /TEXT DECLARATION/
 
