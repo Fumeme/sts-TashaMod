@@ -1,5 +1,6 @@
 package CorruptedMod.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,6 +17,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayPower;
 import CorruptedMod.powers.Mana;
+import CorruptedMod.powers.ManaBlightPower;
 import basemod.abstracts.CustomCard;
 
 public class SpecializedShot extends CustomCard {
@@ -34,6 +36,7 @@ public class SpecializedShot extends CustomCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private int magictimes = 0;
 
     // /TEXT DECLARATION/
 
@@ -68,7 +71,8 @@ public class SpecializedShot extends CustomCard {
                         AbstractGameAction.AttackEffect.FIRE));
         
         
-        if(magic((short) 3)) {
+        if(magic((short) 3)) { AbstractDungeon.player.getPower(Mana.POWER_ID).flash();
+        	this.magictimes++;
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new PoisonPower(m, p, this.magicNumber), this.magicNumber));
@@ -76,7 +80,8 @@ public class SpecializedShot extends CustomCard {
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new DecayPower(m, p, 1), 1));
         	
-        	if(magic((short) 5)) {
+        	if(magic((short) 5)) {AbstractDungeon.player.getPower(Mana.POWER_ID).flash();
+        		this.magictimes++;
         		
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                         new PoisonPower(m, p, this.magicNumber), this.magicNumber));
@@ -85,6 +90,12 @@ public class SpecializedShot extends CustomCard {
                         new WeakPower(m, this.magicNumber-1, false), this.magicNumber));
         	}
         }
+        
+		if(m.hasPower(ManaBlightPower.POWER_ID) && m.getPower(ManaBlightPower.POWER_ID).amount>0) {
+	        if (AbstractDungeon.player.getPower(Mana.POWER_ID) instanceof TwoAmountPower) {
+	            ((TwoAmountPower)AbstractDungeon.player.getPower(Mana.POWER_ID)).amount2 = this.magictimes;;
+	          } 
+		}
 
     }
     boolean magic (short min) {

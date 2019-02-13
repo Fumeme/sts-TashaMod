@@ -52,16 +52,14 @@ public class loreSpire extends CustomCard {
 		this.damage = this.baseDamage = this.baseBlock = this.block = 5;
 		this.isMultiDamage = true;
 		
-        this.rawDescription = DESCRIPTION + loreSpire.LORE[0];
-        
-        this.initializeDescription();
+		this.rawDescription = DESCRIPTION + loreSpire.LORE[0];
 	}
 
 	/*    */ public void triggerWhenDrawn()
 	/*    */ {
 		applyPowers();
 		/* 41 */ flash();
-		/*    */ AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.baseBlock));
+		/*    */ AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
 
 		AbstractDungeon.actionManager.addToBottom(
 				new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, DamageType.THORNS, AbstractGameAction.AttackEffect.SHIELD));
@@ -79,16 +77,21 @@ public class loreSpire extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new loreSpire();
 	}
-
+//OnCardDrawPower 
 	@Override
 	public void upgrade() {
-		this.upgradeName();
+		if(this.timesUpgraded <= 5) {
+            this.timesUpgraded++;
+			this.upgraded = true;
+		this.name = (NAME + "+" + this.timesUpgraded);
 		this.upgradeDamage(3);
 		this.upgradeBlock(3);
-		this.rawDescription += loreSpire.LORE[this.timesUpgraded];
-		
+		this.rawDescription = DESCRIPTION;
+		for(int i = 0; i <= this.timesUpgraded; i++) {
+		this.rawDescription += loreSpire.LORE[i];
+		}
 		this.initializeTitle();
 		this.initializeDescription();
-	}
+	}}
 
 }

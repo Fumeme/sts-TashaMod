@@ -1,31 +1,35 @@
 package CorruptedMod.powers;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnCardDrawPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import CorruptedMod.CorruptedBase;
+
 //Gain 1 dex for the turn for each card played.
 
-public class Mana extends TwoAmountPower {
+public class RapidFirePower extends AbstractPower implements OnCardDrawPower  {
     public AbstractCreature source;
 
-    public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("Mana");
+    public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("RapidFirePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    
-	private static int magictimesCheck = 0;
 
-    public Mana(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public RapidFirePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.amount2 = Mana.magictimesCheck;
         this.updateDescription();
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
@@ -35,17 +39,8 @@ public class Mana extends TwoAmountPower {
 
     }
 
-    public void update(int slot)
-    {
-      super.update(slot);
-    }
-    // At the end of the turn, Remove gained dexterity.
-    @Override
-    public void atEndOfTurn(final boolean isPlayer) {
-if(this.amount2 !=0) {
-    	this.amount2 = 0;
-}
-    }
+
+
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
@@ -58,7 +53,24 @@ if(this.amount2 !=0) {
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0] + this.amount;
+    	this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
+
+
+
+	@Override
+	public void onCardDraw(AbstractCard arg0) {
+		if (arg0.hasTag(CorruptedBase.Ammo)) {
+			
+	        AbstractDungeon.actionManager
+            .addToBottom(new DamageRandomEnemyAction(new DamageInfo(
+            		owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
+	        
+	        AbstractDungeon.actionManager
+            .addToBottom(new DamageRandomEnemyAction(new DamageInfo(
+            		owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
+		}
+		
+	}
 
 }

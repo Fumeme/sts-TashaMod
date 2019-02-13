@@ -43,6 +43,13 @@
         "NAME": "Undying",
         "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]
 },
+"Corrupted: RapidFirePower": {
+        "NAME": "Rapid Fire",
+        "DESCRIPTIONS": [
+                "Deal ",
+                 " damage twice to a random enemy whenever you draw an ammo card."
+                ]
+},
 "Corrupted: DecayPower": {
         "NAME": "Decay",
         "DESCRIPTIONS": [
@@ -83,9 +90,14 @@
         "NAME": "Nullify",
         "DESCRIPTIONS": ["Negates the next buff."]
 },
+"Corrupted: ManaBlightPower": {
+        "NAME": "Mana Blight",
+        "DESCRIPTIONS": ["whenever an attack targets this creature, it takes ",
+        "damage everytime it activates a magic effect."]
+},
 "Corrupted: SpreadCorruptionPower": {
         "NAME": "Spreading Corruption",
-        "DESCRIPTIONS": ["At the start of your turn, consume #b", "#yMana and apply #b", "#yDecay to everyone and apply #b", "#yPoison to all enemies."]
+        "DESCRIPTIONS": ["At the start of your turn, consume #b", " #yMana and apply #b", " #yDecay to everyone and apply #b", " #yPoison to all enemies."]
 }
 
 }

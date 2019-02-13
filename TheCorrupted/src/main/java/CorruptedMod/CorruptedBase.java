@@ -57,7 +57,12 @@ import CorruptedMod.cards.TransMind;
 import CorruptedMod.cards.aLittleBitExtra;
 import CorruptedMod.cards.aWeakDiamond;
 import CorruptedMod.cards.witheringBarrier;
+import CorruptedMod.cards.ammo.RapidFire;
 import CorruptedMod.cards.lore.*;
+import CorruptedMod.cards.selfdecay.*;
+import CorruptedMod.cards.test.ManaBLightTest;
+import CorruptedMod.cards.mana.*;
+import CorruptedMod.cards.decay.*;
 import CorruptedMod.characters.*;
 import CorruptedMod.patches.*;
 import CorruptedMod.potions.*;
@@ -74,15 +79,6 @@ import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 
-/* 
- * Welcome to this mildly over-commented Slay the Spire modding base. 
- * Use it to make your own mod of any type. - If you want to add any standard in-game content (Character, 
- * cards, relics), this is a good starting point.
- * It features 1 character with a minimal set of things: 1 card of each type, 1 debuff, 1 relic, etc.
- * If you're new to modding, I high taly recommend going though the BaseMod wiki for whatever you wish to add 
- * https://github.com/daviscook477/BaseMod/wiki  and work your way thought your made with this base. 
- * Feel free to use this in any way you like, of course. Happy modding!
- */
 
 @SpireInitializer
 public class CorruptedBase
@@ -139,6 +135,8 @@ public class CorruptedBase
     public static final String ToxicWall = "cards/Toxic-Wall.png";
     public static final String SpreadCorruption = "cards/SpreadCorruption.png";
     public static final String TransMind = "cards/TransMind.png";
+    public static final String Sleep = "cards/Sleep.png";
+    
     
     // Power images
     public static final String COMMON_POWER = "powers/placeholder_power.png";
@@ -205,9 +203,9 @@ public class CorruptedBase
 
     @SuppressWarnings("unused")
     public static void initialize() {
-        logger.info("========================= Initializing Default Mod. Hi. =========================");
+        logger.info("========================= Initializing Corrupted Mod. =========================");
         CorruptedBase defaultmod = new CorruptedBase();
-        logger.info("========================= /Default Mod Initialized/ =========================");
+        logger.info("========================= /Corrupted Mod Initialized/ =========================");
     }
 
     // ============== /SUBSCRIBE, CREATE THE COLOR, INITIALIZE/ =================
@@ -361,7 +359,8 @@ public class CorruptedBase
         BaseMod.addCard(new MaxOut()); 
         BaseMod.addCard(new FocusCard()); 
         
-        
+        BaseMod.addCard(new RapidFire());  
+        BaseMod.addCard(new ManaBLightTest()); 
         /*
          * 
          */

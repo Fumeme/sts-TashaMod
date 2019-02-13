@@ -67,6 +67,8 @@ public class LoreDiary extends CustomRelic implements BetterOnSmithRelic {
 
 		final ArrayList<AbstractCard> upgradableCards = new ArrayList<AbstractCard>();
 
+		if(c.hasTag(CorruptedBase.Lore)) {
+		
 		for (final AbstractCard c1 : AbstractDungeon.player.masterDeck.group) {
 
 			if (c1.canUpgrade() && !c1.hasTag(CorruptedBase.Lore)) {
@@ -90,7 +92,7 @@ public class LoreDiary extends CustomRelic implements BetterOnSmithRelic {
 
 		}
 
-	}
+	}}
 
 	public static void cardEffects() {
 		for (AbstractCard c : cardsToShow) {

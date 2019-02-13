@@ -186,8 +186,16 @@
 		"UPGRADE_DESCRIPTION":"Does !D! damage NL Does 1.6x more damage if target has no block. NL Increase the damage multiplier by 0.07 per mana you have. NL [#239ecf]Magic [#239ecf]4: []damage multiplier is increased by 0.35"
 	},
 		"Corrupted: EvilCloud": {
-		"NAME": "Evil CLoud",
-		"DESCRIPTION": "apply !M! Decay to all enemies. NL Enemies gain Decay instead of losing it."
+		"NAME": "Evil Cloud",
+		"DESCRIPTION": "Apply !M! Decay to all enemies. NL Enemies gain Decay instead of losing it."
+	},
+	"Corrupted: RapidFire": {
+		"NAME": "Quick FIre",
+		"DESCRIPTION": "Deal !M! damage to a random enemy twice wverytime you draw an ammo card."
+	},
+	"Corrupted: ManaBLightTest": {
+		"NAME": "ManaBLight placeholder",
+		"DESCRIPTION": "apply !M! Mana Blight."
 	},
 
 	"Corrupted: CallZitong": {
