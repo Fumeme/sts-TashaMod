@@ -45,6 +45,7 @@ public class ManaBlightPower extends AbstractPower {
     
     @Override
     /*     */   public void onAfterCardPlayed(AbstractCard Card) {
+    	this.counter = getMagicTimes();
     	
     	if(this.counter>0 && this.amount>0 && Card.type == CardType.ATTACK && Card.target.equals(this.owner)) {  // checks the times magic effect activated and stacks are +ive and that this is targeted by an attack
     	/* 249 */     

@@ -98,6 +98,9 @@ public class SpecializedShot extends CustomCard {
 		}
 
     }
+    public int getMagicTimes(){
+    	return this.magictimes;
+    }
     boolean magic (short min) {
     	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 
