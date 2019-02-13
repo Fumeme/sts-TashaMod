@@ -87,20 +87,13 @@ public class SpecializedShot extends CustomCard {
                         new PoisonPower(m, p, this.magicNumber), this.magicNumber));
 
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                        new WeakPower(m, this.magicNumber-1, false), this.magicNumber));
+                        new WeakPower(m, this.magicNumber-1, false), this.magicNumber-1));
         	}
         }
-        
-		if(m.hasPower(ManaBlightPower.POWER_ID) && m.getPower(ManaBlightPower.POWER_ID).amount>0) {
-	        if (AbstractDungeon.player.getPower(Mana.POWER_ID) instanceof TwoAmountPower) {
-	            ((TwoAmountPower)AbstractDungeon.player.getPower(Mana.POWER_ID)).amount2 = this.magictimes;;
-	          } 
-		}
+
 
     }
-    public int getMagicTimes(){
-    	return this.magictimes;
-    }
+
     boolean magic (short min) {
     	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 

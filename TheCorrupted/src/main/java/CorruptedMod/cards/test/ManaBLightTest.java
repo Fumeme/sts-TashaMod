@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayPower;
+import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.ManaBlightPower;
 import basemod.abstracts.CustomCard;
 
@@ -62,8 +63,12 @@ public class ManaBLightTest extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     	
+    	if(p.hasPower(Mana.POWER_ID)) {
+    		p.getPower(Mana.POWER_ID).flash();
+    	}
+    	
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new ManaBlightPower(m, p, this.magicNumber), this.magicNumber));
+                new ManaBlightPower(m, p, this.magicNumber,1), this.magicNumber));
         
 
 

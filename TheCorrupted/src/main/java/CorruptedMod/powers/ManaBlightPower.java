@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,8 +17,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 //Gain 1 dex for the turn for each card played.
 
-public class ManaBlightPower extends AbstractPower {
-    private static int counter = 0;
+public class ManaBlightPower extends TwoAmountPower {
 
 	public AbstractCreature source;
 
@@ -26,44 +26,42 @@ public class ManaBlightPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public ManaBlightPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public ManaBlightPower(final AbstractCreature owner, final AbstractCreature source, final int amount, final int initTimes) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.updateDescription();
+        this.amount2 = initTimes;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
         this.loadRegion("frail");
         this.source = source;
         canGoNegative = false;
-        
+        this.updateDescription();
 
     }
 
-
+public void blighten(int times) {
+	
+	for(int i = 0; i<= times; i++) {
+	AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner,
+			new DamageInfo(this.owner, this.amount, DamageType.THORNS),
+			AbstractGameAction.AttackEffect.POISON));
+	}
+}
     
-    @Override
-    /*     */   public void onAfterCardPlayed(AbstractCard Card) {
-    	this.counter = getMagicTimes();
-    	
-    	if(this.counter>0 && this.amount>0 && Card.type == CardType.ATTACK && Card.target.equals(this.owner)) {  // checks the times magic effect activated and stacks are +ive and that this is targeted by an attack
-    	/* 249 */     
-    		for(int i = 0; i<= this.counter; i++) {
-            AbstractDungeon.actionManager
-            .addToBottom(new DamageAction(this.owner,
-                    new DamageInfo(this.owner, this.amount, DamageType.THORNS),
-                    AbstractGameAction.AttackEffect.POISON));
-    		}
-    		
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
-                    new ManaBlightPower(this.owner, this.owner, -1), -1));
-            
-this.counter--;
-    		
-    		
-    	}
-    	/*     */   }
+
+@Override
+public void atStartOfTurn() {
+	
+	blighten(this.amount2);
+	this.amount2 = 0;
+
+}
+    
+    
+
+    	    
 
     @Override
     public void stackPower(int stackAmount) {

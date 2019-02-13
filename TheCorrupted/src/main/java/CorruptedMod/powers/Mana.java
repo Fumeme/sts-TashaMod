@@ -18,7 +18,7 @@ public class Mana extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     
-
+public int magicCounter = 0;
     public Mana(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -33,6 +33,8 @@ public class Mana extends AbstractPower {
 
     }
 
+
+    
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;

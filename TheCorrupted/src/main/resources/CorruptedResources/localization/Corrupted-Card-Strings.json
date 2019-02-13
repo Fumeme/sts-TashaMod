@@ -194,8 +194,8 @@
 		"DESCRIPTION": "Deal !M! damage to a random enemy twice wverytime you draw an ammo card."
 	},
 	"Corrupted: ManaBLightTest": {
-		"NAME": "ManaBLight placeholder",
-		"DESCRIPTION": "apply !M! Mana Blight."
+		"NAME": "ManaBlight placeholder",
+		"DESCRIPTION": "apply !M! Mana Blight and null cast once."
 	},
 
 	"Corrupted: CallZitong": {
