@@ -26,7 +26,6 @@ public class ManaBlightPower extends TwoAmountPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int m = 0 ;
 
     public ManaBlightPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
@@ -35,23 +34,23 @@ public class ManaBlightPower extends TwoAmountPower {
         this.amount = amount;
         
         this.amount2 = 0;
+        this.updateDescription();
         
         this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
         this.loadRegion("frail");
         this.source = source;
         canGoNegative = false;
-        this.updateDescription();
 
     }
 
     
 public void blighten(int times) {
 	
-	for(int i = 0; i<= times; i++) {
-	AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner,
-			new DamageInfo(this.owner, this.amount, DamageType.THORNS),
-			AbstractGameAction.AttackEffect.POISON));
+	for(int i = 0; i< times; i++) {
+		AbstractDungeon.actionManager.addToBottom(
+				new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageType.THORNS),
+						AbstractGameAction.AttackEffect.POISON));
 	}
 	this.amount2 =0;
 }
@@ -60,6 +59,7 @@ public void blighten(int times) {
 @Override
 public void atStartOfTurn() {
 	
+	flash();
 	blighten(this.amount2);
 	
 
