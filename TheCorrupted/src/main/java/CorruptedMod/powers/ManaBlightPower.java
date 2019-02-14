@@ -21,7 +21,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 public class ManaBlightPower extends TwoAmountPower {
 
 	public AbstractCreature source;
-	public int amount2;
 
     public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("ManaBlightPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -29,13 +28,13 @@ public class ManaBlightPower extends TwoAmountPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static int m = 0 ;
 
-    public ManaBlightPower(final AbstractCreature owner, final AbstractCreature source, final int amount, final int initTimes) {
+    public ManaBlightPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         
-        this.amount2 = initTimes;
+        this.amount2 = 0;
         
         this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
