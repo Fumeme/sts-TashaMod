@@ -71,6 +71,8 @@ public class ManaBLightTest extends CustomCard {
                 new ManaBlightPower(m, p, this.magicNumber,1), this.magicNumber));
         
 
+        
+        
 
     }
 
