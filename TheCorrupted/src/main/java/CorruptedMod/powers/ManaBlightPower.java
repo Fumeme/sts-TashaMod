@@ -52,9 +52,8 @@ public void blighten(int times) {
 	AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner,
 			new DamageInfo(this.owner, this.amount, DamageType.THORNS),
 			AbstractGameAction.AttackEffect.POISON));
-
-	this.amount2 =0;
 	}
+	this.amount2 =0;
 }
 
 
