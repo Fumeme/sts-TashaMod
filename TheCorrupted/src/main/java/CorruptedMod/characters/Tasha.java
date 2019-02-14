@@ -184,8 +184,8 @@ public class Tasha extends AbstractPlayerWithMinions   {
     @Override
     public void doCharSelectScreenSelectEffect() {
         CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
-        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.XLONG,
-                false); // Screen Effect
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
+                true); // Screen Effect
     }
 
     // Character select on-button-press sound effect
