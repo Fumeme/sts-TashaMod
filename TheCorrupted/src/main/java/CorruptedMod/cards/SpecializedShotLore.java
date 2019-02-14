@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayPower;
 import CorruptedMod.powers.Mana;
@@ -69,7 +70,7 @@ public class SpecializedShotLore extends CustomCard {
                         AbstractGameAction.AttackEffect.FIRE));
         
         
-        if(magic((short) 3)) {
+        if(magic((short) 3)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new PoisonPower(m, p, this.magicNumber), this.magicNumber));
@@ -77,7 +78,7 @@ public class SpecializedShotLore extends CustomCard {
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new DecayPower(m, p, 1), 1));
         	
-        	if(magic((short) 5)) {
+        	if(magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
         		
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                         new PoisonPower(m, p, this.magicNumber), this.magicNumber));

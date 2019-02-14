@@ -3,6 +3,7 @@ package CorruptedMod.cards;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayPower;
 import CorruptedMod.powers.Mana;
@@ -36,7 +38,6 @@ public class SpecializedShot extends CustomCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public int magictimes = 0;
 
     // /TEXT DECLARATION/
 
@@ -66,13 +67,12 @@ public class SpecializedShot extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager
-                .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
+                .addToBottom(new DamageAction(m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));
         
         
-        if(magic((short) 3)) { AbstractDungeon.player.getPower(Mana.POWER_ID).flash();
-        	this.magictimes++;
+        if(magic((short) 3)) { AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new PoisonPower(m, p, this.magicNumber), this.magicNumber));
@@ -80,8 +80,7 @@ public class SpecializedShot extends CustomCard {
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new DecayPower(m, p, 1), 1));
         	
-        	if(magic((short) 5)) {AbstractDungeon.player.getPower(Mana.POWER_ID).flash();
-        		this.magictimes++;
+        	if(magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
         		
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                         new PoisonPower(m, p, this.magicNumber), this.magicNumber));

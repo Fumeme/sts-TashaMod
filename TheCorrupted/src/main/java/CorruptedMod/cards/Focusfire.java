@@ -1,6 +1,7 @@
 package CorruptedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
@@ -63,15 +65,18 @@ public class Focusfire extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	this.isMultiDamage = true;
 
+    	if(magic((short)3)) {
+    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
+    	}
+    	
   		 AbstractDungeon.actionManager
-         .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
+         .addToBottom(new DamageAction(m,
                  new DamageInfo(p, this.damage, this.damageTypeForTurn),
                  AbstractGameAction.AttackEffect.FIRE));
     		 
     		 AbstractDungeon.actionManager
-             .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
+             .addToBottom(new DamageAction(m,
                      new DamageInfo(p, this.damage, this.damageTypeForTurn),
                      AbstractGameAction.AttackEffect.FIRE));
     		 

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.CommonPower;
 import CorruptedMod.powers.HybridRoundsPower;
@@ -67,15 +68,15 @@ public class HybridRounds extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-    	if(magic((short) 2)) {
+    	if(magic((short) 2)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
     		
     		this.baseDamage += 2;
     		
-    		if(magic((short) 4)) {
+    		if(magic((short) 4)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
         		
         		this.baseDamage += 2;
         		
-        		if(magic((short) 6)) {
+        		if(magic((short) 6)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
             		
         			this.baseDamage += 2;
             	}

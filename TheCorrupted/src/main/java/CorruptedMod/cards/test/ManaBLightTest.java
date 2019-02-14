@@ -65,10 +65,6 @@ public class ManaBLightTest extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     	
-    	if(p.hasPower(Mana.POWER_ID)) {
-    		p.getPower(Mana.POWER_ID).flash();
-    	}
-    	
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new ManaBlightPower(m, p, this.magicNumber), this.magicNumber));
         

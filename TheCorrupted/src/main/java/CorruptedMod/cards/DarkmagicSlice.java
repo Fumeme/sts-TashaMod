@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
@@ -56,11 +57,11 @@ public class DarkmagicSlice extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (magic((short) 5)) {
+        if (magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
 
             this.damage += 5;
 
-            if (magic((short) 15)) {
+            if (magic((short) 15)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
 
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Mana(p, p, -2), -2));
                 this.damage *=2;

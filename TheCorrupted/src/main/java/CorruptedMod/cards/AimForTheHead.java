@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.ManaBlightPower;
@@ -50,13 +51,11 @@ public class AimForTheHead extends CustomCard {
 	private static final int UPGRADE_PLUS_DMG = 2;
 	private double mulup = 0;
 	private double dmgAlmost;
-	private int magicTimes = 0;
 	// /STAT DECLARATION/
 
 	public AimForTheHead() {
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		this.damage = this.baseDamage = DAMAGE;
-		this.magicTimes = 0;
 	}
 
 	// Actions the card should do.
@@ -72,7 +71,7 @@ public class AimForTheHead extends CustomCard {
 		if (p.hasPower(Mana.POWER_ID) && p.getPower(Mana.POWER_ID).amount >= 4) {
 
 			this.mulup = 0.35;
-			this.magicTimes++;
+			AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
 			
 		} else {
 			this.mulup = 0.25;
@@ -121,12 +120,6 @@ if(p.hasPower(Mana.POWER_ID)) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-		
-		if(m.hasPower(ManaBlightPower.POWER_ID) && m.getPower(ManaBlightPower.POWER_ID).amount>0) {
-	        if (AbstractDungeon.player.getPower(Mana.POWER_ID) instanceof TwoAmountPower) {
-	            ((TwoAmountPower)AbstractDungeon.player.getPower(Mana.POWER_ID)).amount2 = this.magicTimes;;
-	          } 
-		}
 		}
 	
 

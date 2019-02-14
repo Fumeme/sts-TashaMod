@@ -131,7 +131,7 @@
 	},
 	"Corrupted: DarkmagicSlice": {
 		"NAME": "Darkmagic Slice",
-		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 aditional damage. NL [#239ecf]Magic [#239ecf]15: []Does double damage."
+		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 aditional damage. NL [#239ecf]Magic [#239ecf]15: []consume 2 mana to do double damage."
 	},
 	"Corrupted: ManaBurst": {
 		"NAME": "Mana Burst",
