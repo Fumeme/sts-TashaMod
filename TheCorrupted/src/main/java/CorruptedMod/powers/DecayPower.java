@@ -103,7 +103,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 			if (!this.owner.hasPower(BlackArmorPower.POWER_ID)) {
 				if (!this.owner.hasPower(InfernalFormPower.POWER_ID)) {
 
-					System.out.print("Damaging " + this.owner + " for " + this.amount + " damage");
+					System.out.println("Damaging " + this.owner + " for " + this.amount + " damage");
 					flash();
 					/* 69 */ AbstractDungeon.actionManager.addToBottom(
 							new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageType.THORNS),
@@ -120,7 +120,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 			if (!this.owner.hasPower(EvilCloudPower.POWER_ID)
 					|| this.owner.getPower(EvilCloudPower.POWER_ID).amount <= 0) {
-				System.out.print("minus one decay on " + this.owner);
+				System.out.println("minus one decay on " + this.owner);
 				AbstractDungeon.actionManager.addToBottom(
 						new ApplyPowerAction(this.owner, this.owner, new DecayPower(this.owner, this.owner, -1), -1));
 				/*    */ } else {

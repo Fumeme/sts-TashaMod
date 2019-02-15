@@ -31,7 +31,7 @@ public class ToxicWallPower extends AbstractPower {
         this.updateDescription();
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
-        this.img = new Texture(IMG);
+        this.loadRegion("flameBarrier");
         this.source = source;
 
     }

@@ -2,6 +2,7 @@ package CorruptedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,7 +46,7 @@ public class SappingStrike extends CustomCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int MAGIC = 1;
 
@@ -66,20 +67,20 @@ public class SappingStrike extends CustomCard {
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Mana(p, p, this.magicNumber), this.magicNumber));
         
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         
-        if(magic((short) 3)) {
+        if(magic(3)) {
         	AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Mana(p, p, 1), 1));
-        	
+
         }
 
     }
 
-    boolean magic (short min) {
+    boolean magic (int min) {
     	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 
     		 return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
