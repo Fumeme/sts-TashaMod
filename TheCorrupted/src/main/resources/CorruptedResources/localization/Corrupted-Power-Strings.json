@@ -9,6 +9,10 @@
         "DESCRIPTIONS": ["At the start of your turn TOUCH ", " enemy." , " enemies."]
 },
 
+"Corrupted: ManaShellPower": {
+        "NAME": "Mana Shell",
+        "DESCRIPTIONS": ["Gain #b", "* your [#239ecf]mana count/3, at the end of your turn."]
+},
 "Corrupted: Mana": {
         "NAME": "Mana",
         "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is #b"]

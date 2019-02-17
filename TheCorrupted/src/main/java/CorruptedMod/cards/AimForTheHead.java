@@ -71,7 +71,7 @@ public class AimForTheHead extends CustomCard {
 		if (p.hasPower(Mana.POWER_ID) && p.getPower(Mana.POWER_ID).amount >= 4) {
 
 			this.mulup = 0.35;
-			AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
+			AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
 			
 		} else {
 			this.mulup = 0.25;

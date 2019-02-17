@@ -34,6 +34,11 @@
 		]
 	},
 
+	"Corrupted: ManaShell": {
+		"NAME": "Mana Shell",
+		"DESCRIPTION": "Gain X * your [#239ecf]mana count/3, at the end of your turn.",
+		"UPGRADE_DESCRIPTION": "Gain X+1 * your [#239ecf]mana count/3, at the end of your turn."
+	},
 	"Corrupted: Focus": {
 		"NAME": "Focus",
 		"DESCRIPTION": "Exaust a card, gain mana equal to their cost.",

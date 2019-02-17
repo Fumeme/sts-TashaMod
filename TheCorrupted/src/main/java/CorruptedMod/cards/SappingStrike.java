@@ -72,7 +72,7 @@ public class SappingStrike extends CustomCard {
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         
         if(magic(3)) {
-        	AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
+        	AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Mana(p, p, 1), 1));
 

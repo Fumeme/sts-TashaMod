@@ -67,7 +67,7 @@ public class Focusfire extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
     	if(magic((short)3)) {
-    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
+    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
     	}
     	
   		 AbstractDungeon.actionManager

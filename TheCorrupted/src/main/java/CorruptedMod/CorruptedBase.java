@@ -38,6 +38,7 @@ import CorruptedMod.cards.InnerHeaven;
 import CorruptedMod.cards.LongTerm;
 import CorruptedMod.cards.MagicArmor;
 import CorruptedMod.cards.ManaBurst;
+import CorruptedMod.cards.ManaShell;
 import CorruptedMod.cards.MaxOut;
 import CorruptedMod.cards.Overhead;
 import CorruptedMod.cards.Overload;
@@ -356,6 +357,7 @@ public class CorruptedBase
         BaseMod.addCard(new MaxOut()); 
         BaseMod.addCard(new FocusCard()); 
         
+        BaseMod.addCard(new ManaShell()); 
         BaseMod.addCard(new RapidFire());  
         BaseMod.addCard(new ManaBLightTest()); 
         /*
@@ -417,13 +419,13 @@ public class CorruptedBase
     @Override
     public void receiveEditKeywords() {
 
-        final String[] Magic = {"[#239ecf]magic"};
+        final String[] Magic = {"[#239ecf]magic", "magic"};
         BaseMod.addKeyword(Magic, "(Magic Y) Requires atleast Y stacks of Mana to activate the cards effect");
         
         final String[] Corruption = {"[#9c65c3]corruption"};
         BaseMod.addKeyword(Corruption, "(Corruption Z) Requires atleast Z stacks of Decay to activate the cards effect");
 
-        final String[] Mana = {"mana", "[][#239ecf]mana"};
+        final String[] Mana = {"mana", "[][#239ecf]mana", "[#239ecf]mana"};
         BaseMod.addKeyword(Mana, "Used for Powering your cards.");
         
         final String[] Decay = {"decay"};

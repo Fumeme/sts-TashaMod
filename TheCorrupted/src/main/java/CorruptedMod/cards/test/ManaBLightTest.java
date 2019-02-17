@@ -44,7 +44,7 @@ public class ManaBLightTest extends CustomCard {
     private static final int COST = 1;
 
 
-    private int AMOUNT = 2;
+    private int AMOUNT = 3;
 
     // /STAT DECLARATION/
 
@@ -61,7 +61,7 @@ public class ManaBLightTest extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                 new ManaBlightPower(m, p, this.magicNumber), this.magicNumber));
         
-        AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1));
+        AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
 
     }
 
@@ -76,7 +76,7 @@ public class ManaBLightTest extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
             this.initializeDescription();
         }
     }

@@ -11,14 +11,16 @@ import CorruptedMod.powers.ManaBlightPower;
 /*    */ public class ManaBlightTriggerAction extends AbstractGameAction
 /*    */ {
 int apply = 0;
+int remove = 0;
 	/*    */
-	/*    */ public ManaBlightTriggerAction(AbstractCreature target, AbstractCreature source, int am)
+	/*    */ public ManaBlightTriggerAction(AbstractCreature target, AbstractCreature source, int timesAdd, int dmgMinus)
 	/*    */ {
 		/* 26 */ this.actionType = ActionType.POWER;
 		/* 27 */ this.duration = 0.2f;
 		this.target = target;
 		this.source = source;
-		this.apply = am;
+		this.apply = timesAdd;
+		this.remove = dmgMinus;
 		/*    */ }
 
 	/*    */
@@ -34,7 +36,7 @@ int apply = 0;
             	
             	target.getPower(ManaBlightPower.POWER_ID).flash();
                 ((TwoAmountPower)target.getPower(ManaBlightPower.POWER_ID)).amount2 += this.apply;
-                target.getPower(ManaBlightPower.POWER_ID).amount -=1;
+                target.getPower(ManaBlightPower.POWER_ID).amount -= this.remove;
               }
             }
 
