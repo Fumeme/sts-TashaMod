@@ -26,6 +26,7 @@ import CorruptedMod.cards.DefaultCommonAttack;
 import CorruptedMod.cards.DefaultCommonSkill;
 import CorruptedMod.cards.Embrace;
 import CorruptedMod.cards.EndlessTorment;
+import CorruptedMod.cards.EnergyCannon;
 import CorruptedMod.cards.EvilCloud;
 import CorruptedMod.cards.Flare;
 import CorruptedMod.cards.FocusCard;
@@ -360,6 +361,8 @@ public class CorruptedBase
         BaseMod.addCard(new ManaShell()); 
         BaseMod.addCard(new RapidFire());  
         BaseMod.addCard(new ManaBLightTest()); 
+        
+        BaseMod.addCard(new EnergyCannon()); 
         /*
          * 
          */

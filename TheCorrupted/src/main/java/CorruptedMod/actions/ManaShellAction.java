@@ -32,9 +32,7 @@ import CorruptedMod.powers.ManaShellPower;
 	 {
 		
 		 int effect = EnergyPanel.totalCount;
-		      if (this.amount != -1) {
-			        effect = this.amount;
-		      }
+
 		      
 		      if (this.p.hasRelic("Chemical X")) {
 			        effect += 2;

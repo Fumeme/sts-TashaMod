@@ -13,6 +13,11 @@
 		"NAME": "Quick Draw",
 		"DESCRIPTION": "Deal !D! damage and draw a card"
 	},
+	"Corrupted: EnergyCannon": {
+		"NAME": "Energy Cannon",
+		"DESCRIPTION": "Consume !M! [#239ecf]mana []to Deal !D! damage.",
+		"UPGRADE_DESCRIPTION": "Consume !M! [#239ecf]mana []to Deal !D! damage and 5 damage to ALL other enemies."
+	},
 	"Corrupted: Reload": {
 		"NAME": "Reload",
 		"DESCRIPTION": "Draw !M! Card(s) NL If any of the cards drawn by this card are Ammo cards, draw another card."
@@ -42,7 +47,7 @@
 	"Corrupted: Focus": {
 		"NAME": "Focus",
 		"DESCRIPTION": "Exaust a card, gain mana equal to their cost.",
-		"UPGRADE_DESCRIPTION": "!Exaust upto 2 cards, gain mana equal to their cost."
+		"UPGRADE_DESCRIPTION": "Exaust upto 2 cards, gain mana equal to their cost."
 	},
 	"Corrupted: BattleSense": {
 		"NAME": "Battle Sense",
