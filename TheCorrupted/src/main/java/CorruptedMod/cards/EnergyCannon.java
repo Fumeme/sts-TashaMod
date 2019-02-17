@@ -58,7 +58,7 @@ public class EnergyCannon extends CustomCard {
     public EnergyCannon() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 20;
-        this.magicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 5;
 
     }
 
@@ -76,29 +76,30 @@ public class EnergyCannon extends CustomCard {
                 new Mana(p, p, -this.magicNumber), -this.magicNumber));
         
         if(this.upgraded) {
-
+/*
         	 int count = 0;
-        	 /* 43 */     for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
-        	 /* 44 */       if ((!mon.isDeadOrEscaped())) {
-        	 /* 45 */         count++;
-        	 /*    */       }
-        	 /*    */     }
+        	    for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
+        	      if ((!mon.isDeadOrEscaped())) {
+        		 
+        	        count++;
+             }
+             }
 
         	int[] aDamage;
         	aDamage = new int[count];
         	
-       	 /* 48 */     for (int i = 1; i < count; i++) {
-       	 /* 49 */       //thing
+        for (int i = 1; i < count; i++) {
+       	      //thing
        		 
        		 			aDamage[i] = 5;
-       	 /*    */     }
-        	
+    }
+*/        	
         	 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.2F));  //fx
-           
+this.damage = 5;           
 
         	AbstractDungeon.actionManager
-            .addToBottom(new DamageAllButOneEnemyAction(p,m , aDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            .addToBottom(new DamageAllButOneEnemyAction(p,m , this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         
     }}}
 
