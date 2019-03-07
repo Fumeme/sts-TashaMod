@@ -54,12 +54,13 @@ public class FadingHope extends CustomRelic {
     @Override
     public void atBattleStartPreDraw() {
         this.flash();
+        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        
         
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new GenericStrengthUpPower(mo, "Gaining Strength", 1), 1));
         }
         
-        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
     
 

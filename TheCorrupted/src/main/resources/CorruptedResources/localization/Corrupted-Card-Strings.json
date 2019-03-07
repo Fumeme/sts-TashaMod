@@ -6,9 +6,24 @@
 	},
 	"Corrupted: MaxOut": {
 		"NAME": "Maximum Output",
-		"DESCRIPTION": "Gain !M! Mana, Gain 2 Strength and add an Overexertion in your discard pile. NL lose 1 Strength at the end of your turn."
+		"DESCRIPTION": "Gain !M! [#239ecf]mana [], Gain 2 Strength and add an Overexertion in your discard pile. NL lose 1 Strength at the end of your turn."
 	},
-
+	"Corrupted: PureMana": {
+		"NAME": "Pure Mana Ammo",
+		"DESCRIPTION": "deal !D! damage, consume 1 [#239ecf]mana []to deal 5 additional damage and apply !M! [#239ecf]Mana_blight | magic 3,6,9: Deal !M! damage NL Apply !M! vulnerable NL Apply 1 [#239ecf]Mana_blight."
+	},
+	"Corrupted: ManaSpark": {
+		"NAME": "Mana Spark Ammo",
+		"DESCRIPTION": "Consume 1 [#239ecf]mana []to deal !D! damage, if target has no [#239ecf]Mana_blight, apply !M! [#239ecf]Mana_blight, otherwise trigger their [#239ecf]Mana_blight NL",
+		"EXTENDED_DESCRIPTION":[ "magic 5,6,7,8: deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight.",
+			"magic 5", "[#239ecf]magic 5",
+			",6", "[#239ecf],6",
+			",7", "[#239ecf],7",
+			 ",8", "[#239ecf],8",
+			 ": deal !D! damage again NL", "[]: [#239ecf]deal[] !D! [#239ecf]damage [][#239ecf]again NL",
+			 "magic 10: apply 3 [#239ecf]Mana_blight." ,  "[#239ecf]magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight." 
+		]
+	},
 	"Corrupted: QuickDraw": {
 		"NAME": "Quick Draw",
 		"DESCRIPTION": "Deal !D! damage and draw a card"
@@ -205,7 +220,7 @@
 	},
 	"Corrupted: ManaBLightTest": {
 		"NAME": "ManaBlight placeholder",
-		"DESCRIPTION": "apply !M! Mana Blight and null cast once."
+		"DESCRIPTION": "apply !M! [#239ecf]Mana_blight and null cast once."
 	},
 
 	"Corrupted: CallZitong": {

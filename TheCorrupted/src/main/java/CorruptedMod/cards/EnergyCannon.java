@@ -76,10 +76,10 @@ public class EnergyCannon extends CustomCard {
                 new Mana(p, p, -this.magicNumber), -this.magicNumber));
         
         if(this.upgraded) {
-/*
+
         	 int count = 0;
         	    for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
-        	      if ((!mon.isDeadOrEscaped())) {
+        	      if ((!mon.isDeadOrEscaped() && mon.id != m.id)) {
         		 
         	        count++;
              }
@@ -88,18 +88,19 @@ public class EnergyCannon extends CustomCard {
         	int[] aDamage;
         	aDamage = new int[count];
         	
-        for (int i = 1; i < count; i++) {
+        for (int i = 0; i < count; i++) {
        	      //thing
        		 
        		 			aDamage[i] = 5;
+       		 		
     }
-*/        	
+        	
         	 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.2F));  //fx
 this.damage = 5;           
 
         	AbstractDungeon.actionManager
-            .addToBottom(new DamageAllButOneEnemyAction(p,m , this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            .addToBottom(new DamageAllButOneEnemyAction(p,m , aDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         
     }}}
 

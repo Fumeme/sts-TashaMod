@@ -17,22 +17,22 @@
 		"NAME": "Odd Shaped Key",
 		"FLAVOR": "This Key is more of a decorative peace than anthing.",
 		"DESCRIPTIONS": [
-			"Gain [e], Whenever you open a non-Boss chest, add 1 more status to your draw pile."
+			"Gain [E], Whenever you open a non-Boss chest, add #b1 more status to your draw pile at the beginning of every combat."
 		]
 	},
 	"Corrupted: LoreDiary": {
 		"NAME": "Lore Diary",
 		"FLAVOR": "The more you Look at it, the more Familiar the text is.",
 		"DESCRIPTIONS": [
-			"non-boss chests now also contain #bLore #bcard rewards."
+			"non-boss chests now also contain #pLore #pcard rewards."
 		]
 	},
 
 	"Corrupted: PlaceholderRelic2": {
-		"NAME": "DyingHope",
-		"FLAVOR": "your hope is in fact dying",
+		"NAME": "Dying Hope",
+		"FLAVOR": "your #phope is in fact dying",
 		"DESCRIPTIONS": [
-			"Gain [e][e], enemies gain 1 strength every turn."
+			"Gain [E] [E], Enemies gain #b1 #ystrength every turn."
 		]
 	}
 }

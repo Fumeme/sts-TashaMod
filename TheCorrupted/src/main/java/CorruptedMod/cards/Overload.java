@@ -61,7 +61,20 @@ public class Overload extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new Mana(p, p, this.magicNumber), this.magicNumber));
-        
+        if(this.upgraded) {
+        	
+            if(magic((short) 3)) {
+            	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new Mana(p, p, this.magicNumber), this.magicNumber));
+            	
+            	if(magic((short) 10)) {
+            		
+            		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                            new Mana(p, p, AbstractDungeon.player.getPower(Mana.POWER_ID).amount), AbstractDungeon.player.getPower(Mana.POWER_ID).amount));
+            		
+            	}
+        	
+        }else {
         if(magic((short) 5)) {
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new Mana(p, p, this.magicNumber), this.magicNumber));
@@ -73,7 +86,7 @@ public class Overload extends CustomCard {
         		
         	}
         }
-    }
+    }}}
 
     boolean magic (short min) {
     	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
@@ -94,6 +107,7 @@ public class Overload extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

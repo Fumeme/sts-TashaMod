@@ -1,4 +1,4 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.ammo;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

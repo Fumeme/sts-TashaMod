@@ -71,6 +71,11 @@ public class CursedStrike extends CustomCard {
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         
+        if(this.upgraded) {
+        	
+        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new DecayPower(m, p, 1), 1));	
+        }
+        
 
     }
 

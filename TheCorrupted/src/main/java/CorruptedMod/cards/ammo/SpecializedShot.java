@@ -1,4 +1,4 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.ammo;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -72,7 +72,7 @@ public class SpecializedShot extends CustomCard {
                         AbstractGameAction.AttackEffect.FIRE));
         
         
-        if(magic((short) 3)) { AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
+        if(magic((short) 3)) { AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new PoisonPower(m, p, this.magicNumber), this.magicNumber));
@@ -80,7 +80,7 @@ public class SpecializedShot extends CustomCard {
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                     new DecayPower(m, p, 1), 1));
         	
-        	if(magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
+        	if(magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
         		
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                         new PoisonPower(m, p, this.magicNumber), this.magicNumber));

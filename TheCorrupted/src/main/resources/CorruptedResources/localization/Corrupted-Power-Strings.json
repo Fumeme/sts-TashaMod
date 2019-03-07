@@ -11,11 +11,11 @@
 
 "Corrupted: ManaShellPower": {
         "NAME": "Mana Shell",
-        "DESCRIPTIONS": ["Gain #b", "* your [#239ecf]mana count/3, at the end of your turn."]
+        "DESCRIPTIONS": ["Gain #b", " times your [#239ecf]mana count/3, at the end of your turn. NL Total of ", " block will be gained."]
 },
 "Corrupted: Mana": {
         "NAME": "Mana",
-        "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is #b"]
+        "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is #b", "."]
 },
 "Corrupted: ManaGeneration": {
         "NAME": "Mana Regen",
@@ -96,12 +96,12 @@
 },
 "Corrupted: ManaBlightPower": {
         "NAME": "Mana Blight",
-        "DESCRIPTIONS": ["whenever an attack targets this creature, it takes ",
-        "damage everytime it activates a magic effect."]
+        "DESCRIPTIONS": ["whenever an attack targets this creature and it activates its magic effect, consume 1 stack to make it takes ",
+        "damage at the start of its turn."]
 },
 "Corrupted: SpreadCorruptionPower": {
         "NAME": "Spreading Corruption",
-        "DESCRIPTIONS": ["At the start of your turn, consume #b", " #yMana and apply #b", " #yDecay to everyone and apply #b", " #yPoison to all enemies."]
+        "DESCRIPTIONS": ["At the start of your turn, consume #b", " [#239ecf]mana []and apply #b", " #yDecay to everyone and apply #b", " #yPoison to all enemies."]
 }
 
 }

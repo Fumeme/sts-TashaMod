@@ -1,12 +1,16 @@
 package CorruptedMod;
 
+import java.nio.charset.StandardCharsets;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -46,12 +50,10 @@ import CorruptedMod.cards.Overload;
 import CorruptedMod.cards.PowerNap;
 import CorruptedMod.cards.QuickDraw;
 import CorruptedMod.cards.ReinArmor;
-import CorruptedMod.cards.Reload;
 import CorruptedMod.cards.ReloadLore;
 import CorruptedMod.cards.SappingStrike;
 import CorruptedMod.cards.SealTheWounds;
 import CorruptedMod.cards.ShortTerm;
-import CorruptedMod.cards.SpecializedShot;
 import CorruptedMod.cards.SpecializedShotLore;
 import CorruptedMod.cards.SpreadCorruption;
 import CorruptedMod.cards.ToxicWall;
@@ -77,7 +79,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 
 @SpireInitializer
 public class CorruptedBase
@@ -363,6 +365,8 @@ public class CorruptedBase
         BaseMod.addCard(new ManaBLightTest()); 
         
         BaseMod.addCard(new EnergyCannon()); 
+        BaseMod.addCard(new ManaSparkAmmo()); 
+        BaseMod.addCard(new PureManaAmmo()); 
         /*
          * 
          */
@@ -443,7 +447,18 @@ public class CorruptedBase
         final String[] Inefficiency = {"inefficiency"};
         BaseMod.addKeyword(Inefficiency, "if you have more than 3 mana redude you mana by you Inefficiency stacks otherwise it removes itself.");
   
+        
+        Gson gson = new Gson();
+        String json = Gdx.files.internal("CorruptedResources/localization/Corrupted-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = (Keyword[])gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+          for (Keyword keyword : keywords) {
+            BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+          }
+        }
+
     }
+
 
     // ================ /LOAD THE KEYWORDS/ ===================    
 

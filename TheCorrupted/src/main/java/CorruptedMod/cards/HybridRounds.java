@@ -68,15 +68,15 @@ public class HybridRounds extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-    	if(magic((short) 2)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 1));
+    	if(magic((short) 2)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 0));
     		
     		this.baseDamage += 2;
     		
-    		if(magic((short) 4)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 1));
+    		if(magic((short) 4)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 0));
         		
         		this.baseDamage += 2;
         		
-        		if(magic((short) 6)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 1));
+        		if(magic((short) 6)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 0));
             		
         			this.baseDamage += 2;
             	}

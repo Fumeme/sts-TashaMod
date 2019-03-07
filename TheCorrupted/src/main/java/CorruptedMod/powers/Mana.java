@@ -1,6 +1,7 @@
 package CorruptedMod.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Mana extends AbstractPower {
+public class Mana extends AbstractPower{
     public AbstractCreature source;
 
     public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("Mana");
@@ -42,12 +43,19 @@ public int magicCounter = 0;
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
-        }
+        } 
         
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0] + this.amount;
+    	this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
+	@Override
+	public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+		
+		if(this.owner.hasPower(ManaShellPower.POWER_ID)) {
+		this.owner.getPower(ManaShellPower.POWER_ID).updateDescription();
+		}
 
+	}
 }
