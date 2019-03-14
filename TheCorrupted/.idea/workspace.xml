@@ -1,100 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e36317f-f10c-453b-8d05-c1bc5fae7ec8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/defaultmod/DefaultMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/defaultmod/DefaultMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/defaultmod/cards/DarkmagicSlice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/defaultmod/cards/DarkmagicSlice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/defaultmod/powers/CripplingAmmoPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/defaultmod/powers/CripplingAmmoPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModTheSpire.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/1024/bg_attack_default_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/1024/bg_attack_thief.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/1024/bg_power_default_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/1024/bg_skill_default_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/1024/card_default_gray_orb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/1024/card_purple_orb.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/512/bg_attack_default_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/512/bg_power_default_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/512/bg_skill_default_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/512/card_default_gray_orb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/512/card_small_orb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/Badge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Attack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Attack_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Attack_p.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Power.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Power_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Power_p.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Skill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Skill_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/Skill_p.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/beautifu -bouquet color by Studio 7042.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/cards/placeholder_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/Spriter/object1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/Spriter/object2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/Spriter/object3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/Spriter/skeleton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.autosave.scml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/corpse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/main2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer1d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer2d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer3d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer4d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer5d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/layer6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/orb/vfx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/shoulder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/shoulder2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/skeleton.atlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/skeleton.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/char/defaultCharacter/skeleton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/charSelect/Button.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/charSelect/DeafultCharacterPortraitBG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/charSelect/DefaultCharacterButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/charSelect/PortraitBG.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/powers/placeholder_power.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/relics/outline/placeholder_relic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/relics/outline/placeholder_relic2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/relics/placeholder_relic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/images/relics/placeholder_relic2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/localization/DefaultMod-Card-Strings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/localization/DefaultMod-Potion-Strings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/localization/DefaultMod-Power-Strings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultModResources/localization/DefaultMod-Relic-Strings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/DefaultMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/DefaultMod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/actions/UncommonPowerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/actions/UncommonPowerAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/Channel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultAttackWithVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultCommonAttack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultCommonPower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultCommonSkill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultRareAttack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultRarePower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultRareSkill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultUncommonAttack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultUncommonPower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/DefaultUncommonSkill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/cards/HairyTrigger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/patches/AbstractCardEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/patches/AbstractCardEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/patches/LibraryTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/patches/LibraryTypeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/patches/TheDefaultEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/patches/TheDefaultEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/powers/CommonPower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/powers/Mana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/powers/RarePower.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/powers/RarePower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/relics/PlaceholderRelic2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/relics/PlaceholderRelic2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defaultmod/variables/DefaultCustomVariable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/defaultmod/variables/DefaultCustomVariable.class" afterDir="false" />
+    <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/Encounters/Enemies/InfernalSpawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/BarricadeRemoveCountdown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/TempRegen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Monster-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/theDefault.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TashaMod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TashaMod.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/tools/TextureLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/tools/TextureLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,65 +31,111 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="TashaMod" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/AmmoOfCrippling.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+            <state relative-caret-position="544">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/powers/CripplingAmmoPower.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/Encounters/Enemies/InfernalSpawn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1541">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="170">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/BarricadeRemoveCountdown.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/DarkmagicSlice.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="415">
+              <caret line="120" selection-start-line="120" selection-end-line="120" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/Channel.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/DefaultCommonSkill.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180" />
+            <state relative-caret-position="833">
+              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+              <folding>
+                <element signature="e#2958#2959#0" expanded="true" />
+                <element signature="e#2999#3000#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/tools/TextureLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/AbstractCorrMinion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>manab</find>
+      <find>postin</find>
+      <find>AwakenedOne</find>
+      <find>moves</find>
+      <find>blur</find>
+      <find>mari</find>
+      <find>defaultmod</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>InfernalSpaw</replace>
+      <replace>Zitong</replace>
+      <replace>Corrupted</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -169,15 +143,36 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/defaultmod/powers/CripplingAmmoPower.java" />
-        <option value="$PROJECT_DIR$/src/main/java/defaultmod/DefaultMod.java" />
-        <option value="$PROJECT_DIR$/src/main/java/defaultmod/cards/DarkmagicSlice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/AbstractCardEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Monster-Strings.json" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/TempRegen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/Encounters/Enemies/InfernalSpawn.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/BarricadeRemoveCountdown.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/tools/TextureLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java" />
       </list>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="The Corrupted" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="The Corrupted" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -187,35 +182,102 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="TashaMod" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theDefault" type="462c0819:PsiDirectoryNode" />
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+              <item name="waifus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+              <item name="waifus" type="462c0819:PsiDirectoryNode" />
+              <item name="zitong" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedResources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TashaMod" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedResources" type="462c0819:PsiDirectoryNode" />
+              <item name="localization" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547333932785" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="CorruptedMod.powers" />
+      <recent name="CorruptedMod.cards" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\resources\CorruptedResources\localization" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,136 +291,314 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="TashaMod (2)" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="TashaMod (2)" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7e36317f-f10c-453b-8d05-c1bc5fae7ec8" name="Default Changelist" comment="" />
-      <created>1547320551313</created>
+      <changelist id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="" />
+      <created>1552269836767</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547320551313</updated>
-      <workItem from="1547320563700" duration="498000" />
-      <workItem from="1547321353029" duration="271000" />
-      <workItem from="1547323107917" duration="2985000" />
-      <workItem from="1547326159725" duration="3722000" />
-      <workItem from="1547332793944" duration="1300000" />
+      <updated>1552269836767</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8776000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.15204236" />
-      <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.14750378" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Learn" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.14750378" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.22585924" />
-      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.3207262" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.11497731" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Json Parser" order="6" weight="0.32980332" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.11951589" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Run" order="5" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Maven" order="2" visible="true" weight="0.11497731" />
+      <window_info anchor="right" id="Json Parser" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TashaMod (1).iml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/AbstractCardEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DarkmagicSlice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="79" selection-start-line="79" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="75" selection-start-line="75" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/badlogic/gdx/graphics/Color.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Potion-Strings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/monsters/AbstractMonster.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="114" column="34" lean-forward="true" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Monster-Strings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/test/ManaBLightTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="60" selection-start-line="60" selection-end-line="61" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaBlightPower.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="383">
+          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/DefaultMod.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/TempRegen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="268" column="36" selection-start-line="268" selection-start-column="36" selection-end-line="268" selection-end-column="36" />
+        <state relative-caret-position="212">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/CursedStrike.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="67" column="136" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="136" />
+        <state relative-caret-position="464">
+          <caret line="112" column="88" selection-start-line="112" selection-start-column="88" selection-end-line="112" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/AmmoOfCrippling.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+        <state relative-caret-position="117">
+          <caret line="341" column="44" lean-forward="true" selection-start-line="341" selection-start-column="44" selection-end-line="341" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/powers/CripplingAmmoPower.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1541">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/Channel.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/DefaultCommonSkill.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overhead.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180" />
+        <state relative-caret-position="-345">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TashaMod.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/defaultmod/cards/DarkmagicSlice.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/QuickDraw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="296">
+          <caret line="59" column="56" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SappingStrike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="71" column="65" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="71" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/Encounters/Enemies/InfernalSpawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/BarricadeRemoveCountdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding>
+            <element signature="e#2958#2959#0" expanded="true" />
+            <element signature="e#2999#3000#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/tools/TextureLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/AbstractCorrMinion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ProjectJDKs.UI">
+      <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <last-edited>11</last-edited>
+          <artifact-editor />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -368,7 +608,65 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ScopeChooserConfigurable.UI">
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

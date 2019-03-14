@@ -1,5 +1,8 @@
 {
-
+	"Corrupted: SummonZitong": {
+		"NAME": "Summon Zitong",
+		"DESCRIPTION": "Summon Zitong."
+	},
 	"Corrupted: Overexertion": {
 		"NAME": "Overexertion",
 		"DESCRIPTION": "When drawn, Gain 1 Mana, gain 2 Inefficiency and take 2 damage"

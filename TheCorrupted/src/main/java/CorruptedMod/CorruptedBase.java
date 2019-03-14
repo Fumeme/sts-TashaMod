@@ -2,6 +2,8 @@ package CorruptedMod;
 
 import java.nio.charset.StandardCharsets;
 
+import CorruptedMod.Encounters.Enemies.InfernalSpawn;
+import CorruptedMod.cards.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,50 +19,6 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import CorruptedMod.cards.AimForTheHead;
-import CorruptedMod.cards.BattleSense;
-import CorruptedMod.cards.BlackArmor;
-import CorruptedMod.cards.BreakTheseCuffs;
-import CorruptedMod.cards.Channel;
-import CorruptedMod.cards.Corrupt;
-import CorruptedMod.cards.Curse;
-import CorruptedMod.cards.CursedStrike;
-import CorruptedMod.cards.DarkmagicSlice;
-import CorruptedMod.cards.DefaultCommonAttack;
-import CorruptedMod.cards.DefaultCommonSkill;
-import CorruptedMod.cards.Embrace;
-import CorruptedMod.cards.EndlessTorment;
-import CorruptedMod.cards.EnergyCannon;
-import CorruptedMod.cards.EvilCloud;
-import CorruptedMod.cards.Flare;
-import CorruptedMod.cards.FocusCard;
-import CorruptedMod.cards.Focusfire;
-import CorruptedMod.cards.HairyTrigger;
-import CorruptedMod.cards.HybridRounds;
-import CorruptedMod.cards.ImmovableObject;
-import CorruptedMod.cards.InfernalForm;
-import CorruptedMod.cards.InnerHeaven;
-import CorruptedMod.cards.LongTerm;
-import CorruptedMod.cards.MagicArmor;
-import CorruptedMod.cards.ManaBurst;
-import CorruptedMod.cards.ManaShell;
-import CorruptedMod.cards.MaxOut;
-import CorruptedMod.cards.Overhead;
-import CorruptedMod.cards.Overload;
-import CorruptedMod.cards.PowerNap;
-import CorruptedMod.cards.QuickDraw;
-import CorruptedMod.cards.ReinArmor;
-import CorruptedMod.cards.ReloadLore;
-import CorruptedMod.cards.SappingStrike;
-import CorruptedMod.cards.SealTheWounds;
-import CorruptedMod.cards.ShortTerm;
-import CorruptedMod.cards.SpecializedShotLore;
-import CorruptedMod.cards.SpreadCorruption;
-import CorruptedMod.cards.ToxicWall;
-import CorruptedMod.cards.TransMind;
-import CorruptedMod.cards.aLittleBitExtra;
-import CorruptedMod.cards.aWeakDiamond;
-import CorruptedMod.cards.witheringBarrier;
 import CorruptedMod.cards.ammo.*;
 import CorruptedMod.cards.lore.*;
 import CorruptedMod.cards.test.*;
@@ -80,6 +38,8 @@ import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+
+import static basemod.BaseMod.addMonster;
 
 @SpireInitializer
 public class CorruptedBase
@@ -233,6 +193,9 @@ public class CorruptedBase
     
     @Override
     public void receivePostInitialize() {
+logger.info("adding monster(s)");
+
+        addMonster("Infernal_Spawn", "Infernal Spawn", () -> new InfernalSpawn());
 
         logger.info("Load Badge Image and mod options");
         // Load the Mod Badge
@@ -375,7 +338,9 @@ public class CorruptedBase
         BaseMod.addCard(new SpecializedShotLore()); 
         BaseMod.addCard(new loreSpire()); 
         
-        
+
+        BaseMod.addCard(new SummonZitong());
+
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
@@ -383,7 +348,7 @@ public class CorruptedBase
         UnlockTracker.unlockCard(Focusfire.ID);
         UnlockTracker.unlockCard(Channel.ID);
         UnlockTracker.unlockCard(CursedStrike.ID);
- 
+
         logger.info("Cards - added!");
     }
 

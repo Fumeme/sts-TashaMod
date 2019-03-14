@@ -1,7 +1,9 @@
 package CorruptedMod.actions;
 
+import com.badlogic.gdx.tools.hiero.unicodefont.effects.Effect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,12 +28,20 @@ public class ZitongAttack extends AbstractGameAction {
                 upgradeCount = this.owner.getPower(Mana.POWER_ID).amount;
             }
             int attackDamage = ZitongStats.ZitongAttackDamage + upgradeCount;
-        	System.out.println(this.owner + " is attacking");   
+        	System.out.println(this.owner + " is attacking");
+
+
+
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                DamageInfo info = new DamageInfo(this.owner, attackDamage, DamageInfo.DamageType.NORMAL);
+               DamageInfo info = new DamageInfo(this.owner, attackDamage, DamageInfo.DamageType.NORMAL);
                 info.applyPowers(this.owner, mo);
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, info));
+               // AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, info));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
+                        new DamageInfo(this.owner, attackDamage),
+                        AttackEffect.BLUNT_LIGHT));
+
             }
+
             this.isDone = true;
         }
     }

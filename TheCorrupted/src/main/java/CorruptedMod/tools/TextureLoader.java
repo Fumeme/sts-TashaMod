@@ -23,7 +23,7 @@ public class TextureLoader {
                 loadTexture(textureString);
             } catch (GdxRuntimeException e) {
                 logger.error("Could not find texture: " + textureString);
-                return getTexture("defaultModResources/images/oops.png");
+                return getTexture("CorruptedResources/images/oops.png");
             }
         }
         return textures.get(textureString);

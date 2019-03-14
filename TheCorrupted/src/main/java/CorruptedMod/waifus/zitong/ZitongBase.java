@@ -23,13 +23,13 @@ public class ZitongBase extends AbstractCorrMinion {
 	public static String NAME = "Zitong";
     public static String ID = "Zitong";
     private int upgradeCount;
-    private static Texture intentOne = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_1.png");
-    private static Texture intentTwo = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_2.png");
-    private static Texture intentThree = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_3.png");
-    private static Texture intentFour = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_4.png");
-    private static Texture intentFive = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_5.png");
-    private static Texture intentSix = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_6.png");
-    private static Texture intentSeven = TextureLoader.getTexture("defaultModResources/images/Waifus/Zitong/attack_intent_7.png");
+    private static Texture intentOne = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_1.png");
+    private static Texture intentTwo = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_2.png");
+    private static Texture intentThree = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_3.png");
+    private static Texture intentFour = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_4.png");
+    private static Texture intentFive = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_5.png");
+    private static Texture intentSix = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_6.png");
+    private static Texture intentSeven = TextureLoader.getTexture("CorruptedResources/images/Waifus/Zitong/attack_intent_7.png");
     private static Texture[] intentImgs = {intentOne, intentTwo, intentThree, intentFour, intentFive, intentSix, intentSeven};
     
     private AbstractMonster target;
@@ -37,7 +37,7 @@ public class ZitongBase extends AbstractCorrMinion {
 
     public ZitongBase(float offSetX, boolean slotOne) {
         super(NAME, ID, ZitongStats.ZitongHP,
-                -2.0F, 10.0F, 230.0F, 240.0F, "defaultModResources/images/Waifus/Zitong/Zitong.png", offSetX, 0, intentImgs, slotOne);
+                -2.0F, 10.0F, 230.0F, 240.0F, "CorruptedResources/images/Waifus/Zitong/Zitong.png", offSetX, 0, intentImgs, slotOne);
         addMoves();
     }
 
@@ -60,7 +60,7 @@ public class ZitongBase extends AbstractCorrMinion {
 
     {
 
-    	 System.out.println("Zitong Taking Turn. nextMove: " + this.nextMove);
+    	 System.out.println("Zitong Taking Turn... nextMove: " + this.nextMove);
 
         AbstractMonster abstractMonster = AbstractDungeon.getRandomMonster();
 
@@ -84,8 +84,6 @@ public class ZitongBase extends AbstractCorrMinion {
 
             	System.out.println(this.name + " is about to heal");   
                 AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
-                
-                setMove((byte)2, Intent.BUFF);
 
                 break;
 
@@ -94,8 +92,6 @@ public class ZitongBase extends AbstractCorrMinion {
             	System.out.println(this.name + " is about to attack");   
             	AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
 
- 	
-                setMove((byte)1, AbstractMonster.Intent.ATTACK, this.basedmg );
             	break;
         }
 
@@ -106,17 +102,17 @@ public class ZitongBase extends AbstractCorrMinion {
     
     
     public void addMoves() {
-/**
-        this.moves.addMove(new MinionMove("Attack", this, new Texture("defaultModResources/images/Waifus/Zitong/Zitong.png"), "Deal 3 plus her mana count damage to all enemies", () -> {
+
+        this.moves.addMove(new MinionMove("Attack", this, new Texture("CorruptedResources/images/Waifus/Zitong/Zitong.png"), "Deal 3 plus her mana count damage to all enemies", () -> {
             target = AbstractDungeon.getRandomMonster();
             DamageInfo info = new DamageInfo(this,5,DamageInfo.DamageType.NORMAL);
             info.applyPowers(this, target); // <--- This lets powers effect minions attacks
             AbstractDungeon.actionManager.addToBottom(new ZitongAttack(this));
         }));
-        this.moves.addMove(new MinionMove("Heal", this, new Texture("defaultModResources/images/Waifus/Zitong/Zitong.png"),"Gain heal 1 hp to her and all allies", () -> {
+        this.moves.addMove(new MinionMove("Heal", this, new Texture("CorruptedResources/images/Waifus/Zitong/Zitong.png"),"Gain heal 1 hp to her and all allies", () -> {
             AbstractDungeon.actionManager.addToBottom(new ZitongHeal(this));
         }));
-**/
+
     }
 
     //Not needed unless doing some kind of random move like normal Monsters

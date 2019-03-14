@@ -1,8 +1,12 @@
 package CorruptedMod.cards;
 
+import CorruptedMod.waifus.AbstractCorrMinion;
+import CorruptedMod.waifus.zitong.ZitongBase;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -13,6 +17,9 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.CommonPower;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
+import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
 
 public class SummonZitong extends CustomCard {
 
@@ -25,7 +32,7 @@ public class SummonZitong extends CustomCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("SummonDia");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("SummonZitong");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_UNCOMMON_POWER);
 
@@ -54,9 +61,23 @@ public class SummonZitong extends CustomCard {
 
     // Actions the card should do.
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
+        boolean hasZitong = false;
+        if (p instanceof AbstractPlayerWithMinions) {
+            final AbstractPlayerWithMinions player = (AbstractPlayerWithMinions) p;
+            final int summonCount = player.minions.monsters.size();
 
-        
+
+            for (int i = 0; i<summonCount-1 ; i++) {
+                if (player.minions.monsters.get(i).id.equals(ZitongBase.ID)) {
+                    hasZitong = true;
+                }
+            }
+            if (hasZitong == false){
+                player.addMinion((AbstractFriendlyMonster) new ZitongBase(-750.0f, true));
+
+            }
+        }
     }
 
 
