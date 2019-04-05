@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
-import CorruptedMod.cards.Focusfire;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.ManaBlightPower;
@@ -56,8 +55,10 @@ public class ManaSparkAmmo extends CustomCard {
 	public ManaSparkAmmo() {
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		this.baseDamage = DAMAGE;
-		this.baseMagicNumber = this.magicNumber = AMOUNT;
+		 this.magicNumber = this.baseMagicNumber = AMOUNT;
 		tags.add(CorruptedBase.Ammo);
+		this.rawDescription = DESCRIPTION + EFFECTS[0];
+		this.initializeDescription();
 	}
 
 	// Actions the card should do.

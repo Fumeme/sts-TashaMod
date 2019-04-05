@@ -1,21 +1,16 @@
 package CorruptedMod.powers;
 
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.badlogic.gdx.graphics.Texture;
+import DiamondMod.powers.DecayPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.*;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-
-import CorruptedMod.CorruptedBase;
-import CorruptedMod.cards.ShortTerm;
 
 //Gain 1 dex for the turn for each card played.
 
@@ -65,11 +60,11 @@ public class InfernalFormPower extends AbstractPower {
     public void atEndOfTurn(final boolean isPlayer) {
     	
   
-    	if(owner.hasPower(CorruptedMod.powers.DecayPower.POWER_ID)) {
+    	if(owner.hasPower(DecayPower.POWER_ID)) {
     		
     		
     		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-                    new Mana(owner, owner, owner.getPower(CorruptedMod.powers.DecayPower.POWER_ID).amount*this.amount), owner.getPower(CorruptedMod.powers.DecayPower.POWER_ID).amount*this.amount));
+                    new Mana(owner, owner, owner.getPower(DecayPower.POWER_ID).amount*this.amount), owner.getPower(DecayPower.POWER_ID).amount*this.amount));
     			
     		
     		

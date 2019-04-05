@@ -17,14 +17,14 @@
 	},
 	"Corrupted: ManaSpark": {
 		"NAME": "Mana Spark Ammo",
-		"DESCRIPTION": "Consume 1 [#239ecf]mana []to deal !D! damage, if target has no [#239ecf]Mana_blight, apply !M! [#239ecf]Mana_blight, otherwise trigger their [#239ecf]Mana_blight NL",
-		"EXTENDED_DESCRIPTION":[ "magic 5,6,7,8: deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight.",
+		"DESCRIPTION": "Consume 1 [#239ecf]mana []to deal !D! damage, if target has no [#239ecf]Mana_blight, apply !M! [#239ecf]Mana_blight, otherwise trigger their [#239ecf]Mana_blight NL ",
+		"EXTENDED_DESCRIPTION":[ "[#239ecf]Magic [][#239ecf]5,6,7,8: []deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight.",
 			"magic 5", "[#239ecf]magic 5",
 			",6", "[#239ecf],6",
 			",7", "[#239ecf],7",
 			 ",8", "[#239ecf],8",
-			 ": deal !D! damage again NL", "[]: [#239ecf]deal[] !D! [#239ecf]damage [][#239ecf]again NL",
-			 "magic 10: apply 3 [#239ecf]Mana_blight." ,  "[#239ecf]magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight." 
+			 ": deal !D! damage again NL", "[]: [#239ecf]deal[] !D! [#239ecf]damage [][#239ecf]again NL ",
+			 "[#239ecf]Magic [] 10: apply 3 [#239ecf]Mana_blight." ,  "[#239ecf]Magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight."
 		]
 	},
 	"Corrupted: QuickDraw": {
@@ -34,7 +34,7 @@
 	"Corrupted: EnergyCannon": {
 		"NAME": "Energy Cannon",
 		"DESCRIPTION": "Consume !M! [#239ecf]mana []to Deal !D! damage.",
-		"UPGRADE_DESCRIPTION": "Consume !M! [#239ecf]mana []to Deal !D! damage and 5 damage to ALL other enemies."
+		"UPGRADE_DESCRIPTION": "Consume !M! [#239ecf]Mana []to Deal !D! damage and 5 damage to ALL enemies."
 	},
 	"Corrupted: Reload": {
 		"NAME": "Reload",
@@ -59,7 +59,7 @@
 
 	"Corrupted: ManaShell": {
 		"NAME": "Mana Shell",
-		"DESCRIPTION": "Gain X * your [#239ecf]mana count/3, at the end of your turn.",
+		"DESCRIPTION": "Gain X * your [#239ecf]mana []count/3, at the end of your turn.",
 		"UPGRADE_DESCRIPTION": "Gain X+1 * your [#239ecf]mana count/3, at the end of your turn."
 	},
 	"Corrupted: Focus": {
@@ -165,6 +165,10 @@
 		"NAME": "Mana Burst",
 		"DESCRIPTION": "Consume !M! Mana to do !D! Damage 3 times."
 	},
+	"Corrupted: BurstFire": {
+		"NAME": "Burst Fire",
+		"DESCRIPTION": "Deal !D! Damage twice. NL [#239ecf]Magic [][#239ecf]3,6: []Deal !D! damage. NL [#239ecf]Magic [] !MM! [#239ecf]: []Apply 2 Weak."
+	},
 	"Corrupted: BreakTheseCuffs": {
 		"NAME": "Break These Cuffs",
 		"DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay. NL Exaust",
@@ -196,8 +200,8 @@
 
 	"Corrupted: aLittleBitExtra": {
 		"NAME": "A Little Bit Extra",
-		"DESCRIPTION": "Deal !D! damage. deal !D! damage if the target has decay, deal !D! damage  if target also has poison ",
-		"UPGRADE_DESCRIPTION":  "Deal !D! damage. deal !D! damage if the target has decay, deal !D! damage  if target also has poison "
+		"DESCRIPTION": "Deal !D! damage. deal !Dm2! damage if the target has decay, deal !Dm1! damage  if target also has poison ",
+		"UPGRADE_DESCRIPTION":  "Deal !D! damage. deal !Dm2! damage if the target has decay, deal !Dm1! damage  if target also has poison "
 	},
 	"Corrupted: Curse": {
 		"NAME": "Curse",
@@ -215,21 +219,17 @@
 	},
 		"Corrupted: EvilCloud": {
 		"NAME": "Evil Cloud",
-		"DESCRIPTION": "Apply !M! Decay to all enemies. NL Enemies gain Decay instead of losing it."
+		"DESCRIPTION": "Apply !M! Decay to all enemies. NL Enemies gain Decay instead of losing it. NL Exhaust"
 	},
 	"Corrupted: RapidFire": {
 		"NAME": "Quick FIre",
-		"DESCRIPTION": "Deal !M! damage to a random enemy twice wverytime you draw an ammo card."
+		"DESCRIPTION": "Deal !M! damage to a random enemy twice everytime you draw an ammo card."
 	},
 	"Corrupted: ManaBLightTest": {
 		"NAME": "ManaBlight placeholder",
 		"DESCRIPTION": "apply !M! [#239ecf]Mana_blight and null cast once."
 	},
 
-	"Corrupted: CallZitong": {
-		"NAME": "Call Zitong",
-		"DESCRIPTION": "Call in Zitong."
-	},
 
 
 	"Corrupted: DefaultCommonAttack": {

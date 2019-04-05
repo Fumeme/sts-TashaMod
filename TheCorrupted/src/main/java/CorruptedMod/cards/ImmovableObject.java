@@ -7,12 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BufferPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.CommonPower;
-import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.UndyingPower;
 import basemod.abstracts.CustomCard;
 

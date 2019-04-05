@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.curses.Decay;
 /*    */ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 
 /*    */
 /*    */ public class Decay2PoisonAction extends com.megacrit.cardcrawl.actions.AbstractGameAction

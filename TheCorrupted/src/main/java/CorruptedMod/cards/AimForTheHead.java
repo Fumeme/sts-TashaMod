@@ -1,11 +1,9 @@
 package CorruptedMod.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +14,6 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
-import CorruptedMod.powers.ManaBlightPower;
 import basemod.abstracts.CustomCard;
 
 public class AimForTheHead extends CustomCard {

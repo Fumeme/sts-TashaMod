@@ -4,11 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.DamageAllButOneEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,9 +18,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
-import CorruptedMod.powers.ManaBlightPower;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 
 public class EnergyCannon extends CustomCard {
 
@@ -66,43 +63,25 @@ public class EnergyCannon extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
     	if(p.hasPower(Mana.POWER_ID) && p.getPower(Mana.POWER_ID).amount >= this.magicNumber) {
-    	
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new Mana(p, p, -this.magicNumber), -this.magicNumber));
+
         AbstractDungeon.actionManager
                 .addToBottom(new DamageAction(m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SMASH));
-        
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new Mana(p, p, -this.magicNumber), -this.magicNumber));
-        
+
         if(this.upgraded) {
 
-        	 int count = 0;
-        	    for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters) {
-        	      if ((!mon.isDeadOrEscaped() && mon.id != m.id)) {
-        		 
-        	        count++;
-             }
-             }
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.2F));  //fx
 
-        	int[] aDamage;
-        	aDamage = new int[count];
-        	
-        for (int i = 0; i < count; i++) {
-       	      //thing
-       		 
-       		 			aDamage[i] = 5;
-       		 		
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(5, false), this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
+
+    	}
     }
-        	
-        	 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-           AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.2F));  //fx
-this.damage = 5;           
-
-        	AbstractDungeon.actionManager
-            .addToBottom(new DamageAllButOneEnemyAction(p,m , aDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        
-    }}}
 
     // Which card to return when making a copy of this card.
     @Override

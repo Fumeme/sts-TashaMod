@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,7 +17,7 @@ import CorruptedMod.cards.ShortTerm;
 
 //Gain 1 dex for the turn for each card played.
 
-public class LongTermDebuff extends AbstractPower {
+public class LongTermDebuff extends AbstractPower implements NonStackablePower {
     public AbstractCreature source;
 
     public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("LongTermDebuff");
@@ -41,13 +42,15 @@ int currM;
 
     @Override
     public void atStartOfTurn() {
-    
-    	if(this.amount <1) {
-    		
-    		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-    	            new LongTermBuff(owner, owner, 3, this.currM ), 3));
-    		
-    		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction( owner, owner , new LongTermDebuff(owner, owner, -1, currM)));
+
+        if(this.amount <1) {
+
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner,
+                    new LongTermBuff(owner, owner, 3, this.currM ), 3));
     	}else {
     	
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
@@ -58,8 +61,7 @@ int currM;
     @Override
     public void atEndOfTurn(final boolean isPlayer) {
     	
-    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction( owner, owner , new LongTermDebuff(owner, owner, -1, currM)));
-    	
+
 
     }
     @Override
@@ -68,6 +70,10 @@ int currM;
         this.amount += stackAmount;
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner,
+                    new LongTermBuff(owner, owner, 3, this.currM ), 3));
+
         }
         }
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))

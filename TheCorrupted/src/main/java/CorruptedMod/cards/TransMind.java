@@ -13,8 +13,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ModifyMagicAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.CommonPower;
-import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class TransMind extends CustomCard {

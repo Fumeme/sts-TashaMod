@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import DiamondMod.powers.DecayPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;

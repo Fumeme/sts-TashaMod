@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,7 +17,7 @@ import CorruptedMod.cards.ShortTerm;
 
 //Gain 1 dex for the turn for each card played.
 
-public class LongTermBuff extends AbstractPower {
+public class LongTermBuff extends AbstractPower implements NonStackablePower {
     public AbstractCreature source;
 
     public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("LongTermBuff");
@@ -45,6 +46,7 @@ this.currM = M;
     
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
                 new Mana(owner, owner, (this.currM)/2), (this.currM)/2));
+    	AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, this, 1));
     
     }
 

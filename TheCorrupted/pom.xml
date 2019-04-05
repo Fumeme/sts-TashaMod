@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>tashamod</groupId>
     <artifactId>TashaMod</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.5</version>
     <packaging>jar</packaging>
 	
     <name>The Corrupted</name>
@@ -52,11 +52,11 @@
             <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
         </dependency>
         <dependency>
-            <groupId>stsfriendlyminions</groupId>
-            <artifactId>stsfriendlyminions</artifactId>
+            <groupId>diacore</groupId>
+            <artifactId>Diacore</artifactId>
             <version>0.0.1</version>
             <scope>system</scope>
-            <systemPath>${Steam.path}/workshop/content/646570/1612426481/FriendlyMinions.jar</systemPath>
+            <systemPath>C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/mods/DiamondMod.jar</systemPath>
         </dependency>
     </dependencies>
 

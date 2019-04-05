@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import DiamondMod.powers.DecayPower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

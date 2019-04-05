@@ -11,8 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.CommonPower;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 

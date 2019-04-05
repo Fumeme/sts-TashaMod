@@ -1,10 +1,10 @@
 package CorruptedMod.cards;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -46,43 +46,44 @@ public class BurstFire extends CustomCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 3;
-    private static final int OTHER_DAMAGE = 4;
+    private static final int WEAK_MAGIC = 10;
+    int attackTimes = 2;
 
     // /STAT DECLARATION/
 
     public BurstFire() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = OTHER_DAMAGE;
+        this.magicNumber = this.baseMagicNumber = WEAK_MAGIC;
 
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager
-                .addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.FIRE));
+        for(int i = 0; i<this.attackTimes; i++) {
+            AbstractDungeon.actionManager
+                    .addToBottom(new DamageAction(m,
+                            new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                            AbstractGameAction.AttackEffect.FIRE));
+        }
 
-        AbstractDungeon.actionManager
-                .addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.FIRE));
+        if (magic(3)){    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
 
-        if (magic(3)){
 
             AbstractDungeon.actionManager
                     .addToBottom(new DamageAction(m,
-                            new DamageInfo(p, this.magicNumber, this.damageTypeForTurn),
+                            new DamageInfo(p, this.damage, this.damageTypeForTurn),
                             AbstractGameAction.AttackEffect.FIRE));
-            if (magic(6)){
+            if (magic(6)){    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
+
 
                 AbstractDungeon.actionManager
                         .addToBottom(new DamageAction(m,
-                                new DamageInfo(p, this.magicNumber, this.damageTypeForTurn),
+                                new DamageInfo(p, this.damage, this.damageTypeForTurn),
                                 AbstractGameAction.AttackEffect.FIRE));
-                if (magic(10)){
+                if (magic(this.magicNumber)){    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
+
 
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m,2,false), 2));
 
@@ -111,7 +112,7 @@ public class BurstFire extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(1);
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(-2);
             this.initializeDescription();
         }
     }

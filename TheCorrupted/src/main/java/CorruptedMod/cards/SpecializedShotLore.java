@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 

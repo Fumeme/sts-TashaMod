@@ -48,7 +48,8 @@ public class witheringBarrier extends CustomCard {
 
 
     public witheringBarrier() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR
+                , RARITY, TARGET);
 
     }
 

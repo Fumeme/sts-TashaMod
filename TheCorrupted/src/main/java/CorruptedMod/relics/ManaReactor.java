@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import CorruptedMod.CorruptedBase;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomRelic;
 

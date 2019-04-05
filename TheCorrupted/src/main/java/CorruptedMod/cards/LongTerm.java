@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.CommonPower;
 import CorruptedMod.powers.LongTermDebuff;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;

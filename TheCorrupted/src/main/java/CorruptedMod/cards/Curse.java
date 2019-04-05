@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.Decay2PoisonAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 
 public class Curse extends CustomCard {

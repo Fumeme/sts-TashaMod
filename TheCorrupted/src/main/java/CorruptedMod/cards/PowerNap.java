@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.CommonPower;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 

@@ -10,12 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.RegenPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 
 public class CursedStrike extends CustomCard {
@@ -91,7 +89,7 @@ public class CursedStrike extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
-            this.upgradeMagicNumber(1);
+            this.rawDescription += " Then apply 1 Decay.";
             this.initializeDescription();
         }
     }

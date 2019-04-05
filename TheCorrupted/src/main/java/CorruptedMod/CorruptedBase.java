@@ -267,10 +267,14 @@ logger.info("adding monster(s)");
     @Override
     public void receiveEditCards() {
         logger.info("Add Variables");
+        BaseMod.addDynamicVariable(new MagicalMagic());
+
         // Add the Custom Dynamic Variables
         BaseMod.addDynamicVariable(new Magicx2());
         BaseMod.addDynamicVariable(new MagicP1());
         BaseMod.addDynamicVariable(new TuP1());
+        BaseMod.addDynamicVariable(new DamageM1());
+        BaseMod.addDynamicVariable(new DamageM2());
         
         logger.info("Add Cards");
         // Add the cards
@@ -321,8 +325,9 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new Reload());
         BaseMod.addCard(new BlackArmor()); 
         BaseMod.addCard(new MaxOut()); 
-        BaseMod.addCard(new FocusCard()); 
-        
+        BaseMod.addCard(new FocusCard());
+
+        BaseMod.addCard(new BurstFire());
         BaseMod.addCard(new ManaShell()); 
         BaseMod.addCard(new RapidFire());  
         BaseMod.addCard(new ManaBLightTest()); 
@@ -339,7 +344,6 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new loreSpire()); 
         
 
-        BaseMod.addCard(new SummonZitong());
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

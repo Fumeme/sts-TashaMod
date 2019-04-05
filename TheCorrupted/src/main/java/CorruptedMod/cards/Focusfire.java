@@ -65,11 +65,11 @@ public class Focusfire extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-    	if(magic((short)3)) {
-    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
+    	if(magic(3)) {
+    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
     	}
-    	
+
+
   		 AbstractDungeon.actionManager
          .addToBottom(new DamageAction(m,
                  new DamageInfo(p, this.damage, this.damageTypeForTurn),
@@ -83,7 +83,7 @@ public class Focusfire extends CustomCard {
 
     }
     
-    boolean magic (short min) {
+    boolean magic (int min) {
     	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 
     		 return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
@@ -95,14 +95,14 @@ public class Focusfire extends CustomCard {
     public void applyPowers(){
     	
     	int tmp = this.baseDamage;
-    	if (magic((short) 3)){
-    	    this.baseDamage += bonus;
+    	if (magic( 3)){
+    	    this.baseDamage += this.magicNumber;
     	}
     	super.applyPowers();
     	this.baseDamage = tmp;
     	this.isDamageModified = this.baseDamage != this.damage;
         
-    	if(magic((short) 3)) {
+    	if(magic( 3)) {
     		
     		this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[1];
     	}else {

@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import DiamondMod.powers.DecayPower;
+
 //Gain 1 dex for the turn for each card played.
 
 public class witheringBarrierPower extends AbstractPower implements OnLoseBlockPower {
@@ -25,13 +27,12 @@ public class witheringBarrierPower extends AbstractPower implements OnLoseBlockP
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.updateDescription();
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
         this.loadRegion("dexterity");
         this.source = source;
         canGoNegative = false;
-
+        this.updateDescription();
     }
 
 
@@ -41,10 +42,10 @@ public class witheringBarrierPower extends AbstractPower implements OnLoseBlockP
 
     	if(this.amount <= 0) {
     		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-    	}
-    	AbstractDungeon.actionManager.addToBottom(
-				new ApplyPowerAction(this.owner, this.owner, new DecayPower(this.owner, this.owner, 2), 2));
-    	
+    	}else {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(this.owner, this.owner, new DecayPower(this.owner, this.owner, 2), 2));
+        }
     }
     @Override
     public void stackPower(int stackAmount) {

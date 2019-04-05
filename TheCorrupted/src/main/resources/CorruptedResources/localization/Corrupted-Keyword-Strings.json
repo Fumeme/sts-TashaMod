@@ -26,7 +26,7 @@
 	
 		],
 	
-		"DESCRIPTION": "Mana blight description that i'll add later."
+		"DESCRIPTION": "Creatures with Mana blight will recieve damage once per magic effect triggered from the attack that targeted it."
 	
 	  }
 

@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 
 public class Corrupt extends CustomCard {

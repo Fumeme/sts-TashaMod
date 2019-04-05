@@ -2,9 +2,8 @@ package CorruptedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +14,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 public class EndlessTorment extends CustomCard {
 
@@ -40,7 +39,7 @@ public class EndlessTorment extends CustomCard {
 	// STAT DECLARATION
 
 	private static final CardRarity RARITY = CardRarity.UNCOMMON;
-	private static final CardTarget TARGET = CardTarget.ENEMY;
+	private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 	private static final CardType TYPE = CardType.ATTACK;
 	public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
@@ -52,7 +51,7 @@ public class EndlessTorment extends CustomCard {
 
 	public EndlessTorment() {
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-		this.baseMagicNumber = this.magicNumber = AMOUNT;
+		 this.magicNumber = this.baseMagicNumber = AMOUNT;
 		this.baseDamage = 2;
 		this.isMultiDamage = true;
 	}
@@ -63,10 +62,9 @@ public class EndlessTorment extends CustomCard {
 
 		for (short i = 0; i < this.magicNumber; i++) {
 
+			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+
 			for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-				AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
-						new DamageInfo(p, this.damage, this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new DecayPower(mo, p, 2), 2));
 				
@@ -85,6 +83,7 @@ public class EndlessTorment extends CustomCard {
 
 
 			}
+
 
 		}
 

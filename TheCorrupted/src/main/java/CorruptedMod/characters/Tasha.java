@@ -2,6 +2,7 @@ package CorruptedMod.characters;
 
 import java.util.ArrayList;
 
+import basemod.abstracts.CustomPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,10 +27,10 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.relics.InfernalCore;
 import CorruptedMod.relics.LoreDiary;
 import basemod.animations.SpriterAnimation;
-import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
-import kobting.friendlyminions.characters.CustomCharSelectInfo;
+//import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
+//import kobting.friendlyminions.characters.CustomCharSelectInfo;
 
-public class Tasha extends AbstractPlayerWithMinions   {
+public class Tasha extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(CorruptedBase.class.getName());
 
     // =============== BASE STATS =================
@@ -40,7 +41,7 @@ public class Tasha extends AbstractPlayerWithMinions   {
     public static final int STARTING_GOLD = 105;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
-    public static final int MinionMax = 3;
+  //  public static final int MinionMax = 3;
 
     // =============== /BASE STATS/ =================
 
@@ -119,24 +120,12 @@ public class Tasha extends AbstractPlayerWithMinions   {
                 getStartingDeck(), false);
     }
 **/
-    
+
+    @Override
     public CharSelectInfo getLoadout() {
-
-        CharSelectInfo info = new CustomCharSelectInfo(
-                "The Corrupted",
-                " use your mana properly to maximize your card value or NL \" + \"Second line of description text. ",
-                STARTING_HP, //currentHP
-                MAX_HP, //maxHP
-                ORB_SLOTS,  //maxOrbs
-                MinionMax,  //maxMinions
-                STARTING_GOLD, //gold
-                CARD_DRAW,  //cardDraw
-                this,
-                getStartingRelics(),
-                getStartingDeck(),
-                false);
-
-        return info;
+        return new CharSelectInfo("The Corrupted", "Optimize your mana or use decay",
+                STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this, getStartingRelics(),
+                getStartingDeck(), false);
     }
     
     
@@ -281,11 +270,11 @@ public class Tasha extends AbstractPlayerWithMinions   {
     public String getVampireText() {
         return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~basic~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
     }
-
+/*
 	@Override
 	public CustomCharSelectInfo getInfo() {
 		return (CustomCharSelectInfo) getLoadout ();
 	}
-
+*/
 
 }

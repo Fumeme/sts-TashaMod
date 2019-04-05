@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.DecayPower;
+import DiamondMod.powers.DecayPower;
 import CorruptedMod.powers.EvilCloudPower;
 import basemod.abstracts.CustomCard;
 
@@ -44,14 +44,14 @@ public class EvilCloud extends CustomCard {
     private static final int COST = 1;
 
 
-    private int AMOUNT = 5;
+    private int AMOUNT = 6;
 
     // /STAT DECLARATION/
 
     
     public EvilCloud() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = this.magicNumber = AMOUNT;
+         this.magicNumber = this.baseMagicNumber = AMOUNT;
         this.exhaust = true;
     }
 
@@ -62,14 +62,13 @@ public class EvilCloud extends CustomCard {
             for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             	
             	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new DecayPower(mo, p, this.magicNumber), this.magicNumber));       
-            }
-            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            	
+                        new DecayPower(mo, p, this.magicNumber), this.magicNumber));
+
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new EvilCloudPower(mo, p, 1), 1));        
+                        new EvilCloudPower(mo, p, 1), 1));
+
             }
-            
+
             
     }
 
@@ -85,7 +84,7 @@ public class EvilCloud extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeBaseCost(0);
-            this.upgradeMagicNumber(3);
+            this.upgradeMagicNumber(1);
             this.initializeDescription();
         }
     }

@@ -1,20 +1,16 @@
 package CorruptedMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaShellAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.ManaShellPower;
 import basemod.abstracts.CustomCard;
 
 public class ManaShell extends CustomCard {
