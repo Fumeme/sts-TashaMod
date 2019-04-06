@@ -1,23 +1,20 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Mana;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import CorruptedMod.CorruptedBase;
-import CorruptedMod.cards.statuses.Overexertion;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
+import CorruptedMod.powers.ShortTermPower;
 import basemod.abstracts.CustomCard;
 
-public class MaxOut extends CustomCard {
+public class ShortTerm extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -28,9 +25,9 @@ public class MaxOut extends CustomCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("MaxOut");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("ShortTerm");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.InfernalForm);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_UNCOMMON_POWER);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -41,18 +38,19 @@ public class MaxOut extends CustomCard {
 
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 1;
 
     // /STAT DECLARATION/
 
 
-    public MaxOut() {
+    public ShortTerm() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
     }
@@ -64,19 +62,15 @@ public class MaxOut extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new Mana(p, p, this.magicNumber), this.magicNumber));
         
-        AbstractDungeon.actionManager.addToBottom(
-        		new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 2), 2));
-        AbstractDungeon.actionManager.addToBottom(
-        		new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, 1), 1));
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Overexertion(), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new ShortTermPower(p, p, (this.magicNumber)+1), (this.magicNumber)+1));
     }
 
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new MaxOut();
+        return new ShortTerm();
     }
 
     //Upgraded stats.
@@ -84,7 +78,7 @@ public class MaxOut extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-this.upgradeBaseCost(0);
+            this.upgradeMagicNumber(UPGRADE_MAGIC);
             this.initializeDescription();
         }
     }

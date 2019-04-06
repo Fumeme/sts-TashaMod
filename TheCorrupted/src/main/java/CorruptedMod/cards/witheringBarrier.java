@@ -42,7 +42,7 @@ public class witheringBarrier extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     // /STAT DECLARATION/
 
@@ -74,7 +74,7 @@ public class witheringBarrier extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(2);
+            this.upgradeBaseCost(1);
             this.initializeDescription();
         }
     }

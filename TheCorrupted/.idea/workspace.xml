@@ -2,73 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/MagicalMagic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TashaMod (1).iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TashaMod.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/PurgingBlade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayPurge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/MenacingPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondBlockNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondDamageNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondMagicNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/Decay2PoisonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/Decay2PoisonAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongHeal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AimForTheHead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AimForTheHead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BreakTheseCuffs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BreakTheseCuffs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CallZitong.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Corrupt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Corrupt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Curse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Curse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AimForTheHead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/AimForTheHead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BlackArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BlackArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/BurstFire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Embrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Embrace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EndlessTorment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EndlessTorment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EnergyCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EnergyCannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/HybridRounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/HybridRounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ImmovableObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ImmovableObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/InnerHeaven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/InnerHeaven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/LongTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/LongTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/MagicArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/MagicArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaBlade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaShell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overhead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overhead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/PowerNap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/PowerNap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SealTheWounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SealTheWounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ShortTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ShortTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SpecializedShotLore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SpecializedShotLore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SpreadCorruption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SpreadCorruption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonDia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonMaria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonMiku.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonXueli.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ToxicWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ToxicWall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/TransMind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/TransMind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aLittleBitExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aLittleBitExtra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/PureManaAmmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/PureManaAmmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/RapidFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/RapidFire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/SpecializedShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/SpecializedShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DarkmagicSlice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/DarkmagicSlice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/FocusCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/FocusCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/MagicArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MagicArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaBurst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBurst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ManaShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaShell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/MaxOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MaxOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/Overload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/PowerNap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/PowerNap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ReinArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ReinArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ShortTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ShortTerm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aWeakDiamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/aWeakDiamond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/lore/loreSpire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/lore/loreSpire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayPower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/InfernalFormPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/InfernalFormPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/LoreDiaryPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/relics/LoreDiary/LoreDiaryPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/LoreDiaryReward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/relics/LoreDiary/LoreDiaryReward.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/HybridRoundsPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/HybridRoundsPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermBuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermBuff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermDebuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermDebuff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/SpreadCorruptionPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/SpreadCorruptionPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ToxicWallPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ToxicWallPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/witheringBarrierPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/witheringBarrierPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/InfernalCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/InfernalCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/ManaReactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/ManaReactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/AbstractCorrMinion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongStats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaBarrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/NullifyPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/NullifyPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ShortTermPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ShortTermPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/UndyingPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/UndyingPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/LoreDiary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/LoreDiary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/MagicalMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/MagicalMagic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,68 +61,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="169" column="118" selection-start-line="169" selection-start-column="118" selection-end-line="169" selection-end-column="118" />
+            <state relative-caret-position="268">
+              <caret line="205" column="73" selection-start-line="205" selection-start-column="73" selection-end-line="205" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/variables/MagicalMagic.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
-                <element signature="e#1953#1954#0" expanded="true" />
-                <element signature="e#2009#2010#0" expanded="true" />
-                <element signature="e#2208#2209#0" expanded="true" />
-                <element signature="e#2254#2255#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2535#2536#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="269" column="53" selection-start-line="269" selection-start-column="53" selection-end-line="269" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-148">
-              <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+            <state relative-caret-position="-1171">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -162,9 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>manab</find>
-      <find>postin</find>
-      <find>AwakenedOne</find>
       <find>moves</find>
       <find>blur</find>
       <find>mari</find>
@@ -174,7 +109,6 @@
       <find>import CorruptedMod.powers.DecayPower;</find>
       <find>decay</find>
       <find>build</find>
-      <find>card</find>
       <find>burs</find>
       <find>energy ca</find>
       <find>evil</find>
@@ -183,11 +117,19 @@
       <find>DEFAULT_GRAY</find>
       <find>mana blight</find>
       <find>sparl</find>
-      <find>mana</find>
       <find>keyword</find>
       <find>key</find>
       <find>variab</find>
       <find>burst</find>
+      <find>weakd</find>
+      <find>cursed</find>
+      <find>lore</find>
+      <find>AbstractMonter mo</find>
+      <find>default</find>
+      <find>Damage</find>
+      <find>Magicnumber</find>
+      <find>mana</find>
+      <find>card</find>
     </findStrings>
     <replaceStrings>
       <replace>InfernalSpaw</replace>
@@ -196,6 +138,8 @@
       <replace>import DiamondMod.powers.DecayPower;</replace>
       <replace>DEFAULT_GRAY</replace>
       <replace />
+      <replace>Damage</replace>
+      <replace>Block</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\java</dir>
@@ -207,10 +151,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Monster-Strings.json" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/TempRegen.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/Encounters/Enemies/InfernalSpawn.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/BarricadeRemoveCountdown.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java" />
@@ -219,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aLittleBitExtra.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" />
         <option value="$PROJECT_DIR$/dependency-reduced-pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ToxicWallPower.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/witheringBarrierPower.java" />
@@ -229,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermDebuff.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/Power2ALLenemies.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EndlessTorment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/AbstractCardEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonAttack.java" />
@@ -237,15 +177,31 @@
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/TheDefaultEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/patches/LibraryTypeEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/DamageM1.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/MagicalMagic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/PurgingBlade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/PurgingBlade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aWeakDiamond.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BlackArmor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayPurge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Menacing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/DefaultSecondMagicNumber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondMagicNumber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondDamageNumber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondBlockNumber.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/MenacingPower.java" />
         <option value="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" />
         <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java" />
       </list>
     </option>
   </component>
@@ -284,8 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,6 +300,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
               <item name="cards" type="462c0819:PsiDirectoryNode" />
+              <item name="Decay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheCorrupted" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
+              <item name="lore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheCorrupted" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
               <item name="statuses" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -356,24 +330,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
               <item name="characters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheCorrupted" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
-              <item name="patches" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheCorrupted" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CorruptedMod" type="462c0819:PsiDirectoryNode" />
-              <item name="variables" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheCorrupted" type="b2602c69:ProjectViewProjectNode" />
@@ -403,6 +359,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,11 +373,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="CorruptedMod.variables" />
-      <recent name="CorruptedMod.cards.ammo" />
-      <recent name="CorruptedMod.actions" />
+      <recent name="CorruptedMod.variables.secondstats" />
       <recent name="CorruptedMod.powers" />
       <recent name="CorruptedMod.cards" />
+      <recent name="CorruptedMod.variables" />
+      <recent name="CorruptedMod.cards.ammo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\resources\CorruptedResources\localization" />
@@ -503,7 +461,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33736762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -523,7 +481,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.15582451" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.15582451" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Json Parser" order="6" weight="0.32980332" />
     </layout>
@@ -554,164 +512,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overhead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/QuickDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="59" column="56" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SappingStrike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="71" column="65" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="71" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/Encounters/Enemies/InfernalSpawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/zitong/ZitongBase.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ZitongAttack.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SummonZitong.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/tools/TextureLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/waifus/AbstractCorrMinion.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/BarricadeRemoveCountdown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" selection-start-line="50" selection-end-line="53" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ModTheSpire.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CallZitong.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/InfernalFormPower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="66" column="115" selection-start-line="66" selection-start-column="115" selection-end-line="66" selection-end-column="115" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/SpreadCorruptionPower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/witheringBarrierPower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3216#3217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1490">
-          <caret line="95" column="44" lean-forward="true" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aLittleBitExtra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dependency-reduced-pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermBuff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermDebuff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ToxicWallPower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/DamageAllEnemiesAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/actions/Power2ALLenemies.java" />
-    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/ApplyPowerAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1950">
-          <caret line="113" column="11" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/statuses/Overexertion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -740,13 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonAttack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -761,7 +554,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/MaxOut.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MaxOut.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
@@ -775,43 +568,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/TheDefaultEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/LibraryTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BurstFire.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/BurstFire.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
           <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
           <folding>
             <element signature="e#3967#3968#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="42" column="70" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="92" column="90" selection-start-line="92" selection-start-column="79" selection-end-line="92" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,45 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/cards/AbstractCard.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="527" column="16" selection-start-line="527" selection-start-column="16" selection-end-line="527" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -879,30 +606,336 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="269" column="53" selection-start-line="269" selection-start-column="53" selection-end-line="269" selection-end-column="53" />
+        <state relative-caret-position="1530">
+          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="169" column="118" selection-start-line="169" selection-start-column="118" selection-end-line="169" selection-end-column="118" />
+        <state relative-caret-position="3026">
+          <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/variables/MagicalMagic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        <state relative-caret-position="195">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/HybridRoundsPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="47" selection-start-line="43" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/badlogic/gdx/graphics/g2d/TextureAtlas.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="142" column="36" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/powers/AbstractPower.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/PowerNap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="82" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BlackArmor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Mana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Corrupt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Curse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="32" selection-start-line="32" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/relics/LoreDiary/LoreDiaryReward.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/relics/LoreDiary/LoreDiaryPatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/LibraryTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/patches/TheDefaultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="95" column="54" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
           <folding>
-            <element signature="e#1953#1954#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-            <element signature="e#2208#2209#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
+            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="e#3222#3223#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayPurge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2352#2353#0" expanded="true" />
+            <element signature="e#2434#2435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/lore/loreSpire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7311#7312#0" expanded="true" />
+            <element signature="e#7351#7352#0" expanded="true" />
+            <element signature="e#7582#7583#0" expanded="true" />
+            <element signature="e#7606#7607#0" expanded="true" />
+            <element signature="e#7751#7752#0" expanded="true" />
+            <element signature="e#7803#7804#0" expanded="true" />
+            <element signature="e#7939#7940#0" expanded="true" />
+            <element signature="e#8001#8002#0" expanded="true" />
+            <element signature="e#8194#8195#0" expanded="true" />
+            <element signature="e#8244#8245#0" expanded="true" />
+            <element signature="e#8376#8377#0" expanded="true" />
+            <element signature="e#8414#8415#0" expanded="true" />
+            <element signature="e#8537#8538#0" expanded="true" />
+            <element signature="e#8585#8586#0" expanded="true" />
+            <element signature="e#8739#8740#0" expanded="true" />
+            <element signature="e#8777#8778#0" expanded="true" />
+            <element signature="e#8930#8931#0" expanded="true" />
+            <element signature="e#8991#8992#0" expanded="true" />
+            <element signature="e#9144#9145#0" expanded="true" />
+            <element signature="e#9206#9207#0" expanded="true" />
+            <element signature="e#9377#9378#0" expanded="true" />
+            <element signature="e#9439#9440#0" expanded="true" />
+            <element signature="e#10138#10139#0" expanded="true" />
+            <element signature="e#10183#10184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/relics/PlaceholderRelic2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/PurgingBlade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="64" column="84" selection-start-line="64" selection-start-column="84" selection-end-line="64" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/aWeakDiamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaBlightPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="61" selection-start-line="61" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/EvilCloudPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="61" selection-start-line="61" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../lib/desktop-1.0.jar!/com/megacrit/cardcrawl/cards/AbstractCard.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondMagicNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondBlockNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondDamageNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <folding>
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/RarePower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" selection-start-line="32" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="116" column="120" selection-start-line="116" selection-start-column="120" selection-end-line="116" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/powers/MenacingPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <folding>
+            <element signature="e#2949#2950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="205" column="73" selection-start-line="205" selection-start-column="73" selection-end-line="205" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="303" column="38" selection-start-line="303" selection-start-column="38" selection-end-line="303" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1171">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>

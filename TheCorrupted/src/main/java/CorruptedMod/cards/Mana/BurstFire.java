@@ -1,4 +1,4 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Mana;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;

@@ -5,26 +5,26 @@
 	},
 	"Corrupted: Overexertion": {
 		"NAME": "Overexertion",
-		"DESCRIPTION": "When drawn, Gain 1 Mana, gain 2 Inefficiency and take 2 damage"
+		"DESCRIPTION": "When drawn, Gain 1 [#239ecf]Mana [], gain 2 Inefficiency and take 2 damage"
 	},
 	"Corrupted: MaxOut": {
 		"NAME": "Maximum Output",
-		"DESCRIPTION": "Gain !M! [#239ecf]mana [], Gain 2 Strength and add an Overexertion in your discard pile. NL lose 1 Strength at the end of your turn."
+		"DESCRIPTION": "Gain !M! [#239ecf]Mana [], Gain 2 Strength and add an Overexertion in your discard pile. NL lose 1 Strength at the end of your turn."
 	},
 	"Corrupted: PureMana": {
 		"NAME": "Pure Mana Ammo",
-		"DESCRIPTION": "deal !D! damage, consume 1 [#239ecf]mana []to deal 5 additional damage and apply !M! [#239ecf]Mana_blight | magic 3,6,9: Deal !M! damage NL Apply !M! vulnerable NL Apply 1 [#239ecf]Mana_blight."
+		"DESCRIPTION": "deal !D! damage, consume 1 [#239ecf]Mana []to deal 5 additional damage and apply !M! [#239ecf]Mana_blight | magic 3,6,9: Deal !M! damage NL Apply !M! vulnerable NL Apply 1 [#239ecf]Mana_blight."
 	},
 	"Corrupted: ManaSpark": {
 		"NAME": "Mana Spark Ammo",
-		"DESCRIPTION": "Consume 1 [#239ecf]mana []to deal !D! damage, if target has no [#239ecf]Mana_blight, apply !M! [#239ecf]Mana_blight, otherwise trigger their [#239ecf]Mana_blight NL ",
-		"EXTENDED_DESCRIPTION":[ "[#239ecf]Magic [][#239ecf]5,6,7,8: []deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight.",
+		"DESCRIPTION": "Consume 1 [#239ecf]Mana []to deal !D! damage, if target has no [#239ecf]Mana_blight, apply !M! [#239ecf]Mana_blight, otherwise trigger their [#239ecf]Mana_blight NL ",
+		"EXTENDED_DESCRIPTION":[ "[#239ecf]Magic [][#239ecf]5,6,7,8: []deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight. []",
 			"magic 5", "[#239ecf]magic 5",
 			",6", "[#239ecf],6",
 			",7", "[#239ecf],7",
 			 ",8", "[#239ecf],8",
 			 ": deal !D! damage again NL", "[]: [#239ecf]deal[] !D! [#239ecf]damage [][#239ecf]again NL ",
-			 "[#239ecf]Magic [] 10: apply 3 [#239ecf]Mana_blight." ,  "[#239ecf]Magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight."
+			 "[#239ecf]Magic []10: apply 3 [#239ecf]Mana_blight. []" ,  "[#239ecf]Magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight. []"
 		]
 	},
 	"Corrupted: QuickDraw": {
@@ -33,7 +33,7 @@
 	},
 	"Corrupted: EnergyCannon": {
 		"NAME": "Energy Cannon",
-		"DESCRIPTION": "Consume !M! [#239ecf]mana []to Deal !D! damage.",
+		"DESCRIPTION": "Consume !M! [#239ecf]Mana []to Deal !D! damage.",
 		"UPGRADE_DESCRIPTION": "Consume !M! [#239ecf]Mana []to Deal !D! damage and 5 damage to ALL enemies."
 	},
 	"Corrupted: Reload": {
@@ -46,8 +46,8 @@
 	},
 	"Corrupted: Channel": {
 		"NAME": "Channel",
-		"DESCRIPTION": "Gain !M! Mana.",
-		"UPGRADE_DESCRIPTION": "!M! Mana, at the end of your turn gain !M! Mana."
+		"DESCRIPTION": "Gain !M! [#239ecf]Mana. []",
+		"UPGRADE_DESCRIPTION": "!M! [#239ecf]Mana, []and at the end of your turn gain !M! [#239ecf]Mana. []"
 	},
 	"Corrupted: Focusfire": {
 		"NAME": "Focus fire",
@@ -59,13 +59,13 @@
 
 	"Corrupted: ManaShell": {
 		"NAME": "Mana Shell",
-		"DESCRIPTION": "Gain X * your [#239ecf]mana []count/3, at the end of your turn.",
-		"UPGRADE_DESCRIPTION": "Gain X+1 * your [#239ecf]mana count/3, at the end of your turn."
+		"DESCRIPTION": "Gain X times your [#239ecf]Mana []count/3, at the end of your turn.",
+		"UPGRADE_DESCRIPTION": "Gain X+1 times your [#239ecf]Mana []count/3, at the end of your turn."
 	},
 	"Corrupted: Focus": {
 		"NAME": "Focus",
-		"DESCRIPTION": "Exaust a card, gain mana equal to their cost.",
-		"UPGRADE_DESCRIPTION": "Exaust upto 2 cards, gain mana equal to their cost."
+		"DESCRIPTION": "Exhaust a card, gain [#239ecf]Mana []equal to their cost.",
+		"UPGRADE_DESCRIPTION": "Exhaust upto 2 cards, gain [#239ecf]Mana []equal to their cost."
 	},
 	"Corrupted: BattleSense": {
 		"NAME": "Battle Sense",
@@ -74,58 +74,67 @@
 	},
 	"Corrupted: ShortTerm": {
 		"NAME": "Short Term Investmenet",
-		"DESCRIPTION": "Gain !M! Mana. NL At the end of your turn, lose 1 more than the Mana you have gained."
+		"DESCRIPTION": "Gain !M! [#239ecf]Mana. [] NL At the end of your turn, lose 1 more than the Mana you have gained."
 	},
 	"Corrupted: Flare": {
 		"NAME": "Flare",
-		"DESCRIPTION": "apply 2 Vulnerable and remove 1 Strength on all enemies, NL When upgraded, apply an aditional Vulnerable"
+		"DESCRIPTION": "apply 2 Vulnerable and remove 1 Strength on all enemies.",
+		"UPGRADE_DESCRIPTION": " then apply an additional Vulnerable."
 	},
 	"Corrupted: Overhead": {
 		"NAME": "Overhead Swing",
-		"DESCRIPTION": "Deal !D! damage, if it kills, NL apply 1 Vulnerable and reduce the Strength of a random enemy by 1."
+		"DESCRIPTION": "Deal !D! damage, if it kills, NL apply !M! Vulnerable and reduce the Strength of a random enemy by !M!."
 	},
 	"Corrupted: TransMind": {
 		"NAME": "Transencent Mindset",
-		"DESCRIPTION": "Gain 1 intangable, gain !M! Vulnerable. NL using this card increases the Vulnerable you get for the rest of combat."
+		"DESCRIPTION": "Gain 1 intangable, gain !M! Vulnerable and !M2! Frail. NL using this card increases the Vulnerable you get for the rest of combat."
 	},
 	"Corrupted: ReinArmor": {
 		"NAME": "Reinforce Armor",
 		"DESCRIPTION": "Gain !B! block and gain !M! Plated Armor. NL ", 
-		"EXTENDED_DESCRIPTION":["[#239ecf]Magic [#239ecf]3:[] consume 1 Mana to increase the plated armor you get by 1.",
+		"EXTENDED_DESCRIPTION":["[#239ecf]Magic [#239ecf]3:[] consume 1 [#239ecf]Mana []to increase the plated armor you get by 1.",
 								"[#239ecf]Magic [#239ecf]3: [][#239ecf]consume [][#239ecf]1 [][#239ecf]Mana [][#239ecf]to [][#239ecf]increase [][#239ecf]the [][#239ecf]Plated [][#239ecf]armor [][#239ecf]you [][#239ecf]get [][#239ecf]by [][#239ecf]1.[]"]
 	},
 	"Corrupted: SpecShot": {
-		"NAME": "Specialized Shot",
+		"NAME": "Specialized Ammo",
 		"DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Apply !M! Poison and 1 Decay. NL [#239ecf]Magic [#239ecf]5: []Apply !M! Poison again and apply !M! -1 Weak."
 	},
 	"Corrupted: PowerNap": {
 		"NAME": "Power Nap",
-		"DESCRIPTION": "Consume 1 Mana to Gain !M! Regen. NL [#239ecf]Magic [#239ecf]4: []Gain an aditional Regen"
+		"DESCRIPTION": "Consume 1 [#239ecf]Mana []to Gain !M! Regen. NL [#239ecf]Magic [#239ecf]4: []Gain an additional Regen"
 	},
 	"Corrupted: CursedStrike": {
 		"NAME": "Cursed Strike",
-		"DESCRIPTION": "Deal !D! damage and !M! Decay."
+		"DESCRIPTION": " Gain !M! Decay then Deal !D! damage.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 Decay. NL Take !M! Decay damage at the end of your turn."
+
 	},
 	"Corrupted: witheringBarrier": {
 		"NAME": "Withering Barrier",
-		"DESCRIPTION": "gain 2 decay at the end of your turn. NL Attack damage that you blocked is reflected back at the attacker in decay"
+		"DESCRIPTION": "gain 2 Decay at the end of your turn. NL Attack damage that you blocked is reflected back at the attacker in decay"
 	},
+	"Corrupted: Menacing": {
+		"NAME": "Menacing Presence",
+		"EXTENDED_DESCRIPTION":[
+			"Gain !B! Block", " twice", ". NL At the start of your next !M! turns, ALL enemies that intend to attack gain !M2! Weak and Vulnerable."
+		]
+},
 	"Corrupted: Corrupt": {
 		"NAME": "Corrupt",
 		"DESCRIPTION": "Gain 1 Decay, Apply !Mx2! Vulnerable, 1 Weak and 1 Strength. NL Apply !M! Poison and !Mp1! decay to all enemies. "
 	},
 	"Corrupted: EmbraceDarkness": {
 		"NAME": "Embrace Darkness",
-		"DESCRIPTION": "gain 1 mana, gain 2 decay and draw 1 card(s).",
-		"UPGRADE_DESCRIPTION":"gain 1 mana, gain 1 decay and draw 2 card(s)."
+		"DESCRIPTION": "gain 1 [#239ecf]Mana, []gain 2 decay and draw 1 card(s).",
+		"UPGRADE_DESCRIPTION":"gain 1 [#239ecf]Mana, []gain 1 decay and draw 2 card(s)."
 	},
 	"Corrupted: InfernalForm": {
 		"NAME": "Infernal Form",
-		"DESCRIPTION": "You do not take damage from Decay. At the end of your turn, gain Mana equal to your Decay. You take twice as much damage from Poison. NL Ethereal(loses Ethereal)."
+		"DESCRIPTION": "You do not take damage from Decay. At the end of your turn, gain [#239ecf]Mana []equal to your Decay. You take twice as much damage from Poison. NL Ethereal(loses Ethereal)."
 	},
 	"Corrupted: SealTheWounds": {
 		"NAME": "Seal Wounds",
-		"DESCRIPTION": "Lose all Decay. NL Exaust"
+		"DESCRIPTION": "Lose all Decay. NL Exhaust"
 	},
 	"Corrupted: ToxicWall": {
 		"NAME": "Toxic Wall",
@@ -133,37 +142,41 @@
 	},
 	"Corrupted: SpreadCorruption": {
 		"NAME": "Spread Corruption",
-		"DESCRIPTION": "At the Start of your turn, consume 1 Mana to apply !M! Decay to everyone and !M! Poison to all enemies."
+		"DESCRIPTION": "At the Start of your turn, consume 1 [#239ecf]Mana []to apply !M! Decay to everyone and !M! Poison to all enemies."
 	},
 	"Corrupted: LongTerm": {
 		"NAME": "Long Term Investment",
-		"DESCRIPTION": "At the end of this turn and next turn, lose half(a third) of your Mana. At the start of the following 3 turns, gain half(two thirds) of your current Mana."
+		"DESCRIPTION": "At the end of this turn and next turn, lose half(a third) of your [#239ecf]Mana. []At the start of the following 3 turns, gain half(two thirds) of your current [#239ecf]Mana. []"
 	},
 	"Corrupted: MagicArmor": {
 		"NAME": "Magic Armor",
-		"DESCRIPTION": "convert all of your mana into plated armor."
+		"DESCRIPTION": "convert all of your [#239ecf]Mana []into plated armor."
 	},
 	"Corrupted: InnerHeaven": {
 		"NAME": "Inner Heaven",
-		"DESCRIPTION": "Lose !M! Decay. NL Gain 1 Mana per 5 Decay lost. NL Gain 1 Energy per 10 Decay lost.",
-		"UPGRADE_DESCRIPTION": "Lose !M! Decay. NL Gain 1 Mana per 4 Decay lost. NL Gain 1 Energy per 9 Decay lost."
+		"DESCRIPTION": "Lose !M! Decay. NL Gain 1 [#239ecf]Mana []per 5 Decay lost. NL Gain 1 Energy per 10 Decay lost.",
+		"UPGRADE_DESCRIPTION": "Lose !M! Decay. NL Gain 1 [#239ecf]Mana []per 4 Decay lost. NL Gain 1 Energy per 9 Decay lost."
 	},
 	"Corrupted: Overload": {
 		"NAME": "Overload",
-		"DESCRIPTION": "Gain 1 Mana. NL [#239ecf]Magic [#239ecf]5: []gain 2 Mana. NL [#239ecf]Magic [#239ecf]15: []Double your Mana. NL Exaust.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Mana. NL [#239ecf]Magic [#239ecf]3: []gain 2 Mana. NL [#239ecf]Magic [#239ecf]10: []Double your Mana. NL Exaust."
+		"DESCRIPTION": "Gain 1 [#239ecf]Mana. [] NL [#239ecf]Magic [#239ecf]5: []gain 2 [#239ecf]Mana. [] NL [#239ecf]Magic [#239ecf]15: []Double your [#239ecf]Mana. [] NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 1 [#239ecf]Mana. [] NL [#239ecf]Magic [#239ecf]3: []gain 2 [#239ecf]Mana. [] NL [#239ecf]Magic [#239ecf]10: []Double your [#239ecf]Mana. [] NL Exhaust."
 	},
 	"Corrupted: SappingStrike": {
 		"NAME": "Sapping Strike",
-		"DESCRIPTION": "Gain !M! Mana and deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Gain 1 Mana"
+		"DESCRIPTION": "Gain !M! [#239ecf]Mana []and deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Gain 1 [#239ecf]Mana. []"
 	},
 	"Corrupted: DarkmagicSlice": {
 		"NAME": "Darkmagic Slice",
-		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 aditional damage. NL [#239ecf]Magic [#239ecf]15: []consume 2 mana to do double damage."
+		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 additional damage. NL [#239ecf]Magic [#239ecf]15: []consume 2 [#239ecf]Mana []to do double damage."
+	},
+	"Corrupted: PurgingBlade": {
+		"NAME": "Purging Blade",
+		"DESCRIPTION": "Deal !D! damage and lose 1 additional Decay at the end of your next !M! turns. "
 	},
 	"Corrupted: ManaBurst": {
 		"NAME": "Mana Burst",
-		"DESCRIPTION": "Consume !M! Mana to do !D! Damage 3 times."
+		"DESCRIPTION": "Consume !M! [#239ecf]Mana []to do !D! Damage 3 times."
 	},
 	"Corrupted: BurstFire": {
 		"NAME": "Burst Fire",
@@ -171,7 +184,7 @@
 	},
 	"Corrupted: BreakTheseCuffs": {
 		"NAME": "Break These Cuffs",
-		"DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay. NL Exaust",
+		"DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay. NL Exhaust",
 		"UPGRADE_DESCRIPTION": "Convert all Vulnerable, Weak and Frail into Decay."
 	},
 	"Corrupted: EndlessTorment": {
@@ -190,7 +203,7 @@
 	},
 	"Corrupted: aWeakDiamond": {
 		"NAME": "A Weak Diamond",
-		"DESCRIPTION": "Gain !M! Metalicize and !Mx2! PLated Armor."
+		"DESCRIPTION": "Consume 2 [#239ecf]Mana []to gain !M! Metallicize and !Mx2! Plated Armor."
 	},
 	"Corrupted: BlackArmor": {
 		"NAME": "Black Armor",
@@ -227,7 +240,7 @@
 	},
 	"Corrupted: ManaBLightTest": {
 		"NAME": "ManaBlight placeholder",
-		"DESCRIPTION": "apply !M! [#239ecf]Mana_blight and null cast once."
+		"DESCRIPTION": "apply !M! [#239ecf]Mana_blight and null_cast once."
 	},
 
 

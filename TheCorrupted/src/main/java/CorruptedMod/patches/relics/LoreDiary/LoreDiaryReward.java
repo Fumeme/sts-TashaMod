@@ -1,4 +1,4 @@
-package CorruptedMod.patches;
+package CorruptedMod.patches.relics.LoreDiary;
 
 import java.util.ArrayList;
 

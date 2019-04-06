@@ -161,11 +161,14 @@ public class Tasha extends CustomPlayer {
         retVal.add(InfernalCore.ID);
 
         UnlockTracker.markRelicAsSeen(InfernalCore.ID);
-        
+
+        /*
         retVal.add(LoreDiary.ID);
 
         UnlockTracker.markRelicAsSeen(LoreDiary.ID);
 
+
+         */
         return retVal;
     }
 

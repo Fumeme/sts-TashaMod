@@ -1,4 +1,4 @@
-package CorruptedMod.patches;
+package CorruptedMod.patches.relics.LoreDiary;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.rewards.RewardItem;

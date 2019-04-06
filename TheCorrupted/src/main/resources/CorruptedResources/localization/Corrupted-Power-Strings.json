@@ -101,16 +101,25 @@
 },
 "Corrupted: ManaBlightPower": {
         "NAME": "Mana Blight",
-        "DESCRIPTIONS": ["whenever an attack targets this creature and it activates its magic effect, consume 1 stack to make it takes ",
+        "DESCRIPTIONS": ["whenever an attack targets this creature and it activates its magic effect, it takes ",
         "damage at the start of its turn."]
 },
 "Corrupted: SpreadCorruptionPower": {
         "NAME": "Spreading Corruption",
         "DESCRIPTIONS": ["At the start of your turn, consume #b", " [#239ecf]mana []and apply #b", " #yDecay to everyone and apply #b", " #yPoison to all enemies."]
 },
+  "Corrupted: DecayPurge": {
+    "NAME": "Purging Decay",
+    "DESCRIPTIONS": ["At the end of your turn, Reduce your Decay by #b1. NL Lasts for #b", " turns. "]
+  },
+  "Corrupted: MenacingPower": {
+    "NAME": "Menacing",
+    "DESCRIPTIONS": ["At the start of your turn, apply #b", " Weak and Vulnerable to ALL enemies that intend to attack. "]
+  },
+
   "Corrupted: tempBarricade": {
     "NAME": "Infernal Barrier",
-    "DESCRIPTIONS": ["This creature will not lose block at teh end of its next ", "turn.", "turns."]
+    "DESCRIPTIONS": ["This creature will not lose block at the end of its next ", "turn.", "turns."]
   }
 
 }

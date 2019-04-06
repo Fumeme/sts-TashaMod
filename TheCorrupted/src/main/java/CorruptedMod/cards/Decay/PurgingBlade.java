@@ -1,6 +1,12 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.CorruptedBase;
+import CorruptedMod.patches.AbstractCardEnum;
+import CorruptedMod.powers.DecayPurge;
+import DiamondMod.powers.DecayPower;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,22 +16,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import CorruptedMod.CorruptedBase;
-import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.Mana;
-import basemod.abstracts.CustomCard;
-
-public class ManaBlade extends CustomCard {
+public class PurgingBlade extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     * 
+     *
      * Strike Deal 7(9) damage.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("DefaultCommonAttack");
+    public static final String ID = CorruptedBase.makeID("PurgingBlade");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_ATTACK);
 
@@ -34,55 +35,46 @@ public class ManaBlade extends CustomCard {
 
     // /TEXT DECLARATION/
 
-    
+
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    int dam;
+    private static final int DAMAGE = 8;
+    private static final int MAGIC = 3;
 
     // /STAT DECLARATION/
 
-    public ManaBlade() {
+    public PurgingBlade() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-
+        this.magicNumber = this.baseMagicNumber = MAGIC;
+        tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	
-    	/* 
-    	 * this.damage is max damage done, excluding damage modifiers
-    	 *
-    	 * 
-    	 */
-    	
-    	if(p.hasPower(Mana.POWER_ID)&& p.getPower(Mana.POWER_ID).amount > this.damage) {
-    		
-    		this.dam = this.damage;
-    	}else {
-    		
-    		this.dam = p.getPower(Mana.POWER_ID).amount;
-    	}
-    	
-        AbstractDungeon.actionManager
-                .addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.dam, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.SHIELD));
+ 
+        
+        
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DecayPurge(p, p, this.magicNumber), this.magicNumber));
+        
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+
+
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new ManaBlade();
+        return new PurgingBlade();
     }
 
     // Upgraded stats.
@@ -90,7 +82,8 @@ public class ManaBlade extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeDamage(3);
+this.upgradeMagicNumber(2);
             this.initializeDescription();
         }
     }

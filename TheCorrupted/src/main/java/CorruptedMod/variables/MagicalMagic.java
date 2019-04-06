@@ -49,9 +49,9 @@ public class MagicalMagic extends DynamicVariable
 
     @Override
     public boolean upgraded(AbstractCard card)
-
     {               
-       return card.upgradedMagicNumber;
+
+        return card.upgradedMagicNumber;
     }
 
     @Override
@@ -63,6 +63,7 @@ public class MagicalMagic extends DynamicVariable
 
     @Override
     public Color getIncreasedValueColor() {
+
         return Color.valueOf("239ecf");
     }
 }

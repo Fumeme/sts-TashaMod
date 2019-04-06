@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
-import CorruptedMod.cards.ReinArmor;
 import basemod.abstracts.CustomCard;
 
 public class loreSpire extends CustomCard {

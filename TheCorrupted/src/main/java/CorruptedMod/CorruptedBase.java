@@ -4,6 +4,13 @@ import java.nio.charset.StandardCharsets;
 
 import CorruptedMod.Encounters.Enemies.InfernalSpawn;
 import CorruptedMod.cards.*;
+import CorruptedMod.cards.Decay.PurgingBlade;
+import CorruptedMod.cards.Mana.*;
+import CorruptedMod.patches.relics.LoreDiary.LoreDiaryPatch;
+import CorruptedMod.patches.relics.LoreDiary.LoreDiaryReward;
+import CorruptedMod.variables.secondstats.SecondBlockNumber;
+import CorruptedMod.variables.secondstats.SecondDamageNumber;
+import CorruptedMod.variables.secondstats.SecondMagicNumber;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -103,6 +110,7 @@ public class CorruptedBase
     public static final String COMMON_POWER = "powers/placeholder_power.png";
     public static final String UNCOMMON_POWER = "powers/placeholder_power.png";
     public static final String RARE_POWER = "powers/placeholder_power.png";
+    public static final String MenacingPower = "powers/MenacingPower.png";
 
     // Relic images  
     public static final String PLACEHOLDER_RELIC = "relics/placeholder_relic.png";
@@ -211,7 +219,7 @@ logger.info("adding monster(s)");
         logger.info("Done loading badge Image and mod options");
         
         BaseMod.registerCustomReward(
-                LoreDiaryPatch.LoreDiaryReward, 
+                LoreDiaryPatch.LoreDiaryReward,
                 (rewardSave) -> { // this handles what to do when this quest type is loaded.
                     return new LoreDiaryReward();
                 }, 
@@ -248,12 +256,12 @@ logger.info("adding monster(s)");
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new InfernalCore(), AbstractCardEnum.DEFAULT_GRAY);
         BaseMod.addRelicToCustomPool(new ManaReactor(), AbstractCardEnum.DEFAULT_GRAY);
-        BaseMod.addRelicToCustomPool(new LoreDiary(), AbstractCardEnum.DEFAULT_GRAY);
+      //  BaseMod.addRelicToCustomPool(new LoreDiary(), AbstractCardEnum.DEFAULT_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         BaseMod.addRelic(new FadingHope(), RelicType.SHARED);
-        BaseMod.addRelic(new OddShapedKey(), RelicType.SHARED);
+     //   BaseMod.addRelic(new OddShapedKey(), RelicType.SHARED);
 
         logger.info("Done adding relics!");
     }
@@ -275,7 +283,11 @@ logger.info("adding monster(s)");
         BaseMod.addDynamicVariable(new TuP1());
         BaseMod.addDynamicVariable(new DamageM1());
         BaseMod.addDynamicVariable(new DamageM2());
-        
+        BaseMod.addDynamicVariable(new SecondBlockNumber());
+        BaseMod.addDynamicVariable(new SecondDamageNumber());
+        BaseMod.addDynamicVariable(new SecondMagicNumber());
+
+
         logger.info("Add Cards");
         // Add the cards
         
@@ -288,8 +300,8 @@ logger.info("adding monster(s)");
         
         BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
-        
-        
+
+        BaseMod.addCard(new Menacing());
         BaseMod.addCard(new BattleSense());
         BaseMod.addCard(new Flare());
         BaseMod.addCard(new ShortTerm());
@@ -308,16 +320,17 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new MagicArmor());
         BaseMod.addCard(new InnerHeaven());
         BaseMod.addCard(new SappingStrike());
-        BaseMod.addCard(new Overload());        
-        BaseMod.addCard(new DarkmagicSlice()); 
+        BaseMod.addCard(new Overload());
+        BaseMod.addCard(new DarkmagicSlice());
         BaseMod.addCard(new ManaBurst()); 
         BaseMod.addCard(new BreakTheseCuffs()); 
         BaseMod.addCard(new EndlessTorment()); 
         BaseMod.addCard(new HybridRounds()); 
         BaseMod.addCard(new Curse()); 
         BaseMod.addCard(new ImmovableObject()); 
-        BaseMod.addCard(new aWeakDiamond()); 
-        
+        BaseMod.addCard(new aWeakDiamond());
+        BaseMod.addCard(new PurgingBlade());
+
         BaseMod.addCard(new AimForTheHead()); 
         BaseMod.addCard(new EvilCloud()); 
         BaseMod.addCard(new aLittleBitExtra()); 

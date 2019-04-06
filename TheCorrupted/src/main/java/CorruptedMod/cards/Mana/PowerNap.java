@@ -1,4 +1,4 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Mana;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

@@ -1,4 +1,4 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Mana;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,10 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
-import CorruptedMod.powers.ShortTermPower;
 import basemod.abstracts.CustomCard;
 
-public class ShortTerm extends CustomCard {
+public class Overload extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -25,7 +24,7 @@ public class ShortTerm extends CustomCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("ShortTerm");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("Overload");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_UNCOMMON_POWER);
 
@@ -38,21 +37,21 @@ public class ShortTerm extends CustomCard {
 
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 1;
 
     // /STAT DECLARATION/
 
 
-    public ShortTerm() {
+    public Overload() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.exhaust = true;
     }
 
 
@@ -61,16 +60,45 @@ public class ShortTerm extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new Mana(p, p, this.magicNumber), this.magicNumber));
-        
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ShortTermPower(p, p, (this.magicNumber)+1), (this.magicNumber)+1));
+        if(this.upgraded) {
+        	
+            if(magic((short) 3)) {
+            	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new Mana(p, p, this.magicNumber), this.magicNumber));
+            	
+            	if(magic((short) 10)) {
+            		
+            		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                            new Mana(p, p, AbstractDungeon.player.getPower(Mana.POWER_ID).amount), AbstractDungeon.player.getPower(Mana.POWER_ID).amount));
+            		
+            	}
+        	
+        }else {
+        if(magic((short) 5)) {
+        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new Mana(p, p, this.magicNumber), this.magicNumber));
+        	
+        	if(magic((short) 15)) {
+        		
+        		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                        new Mana(p, p, AbstractDungeon.player.getPower(Mana.POWER_ID).amount), AbstractDungeon.player.getPower(Mana.POWER_ID).amount));
+        		
+        	}
+        }
+    }}}
+
+    boolean magic (short min) {
+    	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
+
+    		 return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
+    		
+    	}
+    	return false;
     }
-
-
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new ShortTerm();
+        return new Overload();
     }
 
     //Upgraded stats.
@@ -78,7 +106,7 @@ public class ShortTerm extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_MAGIC);
+            this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }

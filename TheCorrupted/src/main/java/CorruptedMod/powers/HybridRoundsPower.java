@@ -1,9 +1,6 @@
 package CorruptedMod.powers;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,9 +8,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
-
-import CorruptedMod.CorruptedBase;
-import CorruptedMod.cards.ShortTerm;
 
 //Gain 1 dex for the turn for each card played.
 

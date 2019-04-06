@@ -1,7 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Mana;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,22 +11,21 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
-import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
-public class DarkmagicSlice extends CustomCard {
+public class ManaBlade extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
+     * 
      * Strike Deal 7(9) damage.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("DarkmagicSlice");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("DefaultCommonAttack");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_ATTACK);
 
@@ -36,60 +34,55 @@ public class DarkmagicSlice extends CustomCard {
 
     // /TEXT DECLARATION/
 
+    
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 7;
+    private static final int COST = 1;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    int dam;
 
     // /STAT DECLARATION/
 
-    public DarkmagicSlice() {
+    public ManaBlade() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if (magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
-
-            this.damage += 5;
-
-            if (magic((short) 15)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
-
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Mana(p, p, -2), -2));
-                this.damage *=2;
-
-            }
-        }
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-    }
-
-    boolean magic(short min) {
-        if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
-
-            return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
-
-        }
-        return false;
+    	
+    	/* 
+    	 * this.damage is max damage done, excluding damage modifiers
+    	 *
+    	 * 
+    	 */
+    	
+    	if(p.hasPower(Mana.POWER_ID)&& p.getPower(Mana.POWER_ID).amount > this.damage) {
+    		
+    		this.dam = this.damage;
+    	}else {
+    		
+    		this.dam = p.getPower(Mana.POWER_ID).amount;
+    	}
+    	
+        AbstractDungeon.actionManager
+                .addToBottom(new DamageAction(m,
+                        new DamageInfo(p, this.dam, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.SHIELD));
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new DarkmagicSlice();
+        return new ManaBlade();
     }
 
     // Upgraded stats.
@@ -97,7 +90,7 @@ public class DarkmagicSlice extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.initializeDescription();
         }
     }
