@@ -13,7 +13,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class DefaultRareSkill extends CustomCard {
+public class DefaultRareSkill extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -25,7 +25,7 @@ public class DefaultRareSkill extends CustomCard {
 
     public static final String ID = CorruptedMod.CorruptedBase.makeID("DefaultRareSkill");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_RARE_SKILL);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

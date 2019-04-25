@@ -13,7 +13,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class HairyTrigger extends CustomCard {
+public class HairyTrigger extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -49,7 +49,6 @@ public class HairyTrigger extends CustomCard {
     public HairyTrigger() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = this.timesUpgraded+1;
     }
 
     // Actions the card should do.
@@ -74,12 +73,10 @@ public class HairyTrigger extends CustomCard {
     // Upgraded stats.
     @Override
     public void upgrade() {
-    	if (this.timesUpgraded <4) {
-            this.timesUpgraded++;
-    	    this.upgraded = true;
-        	this.name = (NAME + "+" + this.timesUpgraded);
-            this.initializeTitle();
+    	if (timesUpgraded <4) {
+            this.name = (NAME + "+" + timesUpgraded);
             this.initializeDescription();
+            timesUpgraded++;
     	}
         
     }

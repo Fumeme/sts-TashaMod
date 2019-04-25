@@ -1,7 +1,9 @@
 package CorruptedMod.powers;
 
+import DiamondMod.powers.DecayPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,31 +13,32 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Mana extends AbstractPower{
+public class DecayResist extends TwoAmountPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("Mana");
+    public static final String POWER_ID = CorruptedMod.CorruptedBase.makeID("DecayResist");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    
-public int magicCounter = 0;
-    public Mana(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+
+
+    public DecayResist(final AbstractCreature owner, final AbstractCreature source, final int turns, final int resist) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
-        this.updateDescription();
+        this.amount = turns;
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
-        this.loadRegion("focus");
+        this.loadRegion("brutality");
         this.source = source;
         canGoNegative = false;
+        this.updateDescription();
+        this.priority = 11;
+        this.amount2 = resist;
 
     }
 
 
-    
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
@@ -43,19 +46,16 @@ public int magicCounter = 0;
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
-        } 
-        
+    }
+
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount2 + DESCRIPTIONS[1] + this.amount;
+        if (this.amount > 1){
+            this.description += DESCRIPTIONS[3];
+        }else {
+            this.description += DESCRIPTIONS[2];
+        }
     }
-	@Override
-	public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-		
-		if(this.owner.hasPower(ManaShellPower.POWER_ID)) {
-		this.owner.getPower(ManaShellPower.POWER_ID).updateDescription();
-		}
-
-	}
 }

@@ -17,10 +17,10 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.Mana;
+import DiamondMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
-public class EnergyCannon extends CustomCard {
+public class EnergyCannon extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -54,8 +54,9 @@ public class EnergyCannon extends CustomCard {
 
     public EnergyCannon() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 20;
+        this.baseDamage = 25;
         this.magicNumber = this.baseMagicNumber = 5;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = 10;
 
     }
 
@@ -75,9 +76,9 @@ public class EnergyCannon extends CustomCard {
         if(this.upgraded) {
 
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.2F));  //fx
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));  //fx
 
-            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(5, false), this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.SecondMagicNumber, false), this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
 
     	}

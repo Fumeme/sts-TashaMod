@@ -1,6 +1,9 @@
 package CorruptedMod.cards;
 
+import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.LoadCardImgAction;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public abstract class AbstractCorrCard extends CustomCard {
 
@@ -9,7 +12,7 @@ public abstract class AbstractCorrCard extends CustomCard {
     // by default, that you need in your own cards.
 
     // In this example, we use a custom Abstract Card in order to define a new magic number. From here on out, we can
-    // simply use that in our cards, so long as we put "extends AbstractDynamicCard" instead of "extends CustomCard" at the start.
+    // simply use that in our cards, so long as we put "extends AbstractDynamicCard" instead of "extends AbstractCorrCard" at the start.
     // In simple terms, it's for things that we don't want to define again and again in every single card we make.
 
     public int SecondMagicNumber;        // Just like magic number, or any number for that matter, we want our regular, modifiable stat
@@ -26,6 +29,7 @@ public abstract class AbstractCorrCard extends CustomCard {
     public int SecondDamage;
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
+    public String img;
 
     public AbstractCorrCard(final String id,
                             final String name,
@@ -38,7 +42,13 @@ public abstract class AbstractCorrCard extends CustomCard {
                             final CardTarget target) {
 
 
-        super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        super(id, name,
+
+                img,
+
+                cost, rawDescription, type, color, rarity, target);
+
+this.img = img;
 
         // Set all the things to their default values.
         isCostModified = false;
@@ -88,5 +98,6 @@ public abstract class AbstractCorrCard extends CustomCard {
         SecondDamage = BaseSecondDamage; // Set the number to be equal to the base value.
         upgradedSecondDamage = true; // Upgraded = true - which does what the above method does.
     }
+
 
 }

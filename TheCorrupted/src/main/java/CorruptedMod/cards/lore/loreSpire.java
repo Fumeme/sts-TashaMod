@@ -1,5 +1,6 @@
 package CorruptedMod.cards.lore;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import basemod.abstracts.CustomCard;
 
-public class loreSpire extends CustomCard {
+public class loreSpire extends AbstractCorrCard {
 
 	/*
 	 * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

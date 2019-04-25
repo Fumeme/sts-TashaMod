@@ -1,5 +1,11 @@
 package CorruptedMod.cards;
 
+import CorruptedMod.CorruptedBase;
+import CorruptedMod.patches.AbstractCardEnum;
+import CorruptedMod.powers.DecayResist;
+import DiamondMod.powers.DecayPower;
+import DiamondMod.powers.Mana;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,24 +13,20 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
-import CorruptedMod.CorruptedBase;
-import CorruptedMod.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
-
-public class DefaultCommonSkill extends AbstractCorrCard {
+public class FieldofDarkness extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     * 
+     *
      * Defend Gain 5 (8) block.
      */
 
 
-    // TEXT DECLARATION 
+    // TEXT DECLARATION
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("DefaultCommonSkill");
+    public static final String ID = CorruptedBase.makeID("FieldofDarkness");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
 
@@ -34,25 +36,23 @@ public class DefaultCommonSkill extends AbstractCorrCard {
     // /TEXT DECLARATION/
 
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int BLOCK = 10;
 
 
     // /STAT DECLARATION/
 
 
-    public DefaultCommonSkill() {
+    public FieldofDarkness() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = BLOCK;
-        tags.add(BaseModCardTags.BASIC_DEFEND);
+        this.baseBlock = this.block = BLOCK;
     }
 
     // Actions the card should do.
@@ -60,12 +60,42 @@ public class DefaultCommonSkill extends AbstractCorrCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
+
+        if (Magic(3)){
+
+            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, 1, false), 1));
+            }
+        }
+        if (Corrupt(3)){
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DecayResist(p, p, magicNumber, SecondMagicNumber), 1));
+        }
+    }
+
+    boolean Corrupt(int i) {
+        if (AbstractDungeon.player.hasPower(DecayPower.POWER_ID)) {
+
+            return AbstractDungeon.player.getPower(DecayPower.POWER_ID).amount >= i;
+
+        }
+        return false;
+    }
+
+    boolean Magic(int i) {
+        if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
+
+            return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= i;
+
+        }
+        return false;
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new DefaultCommonSkill();
+        return new FieldofDarkness();
     }
 
     //Upgraded stats.
@@ -73,7 +103,7 @@ public class DefaultCommonSkill extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeBlock(5);
             this.initializeDescription();
         }
     }

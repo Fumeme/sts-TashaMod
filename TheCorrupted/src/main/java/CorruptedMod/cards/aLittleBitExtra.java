@@ -16,7 +16,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class aLittleBitExtra extends CustomCard {
+public class aLittleBitExtra extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

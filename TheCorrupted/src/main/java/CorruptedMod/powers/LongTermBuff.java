@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import DiamondMod.powers.Mana;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

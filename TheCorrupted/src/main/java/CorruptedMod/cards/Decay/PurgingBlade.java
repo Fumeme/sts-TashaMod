@@ -1,6 +1,7 @@
 package CorruptedMod.cards.Decay;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.cards.AbstractCorrCard;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayPurge;
 import DiamondMod.powers.DecayPower;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class PurgingBlade extends CustomCard {
+public class PurgingBlade extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

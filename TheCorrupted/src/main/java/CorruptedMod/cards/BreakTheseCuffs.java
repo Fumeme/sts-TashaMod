@@ -15,7 +15,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 
-public class BreakTheseCuffs extends CustomCard {
+public class BreakTheseCuffs extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

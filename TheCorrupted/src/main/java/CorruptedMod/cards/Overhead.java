@@ -13,7 +13,7 @@ import CorruptedMod.actions.OverheadAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class Overhead extends CustomCard {
+public class Overhead extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

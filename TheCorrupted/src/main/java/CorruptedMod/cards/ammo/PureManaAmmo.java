@@ -1,5 +1,6 @@
 package CorruptedMod.cards.ammo;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -15,11 +16,11 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.Mana;
+import DiamondMod.powers.Mana;
 import CorruptedMod.powers.ManaBlightPower;
 import basemod.abstracts.CustomCard;
 
-public class PureManaAmmo extends CustomCard {
+public class PureManaAmmo extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

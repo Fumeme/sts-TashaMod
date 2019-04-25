@@ -1,5 +1,6 @@
 package CorruptedMod.cards.Mana;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,10 +13,10 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.Mana;
+import DiamondMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
-public class ReinArmor extends CustomCard {
+public class ReinArmor extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

@@ -15,7 +15,7 @@ import CorruptedMod.actions.ModifyMagicAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class TransMind extends CustomCard {
+public class TransMind extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

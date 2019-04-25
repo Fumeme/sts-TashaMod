@@ -1,6 +1,7 @@
 package CorruptedMod.cards;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.actions.GainMenacingAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.MenacingPower;
 import basemod.abstracts.CustomCard;
@@ -29,7 +30,9 @@ public class Menacing extends AbstractCorrCard {
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
 
     public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+    public static final String actualDESC = DESCRIPTION[0] + DESCRIPTION[2];
+
 
     // /TEXT DECLARATION/
 
@@ -51,8 +54,9 @@ public class Menacing extends AbstractCorrCard {
 
 
     public Menacing() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-       this.block = this.baseBlock = BLOCK;
+        super(ID, NAME, IMG, COST, actualDESC, TYPE, COLOR, RARITY, TARGET);
+
+        this.block = this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber = turns;
         this.SecondMagicNumber = this.BaseSecondMagicNumber = amount;
     }
@@ -65,7 +69,7 @@ public class Menacing extends AbstractCorrCard {
                     new GainBlockAction(p, p, this.block));
         }
 
-AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MenacingPower(p, p, magicNumber, SecondMagicNumber)));
+AbstractDungeon.actionManager.addToBottom(new GainMenacingAction(p, p, magicNumber, SecondMagicNumber));
     }
 
     // Which card to return when making a copy of this card.
@@ -79,6 +83,7 @@ AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Menacin
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.rawDescription = DESCRIPTION[0] + DESCRIPTION[1] + DESCRIPTION[2];
             this.UpgradeSecondMagicNumber(1);
             this.initializeDescription();
         }

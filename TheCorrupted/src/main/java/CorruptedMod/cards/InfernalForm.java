@@ -13,7 +13,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.InfernalFormPower;
 import basemod.abstracts.CustomCard;
 
-public class InfernalForm extends CustomCard {
+public class InfernalForm extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

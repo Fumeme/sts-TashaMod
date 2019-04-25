@@ -13,7 +13,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.UndyingPower;
 import basemod.abstracts.CustomCard;
 
-public class ImmovableObject extends CustomCard {
+public class ImmovableObject extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +26,7 @@ public class ImmovableObject extends CustomCard {
 
     public static final String ID = CorruptedMod.CorruptedBase.makeID("ImmovableObject");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_UNCOMMON_POWER);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_POWER);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

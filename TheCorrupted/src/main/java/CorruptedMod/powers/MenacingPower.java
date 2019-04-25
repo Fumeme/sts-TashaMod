@@ -4,6 +4,7 @@ import CorruptedMod.CorruptedBase;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,21 +43,26 @@ public class MenacingPower extends TwoAmountPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void atStartOfTurnPostDraw() {
         updateDescription();
 
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 
-            if (((mo.intent.equals("ATTACK")) || (mo.intent.equals("ATTACK_BUFF")) ||
-                    (mo.intent.equals("ATTACK_DEBUFF")) || (mo.intent.equals("ATTACK_DEFEND")))) {
+            if (((mo.intent.equals(AbstractMonster.Intent.ATTACK)) || (mo.intent.equals(AbstractMonster.Intent.ATTACK_BUFF)) ||
+                    (mo.intent.equals(AbstractMonster.Intent.ATTACK_DEBUFF)) || (mo.intent.equals(AbstractMonster.Intent.ATTACK_DEFEND)))) {
 
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, owner, new VulnerablePower(mo, amount2, false), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, owner, new WeakPower(mo, amount2, false), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, owner, new VulnerablePower(mo, amount2, false), amount2));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, owner, new WeakPower(mo, amount2, false), amount2));
             }
         }
-    }
 
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, this, 1));
+    }
+    @Override
+    public void atStartOfTurn() {
+        updateDescription();
+    }
 
     @Override
     public void stackPower(int stackAmount) {

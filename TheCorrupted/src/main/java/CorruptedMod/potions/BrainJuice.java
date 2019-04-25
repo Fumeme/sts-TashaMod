@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import CorruptedMod.powers.Mana;
+import DiamondMod.powers.Mana;
 
 public class BrainJuice extends AbstractPotion {
 

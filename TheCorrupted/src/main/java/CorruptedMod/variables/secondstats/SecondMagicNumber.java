@@ -4,7 +4,7 @@ import CorruptedMod.cards.AbstractCorrCard;
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-import static DiamondMod.DiamondCore.makeID;
+import static CorruptedMod.CorruptedBase.makeID;
 
 public class SecondMagicNumber extends DynamicVariable {
 
@@ -12,7 +12,7 @@ public class SecondMagicNumber extends DynamicVariable {
 
     @Override
     public String key() {
-        return makeID("M2");
+        return("2ndM");
         // This is what you put between "!!" in your card strings to actually display the number.
         // You can name this anything (no spaces), but please pre-phase it with your mod name as otherwise mod conflicts can occur.
         // Remember, we're using makeID so it automatically puts "DiamondMod:" (or, your id) before the name.

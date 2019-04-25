@@ -13,7 +13,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.SpreadCorruptionPower;
 import basemod.abstracts.CustomCard;
 
-public class SpreadCorruption extends CustomCard {
+public class SpreadCorruption extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

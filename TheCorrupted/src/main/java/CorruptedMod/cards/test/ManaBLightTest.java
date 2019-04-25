@@ -1,5 +1,6 @@
 package CorruptedMod.cards.test;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +15,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.ManaBlightPower;
 import basemod.abstracts.CustomCard;
 
-public class ManaBLightTest extends CustomCard {
+public class ManaBLightTest extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

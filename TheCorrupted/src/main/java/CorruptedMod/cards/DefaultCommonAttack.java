@@ -14,7 +14,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 
-public class DefaultCommonAttack extends CustomCard {
+public class DefaultCommonAttack extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

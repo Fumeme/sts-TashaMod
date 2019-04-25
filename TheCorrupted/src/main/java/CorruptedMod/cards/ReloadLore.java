@@ -12,7 +12,7 @@ import CorruptedMod.actions.drawCardandAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class ReloadLore extends CustomCard implements drawCardandAction.IDrawCardsAndDoCallback  {
+public class ReloadLore extends AbstractCorrCard implements drawCardandAction.IDrawCardsAndDoCallback  {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -25,7 +25,7 @@ public class ReloadLore extends CustomCard implements drawCardandAction.IDrawCar
 
     public static final String ID = CorruptedMod.CorruptedBase.makeID("Reload");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_UNCOMMON_POWER);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

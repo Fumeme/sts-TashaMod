@@ -13,7 +13,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.BlackArmorPower;
 import basemod.abstracts.CustomCard;
 
-public class BlackArmor extends CustomCard {
+public class BlackArmor extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

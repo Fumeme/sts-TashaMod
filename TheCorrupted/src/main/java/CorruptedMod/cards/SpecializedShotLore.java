@@ -16,10 +16,10 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
 import DiamondMod.powers.DecayPower;
-import CorruptedMod.powers.Mana;
+import DiamondMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
-public class SpecializedShotLore extends CustomCard {
+public class SpecializedShotLore extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

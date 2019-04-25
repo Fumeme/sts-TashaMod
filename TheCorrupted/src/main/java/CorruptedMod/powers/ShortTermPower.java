@@ -1,6 +1,7 @@
 package CorruptedMod.powers;
 
 
+import DiamondMod.powers.Mana;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.core.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

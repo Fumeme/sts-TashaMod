@@ -1,5 +1,6 @@
 package CorruptedMod.powers;
 
+import DiamondMod.powers.Mana;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;

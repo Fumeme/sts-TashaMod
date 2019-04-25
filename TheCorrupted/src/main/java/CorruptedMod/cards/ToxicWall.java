@@ -13,7 +13,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.ToxicWallPower;
 import basemod.abstracts.CustomCard;
 
-public class ToxicWall extends CustomCard {
+public class ToxicWall extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

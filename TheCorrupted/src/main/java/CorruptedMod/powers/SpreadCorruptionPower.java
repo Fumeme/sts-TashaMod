@@ -1,6 +1,7 @@
 package CorruptedMod.powers;
 
 import DiamondMod.powers.DecayPower;
+import DiamondMod.powers.Mana;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -37,7 +38,7 @@ public class SpreadCorruptionPower extends AbstractPower {
 	public void atStartOfTurn() {
 
 		if (this.owner.hasPower(Mana.POWER_ID)) {
-			if (this.owner.getPower(CorruptedMod.powers.Mana.POWER_ID).amount >= 1) {
+			if (this.owner.getPower(Mana.POWER_ID).amount >= 1) {
 				AbstractDungeon.actionManager.addToBottom(
 						new ApplyPowerAction(owner, owner, new Mana(owner, owner, -1), -1));
 

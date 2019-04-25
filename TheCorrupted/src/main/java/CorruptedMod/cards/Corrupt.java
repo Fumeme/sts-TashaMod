@@ -17,7 +17,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 
-public class Corrupt extends CustomCard {
+public class Corrupt extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

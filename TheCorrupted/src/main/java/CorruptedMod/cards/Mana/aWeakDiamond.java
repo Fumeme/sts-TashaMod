@@ -1,6 +1,7 @@
 package CorruptedMod.cards.Mana;
 
-import CorruptedMod.powers.Mana;
+import CorruptedMod.cards.AbstractCorrCard;
+import DiamondMod.powers.Mana;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,7 +17,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class aWeakDiamond extends CustomCard {
+public class aWeakDiamond extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -29,7 +30,7 @@ public class aWeakDiamond extends CustomCard {
 
     public static final String ID = CorruptedMod.CorruptedBase.makeID("aWeakDiamond");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_UNCOMMON_POWER);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_POWER);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

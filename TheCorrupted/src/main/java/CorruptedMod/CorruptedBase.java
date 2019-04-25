@@ -2,7 +2,6 @@ package CorruptedMod;
 
 import java.nio.charset.StandardCharsets;
 
-import CorruptedMod.Encounters.Enemies.InfernalSpawn;
 import CorruptedMod.cards.*;
 import CorruptedMod.cards.Decay.PurgingBlade;
 import CorruptedMod.cards.Mana.*;
@@ -86,15 +85,6 @@ public class CorruptedBase
     private static final String ENERGY_ORB_DEAFULT_GRAY_PORTRAIT = "1024/card_default_gray_orb.png";
 
     // Card images
-    public static final String DEFAULT_COMMON_ATTACK = "cards/Attack.png";
-    public static final String DEFAULT_COMMON_SKILL = "cards/Skill.png";
-    public static final String DEFAULT_COMMON_POWER = "cards/Power.png";
-    public static final String DEFAULT_UNCOMMON_ATTACK = "cards/Attack.png";
-    public static final String DEFAULT_UNCOMMON_SKILL = "cards/Skill.png";
-    public static final String DEFAULT_UNCOMMON_POWER = "cards/Power.png";
-    public static final String DEFAULT_RARE_ATTACK = "cards/Attack.png";
-    public static final String DEFAULT_RARE_SKILL = "cards/Skill.png";
-    public static final String DEFAULT_RARE_POWER = "cards/Power.png";
 
     public static final String SappingStrike = "cards/sapping-strike.png";
     public static final String Corrupt = "cards/Corrupt.png";
@@ -104,12 +94,17 @@ public class CorruptedBase
     public static final String SpreadCorruption = "cards/SpreadCorruption.png";
     public static final String TransMind = "cards/TransMind.png";
     public static final String Sleep = "cards/Sleep.png";
-    
-    
+
+    public static final String DEFAULT_COMMON_ATTACK = SappingStrike;
+    public static final String DEFAULT_COMMON_SKILL = ReinArmor;
+    public static final String DEFAULT_COMMON_POWER = InfernalForm;
+
+
     // Power images
     public static final String COMMON_POWER = "powers/placeholder_power.png";
-    public static final String UNCOMMON_POWER = "powers/placeholder_power.png";
-    public static final String RARE_POWER = "powers/placeholder_power.png";
+    public static final String UNCOMMON_POWER = COMMON_POWER;
+    public static final String RARE_POWER = COMMON_POWER;
+
     public static final String MenacingPower = "powers/MenacingPower.png";
 
     // Relic images  
@@ -203,8 +198,6 @@ public class CorruptedBase
     public void receivePostInitialize() {
 logger.info("adding monster(s)");
 
-        addMonster("Infernal_Spawn", "Infernal Spawn", () -> new InfernalSpawn());
-
         logger.info("Load Badge Image and mod options");
         // Load the Mod Badge
         Texture badgeTexture = new Texture(makePath(BADGE_IMAGE));
@@ -224,7 +217,7 @@ logger.info("adding monster(s)");
                     return new LoreDiaryReward();
                 }, 
                 (customReward) -> { // this handles what to do when this quest type is saved.
-                    return new RewardSave(customReward.type.toString(), null);
+                    return new RewardSave(customReward.type.toString(), "LoreDiary");
                 });
 
        }
@@ -296,8 +289,11 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new CursedStrike());
         BaseMod.addCard(new Focusfire());
         BaseMod.addCard(new Channel());
-        
-        
+
+
+        BaseMod.addCard(new FieldofDarkness());
+        BaseMod.addCard(new DefaultCommonAttack());
+
         BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
 
@@ -447,7 +443,7 @@ logger.info("adding monster(s)");
     // this adds "ModName: " before the ID of any card/relic/power etc.
     // in order to avoid conflics if any other mod uses the same ID.
     public static String makeID(String idText) {
-        return "Corrupted: " + idText;
+        return "Corrupted:" + idText;
     }
     
 

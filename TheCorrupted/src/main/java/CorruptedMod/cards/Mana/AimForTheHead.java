@@ -1,5 +1,6 @@
 package CorruptedMod.cards.Mana;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,10 +14,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.Mana;
+import DiamondMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
-public class AimForTheHead extends CustomCard {
+public class AimForTheHead extends AbstractCorrCard {
 
 	/*
 	 * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

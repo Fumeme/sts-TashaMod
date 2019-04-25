@@ -1,34 +1,34 @@
 {
-	"Corrupted: InfernalCore": {
+	"Corrupted:InfernalCore": {
 		"NAME": "Infernal Core",
 		"FLAVOR": "The Infernal inhabits your body as its new home. creepy...",
 		"DESCRIPTIONS": [
 			"Starting your turn with #yDecay gives you #b1 #yMana."
 		]
 	},
-	"Corrupted: ManaReactor": {
+	"Corrupted:ManaReactor": {
 		"NAME": "Mana Reactor",
-		"FLAVOR": "This odd artifact generates mana whenever the holder takes damage... weird.",
+		"FLAVOR": "This odd artifact generates Mana whenever the holder takes damage... weird.",
 		"DESCRIPTIONS": [
-			"Gain #b1 #yMana whenever you get hit."
+			"Gain #b1 #yMana whenever you receive unblocked attack damage."
 		]
 	},
-	"Corrupted: OddShapedKey": {
+	"Corrupted:OddShapedKey": {
 		"NAME": "Odd Shaped Key",
-		"FLAVOR": "This Key is more of a decorative peace than anthing.",
+		"FLAVOR": "This Key is more of a decorative peace than anything.",
 		"DESCRIPTIONS": [
 			"Gain [E], Whenever you open a non-Boss chest, add #b1 more status to your draw pile at the beginning of every combat."
 		]
 	},
-	"Corrupted: LoreDiary": {
+	"Corrupted:LoreDiary": {
 		"NAME": "Lore Diary",
 		"FLAVOR": "The more you Look at it, the more Familiar the text is.",
 		"DESCRIPTIONS": [
-			"non-boss chests now also contain #pLore #pcard rewards."
+			"non-boss chests now also contain #pLore #pcard rewards. NL Smithing a #pLore #pcard also upgrades a random  non-Lore card."
 		]
 	},
 
-	"Corrupted: PlaceholderRelic2": {
+	"Corrupted:PlaceholderRelic2": {
 		"NAME": "Dying Hope",
 		"FLAVOR": "your #phope is in fact dying",
 		"DESCRIPTIONS": [

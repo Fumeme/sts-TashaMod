@@ -17,7 +17,7 @@ import CorruptedMod.patches.AbstractCardEnum;
 import DiamondMod.powers.DecayPower;
 import basemod.abstracts.CustomCard;
 
-public class CursedStrike extends CustomCard {
+public class CursedStrike extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -46,7 +46,7 @@ public class CursedStrike extends CustomCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int MAGIC = 2;
 

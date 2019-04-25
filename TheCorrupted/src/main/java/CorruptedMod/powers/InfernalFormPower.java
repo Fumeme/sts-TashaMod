@@ -1,6 +1,7 @@
 package CorruptedMod.powers;
 
 import DiamondMod.powers.DecayPower;
+import DiamondMod.powers.Mana;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
@@ -64,7 +65,7 @@ public class InfernalFormPower extends AbstractPower {
     		
     		
     		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner,
-                    new Mana(owner, owner, owner.getPower(DecayPower.POWER_ID).amount*this.amount), owner.getPower(DecayPower.POWER_ID).amount*this.amount));
+                    new Mana(owner, owner, this.amount), this.amount));
     			
     		
     		

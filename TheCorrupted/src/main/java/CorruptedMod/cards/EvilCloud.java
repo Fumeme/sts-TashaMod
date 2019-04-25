@@ -14,7 +14,7 @@ import DiamondMod.powers.DecayPower;
 import CorruptedMod.powers.EvilCloudPower;
 import basemod.abstracts.CustomCard;
 
-public class EvilCloud extends CustomCard {
+public class EvilCloud extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +26,7 @@ public class EvilCloud extends CustomCard {
 
     public static final String ID = CorruptedMod.CorruptedBase.makeID("EvilCloud");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_RARE_SKILL);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
