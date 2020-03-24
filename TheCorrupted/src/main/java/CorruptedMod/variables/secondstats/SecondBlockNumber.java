@@ -4,7 +4,7 @@ import CorruptedMod.cards.AbstractCorrCard;
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-import static DiamondMod.DiamondCore.makeID;
+import static CorruptedMod.CorruptedBase.makeID;
 
 public class SecondBlockNumber extends DynamicVariable {
 

@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,8 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.Decay2PoisonAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.Decay;
 
 public class Curse extends AbstractCorrCard {
 
@@ -55,7 +55,7 @@ public class Curse extends AbstractCorrCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new DecayPower(m, p, 5), 5));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new Decay(m, p, 5), 5));
 
 		AbstractDungeon.actionManager.addToBottom(new Decay2PoisonAction(m, p, this.magicNumber));
 		

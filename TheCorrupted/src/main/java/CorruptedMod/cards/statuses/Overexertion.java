@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.powers.Inefficiency;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class Overexertion extends AbstractCorrCard {

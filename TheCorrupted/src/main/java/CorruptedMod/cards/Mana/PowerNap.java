@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class PowerNap extends AbstractCorrCard {

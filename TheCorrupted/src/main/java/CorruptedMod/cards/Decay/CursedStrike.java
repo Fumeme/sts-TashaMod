@@ -1,21 +1,23 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
+import CorruptedMod.powers.TempDecay;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.Decay;
 
-public class BreakTheseCuffs extends AbstractCorrCard {
+public class CursedStrike extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -25,69 +27,64 @@ public class BreakTheseCuffs extends AbstractCorrCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("BreakTheseCuffs");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("CursedStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_ATTACK);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
     // /TEXT DECLARATION/
 
     
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private short DecayGain;
-
+    private static final int DAMAGE = 12;
+    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
 
-    public BreakTheseCuffs() {
+    public CursedStrike() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
+        this.baseDamage = DAMAGE;
+        this.magicNumber = this.baseMagicNumber = MAGIC;
+        tags.add(CardTags.STRIKE);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
  
-    	if(p.hasPower(VulnerablePower.POWER_ID)) {  
-    		this.DecayGain += p.getPower(VulnerablePower.POWER_ID).amount;
-    		
-    		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, VulnerablePower.POWER_ID));
-    	}
         
+        if (upgraded){
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TempDecay(p, p, this.magicNumber), this.magicNumber));
+        }else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Decay(p, p, this.magicNumber), this.magicNumber));
+        }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         
-    	if(p.hasPower(WeakPower.POWER_ID)) {  
-    		this.DecayGain += p.getPower(WeakPower.POWER_ID).amount;
-    		
-    		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, WeakPower.POWER_ID));
-    	}
+        if(this.upgraded) {
+        	
+        	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new Decay(m, p, 1), 1));
+        }
         
 
-    	if(p.hasPower(FrailPower.POWER_ID)) {  
-    		this.DecayGain += p.getPower(FrailPower.POWER_ID).amount;
-    		
-    		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, FrailPower.POWER_ID));
-    	}
-    	
-    	if(this.DecayGain>0) {
-    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DecayPower(p, p, this.DecayGain), this.DecayGain));
-    	}
-    	
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new BreakTheseCuffs();
+        return new CursedStrike();
     }
 
     // Upgraded stats.
@@ -95,7 +92,7 @@ public class BreakTheseCuffs extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.exhaust = false;
+            this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

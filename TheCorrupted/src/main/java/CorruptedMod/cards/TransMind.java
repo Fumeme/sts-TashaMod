@@ -62,7 +62,8 @@ public class TransMind extends AbstractCorrCard {
         
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
-     
+
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
         
         

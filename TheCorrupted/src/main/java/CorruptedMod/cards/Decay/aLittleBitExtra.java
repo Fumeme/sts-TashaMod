@@ -1,6 +1,7 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
-import DiamondMod.powers.DecayPower;
+import CorruptedMod.cards.AbstractCorrCard;
+import CorruptedMod.powers.Decay;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,6 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 
 public class aLittleBitExtra extends AbstractCorrCard {
 
@@ -63,7 +63,7 @@ public class aLittleBitExtra extends AbstractCorrCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         
-        if (m.hasPower(DecayPower.POWER_ID) && m.getPower(DecayPower.POWER_ID).amount >0) {
+        if (m.hasPower(Decay.POWER_ID) && m.getPower(Decay.POWER_ID).amount >0) {
 
                 AbstractDungeon.actionManager
                 .addToBottom(new DamageAction(m,

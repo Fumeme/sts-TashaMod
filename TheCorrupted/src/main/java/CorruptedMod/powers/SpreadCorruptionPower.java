@@ -1,7 +1,7 @@
 package CorruptedMod.powers;
 
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.Mana;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -43,7 +43,7 @@ public class SpreadCorruptionPower extends AbstractPower {
 						new ApplyPowerAction(owner, owner, new Mana(owner, owner, -1), -1));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(owner, owner, new DecayPower(owner, owner, this.amount), this.amount));
+						new ApplyPowerAction(owner, owner, new Decay(owner, owner, this.amount), this.amount));
 
 
 				for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
@@ -52,7 +52,7 @@ public class SpreadCorruptionPower extends AbstractPower {
 								new PoisonPower(monster, owner, this.amount), this.amount));
 
 						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, owner,
-								new DecayPower(monster, owner, this.amount), this.amount));
+								new Decay(monster, owner, this.amount), this.amount));
 					}
 				}
 			}

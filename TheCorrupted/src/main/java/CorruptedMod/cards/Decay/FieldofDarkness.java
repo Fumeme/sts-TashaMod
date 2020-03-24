@@ -1,10 +1,11 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
 import CorruptedMod.CorruptedBase;
+import CorruptedMod.cards.AbstractCorrCard;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayResist;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.Mana;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -75,9 +76,9 @@ public class FieldofDarkness extends AbstractCorrCard {
     }
 
     boolean Corrupt(int i) {
-        if (AbstractDungeon.player.hasPower(DecayPower.POWER_ID)) {
+        if (AbstractDungeon.player.hasPower(Decay.POWER_ID)) {
 
-            return AbstractDungeon.player.getPower(DecayPower.POWER_ID).amount >= i;
+            return AbstractDungeon.player.getPower(Decay.POWER_ID).amount >= i;
 
         }
         return false;

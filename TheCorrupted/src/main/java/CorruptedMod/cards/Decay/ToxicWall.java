@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,63 +11,65 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import CorruptedMod.powers.witheringBarrierPower;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.ToxicWallPower;
 
-public class witheringBarrier extends AbstractCorrCard {
+public class ToxicWall extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      * 
-     * Hold Place Gain 1(2) Keywords(s).
+     * Defend Gain 5 (8) block.
      */
 
 
     // TEXT DECLARATION 
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("witheringBarrier");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("ToxicWall");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_POWER);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.ToxicWall);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 2;
+    private static final int BLOCK = 15;
+    private static final int UPGRADE_PLUS_BLOCK = 5;
+    private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
 
 
-    public witheringBarrier() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR
-                , RARITY, TARGET);
-
+    public ToxicWall() {
+        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.baseBlock = BLOCK;
+        this.magicNumber = this.baseMagicNumber = MAGIC;
     }
-
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new witheringBarrierPower(p, p, 1), 1));
-        
+    	
+    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new ToxicWallPower(p, p, this.magicNumber), this.magicNumber));
+    	
+        AbstractDungeon.actionManager.addToBottom(
+                new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
     }
-
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new witheringBarrier();
+        return new ToxicWall();
     }
 
     //Upgraded stats.
@@ -74,7 +77,8 @@ public class witheringBarrier extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeMagicNumber(1);
             this.initializeDescription();
         }
     }

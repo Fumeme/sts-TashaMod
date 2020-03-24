@@ -4,7 +4,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.cards.AbstractCorrCard;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

@@ -3,13 +3,14 @@ package CorruptedMod;
 import java.nio.charset.StandardCharsets;
 
 import CorruptedMod.cards.*;
-import CorruptedMod.cards.Decay.PurgingBlade;
+import CorruptedMod.cards.Decay.*;
 import CorruptedMod.cards.Mana.*;
 import CorruptedMod.patches.relics.LoreDiary.LoreDiaryPatch;
 import CorruptedMod.patches.relics.LoreDiary.LoreDiaryReward;
 import CorruptedMod.variables.secondstats.SecondBlockNumber;
 import CorruptedMod.variables.secondstats.SecondDamageNumber;
 import CorruptedMod.variables.secondstats.SecondMagicNumber;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -289,10 +290,7 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new CursedStrike());
         BaseMod.addCard(new Focusfire());
         BaseMod.addCard(new Channel());
-
-
-        BaseMod.addCard(new FieldofDarkness());
-        BaseMod.addCard(new DefaultCommonAttack());
+        BaseMod.addCard(new Barrage());
 
         BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
@@ -306,51 +304,25 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new ReinArmor());
         BaseMod.addCard(new SpecializedShot());
         BaseMod.addCard(new PowerNap());
-        BaseMod.addCard(new Corrupt());
-        BaseMod.addCard(new InfernalForm());
-        BaseMod.addCard(new Embrace());
-        BaseMod.addCard(new SealTheWounds());
-        BaseMod.addCard(new ToxicWall());
-        BaseMod.addCard(new SpreadCorruption());
-        BaseMod.addCard(new LongTerm());
         BaseMod.addCard(new MagicArmor());
-        BaseMod.addCard(new InnerHeaven());
         BaseMod.addCard(new SappingStrike());
         BaseMod.addCard(new Overload());
+
         BaseMod.addCard(new DarkmagicSlice());
-        BaseMod.addCard(new ManaBurst()); 
-        BaseMod.addCard(new BreakTheseCuffs()); 
-        BaseMod.addCard(new EndlessTorment()); 
-        BaseMod.addCard(new HybridRounds()); 
-        BaseMod.addCard(new Curse()); 
-        BaseMod.addCard(new ImmovableObject()); 
+        BaseMod.addCard(new ManaBurst());
         BaseMod.addCard(new aWeakDiamond());
-        BaseMod.addCard(new PurgingBlade());
-
-        BaseMod.addCard(new AimForTheHead()); 
-        BaseMod.addCard(new EvilCloud()); 
-        BaseMod.addCard(new aLittleBitExtra()); 
-        BaseMod.addCard(new witheringBarrier()); 
         BaseMod.addCard(new Reload());
-        BaseMod.addCard(new BlackArmor()); 
-        BaseMod.addCard(new MaxOut()); 
-        BaseMod.addCard(new FocusCard());
 
+        BaseMod.addCard(new HybridRounds());
+        BaseMod.addCard(new ImmovableObject());
+        BaseMod.addCard(new MaxOut());
+        BaseMod.addCard(new FocusCard());
         BaseMod.addCard(new BurstFire());
-        BaseMod.addCard(new ManaShell()); 
-        BaseMod.addCard(new RapidFire());  
-        BaseMod.addCard(new ManaBLightTest()); 
-        
-        BaseMod.addCard(new EnergyCannon()); 
-        BaseMod.addCard(new ManaSparkAmmo()); 
-        BaseMod.addCard(new PureManaAmmo()); 
-        /*
-         * 
-         */
-        
-        BaseMod.addCard(new ReloadLore()); 
-        BaseMod.addCard(new SpecializedShotLore()); 
-        BaseMod.addCard(new loreSpire()); 
+        BaseMod.addCard(new ManaShell());
+        BaseMod.addCard(new RapidFire());
+        BaseMod.addCard(new EnergyCannon());
+        BaseMod.addCard(new AimForTheHead());
+
         
 
 
@@ -360,7 +332,6 @@ logger.info("adding monster(s)");
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
         UnlockTracker.unlockCard(Focusfire.ID);
         UnlockTracker.unlockCard(Channel.ID);
-        UnlockTracker.unlockCard(CursedStrike.ID);
 
         logger.info("Cards - added!");
     }

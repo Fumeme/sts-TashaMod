@@ -1,6 +1,7 @@
 package CorruptedMod.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.ManaGeneration;
 import basemod.abstracts.CustomCard;
 
@@ -43,7 +44,7 @@ public class Channel extends AbstractCorrCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int MAGIC = 1;
 
     // /STAT DECLARATION/
@@ -52,12 +53,16 @@ public class Channel extends AbstractCorrCard {
     public Channel() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.block = this.baseBlock = 12;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom((
+                new GainBlockAction(p, this.block)));
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new Mana(p, p, this.magicNumber), this.magicNumber));
         if(this.upgraded) {
@@ -80,6 +85,7 @@ public class Channel extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeBlock(3);
 			this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

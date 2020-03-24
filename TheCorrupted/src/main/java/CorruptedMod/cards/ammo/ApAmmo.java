@@ -3,7 +3,7 @@ package CorruptedMod.cards.ammo;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.cards.AbstractCorrCard;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -25,7 +25,7 @@ public class ApAmmo extends AbstractCorrCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = CorruptedBase.makeID("SpecShot");
+    public static final String ID = CorruptedBase.makeID("ApAmmo");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_ATTACK);
 
@@ -63,10 +63,10 @@ public class ApAmmo extends AbstractCorrCard {
                 .addToBottom(new DamageAction(m,
                         new DamageInfo(p, this.magicNumber, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));
-
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m ,new DamageInfo(p, this.damage, DamageInfo.DamageType.HP_LOSS )));
-
+ if(magic((short) 3)) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.HP_LOSS)));
+        }
 
     }
 

@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.InfernalFormPower;
-import basemod.abstracts.CustomCard;
 
 public class InfernalForm extends AbstractCorrCard {
 

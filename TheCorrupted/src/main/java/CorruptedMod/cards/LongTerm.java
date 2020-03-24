@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.LongTermDebuff;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class LongTerm extends AbstractCorrCard {

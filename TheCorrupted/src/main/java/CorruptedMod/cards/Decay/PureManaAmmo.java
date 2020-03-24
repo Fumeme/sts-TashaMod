@@ -1,4 +1,4 @@
-package CorruptedMod.cards.ammo;
+package CorruptedMod.cards.Decay;
 
 import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -16,9 +16,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.ManaBlightPower;
-import basemod.abstracts.CustomCard;
 
 public class PureManaAmmo extends AbstractCorrCard {
 

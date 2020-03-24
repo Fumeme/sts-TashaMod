@@ -5,7 +5,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 /*    */ import com.megacrit.cardcrawl.core.AbstractCreature;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import CorruptedMod.powers.ManaBlightPower;
 
 /*    */

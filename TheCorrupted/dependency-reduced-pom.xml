@@ -53,47 +53,49 @@
     </resources>
 
   </build>
+
   <dependencies>
     <dependency>
       <groupId>com.megacrit.cardcrawl</groupId>
       <artifactId>slaythespire</artifactId>
-      <version>016</version>
+      <version>${SlayTheSpire.version}</version>
       <scope>system</scope>
-      <systemPath>${basedir}/../../lib/desktop-1.0.jar</systemPath>
+      <systemPath>${Steam.path}/common/SlayTheSpire/desktop-1.0.jar</systemPath>
+      <!--<systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>-->
     </dependency>
     <dependency>
       <groupId>com.evacipated.cardcrawl</groupId>
-      <artifactId>ModTheSpire</artifactId>
-      <version>3.5.0</version>
+      <artifactId>modthespire</artifactId>
+      <version>${ModTheSpire.version}</version>
       <scope>system</scope>
-      <systemPath>${basedir}/../../lib/ModTheSpire.jar</systemPath>
+      <systemPath>${Steam.path}/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
+      <!--<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>-->
     </dependency>
     <dependency>
-      <groupId>com.evacipated.cardcrawl</groupId>
-      <artifactId>BaseMod</artifactId>
+      <groupId>basemod</groupId>
+      <artifactId>basemod</artifactId>
       <version>5.0.0</version>
       <scope>system</scope>
-      <systemPath>${basedir}/../../lib/BaseMod.jar</systemPath>
+      <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
+      <!--<systemPath>${basedir}/../lib/BaseMod.jar</systemPath>-->
     </dependency>
     <dependency>
-      <groupId>stslib</groupId>
+      <groupId>com.evacipated.cardcrawl.mod</groupId>
       <artifactId>StSLib</artifactId>
-      <version>1.0.0</version>
+      <version>1.3.2</version>
       <scope>system</scope>
-      <systemPath>${basedir}/../../lib/StSLib.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>diacore</groupId>
-      <artifactId>Diacore</artifactId>
-      <version>0.0.1</version>
-      <scope>system</scope>
-      <systemPath>C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/mods/DiamondMod.jar</systemPath>
+      <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
+      <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
     </dependency>
   </dependencies>
+
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <Steam.path>C:/Program Files (x86)/Steam/steamapps</Steam.path>
+    <SlayTheSpire.version>01-28-2020</SlayTheSpire.version>
+    <ModTheSpire.version>3.8.0</ModTheSpire.version>
   </properties>
 </project>
 

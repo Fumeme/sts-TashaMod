@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class MagicArmor extends AbstractCorrCard {

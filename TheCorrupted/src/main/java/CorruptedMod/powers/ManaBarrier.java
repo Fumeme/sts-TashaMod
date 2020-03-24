@@ -31,12 +31,7 @@ public class ManaBarrier extends AbstractPower {
     }
 
 
-    // At the end of the turn, Remove gained dexterity.
-    @Override
-    public void atEndOfTurn(final boolean isPlayer) {
 
-    }
-    
     @Override
     public void atStartOfTurn() {
 this.amount = this.amount/2;

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import DiamondMod.powers.DecayPower;
+import CorruptedMod.powers.Decay;
 
 //Gain 1 dex for the turn for each card played.
 
@@ -44,7 +44,7 @@ public class witheringBarrierPower extends AbstractPower implements OnLoseBlockP
     		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     	}else {
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner, this.owner, new DecayPower(this.owner, this.owner, 2), 2));
+                    new ApplyPowerAction(this.owner, this.owner, new Decay(this.owner, this.owner, 2), 2));
         }
     }
     @Override
@@ -62,12 +62,12 @@ public class witheringBarrierPower extends AbstractPower implements OnLoseBlockP
         if (i > owner.currentBlock){
             int d = owner.currentBlock;
             int r = this.amount * d;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(damageInfo.owner, AbstractDungeon.player, new DecayPower(damageInfo.owner, this.owner, r), r, true));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(damageInfo.owner, AbstractDungeon.player, new Decay(damageInfo.owner, this.owner, r), r, true));
 
         }
         else {
             int r = this.amount * i;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(damageInfo.owner, AbstractDungeon.player, new DecayPower(damageInfo.owner, this.owner, r), r, true));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(damageInfo.owner, AbstractDungeon.player, new Decay(damageInfo.owner, this.owner, r), r, true));
         }}
         return i;
      }

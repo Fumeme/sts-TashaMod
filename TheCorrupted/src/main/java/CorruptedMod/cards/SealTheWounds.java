@@ -12,7 +12,7 @@ import basemod.abstracts.CustomCard;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
+import CorruptedMod.powers.Decay;
 
 public class SealTheWounds extends AbstractCorrCard {
 
@@ -51,9 +51,9 @@ public class SealTheWounds extends AbstractCorrCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		if (p.hasPower(DecayPower.POWER_ID)) {
+		if (p.hasPower(Decay.POWER_ID)) {
 
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, DecayPower.POWER_ID));
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, Decay.POWER_ID));
 			
 			
 			}

@@ -1,8 +1,5 @@
 {
-	"Corrupted:SummonZitong": {
-		"NAME": "Summon Zitong",
-		"DESCRIPTION": "Summon Zitong."
-	},
+
 	"Corrupted:Overexertion": {
 		"NAME": "Overexertion",
 		"DESCRIPTION": "When drawn, Gain 1 [#239ecf]Mana [], gain 2 Inefficiency and take 2 damage"
@@ -50,8 +47,8 @@
 	},
 	"Corrupted:Channel": {
 		"NAME": "Channel",
-		"DESCRIPTION": "Gain !M! [#239ecf]Mana. []",
-		"UPGRADE_DESCRIPTION": "!M! [#239ecf]Mana, []and at the end of your turn gain !M! [#239ecf]Mana. []"
+		"DESCRIPTION": "Gain !B! block and !M! [#239ecf]Mana. []",
+		"UPGRADE_DESCRIPTION": "Gain !B! block and !M! [#239ecf]Mana, [] NLat the end of your turn gain !M! [#239ecf]Mana. []"
 	},
 	"Corrupted:Focusfire": {
 		"NAME": "Focus fire",
@@ -107,6 +104,17 @@
 		"NAME": "Power Nap",
 		"DESCRIPTION": "Consume 1 [#239ecf]Mana []to Gain !M! Regen. NL [#239ecf]Magic [#239ecf]4: []Gain an additional Regen"
 	},
+	"Corrupted:BulletBarrage": {
+		"NAME": "Bullet Barrage",
+		"DESCRIPTION": "Deal !D! damage to a random enemy for each ammo card in your hand",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage for each ammo card in your hand"
+
+	},
+
+
+
+
+
 	"Corrupted:CursedStrike": {
 		"NAME": "Cursed Strike",
 		"DESCRIPTION": " Gain !M! Decay then Deal !D! damage.",

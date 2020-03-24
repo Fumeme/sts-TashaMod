@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,17 +8,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.EvilCloudPower;
 
-public class Corrupt extends AbstractCorrCard {
+public class EvilCloud extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -27,9 +24,9 @@ public class Corrupt extends AbstractCorrCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("Corrupt");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("EvilCloud");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.Corrupt);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -40,54 +37,45 @@ public class Corrupt extends AbstractCorrCard {
     // STAT DECLARATION 	
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
 
 
-    private int AMOUNT = 2;
-    private short strGain = 1;
+    private int AMOUNT = 6;
 
     // /STAT DECLARATION/
 
     
-    public Corrupt() {
+    public EvilCloud() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = this.magicNumber = AMOUNT;
+         this.magicNumber = this.baseMagicNumber = AMOUNT;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new VulnerablePower(m, this.magicNumber+this.magicNumber, false), this.magicNumber+this.magicNumber));
-        
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DecayPower(p, p, 1), 1));
-    
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new StrengthPower(m, this.strGain), this.strGain));
-        
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                new WeakPower(m, this.strGain, false), this.strGain));
-        
+      
             for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            	
             	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new DecayPower(mo, p, this.magicNumber+1), this.magicNumber+1));
+                        new Decay(mo, p, this.magicNumber), this.magicNumber));
 
-            	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new PoisonPower(mo, p, this.magicNumber), this.magicNumber));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
+                        new EvilCloudPower(mo, p, 1), 1));
+
             }
 
+            
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new Corrupt();
+        return new EvilCloud();
     }
 
     //Upgraded stats.
@@ -95,6 +83,7 @@ public class Corrupt extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeBaseCost(0);
             this.upgradeMagicNumber(1);
             this.initializeDescription();
         }

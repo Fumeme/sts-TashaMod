@@ -4,7 +4,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.cards.AbstractCorrCard;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.DecayPurge;
-import DiamondMod.powers.DecayPower;
+import CorruptedMod.powers.Decay;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

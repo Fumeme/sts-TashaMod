@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -14,8 +15,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.Decay;
+
 public class EndlessTorment extends AbstractCorrCard {
 
 	/*
@@ -66,7 +67,7 @@ public class EndlessTorment extends AbstractCorrCard {
 
 			for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new DecayPower(mo, p, 2), 2));
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new Decay(mo, p, 2), 2));
 				
 				if (Corrupt(6)) {
 
@@ -90,9 +91,9 @@ public class EndlessTorment extends AbstractCorrCard {
 	}
 
 	boolean Corrupt(int i) {
-		if (AbstractDungeon.player.hasPower(DecayPower.POWER_ID)) {
+		if (AbstractDungeon.player.hasPower(Decay.POWER_ID)) {
 
-			return AbstractDungeon.player.getPower(DecayPower.POWER_ID).amount >= i;
+			return AbstractDungeon.player.getPower(Decay.POWER_ID).amount >= i;
 
 		}
 		return false;

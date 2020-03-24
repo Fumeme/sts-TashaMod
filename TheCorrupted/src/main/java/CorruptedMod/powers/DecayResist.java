@@ -1,6 +1,6 @@
 package CorruptedMod.powers;
 
-import DiamondMod.powers.DecayPower;
+import CorruptedMod.powers.Decay;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;

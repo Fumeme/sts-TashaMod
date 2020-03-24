@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,9 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.Mana;
 
 public class InnerHeaven extends AbstractCorrCard {
 
@@ -57,12 +57,12 @@ private  int Energythres = 10;
 	// Actions the card should do.
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (p.hasPower(DecayPower.POWER_ID)) {
+		if (p.hasPower(Decay.POWER_ID)) {
 
-			if (p.getPower(DecayPower.POWER_ID).amount >= this.magicNumber) {
+			if (p.getPower(Decay.POWER_ID).amount >= this.magicNumber) {
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new DecayPower(p, p, -this.magicNumber), -this.magicNumber));
+						new ApplyPowerAction(p, p, new Decay(p, p, -this.magicNumber), -this.magicNumber));
 
 				AbstractDungeon.actionManager.addToBottom(
 						new ApplyPowerAction(p, p, new Mana(p, p, this.magicNumber / this.Manathres), this.magicNumber / this.Manathres));
@@ -72,12 +72,12 @@ private  int Energythres = 10;
 			}else {
 				
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new DecayPower(p, p, -p.getPower(DecayPower.POWER_ID).amount), -p.getPower(DecayPower.POWER_ID).amount));
+						new ApplyPowerAction(p, p, new Decay(p, p, -p.getPower(Decay.POWER_ID).amount), -p.getPower(Decay.POWER_ID).amount));
 
 				AbstractDungeon.actionManager.addToBottom(
-						new ApplyPowerAction(p, p, new Mana(p, p, p.getPower(DecayPower.POWER_ID).amount / this.Manathres), p.getPower(DecayPower.POWER_ID).amount / this.Manathres));
+						new ApplyPowerAction(p, p, new Mana(p, p, p.getPower(Decay.POWER_ID).amount / this.Manathres), p.getPower(Decay.POWER_ID).amount / this.Manathres));
 				
-				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(p.getPower(DecayPower.POWER_ID).amount/this.Energythres));
+				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(p.getPower(Decay.POWER_ID).amount/this.Energythres));
 				
 			}
 		}

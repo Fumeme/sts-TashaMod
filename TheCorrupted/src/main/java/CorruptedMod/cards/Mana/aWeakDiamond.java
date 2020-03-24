@@ -1,7 +1,7 @@
 package CorruptedMod.cards.Mana;
 
 import CorruptedMod.cards.AbstractCorrCard;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

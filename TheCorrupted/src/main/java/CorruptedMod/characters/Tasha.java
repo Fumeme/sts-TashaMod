@@ -2,6 +2,7 @@ package CorruptedMod.characters;
 
 import java.util.ArrayList;
 
+import CorruptedMod.cards.Decay.CursedStrike;
 import basemod.abstracts.CustomPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +26,6 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.cards.*;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.relics.InfernalCore;
-import CorruptedMod.relics.LoreDiary;
 import basemod.animations.SpriterAnimation;
 //import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
 //import kobting.friendlyminions.characters.CustomCharSelectInfo;
@@ -142,10 +142,7 @@ public class Tasha extends CustomPlayer {
         
         retVal.add(DefaultCommonSkill.ID);
         retVal.add(DefaultCommonSkill.ID);
-        
-        
-        retVal.add(CursedStrike.ID);
-        retVal.add(CursedStrike.ID);
+
         
         retVal.add(Focusfire.ID);
         retVal.add(Channel.ID);

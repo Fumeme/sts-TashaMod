@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 /*    */ import com.megacrit.cardcrawl.screens.select.HandCardSelectScreen;
 /*    */ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 
 /*    */
 /*    */ public class FocusAction extends AbstractGameAction

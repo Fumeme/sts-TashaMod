@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import CorruptedMod.CorruptedBase;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomRelic;
 
 public class InfernalCore extends CustomRelic {
@@ -33,7 +33,7 @@ public class InfernalCore extends CustomRelic {
 @Override
     public void atTurnStart() {
     	
-    	if(AbstractDungeon.player.hasPower(DecayPower.POWER_ID) && (AbstractDungeon.player.getPower(DecayPower.POWER_ID).amount >0)) { 
+    	if(AbstractDungeon.player.hasPower(Decay.POWER_ID) && (AbstractDungeon.player.getPower(Decay.POWER_ID).amount >0)) {
     		
     		flash();
     		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Mana(AbstractDungeon.player, AbstractDungeon.player, 1), 1));

@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class Embrace extends AbstractCorrCard {
@@ -66,7 +66,7 @@ public class Embrace extends AbstractCorrCard {
                 new Mana(p, p, 1), 1));
         
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DecayPower(p, p, this.DecayCnt), this.DecayCnt));
+                new Decay(p, p, this.DecayCnt), this.DecayCnt));
         
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
   

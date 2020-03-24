@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class EnergyCannon extends AbstractCorrCard {

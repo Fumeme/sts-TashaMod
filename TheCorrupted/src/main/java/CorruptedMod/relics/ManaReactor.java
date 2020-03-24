@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import CorruptedMod.CorruptedBase;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomRelic;
 
 public class ManaReactor extends CustomRelic {
@@ -38,7 +37,7 @@ public class ManaReactor extends CustomRelic {
     @Override
     /*    */   public int onAttacked(DamageInfo info, int damageAmount)
     /*    */   {
-    /* 24 */     if ((info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.type != DamageInfo.DamageType.THORNS) && (damageAmount > 1))
+    /* 24 */     if ((info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.type != DamageInfo.DamageType.THORNS) && (damageAmount >= 1))
     /*    */     {
     /* 26 */       flash();
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,

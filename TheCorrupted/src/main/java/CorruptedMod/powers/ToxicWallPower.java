@@ -1,6 +1,6 @@
 package CorruptedMod.powers;
 
-import DiamondMod.powers.DecayPower;
+import CorruptedMod.powers.Decay;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -46,7 +46,7 @@ public class ToxicWallPower extends AbstractPower {
                     new PoisonPower(info.owner, this.owner, this.amount), this.amount));
             
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new DecayPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                    new Decay(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
         }
 
         return damageAmount;

@@ -17,8 +17,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.ManaBlightTriggerAction;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.Mana;
+import CorruptedMod.powers.Decay;
+import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
 
 public class SpecializedShot extends AbstractCorrCard {
@@ -77,7 +77,7 @@ public class SpecializedShot extends AbstractCorrCard {
                     new PoisonPower(m, p, this.magicNumber), this.magicNumber));
         	
         	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new DecayPower(m, p, 1), 1));
+                    new Decay(m, p, 1), 1));
         	
         	if(magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
         		

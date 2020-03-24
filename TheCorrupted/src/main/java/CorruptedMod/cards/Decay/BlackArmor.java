@@ -1,5 +1,6 @@
-package CorruptedMod.cards;
+package CorruptedMod.cards.Decay;
 
+import CorruptedMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,72 +11,67 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
-import DiamondMod.powers.DecayPower;
-import CorruptedMod.powers.EvilCloudPower;
-import basemod.abstracts.CustomCard;
+import CorruptedMod.powers.BlackArmorPower;
 
-public class EvilCloud extends AbstractCorrCard {
+public class BlackArmor extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      * 
-     * for each loop x2" "Apply 1 Vulnerable to all enemies, 2(3) times.
+     * Hold Place Gain 1(2) Keywords(s).
      */
+
 
     // TEXT DECLARATION 
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("EvilCloud");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("BlackArmor");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_SKILL);
+    public static final String IMG = CorruptedBase.makePath(CorruptedBase.TransMind);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
-    
+
     // STAT DECLARATION 	
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-
-
-    private int AMOUNT = 6;
+    private static final int MAGIC = 1;
 
     // /STAT DECLARATION/
 
-    
-    public EvilCloud() {
+
+    public BlackArmor() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-         this.magicNumber = this.baseMagicNumber = AMOUNT;
-        this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = MAGIC;
     }
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-      
-            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            	
-            	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new DecayPower(mo, p, this.magicNumber), this.magicNumber));
+        
+    	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new BlackArmorPower(p, p, this.magicNumber), this.magicNumber));
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new EvilCloudPower(mo, p, 1), 1));
-
-            }
-
-            
+        
+       
+        
+    
     }
+
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new EvilCloud();
+        return new BlackArmor();
     }
 
     //Upgraded stats.
@@ -83,7 +79,6 @@ public class EvilCloud extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
             this.upgradeMagicNumber(1);
             this.initializeDescription();
         }
