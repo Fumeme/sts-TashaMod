@@ -1,9 +1,9 @@
 {
 	"Corrupted:InfernalCore": {
-		"NAME": "Infernal Core",
-		"FLAVOR": "The Infernal inhabits your body as its new home. creepy...",
+		"NAME": "Glock with a star on it",
+		"FLAVOR": "Its just a Glock. what else do you expect?",
 		"DESCRIPTIONS": [
-			"Starting your turn with #yDecay gives you #b1 #yMana."
+			"At the start of combat, gain 2 ManaRegen."
 		]
 	},
 	"Corrupted:ManaReactor": {

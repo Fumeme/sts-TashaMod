@@ -65,10 +65,6 @@ public class Focusfire extends AbstractCorrCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	if(magic(3)) {
-    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
-    	}
-
 
   		 AbstractDungeon.actionManager
          .addToBottom(new DamageAction(m,
@@ -116,7 +112,7 @@ public class Focusfire extends AbstractCorrCard {
     public void calculateCardDamage(AbstractMonster mo) {
         int tmp = this.baseDamage;
         if (magic((short) 3)){
-            this.baseDamage += bonus;
+            this.baseDamage += this.magicNumber;
         }
         super.calculateCardDamage(mo);
         this.baseDamage = tmp;

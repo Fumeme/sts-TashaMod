@@ -24,6 +24,7 @@ public class RapidFirePower extends AbstractPower implements OnCardDrawPower  {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    int dmg = 2;
 
     public RapidFirePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
@@ -61,14 +62,13 @@ public class RapidFirePower extends AbstractPower implements OnCardDrawPower  {
 	@Override
 	public void onCardDraw(AbstractCard arg0) {
 		if (arg0.hasTag(CorruptedBase.Ammo)) {
-			
-	        AbstractDungeon.actionManager
-            .addToBottom(new DamageRandomEnemyAction(new DamageInfo(
-            		owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
-	        
-	        AbstractDungeon.actionManager
-            .addToBottom(new DamageRandomEnemyAction(new DamageInfo(
-            		owner, this.amount, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
+            for (int i = 0; i < this.amount; i++) {
+
+                AbstractDungeon.actionManager
+                        .addToBottom(new DamageRandomEnemyAction(new DamageInfo(
+                                owner, this.dmg, DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
+
+            }
 		}
 		
 	}

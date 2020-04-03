@@ -2,97 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletBarrageAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Barrage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/InstaLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Decay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Mana.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/TempDecay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletSharpenAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Hydration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/BulletSharpener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/Stockpile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TashaMod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TashaMod.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/Decay2PoisonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/Decay2PoisonAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/FocusAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/FocusAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ManaBlightTriggerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/ManaBlightTriggerAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BlackArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/BlackArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BlackArmorLore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/BlackArmorLore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/BreakTheseCuffs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/BreakTheseCuffs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletBarrageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletBarrageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Barrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Barrage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Channel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Corrupt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/Corrupt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Curse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/Curse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/CursedStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/CursedStrike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/PurgingBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/PurgingBlade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Embrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Embrace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EndlessTorment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/EndlessTorment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EnergyCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EnergyCannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EvilCloud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/EvilCloud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/FieldofDarkness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/FieldofDarkness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonSkill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/HybridRounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/HybridRounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/InfernalForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/InfernalForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/InnerHeaven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/InnerHeaven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/LongTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/LongTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/AimForTheHead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/AimForTheHead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/BurstFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/BurstFire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/DarkmagicSlice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/DarkmagicSlice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MagicArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MagicArmor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBurst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBurst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MaxOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MaxOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/Overload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/Overload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/PowerNap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/PowerNap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ReinArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ReinArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ShortTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ShortTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/aWeakDiamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/aWeakDiamond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SappingStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SappingStrike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SealTheWounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SealTheWounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SpecializedShotLore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/SpecializedShotLore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ToxicWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/ToxicWall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/TransMind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/TransMind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/aLittleBitExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/aLittleBitExtra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ApAmmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/ManaSparkAmmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/PureManaAmmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/PureManaAmmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/SpecializedShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/SpecializedShot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/statuses/Overexertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/statuses/Overexertion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/witheringBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Decay/witheringBarrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/QuickDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/QuickDraw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/potions/BrainJuice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/potions/BrainJuice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayPurge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayPurge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayResist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/DecayResist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Inefficiency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Inefficiency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/InfernalFormPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/InfernalFormPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermBuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermBuff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermDebuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/LongTermDebuff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaBarrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaGeneration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaShellPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ManaShellPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ShortTermPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ShortTermPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/SpreadCorruptionPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/SpreadCorruptionPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ToxicWallPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/ToxicWallPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/witheringBarrierPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/witheringBarrierPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Mana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Mana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/RapidFirePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/RapidFirePower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/InfernalCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/InfernalCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/ManaReactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/ManaReactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondBlockNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondBlockNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondDamageNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/variables/secondstats/SecondDamageNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/Zitong.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/Waifus/Zitong/attack_intent_7.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Relic-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Relic-Strings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,18 +69,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="CorruptedMod.powers" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\resources\CorruptedResources\localization" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="CorruptedMod.cards.ammo" />
       <recent name="CorruptedMod.actions" />
       <recent name="CorruptedMod.cards" />
       <recent name="CorruptedMod.powers" />
       <recent name="CorruptedMod.variables.secondstats" />
-      <recent name="CorruptedMod.variables" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\resources\CorruptedResources\localization" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="CorruptedMod.powers" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,6 +146,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585083336185">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585083336185" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1585801915375">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585801915375" />
     <state x="413" y="140" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584129926016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -231,29 +170,33 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="81" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584070651044" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1584586860417">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585954570360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584586860417" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1584586860417">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585954570360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584586860417" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1584586860417">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585954570360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584586860417" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1584586860417">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585954570360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584586860417" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585014393598">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585903075561">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585014393598" />
-    <state x="0" y="0" width="737" height="728" key="find.popup" timestamp="1584125530059">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585903075561" />
+    <state x="413" y="119" key="extract.method.dialog" timestamp="1585040963277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="737" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1584125530059" />
+    <state x="413" y="119" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1585040963277" />
+    <state x="0" y="0" width="737" height="728" key="find.popup" timestamp="1585954349056">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="737" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1585954349056" />
   </component>
 </project>

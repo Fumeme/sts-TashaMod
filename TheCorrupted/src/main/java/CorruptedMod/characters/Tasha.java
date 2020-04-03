@@ -123,7 +123,7 @@ public class Tasha extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Corrupted", "Optimize your mana or use decay",
+        return new CharSelectInfo("The Magical Gunner", "Optimize your mana for big brain plays.",
                 STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this, getStartingRelics(),
                 getStartingDeck(), false);
     }

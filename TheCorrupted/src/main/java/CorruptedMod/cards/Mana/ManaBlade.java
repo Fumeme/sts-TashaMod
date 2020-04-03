@@ -15,6 +15,7 @@ import CorruptedMod.CorruptedBase;
 import CorruptedMod.patches.AbstractCardEnum;
 import CorruptedMod.powers.Mana;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class ManaBlade extends AbstractCorrCard {
 
@@ -26,7 +27,7 @@ public class ManaBlade extends AbstractCorrCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = CorruptedMod.CorruptedBase.makeID("DefaultCommonAttack");
+    public static final String ID = CorruptedMod.CorruptedBase.makeID("ManaBlade");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = CorruptedBase.makePath(CorruptedBase.DEFAULT_COMMON_ATTACK);
 
@@ -38,21 +39,22 @@ public class ManaBlade extends AbstractCorrCard {
     
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
     private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    int dam;
+    int MIN = 3;
 
     // /STAT DECLARATION/
 
     public ManaBlade() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+        this.baseMagicNumber = MIN;
+        this.SecondMagicNumber = 0;
 
     }
 
@@ -61,22 +63,15 @@ public class ManaBlade extends AbstractCorrCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
     	
     	/* 
-    	 * this.damage is max damage done, excluding damage modifiers
+    	 * this.damage is max damage done, magicNumber is Min damage, both affected by dmg modifiers
     	 *
     	 * 
     	 */
-    	
-    	if(p.hasPower(Mana.POWER_ID)&& p.getPower(Mana.POWER_ID).amount > this.damage) {
-    		
-    		this.dam = this.damage;
-    	}else {
-    		
-    		this.dam = p.getPower(Mana.POWER_ID).amount;
-    	}
+
     	
         AbstractDungeon.actionManager
                 .addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.dam, this.damageTypeForTurn),
+                        new DamageInfo(p, this.SecondMagicNumber, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SHIELD));
     }
 
@@ -86,12 +81,81 @@ public class ManaBlade extends AbstractCorrCard {
         return new ManaBlade();
     }
 
+
+    @Override
+    public void applyPowers() {
+        AbstractPlayer p = AbstractDungeon.player;
+        int CurrMin = baseMagicNumber;
+        int CurrMax = baseDamage;
+        baseDamage = CurrMin;
+        super.applyPowers(); // takes baseDamage and applies things like Strength or Pen Nib to set damage
+
+        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+
+        // repeat so damage holds the second condition's damage
+        baseDamage = CurrMax;
+
+        if (p.hasPower(Mana.POWER_ID)) {
+            if (p.getPower(Mana.POWER_ID).amount >= this.damage) {
+
+                this.SecondMagicNumber = this.damage;
+            } else if (p.getPower(Mana.POWER_ID).amount <= this.magicNumber) {
+
+                this.SecondMagicNumber = this.magicNumber;
+            } else {
+
+                this.SecondMagicNumber = p.getPower(Mana.POWER_ID).amount;
+            }
+        }else {this.SecondMagicNumber = this.magicNumber;}
+
+        super.applyPowers();
+
+        this.initializeDescription();
+
+
+    }
+    @Override
+    public void calculateCardDamage(final AbstractMonster mo) {
+        AbstractPlayer p = AbstractDungeon.player;
+
+        int CurrMin = baseMagicNumber;
+        int CurrMax = baseDamage;
+        baseDamage = CurrMin;
+        super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
+
+        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+
+        // repeat so damage holds the second condition's damage
+        baseDamage = CurrMax;
+
+        if (p.hasPower(Mana.POWER_ID)) {
+            if (p.getPower(Mana.POWER_ID).amount >= this.damage) {
+
+                this.SecondMagicNumber = this.damage;
+            } else if (p.getPower(Mana.POWER_ID).amount <= this.magicNumber) {
+
+                this.SecondMagicNumber = this.magicNumber;
+            } else {
+
+                this.SecondMagicNumber = p.getPower(Mana.POWER_ID).amount;
+            }
+        }else {this.SecondMagicNumber = this.magicNumber;}
+
+        super.calculateCardDamage(mo);
+
+        this.initializeDescription();
+
+    }
+
     // Upgraded stats.
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeMagicNumber(1);
+            this.upgradeDamage(3);
             this.initializeDescription();
         }
     }

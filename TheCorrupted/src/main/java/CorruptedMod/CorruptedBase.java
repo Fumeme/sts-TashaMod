@@ -291,6 +291,7 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new Focusfire());
         BaseMod.addCard(new Channel());
         BaseMod.addCard(new Barrage());
+        BaseMod.addCard(new Stockpile());
 
         BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
@@ -323,7 +324,12 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new EnergyCannon());
         BaseMod.addCard(new AimForTheHead());
 
-        
+        BaseMod.addCard(new Menacing());
+        BaseMod.addCard(new Hydration());
+        BaseMod.addCard(new BulletSharpener());
+        BaseMod.addCard(new ManaBlade());
+
+
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -381,9 +387,13 @@ logger.info("adding monster(s)");
         final String[] Corruption = {"[#9c65c3]corruption"};
         BaseMod.addKeyword(Corruption, "(Corruption Z) Requires atleast Z stacks of Decay to activate the cards effect");
 
-        final String[] Mana = {"mana", "[][#239ecf]mana", "[#239ecf]mana"};
+        final String[] Mana = {"Mana", "[][#239ecf]Mana", "[#239ecf]Mana"};
         BaseMod.addKeyword(Mana, "Used for Powering your cards.");
-        
+
+        final String[] ManaGen = {"ManaRegen", "[][#239ecf]Mana Regen", "[#239ecf]Mana Regen"};
+        BaseMod.addKeyword(ManaGen, "At the End of your tur Gain 1 Mana then reduces by 1.");
+
+
         final String[] Decay = {"decay"};
         BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");
   

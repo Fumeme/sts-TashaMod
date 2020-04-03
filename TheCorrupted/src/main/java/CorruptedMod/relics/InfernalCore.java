@@ -1,5 +1,6 @@
 package CorruptedMod.relics;
 
+import CorruptedMod.powers.ManaGeneration;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,17 +29,11 @@ public class InfernalCore extends CustomRelic {
     }
     
 @Override
-    public void atBattleStart() {}
-    
-@Override
-    public void atTurnStart() {
-    	
-    	if(AbstractDungeon.player.hasPower(Decay.POWER_ID) && (AbstractDungeon.player.getPower(Decay.POWER_ID).amount >0)) {
-    		
-    		flash();
-    		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Mana(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
-    	}
-    }
+    public void atBattleStart() {
+    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ManaGeneration(AbstractDungeon.player, AbstractDungeon.player, 2), 1));
+
+}
+
 
     // Description
     @Override

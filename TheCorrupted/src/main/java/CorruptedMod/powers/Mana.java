@@ -43,7 +43,7 @@ public class Mana extends AbstractPower {
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0];
+    	this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
 }

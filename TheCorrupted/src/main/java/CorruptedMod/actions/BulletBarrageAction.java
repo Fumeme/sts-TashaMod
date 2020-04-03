@@ -31,8 +31,8 @@ private  boolean isUpgraded;
 
     public void update() {
 
-        for (int i = 0; i < AbstractDungeon.player.gameHandSize; i++) {
-            
+        for (int i = 0; i < AbstractDungeon.player.hand.size(); i++) {
+
             if (AbstractDungeon.player.hand.group.get(i).hasTag(CorruptedBase.Ammo))
                 if (this.isUpgraded) {
                     AbstractDungeon.actionManager.addToTop((AbstractGameAction) new DamageAction(this.target, this.info, AttackEffect.FIRE, true));

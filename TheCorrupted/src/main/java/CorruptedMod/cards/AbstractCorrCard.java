@@ -2,7 +2,9 @@ package CorruptedMod.cards;
 
 import CorruptedMod.CorruptedBase;
 import CorruptedMod.actions.LoadCardImgAction;
+import CorruptedMod.cards.ammo.SpecializedShot;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public abstract class AbstractCorrCard extends CustomCard {
