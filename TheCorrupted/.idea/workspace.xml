@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletSharpenAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Hydration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/BulletSharpener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/Stockpile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletBarrageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/actions/BulletBarrageAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/AbstractCorrCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Barrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Barrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Channel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonSkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Focusfire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Menacing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/QuickDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/QuickDraw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Mana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Mana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/RapidFirePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/RapidFirePower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/InfernalCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/relics/InfernalCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Keyword-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Relic-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Relic-Strings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,26 +150,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="81" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584070651044" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585954570360">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585992006831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585954570360">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585992006831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585954570360">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585992006831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585954570360">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585992006831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585954570360" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585903075561">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586031156950">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585903075561" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586031156950" />
     <state x="413" y="119" key="extract.method.dialog" timestamp="1585040963277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

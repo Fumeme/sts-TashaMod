@@ -87,6 +87,8 @@ public class ManaBlade extends AbstractCorrCard {
         AbstractPlayer p = AbstractDungeon.player;
         int CurrMin = baseMagicNumber;
         int CurrMax = baseDamage;
+        super.applyPowers();
+
         baseDamage = CurrMin;
         super.applyPowers(); // takes baseDamage and applies things like Strength or Pen Nib to set damage
 
@@ -95,6 +97,7 @@ public class ManaBlade extends AbstractCorrCard {
 
         // repeat so damage holds the second condition's damage
         baseDamage = CurrMax;
+        super.applyPowers();
 
         if (p.hasPower(Mana.POWER_ID)) {
             if (p.getPower(Mana.POWER_ID).amount >= this.damage) {
@@ -108,7 +111,7 @@ public class ManaBlade extends AbstractCorrCard {
                 this.SecondMagicNumber = p.getPower(Mana.POWER_ID).amount;
             }
         }else {this.SecondMagicNumber = this.magicNumber;}
-
+        isSecondMagicNumberModified = true;
         super.applyPowers();
 
         this.initializeDescription();
@@ -121,6 +124,8 @@ public class ManaBlade extends AbstractCorrCard {
 
         int CurrMin = baseMagicNumber;
         int CurrMax = baseDamage;
+        super.applyPowers();
+
         baseDamage = CurrMin;
         super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
 
@@ -129,6 +134,7 @@ public class ManaBlade extends AbstractCorrCard {
 
         // repeat so damage holds the second condition's damage
         baseDamage = CurrMax;
+        super.applyPowers();
 
         if (p.hasPower(Mana.POWER_ID)) {
             if (p.getPower(Mana.POWER_ID).amount >= this.damage) {
@@ -142,6 +148,7 @@ public class ManaBlade extends AbstractCorrCard {
                 this.SecondMagicNumber = p.getPower(Mana.POWER_ID).amount;
             }
         }else {this.SecondMagicNumber = this.magicNumber;}
+        isSecondMagicNumberModified = true;
 
         super.calculateCardDamage(mo);
 
