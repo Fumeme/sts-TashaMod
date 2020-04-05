@@ -54,6 +54,7 @@ public class PowerNap extends AbstractCorrCard {
     public PowerNap() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.exhaust = true;
     }
 
 

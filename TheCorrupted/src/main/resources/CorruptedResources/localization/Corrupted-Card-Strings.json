@@ -36,8 +36,8 @@
 	},
 	"Corrupted:Hydration": {
 		"NAME": "Hydration",
-		"DESCRIPTION": "Gain [E] . NL Gain !M! Mana NL Gain 1 Inefficiency.",
-		"UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Gain !M! Mana NL Gain 1 Inefficiency."
+		"DESCRIPTION": "Gain [E] . NL Gain !M! Mana NL Gain 1 Inefficiency. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Gain !M! Mana NL Gain 1 Inefficiency. NL Exhaust."
 
 	},
 	"Corrupted:FieldofDarkness": {
@@ -47,7 +47,7 @@
 	"Corrupted:EnergyCannon": {
 		"NAME": "Energy Cannon",
 		"DESCRIPTION": "Consume !M! [#239ecf]Mana []to Deal !D! damage.",
-		"UPGRADE_DESCRIPTION": "Consume !M! [#239ecf]Mana []to Deal !D! damage and !M2! damage to ALL enemies."
+		"UPGRADE_DESCRIPTION": "Consume !M! [#239ecf]Mana []to Deal !D! damage and !2ndM! damage to ALL enemies."
 	},
 	"Corrupted:Reload": {
 		"NAME": "Reload",
@@ -91,12 +91,12 @@
 	},
 	"Corrupted:Flare": {
 		"NAME": "Flare",
-		"DESCRIPTION": "apply 2 Vulnerable and remove 1 Strength on all enemies.",
-		"UPGRADE_DESCRIPTION": " then apply an additional Vulnerable."
+		"DESCRIPTION": "Apply !M! Vulnerable and apply !2ndM! Strength on all enemies.",
+		"UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and apply !2ndM! Strength on all enemies. NL Apply 1 Vulnerable."
 	},
 	"Corrupted:Overhead": {
 		"NAME": "Overhead Swing",
-		"DESCRIPTION": "Deal !D! damage, if it kills, NL apply !M! Vulnerable and reduce the Strength of a random enemy by !M!."
+		"DESCRIPTION": "Deal !D! damage, if fatal, NL apply !M! Vulnerable and reduce the Strength of a random enemy by !M!."
 	},
 	"Corrupted:TransMind": {
 		"NAME": "Transencent Mindset",
@@ -110,11 +110,11 @@
 	},
 	"Corrupted:SpecShot": {
 		"NAME": "Specialized Ammo",
-		"DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Apply !M! Poison and 1 Decay. NL [#239ecf]Magic [#239ecf]5: []Apply !M! Poison again and apply !M! -1 Weak."
+		"DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Apply !M! Poison. NL [#239ecf]Magic [#239ecf]5: []Apply !M! Poison again and apply !2ndM! Weak."
 	},
 	"Corrupted:PowerNap": {
 		"NAME": "Power Nap",
-		"DESCRIPTION": "Consume 1 [#239ecf]Mana []to Gain !M! Regen. NL [#239ecf]Magic [#239ecf]4: []Gain an additional Regen"
+		"DESCRIPTION": "Consume 1 [#239ecf]Mana []to Gain !M! Regen. NL [#239ecf]Magic [#239ecf]4: []Gain an additional Regen. NL Exhaust."
 	},
 	"Corrupted:BulletBarrage": {
 		"NAME": "Bullet Barrage",
@@ -143,7 +143,7 @@
 	"Corrupted:Menacing": {
 		"NAME": "Menacing Presence",
 		"EXTENDED_DESCRIPTION":[
-			"Gain !B! Block", " twice", ". NL At the start of your next !M! turns, ALL enemies that intend to attack gain !M2! Weak and Vulnerable."
+			"Gain !B! Block", " twice", ". NL At the start of your next !2ndM! turns, ALL enemies that intend to attack gain !M! Weak and Vulnerable."
 		]
 },
 	"Corrupted:Corrupt": {
@@ -254,7 +254,7 @@
 	},
 	"Corrupted:ImmovableObject": {
 		"NAME": "Immovable Object",
-		"DESCRIPTION": "Prevent the next time you'd take fatal damage."
+		"DESCRIPTION": "Prevent the next time you'd die."
 	},
 	"Corrupted:AimForTheHead": {
 		"NAME": "Aim For The Head",

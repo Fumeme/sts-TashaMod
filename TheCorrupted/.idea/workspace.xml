@@ -2,8 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/cards/ammo.pdn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/cards/spec-shot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/cards/spec-shot_p.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/CorruptedBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Channel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/DefaultCommonSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EnergyCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/EnergyCannon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Flare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Flare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MagicArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/MagicArmor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBlade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBurst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ManaBurst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/PowerNap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/PowerNap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ReinArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/ReinArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/aWeakDiamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Mana/aWeakDiamond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overhead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/Overhead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/TransMind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/TransMind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/SpecializedShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/cards/ammo/SpecializedShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/characters/Tasha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Inefficiency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CorruptedMod/powers/Inefficiency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/cards/sapping-strike.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/cards/sapping-strike.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +61,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -125,6 +147,9 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585083336185">
       <screen x="0" y="0" width="1366" height="728" />
@@ -150,26 +175,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="81" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584070651044" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585992006831">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1586067764226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585992006831">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586067764226" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1586067764226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585992006831">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586067764226" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1586067764226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585992006831">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586067764226" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1586067764226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585992006831" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586031156950">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586067764226" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586062542669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586031156950" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586062542669" />
     <state x="413" y="119" key="extract.method.dialog" timestamp="1585040963277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

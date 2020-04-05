@@ -30,6 +30,7 @@ public class Flare extends AbstractCorrCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -44,7 +45,7 @@ public class Flare extends AbstractCorrCard {
     private static final int COST = 1;
 
 
-    private int AMOUNT = 2;
+    private int AMOUNT = 1;
     private short strReduce = -1;
 
     // /STAT DECLARATION/
@@ -53,6 +54,7 @@ public class Flare extends AbstractCorrCard {
     public Flare() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = this.magicNumber = AMOUNT;
+        this.BaseSecondMagicNumber = this.SecondMagicNumber = strReduce;
     }
 
     // Actions the card should do.
@@ -64,7 +66,7 @@ public class Flare extends AbstractCorrCard {
                         new VulnerablePower(mo, this.magicNumber, false), this.magicNumber));
             
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                        new StrengthPower(mo, this.strReduce), this.strReduce));
+                        new StrengthPower(mo, this.SecondMagicNumber), this.SecondMagicNumber));
                 
                 if(this.upgraded) {
                	 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
@@ -88,6 +90,7 @@ public class Flare extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.rawDescription = UPGRADE;
             this.initializeDescription();
         }
     }

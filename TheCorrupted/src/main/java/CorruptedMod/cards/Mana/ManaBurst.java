@@ -50,7 +50,7 @@ public class ManaBurst extends AbstractCorrCard {
     private static final int COST = 1;
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = -1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 5;
 
     // /STAT DECLARATION/
 

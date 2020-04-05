@@ -95,6 +95,7 @@ public class CorruptedBase
     public static final String SpreadCorruption = "cards/SpreadCorruption.png";
     public static final String TransMind = "cards/TransMind.png";
     public static final String Sleep = "cards/Sleep.png";
+    public static final String spec = "cards/spec-shot.png";
 
     public static final String DEFAULT_COMMON_ATTACK = SappingStrike;
     public static final String DEFAULT_COMMON_SKILL = ReinArmor;
@@ -287,7 +288,6 @@ logger.info("adding monster(s)");
         
         BaseMod.addCard(new DefaultCommonAttack());
         BaseMod.addCard(new DefaultCommonSkill());
-        BaseMod.addCard(new CursedStrike());
         BaseMod.addCard(new Focusfire());
         BaseMod.addCard(new Channel());
         BaseMod.addCard(new Barrage());
@@ -299,7 +299,7 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new Menacing());
         BaseMod.addCard(new BattleSense());
         BaseMod.addCard(new Flare());
-        BaseMod.addCard(new ShortTerm());
+       // BaseMod.addCard(new ShortTerm());
         BaseMod.addCard(new Overhead());
         BaseMod.addCard(new TransMind());
         BaseMod.addCard(new ReinArmor());

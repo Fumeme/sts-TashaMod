@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
@@ -53,6 +54,7 @@ public class TransMind extends AbstractCorrCard {
     public TransMind() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = 1;
     }
 
 
@@ -62,6 +64,8 @@ public class TransMind extends AbstractCorrCard {
         
     	AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new FrailPower(p, this.SecondMagicNumber, false), this.SecondMagicNumber));
 
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));

@@ -33,7 +33,7 @@
 },
 "Corrupted:Inefficiency": {
         "NAME": "Inefficiency",
-        "DESCRIPTIONS": ["At the end of your turn, lose", "Mana then remove itself if you haveat most 3 Mana"]
+        "DESCRIPTIONS": ["At the end of your turn, lose", "Mana. Removes itself if you have 3 Mana or less"]
 },
 "Corrupted:witheringBarrierPower": {
         "NAME": "Withering Barrier",
@@ -45,7 +45,7 @@
 },
 "Corrupted:HybridRoundsPower": {
         "NAME": "Hybrid Rounds",
-        "DESCRIPTIONS": ["Your ammo is now temporarily infused with mana causing your next attack to do #b",
+        "DESCRIPTIONS": ["Your ammo is now temporarily infused with Mana causing your next attack to do #b",
         " additional damage."]
 },
 "Corrupted:CripplingRoundsPower": {

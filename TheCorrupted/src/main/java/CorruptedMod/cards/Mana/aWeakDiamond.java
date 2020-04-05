@@ -62,7 +62,7 @@ public class aWeakDiamond extends AbstractCorrCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (magic(2)) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Mana", 2));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, Mana.POWER_ID, 2));
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new MetallicizePower(p, this.magicNumber), this.magicNumber));

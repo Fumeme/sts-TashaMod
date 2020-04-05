@@ -39,7 +39,7 @@ public class MagicArmor extends AbstractCorrCard {
 
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
@@ -61,7 +61,7 @@ public class MagicArmor extends AbstractCorrCard {
     	
     	if(p.hasPower(Mana.POWER_ID)) {
     	
- this.magicNumber +=  	AbstractDungeon.player.getPower(Mana.POWER_ID).amount;
+ this.magicNumber =  	AbstractDungeon.player.getPower(Mana.POWER_ID).amount;
     			
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new Mana(p, p, -this.magicNumber), -this.magicNumber));

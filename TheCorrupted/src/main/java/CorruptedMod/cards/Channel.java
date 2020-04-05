@@ -53,7 +53,7 @@ public class Channel extends AbstractCorrCard {
     public Channel() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.block = this.baseBlock = 11;
+        this.block = this.baseBlock = 6;
     }
 
 
@@ -85,7 +85,7 @@ public class Channel extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(3);
+            this.upgradeBlock(2);
 			this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

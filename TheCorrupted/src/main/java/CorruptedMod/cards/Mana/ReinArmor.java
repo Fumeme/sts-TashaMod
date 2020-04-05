@@ -46,7 +46,7 @@ public class ReinArmor extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 

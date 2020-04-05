@@ -36,8 +36,8 @@ public class Inefficiency extends AbstractPower {
     @Override
 	/*    */ public void atEndOfTurn(boolean isPlayer)
 	/*    */ {
-    	
-    	if(owner.hasPower(Mana.POWER_ID) && owner.getPower(Mana.POWER_ID).amount <= 3) {
+
+        if ((this.amount <= 0 || this.owner.getPower(Mana.POWER_ID).amount <=3) || !this.owner.hasPower(Mana.POWER_ID)) {
     		
     		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     	}else {
@@ -50,7 +50,7 @@ public class Inefficiency extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        if (this.amount <= 0 || this.owner.getPower(Mana.POWER_ID).amount <=3 || !this.owner.hasPower(Mana.POWER_ID)) {
+        if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
         }

@@ -42,7 +42,7 @@ public class DefaultCommonSkill extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
 

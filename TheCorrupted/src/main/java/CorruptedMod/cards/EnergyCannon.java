@@ -55,7 +55,7 @@ public class EnergyCannon extends AbstractCorrCard {
     public EnergyCannon() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 25;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 7;
         this.SecondMagicNumber = this.BaseSecondMagicNumber = 10;
 
     }
@@ -97,7 +97,7 @@ public class EnergyCannon extends AbstractCorrCard {
         	this.isMultiDamage = true;
             this.upgradeName();
             this.rawDescription = UPGRADE;
-            this.upgradeDamage(15);
+            this.upgradeDamage(10);
             this.upgradeMagicNumber(-1);
             this.initializeDescription();
         }

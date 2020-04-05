@@ -41,7 +41,7 @@ public class Overhead extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int mGain = 1;
 
