@@ -60,7 +60,7 @@
 	"Corrupted:Channel": {
 		"NAME": "Channel",
 		"DESCRIPTION": "Gain !B! block and !M! [#239ecf]Mana. []",
-		"UPGRADE_DESCRIPTION": "Gain !B! block and !M! [#239ecf]Mana, [] NLat the end of your turn gain !M! [#239ecf]Mana. []"
+		"UPGRADE_DESCRIPTION": "Gain !B! block and !M! [#239ecf]Mana, [] NL at the end of your turn gain !M! [#239ecf]Mana. []"
 	},
 	"Corrupted:Focusfire": {
 		"NAME": "Focus fire",
@@ -72,8 +72,8 @@
 
 	"Corrupted:ManaShell": {
 		"NAME": "Mana Shell",
-		"DESCRIPTION": "Gain X times your [#239ecf]Mana []count/3, at the end of your turn.",
-		"UPGRADE_DESCRIPTION": "Gain X+1 times your [#239ecf]Mana []count/3, at the end of your turn."
+		"DESCRIPTION": "Gain X times your [#239ecf]Mana []count/3 block, at the end of your turn.",
+		"UPGRADE_DESCRIPTION": "Gain X+1 times your [#239ecf]Mana []count/3 block, at the end of your turn."
 	},
 	"Corrupted:Focus": {
 		"NAME": "Focus",
@@ -96,7 +96,7 @@
 	},
 	"Corrupted:Overhead": {
 		"NAME": "Overhead Swing",
-		"DESCRIPTION": "Deal !D! damage, if fatal, NL apply !M! Vulnerable and reduce the Strength of a random enemy by !M!."
+		"DESCRIPTION": "Deal !D! damage, if it kills any enemy, NL apply !M! Vulnerable and reduce the Strength of a random enemy by !M!."
 	},
 	"Corrupted:TransMind": {
 		"NAME": "Transencent Mindset",
@@ -110,7 +110,7 @@
 	},
 	"Corrupted:SpecShot": {
 		"NAME": "Specialized Ammo",
-		"DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Apply !M! Poison. NL [#239ecf]Magic [#239ecf]5: []Apply !M! Poison again and apply !2ndM! Weak."
+		"DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Apply !M! Poison. NL [#239ecf]Magic [#239ecf]5: []Apply !M! Poison again and apply !2ndM! Weak."
 	},
 	"Corrupted:PowerNap": {
 		"NAME": "Power Nap",
@@ -143,7 +143,7 @@
 	"Corrupted:Menacing": {
 		"NAME": "Menacing Presence",
 		"EXTENDED_DESCRIPTION":[
-			"Gain !B! Block", " twice", ". NL At the start of your next !2ndM! turns, ALL enemies that intend to attack gain !M! Weak and Vulnerable."
+			"Gain !B! Block", " twice", ". NL At the start of your next !2ndM! turns, NL ALL enemies that intend to attack gain !M! Weak and Vulnerable."
 		]
 },
 	"Corrupted:Corrupt": {
@@ -193,6 +193,26 @@
 		"NAME": "Sapping Strike",
 		"DESCRIPTION": "Gain !M! [#239ecf]Mana []and deal !D! damage. NL [#239ecf]Magic [#239ecf]3: []Gain 1 [#239ecf]Mana. []"
 	},
+	"Corrupted:Leech": {
+		"NAME": "Leech Cast",
+		"DESCRIPTION": "Gain !B! block and apply !M! Leech."
+	},
+	"Corrupted:CosmicNova": {
+		"NAME": "Cosmic Nova",
+		"DESCRIPTION": "Deal !D! damage and apply !M! Leech to ALL enemies. NL Exhaust."
+	},
+	"Corrupted:Repurpose": {
+		"NAME": "Recycle",
+		"DESCRIPTION": "Exhaust an attack and add a Recycled ammo into your hand.",
+		"UPGRADE_DESCRIPTION": "Exhaust a card and add a Recycled ammo into your hand."
+
+	},
+	"Corrupted:RecycledAmmo": {
+		"NAME": "Recycled Ammo",
+		"DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]2,4,7: []Add a copy of this card into your discard pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]2,4,7,9: []Add a copy of this card into your discard pile. NL Exhaust."
+
+	},
 	"Corrupted:DarkmagicSlice": {
 		"NAME": "Darkmagic Slice",
 		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 additional damage. NL [#239ecf]Magic [#239ecf]15: []consume 2 [#239ecf]Mana []to do double damage."
@@ -225,11 +245,11 @@
 	},
 	"Corrupted:HybridRounds": {
 		"NAME": "Hybrid Rounds",
-		"DESCRIPTION": "Deal !D! damage. The next attack you play this turn does !M! additional damage NL [#239ecf]Magic [#239ecf]2,4,6: []this card and your next attack this turn does 2 additional damage. "
+		"DESCRIPTION": "Ammo. NL Deal !D! damage. The next attack you play this turn does !M! additional damage NL [#239ecf]Magic [#239ecf]2,4,6: []this card and your next attack this turn does 2 additional damage. "
 	},
 	"Corrupted:CripplingAmmo": {
 		"NAME": "Crippling Ammo",
-		"DESCRIPTION": "Deal !D! damage. Remove !M! Strength for the rest of this turn. NL Magic 2,6: Remove !M! Strength for the rest of this turn. NL Magic 4: Your next attack removes !M! Strength for the rest of ths turn. ",
+		"DESCRIPTION": "Ammo. Deal !D! damage. Remove !M! Strength for the rest of this turn. NL Magic 2,6: Remove !M! Strength for the rest of this turn. NL Magic 4: Your next attack removes !M! Strength for the rest of ths turn. ",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. Remove !M! Strength for the rest of this turn. NL Magic 2,6,10: Remove !M! Strength for the rest of this turn. NL Magic 4,8: Your next attack removes !M! Strength for the rest of ths turn. "
 	},
 	"Corrupted:aWeakDiamond": {
@@ -267,7 +287,8 @@
 	},
 	"Corrupted:RapidFire": {
 		"NAME": "Quick FIre",
-		"DESCRIPTION": "Deal !M! damage to a random enemy twice everytime you draw an ammo card."
+		"DESCRIPTION": "Deal 2 damage to !M! random enemies every time you draw an ammo card.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Deal 2 damage to !M! random enemies every time you draw an ammo card."
 	},
 	"Corrupted:ManaBLightTest": {
 		"NAME": "ManaBlight placeholder",

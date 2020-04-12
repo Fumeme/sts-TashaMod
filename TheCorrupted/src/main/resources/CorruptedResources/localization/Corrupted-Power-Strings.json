@@ -60,8 +60,8 @@
 "Corrupted:RapidFirePower": {
         "NAME": "Rapid Fire",
         "DESCRIPTIONS": [
-                "Deal ",
-                 " damage twice to a random enemy whenever you draw an ammo card."
+                "Deal 2 damage to ",
+                 " random enemies whenever you draw an ammo card."
                 ]
 },
 "Corrupted:DecayPower": {
@@ -120,6 +120,10 @@
   "Corrupted:MenacingPower": {
     "NAME": "Menacing",
     "DESCRIPTIONS": ["At the start of your turn, apply #b", " Weak and Vulnerable to ALL enemies that intend to attack. "]
+  },
+  "Corrupted:Leech": {
+    "NAME": "Leech",
+    "DESCRIPTIONS": ["Gain 1 Mana for every 15 attack unblocked attack damage the owner receives w."]
   },
 
   "Corrupted:tempBarricade": {
