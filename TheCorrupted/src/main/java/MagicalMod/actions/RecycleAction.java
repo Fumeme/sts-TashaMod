@@ -17,7 +17,7 @@ public class RecycleAction extends AbstractGameAction {
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("RecycleAction");
     public static final String[] TEXT = uiStrings.TEXT;
-    boolean isUpgraded = false;
+    boolean isUpgraded;
     AbstractPlayer p = AbstractDungeon.player;
     private ArrayList<AbstractCard> isNotAttack = new ArrayList<>();
 
@@ -62,6 +62,7 @@ public class RecycleAction extends AbstractGameAction {
             this.p.hand.group.removeAll(this.isNotAttack);
             AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, false);
 
+
             for (AbstractCard c : this.isNotAttack) {
                 this.p.hand.addToTop(c);
             }
@@ -71,8 +72,8 @@ public class RecycleAction extends AbstractGameAction {
                 for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 
                     this.p.hand.moveToExhaustPile(c);
-                    addToBot(new MakeTempCardInHandAction(new RecycledAmmo()));
                 }
+                addToBot(new MakeTempCardInHandAction(new RecycledAmmo()));
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();

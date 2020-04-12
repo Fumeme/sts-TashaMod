@@ -335,8 +335,9 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new ManaBlade());
         BaseMod.addCard(new LeechCast());
         BaseMod.addCard(new RecycledAmmo());
-      //  BaseMod.addCard(new Repurpose());
+       BaseMod.addCard(new Repurpose());
         BaseMod.addCard(new CosmicNova());
+        BaseMod.addCard(new stelarCannon());
 
 
 

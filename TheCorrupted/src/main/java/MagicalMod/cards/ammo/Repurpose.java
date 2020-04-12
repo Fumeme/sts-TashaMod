@@ -49,6 +49,7 @@ public class Repurpose extends AbstractCorrCard  {
     public Repurpose() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.baseBlock = 5;
         this.cardsToPreview = (AbstractCard)new RecycledAmmo();
 
 
