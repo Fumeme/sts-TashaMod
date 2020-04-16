@@ -6,5 +6,5 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 public class TheDefaultEnum {
 
     @SpireEnum
-    public static AbstractPlayer.PlayerClass THE_DEFAULT;
+    public static AbstractPlayer.PlayerClass MAGICAL_GUNNER;
 }

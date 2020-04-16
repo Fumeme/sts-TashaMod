@@ -190,7 +190,7 @@ public class Tasha extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return AbstractCardEnum.DEFAULT_GRAY;
+        return AbstractCardEnum.MAGICAL_COLOR;
     }
 
     // Should return a color object to be used to color the trail of moving cards

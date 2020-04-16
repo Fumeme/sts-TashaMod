@@ -160,9 +160,9 @@ public class MagicalBase
 
         logger.info("Done subscribing");
 
-        logger.info("Creating the color " + AbstractCardEnum.DEFAULT_GRAY.toString());
+        logger.info("Creating the color " + AbstractCardEnum.MAGICAL_COLOR.toString());
 
-        BaseMod.addColor(AbstractCardEnum.DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
+        BaseMod.addColor(AbstractCardEnum.MAGICAL_COLOR, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, makePath(ATTACK_DEAFULT_GRAY),
                 makePath(SKILL_DEAFULT_GRAY), makePath(POWER_DEAFULT_GRAY),
                 makePath(ENERGY_ORB_DEAFULT_GRAY), makePath(ATTACK_DEAFULT_GRAY_PORTRAIT),
@@ -186,10 +186,10 @@ public class MagicalBase
 
     @Override
     public void receiveEditCharacters() {
-        logger.info("begin editing characters. " + "Add " + TheDefaultEnum.THE_DEFAULT.toString());
+        logger.info("begin editing characters. " + "Add " + TheDefaultEnum.MAGICAL_GUNNER.toString());
 
-        BaseMod.addCharacter(new Tasha("The Magical Gunner", TheDefaultEnum.THE_DEFAULT),
-                makePath(THE_DEFAULT_BUTTON), makePath(THE_DEFAULT_PORTRAIT), TheDefaultEnum.THE_DEFAULT);
+        BaseMod.addCharacter(new Tasha("The Magical Gunner", TheDefaultEnum.MAGICAL_GUNNER),
+                makePath(THE_DEFAULT_BUTTON), makePath(THE_DEFAULT_PORTRAIT), TheDefaultEnum.MAGICAL_GUNNER);
         
         receiveEditPotions();
         logger.info("done editing characters");
@@ -239,7 +239,7 @@ logger.info("adding monster(s)");
         logger.info("begin editing potions");
        
         // Class Specific Potion If you want your potion to not be class-specific, just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT")
-        BaseMod.addPotion(BrainJuice.class, PLACEHOLDER_POTION_lIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, BrainJuice.POTION_ID, TheDefaultEnum.THE_DEFAULT);
+        BaseMod.addPotion(BrainJuice.class, PLACEHOLDER_POTION_lIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, BrainJuice.POTION_ID, TheDefaultEnum.MAGICAL_GUNNER);
       
         logger.info("end editing potions");
     }
@@ -254,8 +254,8 @@ logger.info("adding monster(s)");
         logger.info("Add relics");
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new InfernalCore(), AbstractCardEnum.DEFAULT_GRAY);
-        BaseMod.addRelicToCustomPool(new ManaReactor(), AbstractCardEnum.DEFAULT_GRAY);
+        BaseMod.addRelicToCustomPool(new InfernalCore(), AbstractCardEnum.MAGICAL_COLOR);
+        BaseMod.addRelicToCustomPool(new ManaReactor(), AbstractCardEnum.MAGICAL_COLOR);
       //  BaseMod.addRelicToCustomPool(new LoreDiary(), AbstractCardEnum.DEFAULT_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
@@ -337,6 +337,9 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new RecycledAmmo());
       //  BaseMod.addCard(new Repurpose());
         BaseMod.addCard(new CosmicNova());
+        BaseMod.addCard(new stelarCannon());
+        BaseMod.addCard(new MagicBlast());
+        BaseMod.addCard(new CoveringFire());
 
 
 

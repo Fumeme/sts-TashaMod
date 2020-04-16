@@ -40,7 +40,7 @@ public class BulletSharpener extends AbstractCorrCard  {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = AbstractCardEnum.DEFAULT_GRAY;
+    public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
     private static final int MAGIC = 1;
@@ -81,6 +81,7 @@ public class BulletSharpener extends AbstractCorrCard  {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeDamage(1);
             this.upgradeMagicNumber(1);
             this.initializeDescription();
         }

@@ -217,13 +217,22 @@
 		"NAME": "Darkmagic Slice",
 		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 additional damage. NL [#239ecf]Magic [#239ecf]15: []consume 2 [#239ecf]Mana []to do double damage."
 	},
-	"Corrupted:PurgingBlade": {
+	"Corrupted:PurgingBlasde": {
 		"NAME": "Purging Blade",
 		"DESCRIPTION": "Deal !D! damage and lose 1 additional Decay at the end of your next !M! turns. "
 	},
 	"Corrupted:ManaBurst": {
 		"NAME": "Mana Burst",
 		"DESCRIPTION": "Consume !M! [#239ecf]Mana []to do !D! Damage 3 times."
+	},
+	"Corrupted:MagicBlast": {
+		"NAME": "Magic Blast",
+		"DESCRIPTION": "[#239ecf]Magic [#239ecf] !M!: []Deal !D! Damage."
+	},
+	"Corrupted:stelarCannon": {
+		"NAME": "stelar Cannon",
+		"DESCRIPTION": "Deal !D! Damage. NL [#239ecf]Magic [][#239ecf]5,10,15: []Deal !D! Damage.",
+		"UPGRADE_DESCRIPTION": "Deal !D! Damage. NL [#239ecf]Magic [][#239ecf]5,10,15,20: []Deal !D! Damage."
 	},
 	"Corrupted:ManaBlade":  {
 		"NAME": "Mana Blade",
