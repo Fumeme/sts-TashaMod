@@ -286,14 +286,9 @@
 		"DESCRIPTION": "Apply !M! Decay to all enemies. NL Enemies gain Decay instead of losing it. NL Exhaust"
 	},
 	"Corrupted:RapidFire": {
-		"NAME": "Quick Fire",
+		"NAME": "Quick FIre",
 		"DESCRIPTION": "Deal 2 damage to !M! random enemies every time you draw an ammo card.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Deal 2 damage to !M! random enemies every time you draw an ammo card."
-	},
-	"Corrupted:stelerCannon": {
-		"NAME": "stelar Cannon",
-		"DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]5,10,15: []Deal !D! damage.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]5,10,15,20: []Deal !D! damage."
 	},
 	"Corrupted:ManaBLightTest": {
 		"NAME": "ManaBlight placeholder",
