@@ -1,4 +1,5 @@
 {
+
 	"Corrupted:Overexertion": {
 		"NAME": "Overexertion",
 		"DESCRIPTION": "When drawn, Gain 1 [#239ecf]Mana [], gain 2 Inefficiency and take 2 damage"
@@ -14,26 +15,20 @@
 	"Corrupted:ManaSpark": {
 		"NAME": "Mana Spark Ammo",
 		"DESCRIPTION": "Consume 1 [#239ecf]Mana []to deal !D! damage, if target has no [#239ecf]Mana_blight, apply !M! [#239ecf]Mana_blight, otherwise trigger their [#239ecf]Mana_blight NL ",
-		"EXTENDED_DESCRIPTION": [
-			"[#239ecf]Magic [][#239ecf]5,6,7,8: []deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight. []",
-			"magic 5",
-			"[#239ecf]magic 5",
-			",6",
-			"[#239ecf],6",
-			",7",
-			"[#239ecf],7",
-			",8",
-			"[#239ecf],8",
-			": deal !D! damage again NL",
-			"[]: [#239ecf]deal[] !D! [#239ecf]damage [][#239ecf]again NL ",
-			"[#239ecf]Magic []10: apply 3 [#239ecf]Mana_blight. []",
-			"[#239ecf]Magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight. []"
+		"EXTENDED_DESCRIPTION":[ "[#239ecf]Magic [][#239ecf]5,6,7,8: []deal !D! damage again NL magic 10: apply 3 [#239ecf]Mana_blight. []",
+			"magic 5", "[#239ecf]magic 5",
+			",6", "[#239ecf],6",
+			",7", "[#239ecf],7",
+			 ",8", "[#239ecf],8",
+			 ": deal !D! damage again NL", "[]: [#239ecf]deal[] !D! [#239ecf]damage [][#239ecf]again NL ",
+			 "[#239ecf]Magic []10: apply 3 [#239ecf]Mana_blight. []" ,  "[#239ecf]Magic [][#239ecf]10: [][#239ecf]Apply [][#239ecf]3 [#239ecf]Mana_blight. []"
 		]
 	},
 	"Corrupted:QuickDraw": {
 		"NAME": "Quick Draw",
 		"DESCRIPTION": "Deal !D! damage and draw a card",
 		"UPGRADE_DESCRIPTION": " Ammo. NL Deal !D! damage and draw a card "
+
 	},
 	"Corrupted:BulletSharpener": {
 		"NAME": "Bullet Sharpener",
@@ -43,6 +38,7 @@
 		"NAME": "Hydration",
 		"DESCRIPTION": "Gain [E] . NL Gain !M! Mana NL Gain 1 Inefficiency. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Gain !M! Mana NL Gain 1 Inefficiency. NL Exhaust."
+
 	},
 	"Corrupted:FieldofDarkness": {
 		"NAME": "Field of Darkness",
@@ -69,11 +65,11 @@
 	"Corrupted:Focusfire": {
 		"NAME": "Focus fire",
 		"DESCRIPTION": "Deal !D! damage twice. NL ",
-		"EXTENDED_DESCRIPTION": [
-			"[#239ecf]Magic [#239ecf]3: []does !M! bonus damage.",
-			"[#239ecf]Magic [#239ecf]3: [][#239ecf]does !M! [][#239ecf]bonus [][#239ecf]damage."
+		"EXTENDED_DESCRIPTION":[ "[#239ecf]Magic [#239ecf]3: []does !M! bonus damage.",
+								 "[#239ecf]Magic [#239ecf]3: [][#239ecf]does !M! [][#239ecf]bonus [][#239ecf]damage."
 		]
 	},
+
 	"Corrupted:ManaShell": {
 		"NAME": "Mana Shell",
 		"DESCRIPTION": "Gain X times your [#239ecf]Mana []count/3 block, at the end of your turn.",
@@ -108,11 +104,9 @@
 	},
 	"Corrupted:ReinArmor": {
 		"NAME": "Reinforce Armor",
-		"DESCRIPTION": "Gain !B! block and gain !M! Plated Armor. NL ",
-		"EXTENDED_DESCRIPTION": [
-			"[#239ecf]Magic [#239ecf]3:[] consume 1 [#239ecf]Mana []to increase the plated armor you get by 1.",
-			"[#239ecf]Magic [#239ecf]3: [][#239ecf]consume [][#239ecf]1 [][#239ecf]Mana [][#239ecf]to [][#239ecf]increase [][#239ecf]the [][#239ecf]Plated [][#239ecf]armor [][#239ecf]you [][#239ecf]get [][#239ecf]by [][#239ecf]1.[]"
-		]
+		"DESCRIPTION": "Gain !B! block and gain !M! Plated Armor. NL ", 
+		"EXTENDED_DESCRIPTION":["[#239ecf]Magic [#239ecf]3:[] consume 1 [#239ecf]Mana []to increase the plated armor you get by 1.",
+								"[#239ecf]Magic [#239ecf]3: [][#239ecf]consume [][#239ecf]1 [][#239ecf]Mana [][#239ecf]to [][#239ecf]increase [][#239ecf]the [][#239ecf]Plated [][#239ecf]armor [][#239ecf]you [][#239ecf]get [][#239ecf]by [][#239ecf]1.[]"]
 	},
 	"Corrupted:SpecShot": {
 		"NAME": "Specialized Ammo",
@@ -126,15 +120,21 @@
 		"NAME": "Bullet Barrage",
 		"DESCRIPTION": "Deal !D! damage to a random enemy for each ammo card in your hand",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage for each ammo card in your hand"
+
 	},
+
 	"Corrupted:Stockpile": {
 		"NAME": "Stockpile",
 		"DESCRIPTION": "Add !M! Ammo cards into your hand NL Exhaust."
 	},
+
+
+
 	"Corrupted:CursedStrike": {
 		"NAME": "Cursed Strike",
 		"DESCRIPTION": " Gain !M! Decay then Deal !D! damage.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 Decay. NL Take !M! Decay damage at the end of your turn."
+
 	},
 	"Corrupted:witheringBarrier": {
 		"NAME": "Withering Barrier",
@@ -142,12 +142,10 @@
 	},
 	"Corrupted:Menacing": {
 		"NAME": "Menacing Presence",
-		"EXTENDED_DESCRIPTION": [
-			"Gain !B! Block",
-			" twice",
-			". NL At the start of your next !2ndM! turns, NL ALL enemies that intend to attack gain !M! Weak and Vulnerable."
+		"EXTENDED_DESCRIPTION":[
+			"Gain !B! Block", " twice", ". NL At the start of your next !2ndM! turns, NL ALL enemies that intend to attack gain !M! Weak and Vulnerable."
 		]
-	},
+},
 	"Corrupted:Corrupt": {
 		"NAME": "Corrupt",
 		"DESCRIPTION": "Gain 1 Decay, Apply !Mx2! Vulnerable, 1 Weak and 1 Strength. NL Apply !M! Poison and !Mp1! decay to all enemies. "
@@ -155,7 +153,7 @@
 	"Corrupted:EmbraceDarkness": {
 		"NAME": "Embrace Darkness",
 		"DESCRIPTION": "gain 1 [#239ecf]Mana, []gain 2 decay and draw 1 card(s).",
-		"UPGRADE_DESCRIPTION": "gain 1 [#239ecf]Mana, []gain 1 decay and draw 2 card(s)."
+		"UPGRADE_DESCRIPTION":"gain 1 [#239ecf]Mana, []gain 1 decay and draw 2 card(s)."
 	},
 	"Corrupted:InfernalForm": {
 		"NAME": "Infernal Form",
@@ -207,11 +205,13 @@
 		"NAME": "Recycle",
 		"DESCRIPTION": "Exhaust an attack and add a Recycled ammo into your hand.",
 		"UPGRADE_DESCRIPTION": "Exhaust a card and add a Recycled ammo into your hand."
+
 	},
 	"Corrupted:RecycledAmmo": {
 		"NAME": "Recycled Ammo",
 		"DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]2,4,7: []Add a copy of this card into your discard pile. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]2,4,7,9: []Add a copy of this card into your discard pile. NL Exhaust."
+
 	},
 	"Corrupted:DarkmagicSlice": {
 		"NAME": "Darkmagic Slice",
@@ -225,7 +225,7 @@
 		"NAME": "Mana Burst",
 		"DESCRIPTION": "Consume !M! [#239ecf]Mana []to do !D! Damage 3 times."
 	},
-	"Corrupted:ManaBlade": {
+	"Corrupted:ManaBlade":  {
 		"NAME": "Mana Blade",
 		"DESCRIPTION": "Deal !M! - !D! Damage based on how much [#239ecf]Mana []you have. (Deals !2ndM! Damage)"
 	},
@@ -260,15 +260,17 @@
 		"NAME": "Black Armor",
 		"DESCRIPTION": "Next time you take Decay damage, gain block instead."
 	},
+
+
 	"Corrupted:aLittleBitExtra": {
 		"NAME": "A Little Bit Extra",
 		"DESCRIPTION": "Deal !D! damage. deal !Dm2! damage if the target has decay, deal !Dm1! damage  if target also has poison ",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. deal !Dm2! damage if the target has decay, deal !Dm1! damage  if target also has poison "
+		"UPGRADE_DESCRIPTION":  "Deal !D! damage. deal !Dm2! damage if the target has decay, deal !Dm1! damage  if target also has poison "
 	},
 	"Corrupted:Curse": {
 		"NAME": "Curse",
 		"DESCRIPTION": "Apply 5 decay. NL Convert all of the targets Decay into poison.",
-		"UPGRADE_DESCRIPTION": "Apply 5 decay. NL Convert all of the targets Decay into !M! times as much poison."
+		"UPGRADE_DESCRIPTION":"Apply 5 decay. NL Convert all of the targets Decay into !M! times as much poison."
 	},
 	"Corrupted:ImmovableObject": {
 		"NAME": "Immovable Object",
@@ -277,9 +279,9 @@
 	"Corrupted:AimForTheHead": {
 		"NAME": "Aim For The Head",
 		"DESCRIPTION": "Does !D! damage NL Does 1.5x more damage if target has no block NL Increase the damage multiplier by 0.06 per mana you have. NL [#239ecf]Magic [#239ecf]4: []damage multiplier is increased by 0.25",
-		"UPGRADE_DESCRIPTION": "Does !D! damage NL Does 1.6x more damage if target has no block. NL Increase the damage multiplier by 0.07 per mana you have. NL [#239ecf]Magic [#239ecf]4: []damage multiplier is increased by 0.35"
+		"UPGRADE_DESCRIPTION":"Does !D! damage NL Does 1.6x more damage if target has no block. NL Increase the damage multiplier by 0.07 per mana you have. NL [#239ecf]Magic [#239ecf]4: []damage multiplier is increased by 0.35"
 	},
-	"Corrupted:EvilCloud": {
+		"Corrupted:EvilCloud": {
 		"NAME": "Evil Cloud",
 		"DESCRIPTION": "Apply !M! Decay to all enemies. NL Enemies gain Decay instead of losing it. NL Exhaust"
 	},
@@ -288,22 +290,10 @@
 		"DESCRIPTION": "Deal 2 damage to !M! random enemies every time you draw an ammo card.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Deal 2 damage to !M! random enemies every time you draw an ammo card."
 	},
-	"Corrupted:stelarCannon": {
+	"Corrupted:stelerCannon": {
 		"NAME": "stelar Cannon",
 		"DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]5,10,15: []Deal !D! damage.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL [#239ecf]Magic [#239ecf]5,10,15,20: []Deal !D! damage."
-	},
-	"Corrupted:CoveringFire": {
-		"NAME": "Covering Fire",
-		"DESCRIPTION": "Gain !B! block. Add a random Ammo card from your discard pile into your hand."
-	},
-	"Corrupted:QuickLoader": {
-		"NAME": "Quick Loader",
-		"DESCRIPTION": "Gain !B! block. Draw !M! cards. Discard all cards drawn this way that do not cost 0."
-	},
-	"Corrupted:MagicBlast": {
-		"NAME": "Magic Blast",
-		"DESCRIPTION": "[#239ecf]Magic [] !M![#239ecf]: []Deal !D! Damage."
 	},
 	"Corrupted:ManaBLightTest": {
 		"NAME": "ManaBlight placeholder",
