@@ -1,33 +1,35 @@
-package MagicalMod.cards.ammo;
+package MagicalMod.cards;
 
 import MagicalMod.MagicalBase;
-import MagicalMod.actions.RecycleAction;
-import MagicalMod.cards.AbstractCorrCard;
 import MagicalMod.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.defect.ScrapeFollowUpAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Repurpose extends AbstractCorrCard  {
+public class QuickLoader extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Hold Place Gain 1(2) Keywords(s).
+     * Defend Gain 5 (8) block.
      */
 
 
     // TEXT DECLARATION
 
-    public static final String ID = MagicalBase.makeID("Repurpose");
+    public static final String ID = MagicalBase.makeID("QuickLoader");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_SKILL);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -39,35 +41,33 @@ public class Repurpose extends AbstractCorrCard  {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
-    private static final int COST = 0;
-    private static final int MAGIC = 1;
+    private static final int COST = 1;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
 
     // /STAT DECLARATION/
 
 
-    public Repurpose() {
+    public QuickLoader() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.baseBlock = 5;
-        this.cardsToPreview = (AbstractCard)new RecycledAmmo();
-
-
+        this.baseBlock = BLOCK;
+        this.baseMagicNumber = 2;
     }
-
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        
-addToBot(new RecycleAction(this.upgraded));
-    }
+        AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, this.block));
 
+        addToBot((AbstractGameAction)new DrawCardAction(this.magicNumber, (AbstractGameAction)new ScrapeFollowUpAction()));
+    }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new Repurpose();
+        return new QuickLoader();
     }
 
     //Upgraded stats.
@@ -75,8 +75,9 @@ addToBot(new RecycleAction(this.upgraded));
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeMagicNumber(1);
             this.initializeDescription();
         }
     }
-
 }
