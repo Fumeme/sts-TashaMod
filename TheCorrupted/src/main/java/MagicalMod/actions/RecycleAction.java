@@ -81,9 +81,14 @@ public class RecycleAction extends AbstractGameAction {
 
             this.p.hand.refreshHandLayout();
 
-            this.isDone = true;
-            tickDuration();
+
         }
+
+
+
+
+        this.isDone = true;
+        tickDuration();
     }
 
 }
