@@ -1,6 +1,7 @@
 package MagicalMod.powers;
 
 import MagicalMod.MagicalBase;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,6 +18,7 @@ public class Mana extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static final String IMG = MagicalBase.makePath(MagicalBase.Mana);
 
     public Mana(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
@@ -26,7 +28,7 @@ public class Mana extends AbstractPower {
         this.updateDescription();
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
-        this.loadRegion("focus");
+        this.img = new Texture(IMG);
         this.source = source;
 
 

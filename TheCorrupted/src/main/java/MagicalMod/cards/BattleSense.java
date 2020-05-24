@@ -30,7 +30,6 @@ public class BattleSense extends AbstractCorrCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -51,27 +50,22 @@ public class BattleSense extends AbstractCorrCard {
     public BattleSense() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = MAGIC;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	AbstractDungeon.actionManager.
-    	addToBottom(new 
-    			ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
-    	
+
     	AbstractDungeon.actionManager.
     	addToBottom(new 
     			ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-    	
-    	if (this.upgraded) {
-    		
-        	AbstractDungeon.actionManager.
-        	addToBottom(new 
-        			ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
-    		
-    	}
+
+        AbstractDungeon.actionManager.
+                addToBottom(new
+                        ApplyPowerAction(p, p, new DexterityPower(p, this.SecondMagicNumber), this.magicNumber));
+
     }
 
 
@@ -86,7 +80,7 @@ public class BattleSense extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-			this.rawDescription = UPGRADE_DESCRIPTION;
+            UpgradeSecondMagicNumber(1);
             this.initializeDescription();
             
         }

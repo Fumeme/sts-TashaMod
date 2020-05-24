@@ -54,6 +54,7 @@ public class Flare extends AbstractCorrCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = this.magicNumber = AMOUNT;
         this.BaseSecondMagicNumber = this.SecondMagicNumber = strReduce;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
@@ -66,12 +67,7 @@ public class Flare extends AbstractCorrCard {
             
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
                         new StrengthPower(mo, this.SecondMagicNumber), this.SecondMagicNumber));
-                
-                if(this.upgraded) {
-               	 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                            new VulnerablePower(mo, 1, false), 1));
-               	
-               }
+
         
             }
             
@@ -90,6 +86,7 @@ public class Flare extends AbstractCorrCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.rawDescription = UPGRADE;
+            this.exhaust = false;
             this.initializeDescription();
         }
     }

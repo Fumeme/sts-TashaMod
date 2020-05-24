@@ -1,7 +1,8 @@
-package MagicalMod.cards;
+package MagicalMod.cards.ammo;
 
 import MagicalMod.MagicalBase;
 import MagicalMod.actions.CoveringAction;
+import MagicalMod.cards.AbstractCorrCard;
 import MagicalMod.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,7 +42,7 @@ public class CoveringFire extends AbstractCorrCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
 
     // /STAT DECLARATION/
@@ -72,7 +73,6 @@ public class CoveringFire extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
             this.upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.initializeDescription();
         }

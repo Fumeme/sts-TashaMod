@@ -112,6 +112,7 @@ public class MagicalBase
 
     public static final String MenacingPower = "powers/MenacingPower.png";
     public static final String Leech = "powers/Mana-leech.png";
+    public static final String Mana = "powers/Mana.png";
 
 
     // Relic images  
@@ -295,6 +296,9 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new DefaultCommonSkill());
         BaseMod.addCard(new Focusfire());
         BaseMod.addCard(new Channel());
+        /* REMINDER to add more cards with managen
+        */
+
         BaseMod.addCard(new Barrage());
         BaseMod.addCard(new Stockpile());
 
@@ -310,7 +314,7 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new ReinArmor());
         BaseMod.addCard(new SpecializedShot());
         BaseMod.addCard(new PowerNap());
-        BaseMod.addCard(new MagicArmor());
+       // BaseMod.addCard(new MagicArmor());
         BaseMod.addCard(new SappingStrike());
         BaseMod.addCard(new Overload());
 
@@ -419,7 +423,7 @@ logger.info("adding monster(s)");
         BaseMod.addKeyword(Inefficiency, "if you have more than 3 mana reduce you mana by you Inefficiency stacks otherwise it removes itself.");
 
         final String[] Leech = {"Leech"};
-        BaseMod.addKeyword(Inefficiency, "Gain 1 Mana for every 15 attack unblocked attack damage the owner receives.");
+        BaseMod.addKeyword(Leech, "Gain 4 Mana for every 15 attack unblocked attack damage the owner receives.");
 
 
         Gson gson = new Gson();

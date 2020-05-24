@@ -1,6 +1,7 @@
 package MagicalMod.cards.Mana;
 
 import MagicalMod.cards.AbstractCorrCard;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -43,16 +45,16 @@ public class ManaBlade extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 11;
-    int MIN = 4;
+    private static final int MAX = 12;
+    int MIN = 5;
 
     // /STAT DECLARATION/
 
     public ManaBlade() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = DAMAGE;
+        this.baseDamage = MAX;
         this.baseMagicNumber = MIN;
-        this.SecondMagicNumber = 0;
+        this.BaseSecondMagicNumber = magicNumber;
 
     }
 
@@ -63,7 +65,6 @@ public class ManaBlade extends AbstractCorrCard {
     	/* 
     	 * this.damage is max damage done, magicNumber is Min damage, both affected by dmg modifiers
     	 *
-    	 * 
     	 */
 
     	
@@ -133,10 +134,12 @@ public class ManaBlade extends AbstractCorrCard {
         AbstractPlayer p = AbstractDungeon.player;
 
         if (p.hasPower(Mana.POWER_ID)) {
-            if (p.getPower(Mana.POWER_ID).amount >= this.damage) {
+            int am = MathUtils.floor(p.getPower(Mana.POWER_ID).amount/4);
+
+            if (am >= this.damage) {
 
                 this.SecondMagicNumber = this.damage;
-            } else if (p.getPower(Mana.POWER_ID).amount <= this.magicNumber) {
+            } else if (am <= this.magicNumber) {
 
                 this.SecondMagicNumber = this.magicNumber;
             } else {

@@ -36,6 +36,8 @@ public class CoveringAction extends AbstractGameAction {
             this.p.hand.addToHand(card);
             this.p.discardPile.removeCard(card);
             this.p.hand.refreshHandLayout();
+            card.lighten(false);
+            card.unhover();
 
             card.applyPowers();
 

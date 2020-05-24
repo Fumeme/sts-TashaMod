@@ -48,12 +48,13 @@ public class HairyTrigger extends AbstractCorrCard {
     public HairyTrigger() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+        this.baseMagicNumber = 1;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-    	for(short i = 0; i <= this.timesUpgraded+1; i++) {
+    	for(short i = 0; i <= magicNumber; i++) {
     	
         AbstractDungeon.actionManager
                 .addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
@@ -72,11 +73,12 @@ public class HairyTrigger extends AbstractCorrCard {
     // Upgraded stats.
     @Override
     public void upgrade() {
-    	if (timesUpgraded <4) {
-            this.name = (NAME + "+" + timesUpgraded);
-            this.initializeDescription();
-            timesUpgraded++;
-    	}
         
+            this.upgradeName();
+            this.name = (NAME + "+" + timesUpgraded);
+
+        this.upgradeMagicNumber(1);
+        this.initializeDescription();
+        timesUpgraded++;
     }
 }
