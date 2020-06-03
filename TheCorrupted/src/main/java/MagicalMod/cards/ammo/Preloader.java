@@ -1,87 +1,81 @@
 package MagicalMod.cards.ammo;
 
+import MagicalMod.MagicalBase;
+import MagicalMod.actions.PreloadAction;
 import MagicalMod.cards.AbstractCorrCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.defect.ScrapeFollowUpAction;
+import MagicalMod.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import MagicalMod.MagicalBase;
-import MagicalMod.actions.drawCardandAction;
-import MagicalMod.patches.AbstractCardEnum;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-public class InstaLoader extends AbstractCorrCard  {
+public class Preloader extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     * 
-     * Hold Place Gain 1(2) Keywords(s).
+     *
+     * Strike Deal 7(9) damage.
      */
 
+    // TEXT DECLARATION
 
-    // TEXT DECLARATION 
-
-    public static final String ID = MagicalBase.makeID("InstaLoader");
+    public static final String ID = MagicalBase.makeID("Preloader");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_SKILL);
+    public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_ATTACK);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
- 
-
+int NumofAmmo = 1;
     // /STAT DECLARATION/
 
-
-    public InstaLoader() {
+    public Preloader() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = MAGIC;
-      
-    }
 
+        this.baseMagicNumber = this.magicNumber = NumofAmmo;
+        BaseSecondMagicNumber = 3;
+
+    }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        addToBot(new DrawCardAction(this.magicNumber, new ScrapeFollowUpAction()));
-
+addToBot(new PreloadAction(SecondMagicNumber,magicNumber));
     }
 
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new InstaLoader();
+        return new Preloader();
     }
 
-    //Upgraded stats.
+    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(2);
+            this.upgradeMagicNumber(1);
+            this.UpgradeSecondMagicNumber(2);
             this.initializeDescription();
         }
     }
-
-
 }

@@ -23,7 +23,7 @@ public class Barrage extends AbstractCorrCard {
 
     public static final String ID = MagicalBase.makeID("BulletBarrage");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_SKILL);
+    public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_ATTACK);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -35,8 +35,8 @@ public class Barrage extends AbstractCorrCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
@@ -77,6 +77,7 @@ public class Barrage extends AbstractCorrCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(2);
+            this.target = CardTarget.ENEMY;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

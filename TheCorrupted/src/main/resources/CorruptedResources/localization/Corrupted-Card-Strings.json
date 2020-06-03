@@ -91,16 +91,16 @@
 	},
 	"Corrupted:Flare": {
 		"NAME": "Flare",
-		"DESCRIPTION": "Apply !M! Vulnerable and apply !2ndM! Strength on all enemies.",
-		"UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and apply !2ndM! Strength on all enemies. NL Apply 1 Vulnerable."
+		"DESCRIPTION": "Apply !M! Vulnerable and apply !2ndM! Strength on all enemies. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and apply !2ndM! Strength on all enemies."
 	},
 	"Corrupted:Overhead": {
 		"NAME": "Overhead Swing",
 		"DESCRIPTION": "Deal !D! damage, if it kills any enemy, NL apply !M! Vulnerable and reduce the Strength of a random enemy by !M!."
 	},
 	"Corrupted:TransMind": {
-		"NAME": "Transencent Mindset",
-		"DESCRIPTION": "Gain 1 Intangable, gain !M! Vulnerable and !2ndM! Frail. NL using this card increases the Vulnerable you get for the rest of combat."
+		"NAME": "Transcendent Mindset",
+		"DESCRIPTION": "Gain 1 Intangible, gain !M! Vulnerable and !2ndM! Frail. NL using this card increases the Vulnerable you get for the rest of combat."
 	},
 	"Corrupted:ReinArmor": {
 		"NAME": "Reinforce Armor",
@@ -201,6 +201,10 @@
 		"NAME": "Cosmic Nova",
 		"DESCRIPTION": "Deal !D! damage and apply !M! Leech to ALL enemies. NL Exhaust."
 	},
+	"Corrupted:CoveringFire": {
+		"NAME": "Tactical Loader",
+		"DESCRIPTION": "Gain !B! block. Add a random ammo card from your discard pile into your hand."
+	},
 	"Corrupted:Repurpose": {
 		"NAME": "Recycle",
 		"DESCRIPTION": "Exhaust an attack and add a Recycled ammo into your hand.",
@@ -213,9 +217,31 @@
 		"UPGRADE_DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]2,4,7,9: []Add a copy of this card into your discard pile. NL Exhaust."
 
 	},
+	"Corrupted:Smoker": {
+		"NAME": "Smoker",
+		"DESCRIPTION": "Ammo. NL Deal !D! damage. Gain !B! block. NL [#239ecf]Magic [#239ecf]4: []Apply !2ndM! Weak. Gain !M! additional block. NL [#239ecf]Magic [#239ecf]7,10: [] Gain !B! additional block.",
+		"UPGRADE_DESCRIPTION": "Ammo. NL Deal !D! damage. NL [#239ecf]Magic [#239ecf]2: Gain !B! additional block. NL [#239ecf]Magic [#239ecf]4: []Apply !2ndM! Weak. Gain !B! additional block. NL [#239ecf]Magic [#239ecf]7,10: [] Gain !B! additional block."
+
+	},
+	"Corrupted:Sparkler": {
+		"NAME": "Sparkler",
+		"DESCRIPTION": "Ammo. NL Deal !D! damage. NL ALL enemies deal !M! damage to themselves at the start of their turn."
+	},
+	"Corrupted:InstaLoader": {
+		"NAME": "InstaLoader",
+		"DESCRIPTION": "Draw !M! cards. NL Discard all cards drawn this way that do not cost 0."
+	},
+	"Corrupted:Preloader": {
+		"NAME": "Preloader",
+		"DESCRIPTION": "Add !M! random ammo cards into your hand, they deal !2ndM! more damage."
+	},
 	"Corrupted:DarkmagicSlice": {
 		"NAME": "Darkmagic Slice",
 		"DESCRIPTION": "Deal !D! damage twice. NL [#239ecf]Magic [#239ecf]3: []Does 5 additional damage. NL [#239ecf]Magic [#239ecf]15: []consume 2 [#239ecf]Mana []to do double damage."
+	},
+	"Corrupted:Brace": {
+		"NAME": "Brace for impact",
+		"DESCRIPTION": "Gain !B! block. NL [#239ecf]Magic [#239ecf]6: []Gain !2ndM! block."
 	},
 	"Corrupted:PurgingBlasde": {
 		"NAME": "Purging Blade",

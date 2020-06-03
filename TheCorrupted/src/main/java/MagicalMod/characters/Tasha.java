@@ -138,10 +138,13 @@ public class Tasha extends CustomPlayer {
         retVal.add(DefaultCommonAttack.ID);
         retVal.add(DefaultCommonAttack.ID);
         retVal.add(DefaultCommonAttack.ID);
-        
+        retVal.add(DefaultCommonAttack.ID);
+
         retVal.add(DefaultCommonSkill.ID);
-        
+        retVal.add(DefaultCommonSkill.ID);
+
         retVal.add(Focusfire.ID);
+        retVal.add(Channel.ID);
         retVal.add(Channel.ID);
         retVal.add(Channel.ID);
         

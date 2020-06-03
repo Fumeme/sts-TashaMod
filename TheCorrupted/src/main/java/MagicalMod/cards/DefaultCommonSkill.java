@@ -41,7 +41,7 @@ public class DefaultCommonSkill extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int BLOCK = 10;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
 
@@ -57,7 +57,7 @@ public class DefaultCommonSkill extends AbstractCorrCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
+                AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
     }
 

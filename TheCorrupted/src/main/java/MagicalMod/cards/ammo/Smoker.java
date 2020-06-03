@@ -1,12 +1,15 @@
-package MagicalMod.cards.Mana;
+package MagicalMod.cards.ammo;
 
 import MagicalMod.MagicalBase;
+import MagicalMod.actions.SmokerAction;
 import MagicalMod.cards.AbstractCorrCard;
 import MagicalMod.patches.AbstractCardEnum;
 import MagicalMod.powers.Mana;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,9 +17,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
-public class MagicBlast extends AbstractCorrCard {
+public class Smoker extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,14 +29,17 @@ public class MagicBlast extends AbstractCorrCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = MagicalBase.makeID("MagicBlast");
+    public static final String ID = MagicalBase.makeID("Smoker");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_ATTACK);
+    public static final String IMG = MagicalBase.makePath(MagicalBase.ReAmmo);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
 
     // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -43,29 +49,33 @@ public class MagicBlast extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/
 
-    public MagicBlast() {
+    public Smoker() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 3;
         this.baseDamage = DAMAGE;
+        SecondMagicNumber = this.BaseSecondMagicNumber = 2;
+        this.baseMagicNumber = 2;
+        this.baseBlock = 2;
+        tags.add(MagicalBase.Ammo);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-            if (magic((short) this.magicNumber)) {
-
-                this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.05F));
-
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+        AbstractDungeon.actionManager
+                .addToBottom(new DamageAction(m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));
-            }
+
+        if (magic((short) 4)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, SecondMagicNumber, false), SecondMagicNumber));
+        }
+            addToBot(new SmokerAction(p, this.block, this.block,upgraded));
+
 
 
     }
@@ -83,7 +93,7 @@ public class MagicBlast extends AbstractCorrCard {
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new MagicBlast();
+        return new Smoker();
     }
 
     // Upgraded stats.
@@ -91,8 +101,8 @@ public class MagicBlast extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
-            this.upgradeMagicNumber(-1);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.upgradeDamage(2);
             this.initializeDescription();
         }
     }

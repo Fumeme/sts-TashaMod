@@ -68,15 +68,13 @@ public class BurstFire extends AbstractCorrCard {
                             AbstractGameAction.AttackEffect.FIRE));
         }
 
-        if (magic(3)){    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
-
+        if (magic(3)){
 
             AbstractDungeon.actionManager
                     .addToBottom(new DamageAction(m,
                             new DamageInfo(p, this.damage, this.damageTypeForTurn),
                             AbstractGameAction.AttackEffect.FIRE));
-            if (magic(6)){    		AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,1));
-
+            if (magic(6)){
 
                 AbstractDungeon.actionManager
                         .addToBottom(new DamageAction(m,

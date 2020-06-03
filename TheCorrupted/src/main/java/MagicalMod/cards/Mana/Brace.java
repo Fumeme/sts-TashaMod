@@ -1,32 +1,34 @@
-package MagicalMod.cards.ammo;
+package MagicalMod.cards.Mana;
 
+import MagicalMod.MagicalBase;
 import MagicalMod.cards.AbstractCorrCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.defect.ScrapeFollowUpAction;
+import MagicalMod.cards.statuses.Overexertion;
+import MagicalMod.patches.AbstractCardEnum;
+import MagicalMod.powers.Mana;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import MagicalMod.MagicalBase;
-import MagicalMod.actions.drawCardandAction;
-import MagicalMod.patches.AbstractCardEnum;
-
-public class InstaLoader extends AbstractCorrCard  {
+public class Brace extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     * 
+     *
      * Hold Place Gain 1(2) Keywords(s).
      */
 
 
-    // TEXT DECLARATION 
+    // TEXT DECLARATION
 
-    public static final String ID = MagicalBase.makeID("InstaLoader");
+    public static final String ID = MagicalBase.makeID("Brace");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_SKILL);
 
@@ -37,40 +39,58 @@ public class InstaLoader extends AbstractCorrCard  {
     // /TEXT DECLARATION/
 
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
- 
+    private static final int MAGIC = 5;
 
     // /STAT DECLARATION/
 
 
-    public InstaLoader() {
+    public Brace() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = MAGIC;
-      
+        this.baseBlock = 12;
+        this.magicNumber = this.baseMagicNumber = 5;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new GainBlockAction(p, p, this.block));
 
-        addToBot(new DrawCardAction(this.magicNumber, new ScrapeFollowUpAction()));
+        if (magic((short) 6)) {
+            addToBot(new GainBlockAction(p, p, this.SecondMagicNumber));
 
+        }
+
+        }
+    boolean magic(short min) {
+        if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
+
+            return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
+
+        }
+        return false;
     }
-
-
+    public void applyPowers() {
+        int xd = baseBlock;
+        baseBlock = BaseSecondMagicNumber;
+        super.applyPowers();
+        SecondMagicNumber = block;
+        isSecondMagicNumberModified = SecondMagicNumber != BaseSecondMagicNumber;
+        baseBlock = xd;
+        super.applyPowers();
+    }
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new InstaLoader();
+        return new Brace();
     }
 
     //Upgraded stats.
@@ -78,10 +98,7 @@ public class InstaLoader extends AbstractCorrCard  {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(2);
             this.initializeDescription();
         }
     }
-
-
 }

@@ -2,46 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/images/powers/Mana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/PreloadAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/SmokerAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Brace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Preloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Smoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Sparkler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/Sparkle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/MagicalBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/MagicalBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/CoveringAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/CoveringAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/FocusAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/FocusAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/BattleSense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/BattleSense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Channel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/CoveringFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/CoveringFire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/EnergyCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/EnergyCannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Flare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Flare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Focusfire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Focusfire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/BulletSharpenAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/BulletSharpenAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Barrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Barrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/DefaultCommonSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/DefaultCommonSkill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HairyTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HairyTrigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HybridRounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HybridRounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Hydration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Hydration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HybridRounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/HybridRounds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/BurstFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/BurstFire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/DarkmagicSlice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/DarkmagicSlice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/FocusCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/FocusCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/MagicBlast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/MagicBlast.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ManaBlade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ManaBurst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ManaBurst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/MaxOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/MaxOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Overload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Overload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/PowerNap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/PowerNap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ReinArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ReinArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/aWeakDiamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/aWeakDiamond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/SappingStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/SappingStrike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/RecycledAmmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/RecycledAmmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/SpecializedShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/SpecializedShot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/statuses/Overexertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/statuses/Overexertion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/stelarCannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/stelarCannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/Inefficiency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/Inefficiency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/LeechPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/LeechPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/Mana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/Mana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/ManaGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/ManaGeneration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/ManaShellPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/ManaShellPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/relics/InfernalCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/relics/InfernalCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/relics/ManaReactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/relics/ManaReactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/InstaLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/InstaLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Reload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Reload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/characters/Tasha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/characters/Tasha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Relic-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Relic-Strings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -88,22 +71,22 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="CorruptedMod.powers" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="MagicalMod.cards.ammo" />
       <recent name="CorruptedMod.cards.Mana" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="MagicalMod.actions" />
+      <recent name="MagicalMod.cards.ammo" />
+      <recent name="MagicalMod.cards.Mana" />
+      <recent name="MagicalMod.powers" />
+      <recent name="MagicalMod.cards" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\resources\CorruptedResources\localization" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="MagicalMod.cards" />
-      <recent name="CorruptedMod.cards.Decay" />
-      <recent name="CorruptedMod.actions" />
-      <recent name="CorruptedMod.cards.ammo" />
-      <recent name="CorruptedMod.cards" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="CorruptedMod.powers" />
     </key>
   </component>
   <component name="RunManager">
@@ -168,6 +151,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
@@ -192,30 +186,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="19" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1366.728@0.0.1366.728" timestamp="1584070652934" />
-    <state x="479" y="249" width="422" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587096030885">
+    <state x="479" y="249" width="422" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590570649010">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="479" y="249" width="422" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1587096030885" />
+    <state x="479" y="249" width="422" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590570649010" />
     <state x="463" y="81" key="FileChooserDialogImpl" timestamp="1584070651044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="81" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584070651044" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1590227355820">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1591079620357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590227355820" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1590227355820">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591079620357" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1591079620357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590227355820" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1590227355819">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591079620357" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1591079620356">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590227355819" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1590227355820">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591079620356" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1591079620357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590227355820" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591079620357" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590112690230">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

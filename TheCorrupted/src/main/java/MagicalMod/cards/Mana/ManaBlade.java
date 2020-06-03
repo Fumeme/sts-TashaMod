@@ -54,7 +54,7 @@ public class ManaBlade extends AbstractCorrCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = MAX;
         this.baseMagicNumber = MIN;
-        this.BaseSecondMagicNumber = magicNumber;
+        this.BaseSecondMagicNumber = MIN;
 
     }
 
@@ -107,11 +107,12 @@ public class ManaBlade extends AbstractCorrCard {
     @Override
     public void calculateCardDamage(final AbstractMonster mo) {
 
-        int CurrMin = baseMagicNumber;
+        int CurrMin = magicNumber;
         int CurrMax = baseDamage;
         super.applyPowers();
 
         baseDamage = CurrMin;
+        super.applyPowers();
         super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
 
         magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
@@ -119,6 +120,7 @@ public class ManaBlade extends AbstractCorrCard {
 
         // repeat so damage holds the second condition's damage
         baseDamage = CurrMax;
+        ManaCheck();
         super.applyPowers();
         super.calculateCardDamage(mo); // takes baseDamage and applies things like Strength or Pen Nib to set damage
 
@@ -130,11 +132,14 @@ public class ManaBlade extends AbstractCorrCard {
         this.initializeDescription();
 
     }
+
+
     public void ManaCheck(){
         AbstractPlayer p = AbstractDungeon.player;
+        SecondMagicNumber = 0;
 
         if (p.hasPower(Mana.POWER_ID)) {
-            int am = MathUtils.floor(p.getPower(Mana.POWER_ID).amount/4);
+            int am = MathUtils.floor(p.getPower(Mana.POWER_ID).amount);
 
             if (am >= this.damage) {
 

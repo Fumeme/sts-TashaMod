@@ -125,7 +125,10 @@
     "NAME": "Leech",
     "DESCRIPTIONS": ["Gain 1 Mana for every 15 attack unblocked attack damage the owner receives w."]
   },
-
+  "Corrupted:Sparkle": {
+    "NAME": "Sparkle",
+    "DESCRIPTIONS": ["At the start of its turn, deal ", "damage to itself."]
+  },
   "Corrupted:tempBarricade": {
     "NAME": "Infernal Barrier",
     "DESCRIPTIONS": ["This creature will not lose block at the end of its next ", "turn.", "turns."]

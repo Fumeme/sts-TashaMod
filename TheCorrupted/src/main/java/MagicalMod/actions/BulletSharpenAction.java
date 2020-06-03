@@ -9,10 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 public class BulletSharpenAction extends AbstractGameAction {
     private AbstractCard card;
 
-    public BulletSharpenAction(int amount) {
-        this.amount = amount;
+    public BulletSharpenAction(int DmgUp) {
+        this.amount = DmgUp;
     }
-
 
 
     public void update() {
@@ -20,11 +19,14 @@ public class BulletSharpenAction extends AbstractGameAction {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.hasTag(MagicalBase.Ammo)) {
                 c.baseDamage += this.amount;
+                if (c.hasTag(MagicalBase.magdam)) {
+                    c.baseMagicNumber += this.amount;
+                }
                 c.applyPowers();
             }
         }
 
         this.isDone = true;
-}
+    }
 
 }

@@ -137,8 +137,9 @@ public class MagicalBase
     public static final String THE_DEFAULT_SKELETON_JSON = "char/defaultCharacter/skeleton.json";
     
     //Card Tags
-	@SpireEnum public static AbstractCard.CardTags Ammo;
-	@SpireEnum public static AbstractCard.CardTags Lore;
+    @SpireEnum public static AbstractCard.CardTags Ammo;
+    @SpireEnum public static AbstractCard.CardTags magdam;
+    @SpireEnum public static AbstractCard.CardTags Lore;
 
     // =============== /INPUT TEXTURE LOCATION/ =================
 
@@ -305,6 +306,10 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new QuickDraw());
         BaseMod.addCard(new HairyTrigger());
 
+        BaseMod.addCard(new Brace());
+        BaseMod.addCard(new InstaLoader());
+        BaseMod.addCard(new Preloader());
+
         BaseMod.addCard(new Menacing());
         BaseMod.addCard(new BattleSense());
         BaseMod.addCard(new Flare());
@@ -322,6 +327,8 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new ManaBurst());
         BaseMod.addCard(new aWeakDiamond());
         BaseMod.addCard(new Reload());
+        BaseMod.addCard(new Smoker());
+        BaseMod.addCard(new Sparkler());
 
         BaseMod.addCard(new HybridRounds());
         BaseMod.addCard(new ImmovableObject());

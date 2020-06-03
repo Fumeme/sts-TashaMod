@@ -1,5 +1,6 @@
-package MagicalMod.cards;
+package MagicalMod.cards.ammo;
 
+import MagicalMod.cards.AbstractCorrCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -40,7 +41,7 @@ public class HybridRounds extends AbstractCorrCard {
 
     // STAT DECLARATION 	
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
@@ -64,16 +65,13 @@ public class HybridRounds extends AbstractCorrCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-    	if(magic((short) 2)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 0));
-    		
+    	if(magic((short) 2)) {
     		this.baseDamage += 2;
     		
-    		if(magic((short) 4)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 0));
-        		
+    		if(magic((short) 4)) {
         		this.baseDamage += 2;
         		
-        		if(magic((short) 6)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1, 0));
-            		
+        		if(magic((short) 6)) {
         			this.baseDamage += 2;
             	}
             	
